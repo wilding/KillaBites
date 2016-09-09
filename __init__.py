@@ -14,7 +14,7 @@ session = DBSession()
 
 @app.route('/')
 def homepage():
-    return "It's working!"
+    return render_template('homepage.html')
 
 if __name__ == '__main__':
     app.debug = True
