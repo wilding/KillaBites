@@ -1,7 +1,7 @@
 # Configuration
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -16,8 +16,18 @@ class Ingredient(Base):
     name = Column(String(500), nullable=False)
     picture = Column(String(2000))
     group = Column(String(500), nullable=False)
-    begin_month = Column(Integer, nullable=False)
-    end_month = Column(Integer, nullable=False)
+    january = Column(Boolean)
+    february = Column(Boolean)
+    march = Column(Boolean)
+    april = Column(Boolean)
+    may = Column(Boolean)
+    june = Column(Boolean)
+    july = Column(Boolean)
+    august = Column(Boolean)
+    september = Column(Boolean)
+    october = Column(Boolean)
+    november = Column(Boolean)
+    december = Column(Boolean)
 
     # JSON
     @property
@@ -27,8 +37,18 @@ class Ingredient(Base):
             'id': self.id,
             'picture': self.picture,
             'group': self.group,
-            'begin_month': self.begin_month,
-            'end_month': self.end_month
+            'january': self.january,
+            'february': self.february,
+            'march': self.march,
+            'april': self.april,
+            'may': self.may,
+            'june': self.june,
+            'july': self.july,
+            'august': self.august,
+            'september': self.september,
+            'october': self.october,
+            'november': self.november,
+            'december': self.december
         }
         return ingredient_dict
 
