@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ super() }} | New Ingredient{% endblock %}
+
+{% block content %}
+    <h1>New Ingredient</h1>
+    <form action="{{url_for('addIngredient')}}" method="post">
+        <ul>
+            <li>
+                <label>Name</label>
+                <input type="text" name="name">
+            </li>
+            <li>
+                <label>Picture</label>
+                <input type="url" name="picture">
+            </li>
+            <li>
+                <label>Group</label>
+                <input type="radio" name="group" value="fruit">
+                <input type="radio" name="group" value="vegetables">
+                <input type="radio" name="group" value="fish/seafood">
+                <input type="radio" name="group" value="birds">
+                <input type="radio" name="group" value="red meat">
+                <input type="radio" name="group" value="nuts">
+            </li>
+            <li>
+                <label>Months</label>
+                <input type="checkbox" name="january">
+                <input type="checkbox" name="february">
+                <input type="checkbox" name="march">
+                <input type="checkbox" name="april">
+                <input type="checkbox" name="may">
+                <input type="checkbox" name="june">
+                <input type="checkbox" name="july">
+                <input type="checkbox" name="august">
+                <input type="checkbox" name="september">
+                <input type="checkbox" name="october">
+                <input type="checkbox" name="november">
+                <input type="checkbox" name="december">
+            </li>
+            <li>
+                <input type="submit" value="Create New Ingredient">
+                <a href="{{url_for('homepage')}}">Cancel</a>
+            </li>
+        </ul>
+    </form>
+{% endblock %}
