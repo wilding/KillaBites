@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+}
+
+label {
+    width: 100%;
+}
