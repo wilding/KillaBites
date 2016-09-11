@@ -15,7 +15,8 @@ session = DBSession()
 
 @app.route('/')
 def homepage():
-    return render_template('homepage.html')
+    ingredients = session.query(Ingredient).all()
+    return render_template('homepage.html', ingredients=ingredients)
 
 
 @app.route('/ingredient/add/', methods=['GET', 'POST'])

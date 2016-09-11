@@ -1,5 +1,45 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>It's Working!</h1>
+    <a href="{{url_for('addIngredient')}}">Add Ingredient</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Group</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dec</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingredient in ingredients: %}
+                <tr>
+                    <td>{{ingredient.name}}</td>
+                    <td>{{ingredient.group}}</td>
+                    <td>{% if ingredient.january: %}X{% endif %}</td>
+                    <td>{% if ingredient.february: %}X{% endif %}</td>
+                    <td>{% if ingredient.march: %}X{% endif %}</td>
+                    <td>{% if ingredient.april: %}X{% endif %}</td>
+                    <td>{% if ingredient.may: %}X{% endif %}</td>
+                    <td>{% if ingredient.june: %}X{% endif %}</td>
+                    <td>{% if ingredient.july: %}X{% endif %}</td>
+                    <td>{% if ingredient.august: %}X{% endif %}</td>
+                    <td>{% if ingredient.september: %}X{% endif %}</td>
+                    <td>{% if ingredient.october: %}X{% endif %}</td>
+                    <td>{% if ingredient.november: %}X{% endif %}</td>
+                    <td>{% if ingredient.december: %}X{% endif %}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
