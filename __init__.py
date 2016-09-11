@@ -12,29 +12,38 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+
 @app.route('/')
 def homepage():
     return render_template('homepage.html')
 
+
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def addIngredient():
     if request.method == 'POST':
+        months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+        month_bool = []
+        for month in months:
+            if request.form.get(month):
+                month_bool.append(True)
+            else:
+                month_bool.append(False)
         newingredient = Ingredient(
             name=request.form['name'],
             picture=request.form['picture'],
             group=request.form['group'],
-            january=request.form['january'],
-            february=request.form['february'],
-            march=request.form['march'],
-            april=request.form['april'],
-            may=request.form['may'],
-            june=request.form['june'],
-            july=request.form['july'],
-            august=request.form['august'],
-            september=request.form['september'],
-            october=request.form['october'],
-            november=request.form['november'],
-            december=request.form['december'])
+            january=month_bool[0],
+            february=month_bool[1],
+            march=month_bool[2],
+            april=month_bool[3],
+            may=month_bool[4],
+            june=month_bool[5],
+            july=month_bool[6],
+            august=month_bool[7],
+            september=month_bool[8],
+            october=month_bool[9],
+            november=month_bool[10],
+            december=month_bool[11])
         session.add(newingredient)
         session.commit()
         flash('Ingredient added!')
@@ -42,6 +51,8 @@ def addIngredient():
     else:
         return render_template('newingredient.html')
 
+
 if __name__ == '__main__':
+    app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=8080)
