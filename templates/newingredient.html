@@ -6,37 +6,37 @@
     <h1>New Ingredient</h1>
     <form action="{{url_for('addIngredient')}}" method="post">
         <ul>
+            <label>Name</label>
             <li>
-                <label>Name</label>
                 <input type="text" name="name">
             </li>
+            <label>Picture</label>
             <li>
-                <label>Picture</label>
                 <input type="url" name="picture">
             </li>
+            <label>Group</label>
             <li>
-                <label>Group</label>
-                <input type="radio" name="group" value="fruit">
-                <input type="radio" name="group" value="vegetables">
-                <input type="radio" name="group" value="fish/seafood">
-                <input type="radio" name="group" value="birds">
-                <input type="radio" name="group" value="red meat">
-                <input type="radio" name="group" value="nuts">
+                <input type="radio" name="group" value="fruit"> Fruit
+                <input type="radio" name="group" value="vegetables"> Vegetables
+                <input type="radio" name="group" value="nuts"> Nuts
+                <input type="radio" name="group" value="fish/seafood"> Fish/Seafood
+                <input type="radio" name="group" value="birds"> Birds
+                <input type="radio" name="group" value="red meat"> Red Meat
             </li>
+            <label>Months</label>
             <li>
-                <label>Months</label>
-                <input type="checkbox" name="january">
-                <input type="checkbox" name="february">
-                <input type="checkbox" name="march">
-                <input type="checkbox" name="april">
-                <input type="checkbox" name="may">
-                <input type="checkbox" name="june">
-                <input type="checkbox" name="july">
-                <input type="checkbox" name="august">
-                <input type="checkbox" name="september">
-                <input type="checkbox" name="october">
-                <input type="checkbox" name="november">
-                <input type="checkbox" name="december">
+                <input type="checkbox" name="jan"> Jan
+                <input type="checkbox" name="feb"> Feb
+                <input type="checkbox" name="mar"> Mar
+                <input type="checkbox" name="apr"> Apr
+                <input type="checkbox" name="may"> May
+                <input type="checkbox" name="jun"> Jun
+                <input type="checkbox" name="jul"> Jul
+                <input type="checkbox" name="aug"> Aug
+                <input type="checkbox" name="sep"> Sep
+                <input type="checkbox" name="oct"> Oct
+                <input type="checkbox" name="nov"> Nov
+                <input type="checkbox" name="dec"> Dec
             </li>
             <li>
                 <input type="submit" value="Create New Ingredient">
