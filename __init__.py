@@ -13,22 +13,18 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
+# Homepage
 @app.route('/')
 def homepage():
     ingredients = session.query(Ingredient).all()
     return render_template('homepage.html', ingredients=ingredients)
 
 
+# Add Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def addIngredient():
     if request.method == 'POST':
-        months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
-        month_bool = []
-        for month in months:
-            if request.form.get(month):
-                month_bool.append(True)
-            else:
-                month_bool.append(False)
+        month_bool = get_month_bool(request.form)
         newingredient = Ingredient(
             name=request.form['name'],
             picture=request.form['picture'],
@@ -51,6 +47,18 @@ def addIngredient():
         return redirect(url_for('homepage'))
     else:
         return render_template('newingredient.html')
+
+
+# month_bool helper function
+def get_month_bool(form):
+    months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+    month_bool = []
+    for month in months:
+        if form.get(month):
+            month_bool.append(True)
+        else:
+            month_bool.append(False)
+    return month_bool
 
 
 if __name__ == '__main__':
