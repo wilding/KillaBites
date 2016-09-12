@@ -16,7 +16,7 @@ session = DBSession()
 # Homepage
 @app.route('/')
 def homepage():
-    ingredients = session.query(Ingredient).all()
+    ingredients = session.query(Ingredient).order_by(Ingredient.group).all()
     return render_template('homepage.html', ingredients=ingredients)
 
 
