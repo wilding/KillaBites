@@ -39,7 +39,7 @@
                     <td>{% if ingredient.november: %}X{% endif %}</td>
                     <td>{% if ingredient.december: %}X{% endif %}</td>
                     <td><a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}">Edit</a></td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}">Delete</a></td>
                 </tr>
                 {% endfor %}
         </tbody>

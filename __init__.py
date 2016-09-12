@@ -50,7 +50,7 @@ def addIngredient():
 
 
 # Edit Ingredient
-@app.route('/ingredient/edit/<int:ingredient_id>', methods=['GET', 'POST'])
+@app.route('/ingredient/edit/<int:ingredient_id>/', methods=['GET', 'POST'])
 def editIngredient(ingredient_id):
     ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
     if request.method == 'POST':
@@ -82,6 +82,16 @@ def editIngredient(ingredient_id):
 
 
 # Delete Ingredient
+@app.route('/ingredient/delete/<int:ingredient_id>/', methods=['GET', 'POST'])
+def deleteIngredient(ingredient_id):
+    ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
+    if request.method == 'POST':
+        session.delete(ingredient)
+        session.commit()
+        flash('Ingredient deleted!')
+        return redirect(url_for('homepage'))
+    else:
+        return render_template('deleteingredient.html', ingredient=ingredient)
 
 
 # month_bool helper function
