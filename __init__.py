@@ -49,6 +49,41 @@ def addIngredient():
         return render_template('newingredient.html')
 
 
+# Edit Ingredient
+@app.route('/ingredient/edit/<int:ingredient_id>', methods=['GET', 'POST'])
+def editIngredient(ingredient_id):
+    ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
+    if request.method == 'POST':
+        if request.form['name']:
+            ingredient.name = request.form['name']
+        if request.form['picture']:
+            ingredient.picture = request.form['picture']
+        if request.form['group']:
+            ingredient.group = request.form['group']
+        month_bool = get_month_bool(request.form)
+        ingredient.january = month_bool[0]
+        ingredient.february = month_bool[1]
+        ingredient.march = month_bool[2]
+        ingredient.april = month_bool[3]
+        ingredient.may = month_bool[4]
+        ingredient.june = month_bool[5]
+        ingredient.july = month_bool[6]
+        ingredient.august = month_bool[7]
+        ingredient.september = month_bool[8]
+        ingredient.october = month_bool[9]
+        ingredient.november = month_bool[10]
+        ingredient.december = month_bool[11]
+        session.add(ingredient)
+        session.commit()
+        flash(ingredient.name + ' edited!')
+        return redirect(url_for('homepage'))
+    else:
+        return render_template('editingredient.html', ingredient=ingredient)
+
+
+# Delete Ingredient
+
+
 # month_bool helper function
 def get_month_bool(form):
     months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']

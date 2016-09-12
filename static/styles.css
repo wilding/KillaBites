@@ -22,6 +22,10 @@ td {
     text-align: center;
 }
 
+th {
+    text-align: center;
+}
+
 h1 {
     width: 100%;
     text-align: center;
@@ -35,9 +39,14 @@ ul {
 
 li {
     width: 100%;
+    display: flex;
     padding: 10px 0px 10px 0px;
 }
 
-label {
+.month-container {
+    width: 8.333333%;
+}
+
+input[type=checkbox] {
     width: 100%;
 }

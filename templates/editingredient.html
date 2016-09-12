@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ super() }} | Edit Ingredient{% endblock %}
+
+{% block content %}
+    <h1>Edit Ingredient</h1>
+    <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post">
+        <ul>
+            <label>Name</label>
+            <li>
+                <input type="text" name="name" placeholder="{{ingredient.name}}">
+            </li>
+            <label>Picture</label>
+            <li>
+                <input type="url" name="picture" placeholder="{{ingredient.picture}}">
+            </li>
+            <label>Group</label>
+            <li>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fruit</th>
+                            <th>Vegetables</th>
+                            <th>Nuts</th>
+                            <th>Fish/Seafood</th>
+                            <th>Birds</th>
+                            <th>Red Meat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                {% if ingredient.group == 'fruit': %}
+                                    <input type="radio" name="group" value="fruit" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="fruit">
+                                    {% endif %}
+                            </td>
+                            <td>
+                                {% if ingredient.group == 'vegetables': %}
+                                    <input type="radio" name="group" value="vegetables" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="vegetables">
+                                    {% endif %}
+                            </td>
+                            <td>
+                                {% if ingredient.group == 'nuts': %}
+                                    <input type="radio" name="group" value="nuts" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="nuts">
+                                    {% endif %}
+                            </td>
+                            <td>
+                                {% if ingredient.group == 'fish/seafood': %}
+                                    <input type="radio" name="group" value="fish/seafood" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="fish/seafood">
+                                    {% endif %}
+                            </td>
+                            <td>
+                                {% if ingredient.group == 'birds': %}
+                                    <input type="radio" name="group" value="birds" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="birds">
+                                    {% endif %}
+                            </td>
+                            <td>
+                                {% if ingredient.group == 'red meat': %}
+                                    <input type="radio" name="group" value="red meat" checked>
+                                    {% else %}
+                                    <input type="radio" name="group" value="red meat">
+                                    {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <label>Months</label>
+            <li class="month-menu">
+                <div class="month-container"><label>
+                    {% if ingredient.january %}
+                        <input type="checkbox" name="jan" checked> Jan
+                        {% else %}
+                        <input type="checkbox" name="jan"> Jan
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.february %}
+                        <input type="checkbox" name="feb" checked> Feb
+                        {% else %}
+                        <input type="checkbox" name="feb"> Feb
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.march %}
+                        <input type="checkbox" name="mar" checked> Mar
+                        {% else %}
+                        <input type="checkbox" name="mar"> Mar
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.april %}
+                        <input type="checkbox" name="apr" checked> Apr
+                        {% else %}
+                        <input type="checkbox" name="apr"> Apr
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.may %}
+                        <input type="checkbox" name="may" checked> May
+                        {% else %}
+                        <input type="checkbox" name="may"> May
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.june %}
+                        <input type="checkbox" name="jun" checked> Jun
+                        {% else %}
+                        <input type="checkbox" name="jun"> Jun
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.july %}
+                        <input type="checkbox" name="jul" checked> Jul
+                        {% else %}
+                        <input type="checkbox" name="jul"> Jul
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.august %}
+                        <input type="checkbox" name="aug" checked> Aug
+                        {% else %}
+                        <input type="checkbox" name="aug"> Aug
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.september %}
+                        <input type="checkbox" name="sep" checked> Sep
+                        {% else %}
+                        <input type="checkbox" name="sep"> Sep
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.october %}
+                        <input type="checkbox" name="oct" checked> Oct
+                        {% else %}
+                        <input type="checkbox" name="oct"> Oct
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.november %}
+                        <input type="checkbox" name="nov" checked> Nov
+                        {% else %}
+                        <input type="checkbox" name="nov"> Nov
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>
+                    {% if ingredient.december %}
+                        <input type="checkbox" name="dec" checked> Dec
+                        {% else %}
+                        <input type="checkbox" name="dec"> Dec
+                        {% endif %}
+                </label></div>
+            </li>
+            <li>
+                <input type="submit" value="Edit Ingredient">
+                <a href="{{url_for('homepage')}}">Cancel</a>
+            </li>
+        </ul>
+    </form>
+{% endblock %}
