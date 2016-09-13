@@ -4,6 +4,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, joinedload_all
 from database_setup import Base, Ingredient
 
+from datetime import datetime
+
 app = Flask(__name__)
 
 # connect to database
@@ -13,11 +15,39 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
+month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'}
+
+
 # Homepage
 @app.route('/')
 def homepage():
-    ingredients = session.query(Ingredient).order_by(Ingredient.group).all()
-    return render_template('homepage.html', ingredients=ingredients)
+    month_num = datetime.now().month
+    month = month_dict[month_num]
+    if month_num == 1:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(january=True).all()
+    elif month_num == 2:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(february=True).all()
+    elif month_num == 3:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(march=True).all()
+    elif month_num == 4:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(april=True).all()
+    elif month_num == 5:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(may=True).all()
+    elif month_num == 6:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(june=True).all()
+    elif month_num == 7:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(july=True).all()
+    elif month_num == 8:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(august=True).all()
+    elif month_num == 9:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(september=True).all()
+    elif month_num == 10:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(october=True).all()
+    elif month_num == 11:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(november=True).all()
+    elif month_num == 12:
+        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(december=True).all()
+    return render_template('homepage.html', ingredients=ingredients, month=month)
 
 
 # Add Ingredient
