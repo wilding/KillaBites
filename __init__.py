@@ -9,7 +9,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # connect to database
-engine = create_engine('sqlite:///killabites.db')
+engine = create_engine('postgresql://vagrant:QB8LLMY)rgr8387e#Wz>Uehn@@localhost/killabites')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

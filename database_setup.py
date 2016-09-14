@@ -100,5 +100,5 @@ class Ingredient(Base):
 
 
 # Configuration
-engine = create_engine('sqlite:///killabites.db')
+engine = create_engine('postgresql://vagrant:QB8LLMY)rgr8387e#Wz>Uehn@@localhost/killabites')
 Base.metadata.create_all(engine)
