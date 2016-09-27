@@ -38,7 +38,7 @@ def addIngredient():
             storage=request.form['storage'])
         session.add(newingredient)
         session.commit()
-        flash('Ingredient added!')
+        flash(newingredient.name + ' added!')
         return redirect(url_for('homepage'))
     else:
         return render_template('newingredient.html')
@@ -73,7 +73,7 @@ def deleteIngredient(ingredient_id):
     if request.method == 'POST':
         session.delete(ingredient)
         session.commit()
-        flash('Ingredient deleted!')
+        flash(ingredient.name + ' deleted!')
         return redirect(url_for('homepage'))
     else:
         return render_template('deleteingredient.html', ingredient=ingredient)
