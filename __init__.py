@@ -6,6 +6,7 @@ from database_setup import Base, Ingredient
 
 from datetime import datetime
 
+# initialize flask app
 app = Flask(__name__)
 
 # connect to database
@@ -15,12 +16,14 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
+# global month dictionary for quick lookup
 month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'}
 
 
 # Homepage
 @app.route('/')
 def homepage():
+    """docstring for homepage"""
     current_month = datetime.now().month
     ingredients = session.query(Ingredient).filter(Ingredient.months.any(current_month)).order_by(Ingredient.group).all()
     return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
@@ -29,6 +32,7 @@ def homepage():
 # Add Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def addIngredient():
+    """docstring for addIngredient"""
     if request.method == 'POST':
         newingredient = Ingredient(
             name=request.form['name'],
@@ -47,6 +51,7 @@ def addIngredient():
 # Edit Ingredient
 @app.route('/ingredient/edit/<int:ingredient_id>/', methods=['GET', 'POST'])
 def editIngredient(ingredient_id):
+    """docstring for editIngredient"""
     ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
     if request.method == 'POST':
         if request.form['name']:
@@ -69,6 +74,7 @@ def editIngredient(ingredient_id):
 # Delete Ingredient
 @app.route('/ingredient/delete/<int:ingredient_id>/', methods=['GET', 'POST'])
 def deleteIngredient(ingredient_id):
+    """docstring for deleteIngredient"""
     ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
     if request.method == 'POST':
         session.delete(ingredient)
@@ -79,8 +85,12 @@ def deleteIngredient(ingredient_id):
         return render_template('deleteingredient.html', ingredient=ingredient)
 
 
+# Helper Functions
+
+
 # month_bool helper function
 def get_months_from_form(form):
+    """docstring for get_months_from_form"""
     output = []
     for i in range(1, 13):
         if form.get(month_dict[i][:3]):
@@ -88,6 +98,7 @@ def get_months_from_form(form):
     return output
 
 
+# set up server to listen to incoming requests
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True

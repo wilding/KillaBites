@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class Ingredient(Base):
+    """docstring for Ingredient class"""
     __tablename__ = 'ingredient'
     id = Column(Integer, primary_key=True)
     name = Column(String(500), nullable=False)
@@ -20,6 +21,9 @@ class Ingredient(Base):
 
     @property
     def serialize(self):
+        """Instance method, returns a dictionary
+        with column names as keywords for the instance's
+        associated values. Output can easily be jsonified."""
         ingredient_dict = {
             'name': self.name,
             'id': self.id,
