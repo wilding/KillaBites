@@ -27,18 +27,18 @@
                 <tr>
                     <td>{{ingredient.name}}</td>
                     <td>{{ingredient.group}}</td>
-                    <td>{% if ingredient.january: %}X{% endif %}</td>
-                    <td>{% if ingredient.february: %}X{% endif %}</td>
-                    <td>{% if ingredient.march: %}X{% endif %}</td>
-                    <td>{% if ingredient.april: %}X{% endif %}</td>
-                    <td>{% if ingredient.may: %}X{% endif %}</td>
-                    <td>{% if ingredient.june: %}X{% endif %}</td>
-                    <td>{% if ingredient.july: %}X{% endif %}</td>
-                    <td>{% if ingredient.august: %}X{% endif %}</td>
-                    <td>{% if ingredient.september: %}X{% endif %}</td>
-                    <td>{% if ingredient.october: %}X{% endif %}</td>
-                    <td>{% if ingredient.november: %}X{% endif %}</td>
-                    <td>{% if ingredient.december: %}X{% endif %}</td>
+                    <td>{% if 1 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 2 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 3 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 4 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 5 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 6 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 7 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 8 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 9 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 10 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 11 in ingredient.months %}X{% endif %}</td>
+                    <td>{% if 12 in ingredient.months %}X{% endif %}</td>
                     <td><a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}">Edit</a></td>
                     <td><a href="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}">Delete</a></td>
                 </tr>

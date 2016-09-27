@@ -21,56 +21,21 @@ month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 
 # Homepage
 @app.route('/')
 def homepage():
-    month_num = datetime.now().month
-    month = month_dict[month_num]
-    if month_num == 1:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(january=True).all()
-    elif month_num == 2:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(february=True).all()
-    elif month_num == 3:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(march=True).all()
-    elif month_num == 4:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(april=True).all()
-    elif month_num == 5:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(may=True).all()
-    elif month_num == 6:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(june=True).all()
-    elif month_num == 7:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(july=True).all()
-    elif month_num == 8:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(august=True).all()
-    elif month_num == 9:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(september=True).all()
-    elif month_num == 10:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(october=True).all()
-    elif month_num == 11:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(november=True).all()
-    elif month_num == 12:
-        ingredients = session.query(Ingredient).order_by(Ingredient.group).filter_by(december=True).all()
-    return render_template('homepage.html', ingredients=ingredients, month=month)
+    current_month = datetime.now().month
+    ingredients = session.query(Ingredient).filter(Ingredient.months.any(current_month)).order_by(Ingredient.group).all()
+    return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
 
 
 # Add Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def addIngredient():
     if request.method == 'POST':
-        month_bool = get_month_bool(request.form)
         newingredient = Ingredient(
             name=request.form['name'],
             picture=request.form['picture'],
             group=request.form['group'],
-            january=month_bool[0],
-            february=month_bool[1],
-            march=month_bool[2],
-            april=month_bool[3],
-            may=month_bool[4],
-            june=month_bool[5],
-            july=month_bool[6],
-            august=month_bool[7],
-            september=month_bool[8],
-            october=month_bool[9],
-            november=month_bool[10],
-            december=month_bool[11])
+            months=get_months_from_form(request.form),
+            storage=request.form['storage'])
         session.add(newingredient)
         session.commit()
         flash('Ingredient added!')
@@ -90,19 +55,9 @@ def editIngredient(ingredient_id):
             ingredient.picture = request.form['picture']
         if request.form['group']:
             ingredient.group = request.form['group']
-        month_bool = get_month_bool(request.form)
-        ingredient.january = month_bool[0]
-        ingredient.february = month_bool[1]
-        ingredient.march = month_bool[2]
-        ingredient.april = month_bool[3]
-        ingredient.may = month_bool[4]
-        ingredient.june = month_bool[5]
-        ingredient.july = month_bool[6]
-        ingredient.august = month_bool[7]
-        ingredient.september = month_bool[8]
-        ingredient.october = month_bool[9]
-        ingredient.november = month_bool[10]
-        ingredient.december = month_bool[11]
+        if request.form['storage']:
+            ingredient.storage = request.form['storage']
+        ingredient.months = get_months_from_form(request.form)
         session.add(ingredient)
         session.commit()
         flash(ingredient.name + ' edited!')
@@ -125,15 +80,12 @@ def deleteIngredient(ingredient_id):
 
 
 # month_bool helper function
-def get_month_bool(form):
-    months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
-    month_bool = []
-    for month in months:
-        if form.get(month):
-            month_bool.append(True)
-        else:
-            month_bool.append(False)
-    return month_bool
+def get_months_from_form(form):
+    output = []
+    for i in range(1, 13):
+        if form.get(month_dict[i][:3]):
+            output.append(i)
+    return output
 
 
 if __name__ == '__main__':

@@ -1,6 +1,4 @@
 # Configuration
-import os
-import sys
 from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -14,22 +12,12 @@ class Ingredient(Base):
     __tablename__ = 'ingredient'
     id = Column(Integer, primary_key=True)
     name = Column(String(500), nullable=False)
-    picture = Column(String(2000))
+    picture = Column(String(9999))
     group = Column(String(500), nullable=False)
-    january = Column(Boolean)
-    february = Column(Boolean)
-    march = Column(Boolean)
-    april = Column(Boolean)
-    may = Column(Boolean)
-    june = Column(Boolean)
-    july = Column(Boolean)
-    august = Column(Boolean)
-    september = Column(Boolean)
-    october = Column(Boolean)
-    november = Column(Boolean)
-    december = Column(Boolean)
+    months = Column(ARRAY(Integer))
+    alts = Column(ARRAY(String(500)))
+    storage = Column(String(9999))
 
-    # JSON
     @property
     def serialize(self):
         ingredient_dict = {
@@ -37,18 +25,9 @@ class Ingredient(Base):
             'id': self.id,
             'picture': self.picture,
             'group': self.group,
-            'january': self.january,
-            'february': self.february,
-            'march': self.march,
-            'april': self.april,
-            'may': self.may,
-            'june': self.june,
-            'july': self.july,
-            'august': self.august,
-            'september': self.september,
-            'october': self.october,
-            'november': self.november,
-            'december': self.december
+            'months': self.months,
+            'alts': self.alts,
+            'storage': self.storage
         }
         return ingredient_dict
 
@@ -69,33 +48,6 @@ class Ingredient(Base):
 #    cuisine list?
 #    season list?
 #    occasion list?
-#    # JSON
-#
-#
-# # Class
-# class Recipe (Base):
-#    # Table Info
-#    __tablename__ = 'recipe'
-#    # Mappers
-#    name
-#    id
-#    photos
-#    ingredients
-#    instructions
-#    courses
-#    types
-#    cuisines
-#    seasons
-#    occasions
-#    time
-#    calories
-#    sources
-#    author id
-#    vegetarian
-#    comments
-#    score
-#    comments toggle
-#    notes
 #    # JSON
 
 

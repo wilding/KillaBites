@@ -78,89 +78,93 @@
             <label>Months</label>
             <li class="month-menu">
                 <div class="month-container"><label>Jan
-                    {% if ingredient.january %}
-                        <input type="checkbox" name="jan" checked>
+                    {% if 1 in ingredient.months %}
+                        <input type="checkbox" name="Jan" checked>
                         {% else %}
-                        <input type="checkbox" name="jan">
+                        <input type="checkbox" name="Jan">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Feb
-                    {% if ingredient.february %}
-                        <input type="checkbox" name="feb" checked>
+                    {% if 2 in ingredient.months %}
+                        <input type="checkbox" name="Feb" checked>
                         {% else %}
-                        <input type="checkbox" name="feb">
+                        <input type="checkbox" name="Feb">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Mar
-                    {% if ingredient.march %}
-                        <input type="checkbox" name="mar" checked>
+                    {% if 3 in ingredient.months %}
+                        <input type="checkbox" name="Mar" checked>
                         {% else %}
-                        <input type="checkbox" name="mar">
+                        <input type="checkbox" name="Mar">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Apr
-                    {% if ingredient.april %}
-                        <input type="checkbox" name="apr" checked>
+                    {% if 4 in ingredient.months %}
+                        <input type="checkbox" name="Apr" checked>
                         {% else %}
-                        <input type="checkbox" name="apr">
+                        <input type="checkbox" name="Apr">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>May
-                    {% if ingredient.may %}
-                        <input type="checkbox" name="may" checked>
+                    {% if 5 in ingredient.months %}
+                        <input type="checkbox" name="May" checked>
                         {% else %}
-                        <input type="checkbox" name="may">
+                        <input type="checkbox" name="May">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Jun
-                    {% if ingredient.june %}
-                        <input type="checkbox" name="jun" checked>
+                    {% if 6 in ingredient.months %}
+                        <input type="checkbox" name="Jun" checked>
                         {% else %}
-                        <input type="checkbox" name="jun">
+                        <input type="checkbox" name="Jun">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Jul
-                    {% if ingredient.july %}
-                        <input type="checkbox" name="jul" checked>
+                    {% if 7 in ingredient.months %}
+                        <input type="checkbox" name="Jul" checked>
                         {% else %}
-                        <input type="checkbox" name="jul">
+                        <input type="checkbox" name="Jul">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Aug
-                    {% if ingredient.august %}
-                        <input type="checkbox" name="aug" checked>
+                    {% if 8 in ingredient.months %}
+                        <input type="checkbox" name="Aug" checked>
                         {% else %}
-                        <input type="checkbox" name="aug">
+                        <input type="checkbox" name="Aug">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Sep
-                    {% if ingredient.september %}
-                        <input type="checkbox" name="sep" checked>
+                    {% if 9 in ingredient.months %}
+                        <input type="checkbox" name="Sep" checked>
                         {% else %}
-                        <input type="checkbox" name="sep">
+                        <input type="checkbox" name="Sep">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Oct
-                    {% if ingredient.october %}
-                        <input type="checkbox" name="oct" checked>
+                    {% if 10 in ingredient.months %}
+                        <input type="checkbox" name="Oct" checked>
                         {% else %}
-                        <input type="checkbox" name="oct">
+                        <input type="checkbox" name="Oct">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Nov
-                    {% if ingredient.november %}
-                        <input type="checkbox" name="nov" checked>
+                    {% if 11 in ingredient.months %}
+                        <input type="checkbox" name="Nov" checked>
                         {% else %}
-                        <input type="checkbox" name="nov">
+                        <input type="checkbox" name="Nov">
                         {% endif %}
                 </label></div>
                 <div class="month-container"><label>Dec
-                    {% if ingredient.december %}
-                        <input type="checkbox" name="dec" checked>
+                    {% if 12 in ingredient.months %}
+                        <input type="checkbox" name="Dec" checked>
                         {% else %}
-                        <input type="checkbox" name="dec">
+                        <input type="checkbox" name="Dec">
                         {% endif %}
                 </label></div>
+            </li>
+            <label>Storage Instructions</label>
+            <li>
+                <input type="text" name="storage" maxlength="9999" placeholder="{{ingredient.storage}}">
             </li>
             <li>
                 <input type="submit" value="Edit Ingredient">
