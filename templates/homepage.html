@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% block title %} __super()__ | {{month}}{% endblock %}
+
 {% block content %}
     <h1>{{month}}</h1>
     <a href="{{url_for('addIngredient')}}">Add Ingredient</a>
