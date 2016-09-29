@@ -29,6 +29,17 @@ def homepage():
     return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
 
 
+# Full Menu
+@app.route('/menu/')
+def menupage():
+    """docstring for menupage"""
+    recipes = session.query(Recipe).all()
+    return render_template('menupage.html', recipes=recipes)
+
+
+# Ingredient CRUD
+
+
 # Add Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def addIngredient():

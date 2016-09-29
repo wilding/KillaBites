@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}__super()__ | Full Menu{% endblock %}
+
+{% block content %}
+    <h1>Full Menu</h1>
+    <a href="#">New Recipe</a>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>pictures</th>
+                <th>gif</th>
+                <th>sources</th>
+                <th>time</th>
+                <th>yield</th>
+                <th>calories</th>
+                <th>vegetarian</th>
+                <th>months</th>
+                <th>cuisines</th>
+                <th>groups</th>
+                <th>courses</th>
+                <th>occassions</th>
+                <th>ingredients</th>
+                <th>instructions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipes %}
+                <tr>
+                    <td>{{recipe.id}}</td>
+                    <td>{{recipe.name}}</td>
+                    <td>{{recipe.pictures}}</td>
+                    <td>{{recipe.gif}}</td>
+                    <td>{{recipe.sources}}</td>
+                    <td>{{recipe.time}}</td>
+                    <td>{{recipe.total_yield}}</td>
+                    <td>{{recipe.calories}}</td>
+                    <td>{{recipe.vegetarian}}</td>
+                    <td>{{recipe.months}}</td>
+                    <td>{{recipe.cuisines}}</td>
+                    <td>{{recipe.groups}}</td>
+                    <td>{{recipe.courses}}</td>
+                    <td>{{recipe.occassions}}</td>
+                    <td>{{recipe.ingredients}}</td>
+                    <td>{{recipe.instructions}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
