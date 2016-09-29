@@ -37,6 +37,14 @@ def menupage():
     return render_template('menupage.html', recipes=recipes)
 
 
+# Full Chart
+@app.route('/chart/')
+def chartpage():
+    """docstring for chartpage"""
+    ingredients = session.query(Ingredient).order_by(Ingredient.group).all()
+    return render_template('chartpage.html', ingredients=ingredients)
+
+
 # Ingredient CRUD
 
 
