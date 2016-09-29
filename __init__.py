@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect, flash, jso
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, joinedload_all
-from database_setup import Base, Ingredient
+from database_setup import Base, Ingredient, Recipe
 
 from datetime import datetime
 
@@ -94,6 +94,75 @@ def deleteIngredient(ingredient_id):
         return redirect(url_for('homepage'))
     else:
         return render_template('deleteingredient.html', ingredient=ingredient)
+
+
+# Recipe CRUD
+
+
+# View Recipe
+@app.route('/recipe/<int:recipe_id>/')
+def viewRecipe(recipe_id):
+    """docstring for viewRecipe"""
+    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
+    return render_template('viewrecipe.html', recipe=recipe)
+
+
+# New Recipe
+@app.route('/recipe/new/', methods=['GET', 'POST'])
+def newRecipe():
+    """docsting for newRecipe"""
+    # if request.method == 'POST':
+        # newrecipe = Recipe(
+            # name
+            # pictures
+            # gif
+            # sources
+            # time
+            # total_yield
+            # calories
+            # vegetarian
+            # months
+            # cuisines
+            # groups
+            # courses
+            # occassions
+            # ingredients
+            # instructions)
+        # session.add(newrecipe)
+        # session.commit()
+        # flash(newrecipe.name + ' added!')
+        # return redirect(url_for('homepage'))
+    # else:
+    return render_template('newrecipe.html')
+
+
+# Edit Recipe
+@app.route('/recipe/edit/<int:recipe_id>/', methods=['GET', 'POST'])
+def editRecipe(recipe_id):
+    """docstring for editRecipe"""
+    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
+    # if request.method == 'POST':
+        # parse form
+        # session.add(recipe)
+        # session.commit()
+        # flash(recipe.name + ' edited!')
+        # return redirect(url_for('viewRecipe', recipe_id=recipe.id))
+    # else:
+    return render_template('editrecipe.html', recipe=recipe)
+
+
+# Delete Recipe
+@app.route('/recipe/delete/<int:recipe_id>/', methods=['GET', 'POST'])
+def deleteRecipe(recipe_id):
+    """docstring for deleteRecipe"""
+    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
+    if request.method == 'POST':
+        session.delete(recipe)
+        session.commit()
+        flash(recipe.name + ' deleted!')
+        return redirect(url_for('homepage'))
+    else:
+        return render_template('deleterecipe.html', recipe=recipe)
 
 
 # Helper Functions
