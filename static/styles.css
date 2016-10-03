@@ -12,6 +12,9 @@ body {
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
+    /*background-color: #2E56A4;*/
+    background-image: url(paper3.jpg);
+    background-size: cover;
 }
 
 table {
@@ -20,6 +23,7 @@ table {
 
 td {
     text-align: center;
+    /*empty-cells: hide;*/
 }
 
 th {
@@ -49,4 +53,22 @@ li {
 
 input[type=checkbox] {
     width: 100%;
+}
+
+.ingredients_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ingredient_pic {
+    height: 8em;
+    width: 8em;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin: 10px;
 }

@@ -1,50 +1,13 @@
 {% extends "layout.html" %}
 
-{% block title %} __super()__ | {{month}}{% endblock %}
+{% block title %} {{ super() }} | {{month}}{% endblock %}
 
 {% block content %}
     <h1>{{month}}</h1>
     <a href="{{url_for('addIngredient')}}">Add Ingredient</a>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Group</th>
-                <th>Jan</th>
-                <th>Feb</th>
-                <th>Mar</th>
-                <th>Apr</th>
-                <th>May</th>
-                <th>Jun</th>
-                <th>Jul</th>
-                <th>Aug</th>
-                <th>Sep</th>
-                <th>Oct</th>
-                <th>Nov</th>
-                <th>Dec</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for ingredient in ingredients: %}
-                <tr>
-                    <td>{{ingredient.name}}</td>
-                    <td>{{ingredient.group}}</td>
-                    <td>{% if 1 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 2 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 3 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 4 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 5 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 6 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 7 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 8 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 9 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 10 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 11 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 12 in ingredient.months %}X{% endif %}</td>
-                    <td><a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}">Edit</a></td>
-                    <td><a href="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}">Delete</a></td>
-                </tr>
-                {% endfor %}
-        </tbody>
-    </table>
+    <div class="ingredients_container">
+        {% for ingredient in ingredients: %}
+            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
+            {% endfor %}
+    </div>
 {% endblock %}
