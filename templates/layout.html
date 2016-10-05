@@ -8,6 +8,11 @@
     {% block scripts %}{% endblock %}
 </head>
 <body>
+    <nav>
+        <a href="{{url_for('chartpage')}}" class="nav-link">Chart</a>
+        <a href="{{url_for('homepage')}}" class="nav-link">Home</a>
+        <a href="{{url_for('menupage')}}" class="nav-link">Menu</a>
+    </nav>
     {% block content %}{% endblock %}
 </body>
 </html>
