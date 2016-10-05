@@ -26,15 +26,18 @@ h1 {
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 td {
     text-align: center;
+    border: 1px solid black;
     /*empty-cells: hide;*/
 }
 
 th {
     text-align: center;
+    border: 1px solid black;
 }
 
 /* Forms */

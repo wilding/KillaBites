@@ -9,7 +9,9 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Alts</th>
                 <th>Group</th>
+                <th>Storage</th>
                 <th>Jan</th>
                 <th>Feb</th>
                 <th>Mar</th>
@@ -28,7 +30,9 @@
             {% for ingredient in ingredients: %}
                 <tr>
                     <td>{{ingredient.name}}</td>
+                    <td>{{ingredient.alts}}</td>
                     <td>{{ingredient.group}}</td>
+                    <td>{{ingredient.storage}}</td>
                     <td>{% if 1 in ingredient.months %}X{% endif %}</td>
                     <td>{% if 2 in ingredient.months %}X{% endif %}</td>
                     <td>{% if 3 in ingredient.months %}X{% endif %}</td>
