@@ -1,23 +1,16 @@
 To Do:
 
     - CRUD recipe
+    - view recipe
 
-    - full chart
-    - full menu
-    - monthly menu
+     - filter recipe by ingredient click
+    - hover for ingredient info
 
-    - dynamic forms
-
-    - show ingredient pictures on homepage
     - homepage css
     - chart css
     - full menu css
-    - monthly menu css
     - view recipe css
     - form css
-
-    - filter recipe by ingredient click
-    - hover for ingredient info
 
     - json backups
     - search google pics for additional images
@@ -27,6 +20,10 @@ To Do:
 
     - download recipe as pdf
     - JSON API
+
+    - ingredient/instruction sections
+    - time sections
+    - occassion dates
 
     - Killa!
 
@@ -42,14 +39,13 @@ Should I?
         - forking recipes
         - favorites
 
-    - ingredient/instruction sections
-    - time sections
-    - occassion dates
     - recipe ingredients json input
 
     - weekly meal plan
         - occassions automatic
     - nutrition info
+
+    - recipe versions
 
     - pantry
     - prices
@@ -72,3 +68,9 @@ Should I?
     - OSX app
     - android app
     - windows app
+
+
+
+
+    Resources:
+        http://www.voidtricks.com/jquery-add-remove-input-fields/
