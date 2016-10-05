@@ -59,6 +59,7 @@ def addIngredient():
             picture=request.form['picture'],
             group=request.form['group'],
             months=get_months_from_form(request.form),
+            alts=request.form.getlist('alt'),
             storage=request.form['storage'])
         session.add(newingredient)
         session.commit()

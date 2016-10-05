@@ -13,9 +13,16 @@ body {
     margin-left: auto;
     justify-content: center;
     /*background-color: #2E56A4;*/
-    background-image: url(paper3.jpg);
-    background-size: cover;
+    /*background-image: url(paper3.jpg);*/
+    /*background-size: cover;*/
 }
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Table */
 
 table {
     width: 100%;
@@ -30,10 +37,7 @@ th {
     text-align: center;
 }
 
-h1 {
-    width: 100%;
-    text-align: center;
-}
+/* Forms */
 
 ul {
     width: 100%;
@@ -47,13 +51,58 @@ li {
     padding: 10px 0px 10px 0px;
 }
 
+.ingredient-form {
+    width: 50%;
+}
+
+.group-menu {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+.month-menu {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
 .month-container {
     width: 8.333333%;
+    text-align: center;
+}
+
+.group-container {
+    width: 16.666666%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 input[type=checkbox] {
     width: 100%;
+    margin: 0;
 }
+
+input[type=radio] {
+    width: 100%;
+}
+
+fieldset {
+    margin: 10px 0px 10px 0px;
+}
+
+label {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+
+/* Homepage */
+
 
 .ingredients_container {
     width: 100%;

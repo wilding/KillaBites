@@ -2,50 +2,47 @@
 
 {% block title %}{{ super() }} | New Ingredient{% endblock %}
 
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dynamicfields.js')}}"></script>
+{% endblock %}
+
 {% block content %}
     <h1>New Ingredient</h1>
-    <form action="{{url_for('addIngredient')}}" method="post">
-        <ul>
-            <label>Name</label>
-            <li>
-                <input type="text" name="name">
-            </li>
-            <label>Picture</label>
-            <li>
-                <input type="url" name="picture">
-            </li>
-            <label>Group</label>
-            <li>
-                <input type="radio" name="group" value="fruit"> Fruit
-                <input type="radio" name="group" value="vegetables"> Vegetables
-                <input type="radio" name="group" value="nuts"> Nuts
-                <input type="radio" name="group" value="fish/seafood"> Fish/Seafood
-                <input type="radio" name="group" value="birds"> Birds
-                <input type="radio" name="group" value="red meat"> Red Meat
-            </li>
-            <label>Months</label>
-            <li>
-                <input type="checkbox" name="Jan"> Jan
-                <input type="checkbox" name="Feb"> Feb
-                <input type="checkbox" name="Mar"> Mar
-                <input type="checkbox" name="Apr"> Apr
-                <input type="checkbox" name="May"> May
-                <input type="checkbox" name="Jun"> Jun
-                <input type="checkbox" name="Jul"> Jul
-                <input type="checkbox" name="Aug"> Aug
-                <input type="checkbox" name="Sep"> Sep
-                <input type="checkbox" name="Oct"> Oct
-                <input type="checkbox" name="Nov"> Nov
-                <input type="checkbox" name="Dec"> Dec
-            </li>
-            <label>Storage Instructions</label>
-            <li>
-                <input type="text" name="storage" maxlength="9999">
-            </li>
-            <li>
-                <input type="submit" value="Create New Ingredient">
-                <a href="{{url_for('homepage')}}">Cancel</a>
-            </li>
-        </ul>
+    <form action="{{url_for('addIngredient')}}" method="post" class="ingredient-form">
+        <fieldset>
+            <legend>Name</legend>
+            <button id="add" type="button">Add Alt</button>
+            <div id="items">
+                <div><input type="text" name="name" maxlength="500" required autofocus></div>
+            </div>
+        </fieldset>
+        <label>Picture <input type="url" name="picture" maxlength="9999"></label><br>
+        <div class="group-menu">
+            <div class="group-container"><label>Fruit<input type="radio" name="group" value="fruit" required></label></div>
+            <div class="group-container"><label>Vegetables<input type="radio" name="group" value="vegetables" required></label></div>
+            <div class="group-container"><label>Nuts<input type="radio" name="group" value="nuts" required></label></div>
+            <div class="group-container"><label>Sea<input type="radio" name="group" value="sea" required></label></div>
+            <div class="group-container"><label>Air<input type="radio" name="group" value="air" required></label></div>
+            <div class="group-container"><label>Land<input type="radio" name="group" value="land" required></label></div>
+        </div>
+        <div class="month-menu">
+            <div class="month-container"><label>Jan<input type="checkbox" name="Jan"></label></div>
+            <div class="month-container"><label>Feb<input type="checkbox" name="Feb"></label></div>
+            <div class="month-container"><label>Mar<input type="checkbox" name="Mar"></label></div>
+            <div class="month-container"><label>Apr<input type="checkbox" name="Apr"></label></div>
+            <div class="month-container"><label>May<input type="checkbox" name="May"></label></div>
+            <div class="month-container"><label>Jun<input type="checkbox" name="Jun"></label></div>
+            <div class="month-container"><label>Jul<input type="checkbox" name="Jul"></label></div>
+            <div class="month-container"><label>Aug<input type="checkbox" name="Aug"></label></div>
+            <div class="month-container"><label>Sep<input type="checkbox" name="Sep"></label></div>
+            <div class="month-container"><label>Oct<input type="checkbox" name="Oct"></label></div>
+            <div class="month-container"><label>Nov<input type="checkbox" name="Nov"></label></div>
+            <div class="month-container"><label>Dec<input type="checkbox" name="Dec"></label></div>
+        </div>
+        <label>Storage Instructions <textarea name="storage" maxlength="9999"></textarea></label><br>
+        <input type="submit" value="Create New Ingredient">
+        <input type="reset">
+        <button type="button" onclick="window.location.assign('{{url_for('homepage')}}');">Cancel</button>
     </form>
 {% endblock %}
