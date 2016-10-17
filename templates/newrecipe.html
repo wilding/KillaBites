@@ -1,0 +1,165 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} | New Recipe{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dynamicfields.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1>New Recipe</h1>
+    <form action="{{url_for('newRecipe')}}" method="post">
+       <ul>
+            <li><label>Name: <input type="text" name="name" maxlength="500" required autofocus></label></li>
+            <li>
+                <button id="add-pics" type="button">+</button>
+                <label>Pictures: </label>
+                <div id="pic-fields"><input type="text" name="pictures" maxlength="9999"></div>
+            </li>
+            <li><label>Gif: <input type="text" name="gif" maxlength="9999"></label></li>
+            <li>
+                <button id="add-sources" type="button">+</button>
+                <label>Sources: </label>
+                <div id="source-fields"><input type="text" name="sources" maxlength="9999"></div>
+            </li>
+            <li><label>Days: <input type="number" name="days"></label>
+            <label>Hours: <input type="number" name="hours"></label>
+            <label>Minutes: <input type="number" name="minutes"></label>
+            <label>Seconds: <input type="number" name="seconds"></label></li>
+            <li><label>Yield: <input type="text" name="total_yield" maxlength="500"></label></li>
+            <li><label>Calories: <input type="number" name="calories"></label></li>
+            <li><label>Vegetarian<input type="checkbox" name="vegetarian"></label></li>
+            <li><div class="month-menu">
+                <div class="month-container"><label>Jan<input type="checkbox" name="Jan"></label></div>
+                <div class="month-container"><label>Feb<input type="checkbox" name="Feb"></label></div>
+                <div class="month-container"><label>Mar<input type="checkbox" name="Mar"></label></div>
+                <div class="month-container"><label>Apr<input type="checkbox" name="Apr"></label></div>
+                <div class="month-container"><label>May<input type="checkbox" name="May"></label></div>
+                <div class="month-container"><label>Jun<input type="checkbox" name="Jun"></label></div>
+                <div class="month-container"><label>Jul<input type="checkbox" name="Jul"></label></div>
+                <div class="month-container"><label>Aug<input type="checkbox" name="Aug"></label></div>
+                <div class="month-container"><label>Sep<input type="checkbox" name="Sep"></label></div>
+                <div class="month-container"><label>Oct<input type="checkbox" name="Oct"></label></div>
+                <div class="month-container"><label>Nov<input type="checkbox" name="Nov"></label></div>
+                <div class="month-container"><label>Dec<input type="checkbox" name="Dec"></label></div>
+            </div></li>
+            <li>
+                <div class="course-container"><label>Breakfast<input type="checkbox" name="breakfast"></label></div>
+                <div class="course-container"><label>Lunch & Dinner<input type="checkbox" name="dinner"></label></div>
+                <div class="course-container"><label>Dessert<input type="checkbox" name="dessert"></label></div>
+                <div class="course-container"><label>Basics<input type="checkbox" name="basics"></label></div>
+            </li>
+            <li>
+                <label>Cuisines:
+                <select name="cuisines" multiple>
+                    <option>African</option>
+                    <option>American</option>
+                    <option>Arab</option>
+                    <option>Brazilian</option>
+                    <option>Burmese</option>
+                    <option>Cajun</option>
+                    <option>Canadian</option>
+                    <option>Caribbean</option>
+                    <option>Central American</option>
+                    <option>Chinese</option>
+                    <option>Eastern European</option>
+                    <option>English</option>
+                    <option>Ethiopian</option>
+                    <option>Filipino</option>
+                    <option>French</option>
+                    <option>German</option>
+                    <option>Hawaiian</option>
+                    <option>Indian</option>
+                    <option>Indonesian</option>
+                    <option>Israeli</option>
+                    <option>Italian</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                    <option>Lebanese</option>
+                    <option>Mediterranean</option>
+                    <option>Mexican</option>
+                    <option>Middle Eastern</option>
+                    <option>Oceanic</option>
+                    <option>Pacific</option>
+                    <option>Persian</option>
+                    <option>Polynesian</option>
+                    <option>Scandinavian</option>
+                    <option>South American</option>
+                    <option>Southern</option>
+                    <option>Spanish</option>
+                    <option>Thai</option>
+                    <option>Turkish</option>
+                    <option>Vietnamese</option>
+                </select></label>
+            </li>
+            <li>
+                <label>Groups:
+                <select name="groups" multiple>
+                    <optgroup label="Breakfast">
+                        <option>Eggs</option>
+                        <option>Toast</option>
+                        <option>Oatmeal</option>
+                        <option>Meat</option>
+                        <option>Vegetable</option>
+                        <option>Fruit</option>
+                        <option>Smoothie</option>
+                        <option>Biscuits</option>
+                        <option>Muffins</option>
+                        <option>Pancakes</option>
+                    </optgroup>
+                    <optgroup label="Lunch & Dinner">
+                        <option>Salad</option>
+                        <option>Soup</option>
+                        <option>Bread</option>
+                        <option>Tortilla</option>
+                        <option>Rice</option>
+                        <option>Pasta</option>
+                        <option>Vegetable</option>
+                        <option>Sea</option>
+                        <option>Air</option>
+                        <option>Land</option>
+                    </optgroup>
+                    <optgroup label="Dessert">
+                        <option>Fruit & Cheese</option>
+                        <option>Pudding</option>
+                        <option>Ice Cream</option>
+                        <option>Milkshake</option>
+                        <option>Cheesecake</option>
+                        <option>Pastry</option>
+                        <option>Cookie</option>
+                        <option>Candy</option>
+                        <option>Donut</option>
+                        <option>Cake</option>
+                    </optgroup>
+                </select></label>
+            </li>
+            <li>
+                <button id="add-occasions" type="button">+</button>
+                <label>Occasions: </label>
+                <div id="occasion-fields"><input type="text" name="occasions" maxlength="500"></div>
+            </li>
+            <li>
+                <button id="add-ingredients" type="button">+</button>
+                <label>Ingredients: </label>
+                <div id="ingredient-fields"><input type="text" name="ingredients" maxlength="9999"></div>
+            </li>
+            <button id="add-instructions" type="button">+</button>
+            <label>Instructions: </label>
+            <li>
+                <div id="instruction-fields">
+                    <div>
+                      <label>Text: <input type="text" name="instructions-text" maxlength="9999"></label>
+                      <label>Photo: <input type="text" name="instructions-photo" maxlength="9999"></label>
+                      <label>Video: <input type="text" name="instructions-video" maxlength="9999"></label>
+                      <label>Gif: <input type="text" name="instructions-gif" maxlength="9999"></label>
+                      <label>Note: <input type="text" name="instructions-note" maxlength="9999"></label>
+                    </div>
+                </div>
+            </li>
+            <li><input type="submit" value="Create New Recipe">
+            <input type="reset">
+            <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button></li>
+        </ul>
+    </form>
+{% endblock %}

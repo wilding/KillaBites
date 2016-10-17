@@ -107,14 +107,17 @@ fieldset {
     margin: 10px 0px 10px 0px;
 }
 
-label {
-    width: 100%;
-}
-
 textarea {
     width: 100%;
 }
 
+#add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
+    height: 19px;
+}
+
+.course-container {
+    width: 25%;
+}
 
 /* Homepage */
 

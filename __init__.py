@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, joinedload_all
 from database_setup import Base, Ingredient, Recipe
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # initialize flask app
 app = Flask(__name__)
@@ -34,6 +34,7 @@ def homepage():
 @app.route('/menu/')
 def menupage():
     """docstring for menupage"""
+    # session.rollback()
     recipes = session.query(Recipe).all()
     return render_template('menupage.html', recipes=recipes)
 
@@ -58,7 +59,7 @@ def addIngredient():
             name=request.form['name'],
             picture=request.form['picture'],
             group=request.form['group'],
-            months=get_months_from_form(request.form),
+            months=parse_months(request.form),
             alts=request.form.getlist('alt'),
             storage=request.form['storage'])
         session.add(newingredient)
@@ -83,7 +84,7 @@ def editIngredient(ingredient_id):
             ingredient.group = request.form['group']
         if request.form['storage']:
             ingredient.storage = request.form['storage']
-        ingredient.months = get_months_from_form(request.form)
+        ingredient.months = parse_months(request.form)
         session.add(ingredient)
         session.commit()
         flash(ingredient.name + ' edited!')
@@ -121,29 +122,29 @@ def viewRecipe(recipe_id):
 @app.route('/recipe/new/', methods=['GET', 'POST'])
 def newRecipe():
     """docsting for newRecipe"""
-    # if request.method == 'POST':
-        # newrecipe = Recipe(
-            # name
-            # pictures
-            # gif
-            # sources
-            # time
-            # total_yield
-            # calories
-            # vegetarian
-            # months
-            # cuisines
-            # groups
-            # courses
-            # occassions
-            # ingredients
-            # instructions)
-        # session.add(newrecipe)
-        # session.commit()
-        # flash(newrecipe.name + ' added!')
-        # return redirect(url_for('homepage'))
-    # else:
-    return render_template('newrecipe.html')
+    if request.method == 'POST':
+        newrecipe = Recipe(
+            name=request.form['name'],
+            pictures=request.form.getlist('pictures'),
+            gif=request.form['gif'],
+            sources=request.form.getlist('sources'),
+            time=parse_time(request.form),
+            total_yield=request.form['total_yield'],
+            calories=request.form['calories'],
+            vegetarian=True if request.form.get('vegetarian') else False,
+            months=parse_months(request.form),
+            cuisines=request.form.getlist('cuisines'),
+            groups=request.form.getlist('groups'),
+            courses=parse_courses(request.form),
+            occasions=request.form.getlist('occasions'),
+            ingredients=request.form.getlist('ingredients'),
+            instructions=parse_instructions(request.form))
+        session.add(newrecipe)
+        session.commit()
+        flash(newrecipe.name + ' added!')
+        return redirect(url_for('homepage'))
+    else:
+        return render_template('newrecipe.html')
 
 
 # Edit Recipe
@@ -178,13 +179,57 @@ def deleteRecipe(recipe_id):
 # Helper Functions
 
 
-# month_bool helper function
-def get_months_from_form(form):
-    """docstring for get_months_from_form"""
+# month parser helper function
+def parse_months(form):
+    """docstring for parse_months"""
     output = []
     for i in range(1, 13):
         if form.get(month_dict[i][:3]):
             output.append(i)
+    return output
+
+
+# timedelta parser helper function
+def parse_time(form):
+    days = int(form['days']) if form.get('days') else 0
+    hours = int(form['hours']) if form.get('hours') else 0
+    minutes = int(form['minutes']) if form.get('minutes') else 0
+    seconds = int(form['seconds']) if form.get('seconds') else 0
+    return timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
+
+
+# course parser helper function
+def parse_courses(form):
+    """docstring for parse_courses"""
+    output = []
+    if form.get('breakfast'):
+        output.append('Breakfast')
+    if form.get('dinner'):
+        output.append('Lunch & Dinner')
+    if form.get('dessert'):
+        output.append('Dessert')
+    if form.get('basics'):
+        output.append('Basics')
+    return output
+
+
+# instructions parser helper function
+def parse_instructions(form):
+    """docstring for parse_instructions"""
+    text_list = form.getlist('instructions-text')
+    photo_list = form.getlist('instructions-photo')
+    video_list = form.getlist('instructions-video')
+    gif_list = form.getlist('instructions-gif')
+    note_list = form.getlist('instructions-note')
+    output = []
+    for i in range(len(text_list)):
+        instruction_dict = {}
+        instruction_dict['text'] = text_list[i]
+        instruction_dict['photo'] = photo_list[i]
+        instruction_dict['video'] = video_list[i]
+        instruction_dict['gif'] = gif_list[i]
+        instruction_dict['note'] = note_list[i]
+        output.append(instruction_dict)
     return output
 
 

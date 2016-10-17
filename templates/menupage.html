@@ -30,7 +30,7 @@
             {% for recipe in recipes %}
                 <tr>
                     <td>{{recipe.id}}</td>
-                    <td>{{recipe.name}}</td>
+                    <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
                     <td>{{recipe.pictures}}</td>
                     <td>{{recipe.gif}}</td>
                     <td>{{recipe.sources}}</td>
@@ -42,9 +42,10 @@
                     <td>{{recipe.cuisines}}</td>
                     <td>{{recipe.groups}}</td>
                     <td>{{recipe.courses}}</td>
-                    <td>{{recipe.occassions}}</td>
-                    <td>{{recipe.ingredients}}</td>
+                    <td>{{recipe.occasions}}</td>
+                    <td>{% for ingredient in recipe.ingredients%}<p>{{ingredient}}</p>{% endfor %}</td>
                     <td>{{recipe.instructions}}</td>
+                    <td><a href="#">Edit</a><br><a href="#">Delete</a></td>
                 </tr>
                 {% endfor %}
         </tbody>
