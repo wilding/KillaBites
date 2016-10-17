@@ -52,8 +52,8 @@ def chartpage():
 
 # Add Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
-def addIngredient():
-    """docstring for addIngredient"""
+def newIngredient():
+    """docstring for newIngredient"""
     if request.method == 'POST':
         newingredient = Ingredient(
             name=request.form['name'],
