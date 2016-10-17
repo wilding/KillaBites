@@ -130,7 +130,7 @@ def newRecipe():
             sources=request.form.getlist('sources'),
             time=parse_time(request.form),
             total_yield=request.form['total_yield'],
-            calories=request.form['calories'],
+            calories=request.form['calories'] if request.form.get('calories') else 0,
             vegetarian=True if request.form.get('vegetarian') else False,
             months=parse_months(request.form),
             cuisines=request.form.getlist('cuisines'),
