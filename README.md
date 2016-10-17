@@ -70,6 +70,9 @@ Should I?
     - windows app
 
 
+backgrounds?
+    menu paper?
+    chalkboard?
 
 
     Resources:
