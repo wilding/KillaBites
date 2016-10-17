@@ -1,0 +1,557 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} | Edit {{recipe.name}}{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dynamicfields.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1>Edit {{recipe.name}}</h1>
+    <form action="{{url_for('editRecipe', recipe_id=recipe.id)}}" method="post">
+       <ul>
+            <li><label>Name: <input type="text" name="name" maxlength="500" placeholder="{{recipe.name}}"></label></li>
+            <li>
+                <button id="add-pics" type="button">+</button>
+                <label>Pictures:</label>
+                <div id="pic-fields">
+                {% for picture in recipe.pictures %}
+                    <div><input type="text" name="pictures" maxlength="9999" value="{{picture}}"><button class="delete" type="button">Delete</button></div>
+                    {% endfor %}
+                </div>
+            </li>
+            <li><label>Gif: <input type="text" name="gif" maxlength="9999" placeholder="{{recipe.gif}}"></label></li>
+            <li>
+                <button id="add-sources" type="button">+</button>
+                <label>Sources:</label>
+                <div id="source-fields">
+                    {% for source in recipe.sources %}
+                        <div><input type="text" name="sources" maxlength="9999" value="{{source}}"><button class="delete" type="button">Delete</button></div>
+                        {% endfor %}
+                </div>
+            </li>
+            <li><label>Days: <input type="number" name="days" value="{{recipe.time.days}}"></label>
+            <label>Hours: <input type="number" name="hours" value="{{recipe.time.seconds // 3600}}"></label>
+            <label>Minutes: <input type="number" name="minutes" value="{{(recipe.time.seconds % 3600) // 60}}"></label>
+            <label>Seconds: <input type="number" name="seconds" value="{{(recipe.time.seconds % 3600) % 60}}"></label></li>
+            <li><label>Yield: <input type="text" name="total_yield" maxlength="500" placeholder="{{recipe.total_yield}}"></label></li>
+            <li><label>Calories: <input type="number" name="calories" placeholder="{{recipe.calories}}"></label></li>
+            <li><label>Vegetarian
+                {% if recipe.vegetarian %}
+                    <input type="checkbox" name="vegetarian" checked>
+                    {% else %}
+                    <input type="checkbox" name="vegetarian">
+                    {% endif %}
+            </label></li>
+            <li><div class="month-menu">
+                <div class="month-container"><label>Jan
+                    {% if 1 in recipe.months %}
+                        <input type="checkbox" name="Jan" checked>
+                        {% else %}
+                        <input type="checkbox" name="Jan">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Feb
+                    {% if 2 in recipe.months %}
+                        <input type="checkbox" name="Feb" checked>
+                        {% else %}
+                        <input type="checkbox" name="Feb">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Mar
+                    {% if 3 in recipe.months %}
+                        <input type="checkbox" name="Mar" checked>
+                        {% else %}
+                        <input type="checkbox" name="Mar">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Apr
+                    {% if 4 in recipe.months %}
+                        <input type="checkbox" name="Apr" checked>
+                        {% else %}
+                        <input type="checkbox" name="Apr">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>May
+                    {% if 5 in recipe.months %}
+                        <input type="checkbox" name="May" checked>
+                        {% else %}
+                        <input type="checkbox" name="May">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Jun
+                    {% if 6 in recipe.months %}
+                        <input type="checkbox" name="Jun" checked>
+                        {% else %}
+                        <input type="checkbox" name="Jun">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Jul
+                    {% if 7 in recipe.months %}
+                        <input type="checkbox" name="Jul" checked>
+                        {% else %}
+                        <input type="checkbox" name="Jul">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Aug
+                    {% if 8 in recipe.months %}
+                        <input type="checkbox" name="Aug" checked>
+                        {% else %}
+                        <input type="checkbox" name="Aug">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Sep
+                    {% if 9 in recipe.months %}
+                        <input type="checkbox" name="Sep" checked>
+                        {% else %}
+                        <input type="checkbox" name="Sep">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Oct
+                    {% if 10 in recipe.months %}
+                        <input type="checkbox" name="Oct" checked>
+                        {% else %}
+                        <input type="checkbox" name="Oct">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Nov
+                    {% if 11 in recipe.months %}
+                        <input type="checkbox" name="Nov" checked>
+                        {% else %}
+                        <input type="checkbox" name="Nov">
+                        {% endif %}
+                </label></div>
+                <div class="month-container"><label>Dec
+                    {% if 12 in recipe.months %}
+                        <input type="checkbox" name="Dec" checked>
+                        {% else %}
+                        <input type="checkbox" name="Dec">
+                        {% endif %}
+                </label></div>
+            </div></li>
+            <li>
+                <div class="course-container"><label>Breakfast
+                    {% if 'Breakfast' in recipe.courses %}
+                        <input type="checkbox" name="breakfast" checked>
+                        {% else %}
+                        <input type="checkbox" name="breakfast">
+                        {% endif %}
+                </label></div>
+                <div class="course-container"><label>Lunch & Dinner
+                    {% if 'Lunch & Dinner' in recipe.courses %}
+                        <input type="checkbox" name="dinner" checked>
+                        {% else %}
+                        <input type="checkbox" name="dinner">
+                        {% endif %}
+                </label></div>
+                <div class="course-container"><label>Dessert
+                    {% if 'Dessert' in recipe.courses %}
+                        <input type="checkbox" name="dessert" checked>
+                        {% else %}
+                        <input type="checkbox" name="dessert">
+                        {% endif %}
+                </label></div>
+                <div class="course-container"><label>Basics
+                    {% if 'Basics' in recipe.courses %}
+                        <input type="checkbox" name="basics" checked>
+                        {% else %}
+                        <input type="checkbox" name="basics">
+                        {% endif %}
+                </label></div>
+            </li>
+            <li>
+                <label>Cuisines:
+                <select name="cuisines" multiple>
+                    {% if 'African' in recipe.cuisines %}
+                        <option selected>African</option>
+                        {% else %}
+                        <option>African</option>
+                        {% endif %}
+                    {% if 'American' in recipe.cuisines %}
+                        <option selected>American</option>
+                        {% else %}
+                        <option>American</option>
+                        {% endif %}
+                    {% if 'Arab' in recipe.cuisines %}
+                        <option selected>Arab</option>
+                        {% else %}
+                        <option>Arab</option>
+                        {% endif %}
+                    {% if 'Brazilian' in recipe.cuisines %}
+                        <option selected>Brazilian</option>
+                        {% else %}
+                        <option>Brazilian</option>
+                        {% endif %}
+                    {% if 'Burmese' in recipe.cuisines %}
+                        <option selected>Burmese</option>
+                        {% else %}
+                        <option>Burmese</option>
+                        {% endif %}
+                    {% if 'Cajun' in recipe.cuisines %}
+                        <option selected>Cajun</option>
+                        {% else %}
+                        <option>Cajun</option>
+                        {% endif %}
+                    {% if 'Canadian' in recipe.cuisines %}
+                        <option selected>Canadian</option>
+                        {% else %}
+                        <option>Canadian</option>
+                        {% endif %}
+                    {% if 'Caribbean' in recipe.cuisines %}
+                        <option selected>Caribbean</option>
+                        {% else %}
+                        <option>Caribbean</option>
+                        {% endif %}
+                    {% if 'Central American' in recipe.cuisines %}
+                        <option selected>Central American</option>
+                        {% else %}
+                        <option>Central American</option>
+                        {% endif %}
+                    {% if 'Chinese' in recipe.cuisines %}
+                        <option selected>Chinese</option>
+                        {% else %}
+                        <option>Chinese</option>
+                        {% endif %}
+                    {% if 'Eastern European' in recipe.cuisines %}
+                        <option selected>Eastern European</option>
+                        {% else %}
+                        <option>Eastern European</option>
+                        {% endif %}
+                    {% if 'English' in recipe.cuisines %}
+                        <option selected>English</option>
+                        {% else %}
+                        <option>English</option>
+                        {% endif %}
+                    {% if 'Ethiopian' in recipe.cuisines %}
+                        <option selected>Ethiopian</option>
+                        {% else %}
+                        <option>Ethiopian</option>
+                        {% endif %}
+                    {% if 'Filipino' in recipe.cuisines %}
+                        <option selected>Filipino</option>
+                        {% else %}
+                        <option>Filipino</option>
+                        {% endif %}
+                    {% if 'French' in recipe.cuisines %}
+                        <option selected>French</option>
+                        {% else %}
+                        <option>French</option>
+                        {% endif %}
+                    {% if 'German' in recipe.cuisines %}
+                        <option selected>German</option>
+                        {% else %}
+                        <option>German</option>
+                        {% endif %}
+                    {% if 'Hawaiian' in recipe.cuisines %}
+                        <option selected>Hawaiian</option>
+                        {% else %}
+                        <option>Hawaiian</option>
+                        {% endif %}
+                    {% if 'Indian' in recipe.cuisines %}
+                        <option selected>Indian</option>
+                        {% else %}
+                        <option>Indian</option>
+                        {% endif %}
+                    {% if 'Indonesian' in recipe.cuisines %}
+                        <option selected>Indonesian</option>
+                        {% else %}
+                        <option>Indonesian</option>
+                        {% endif %}
+                    {% if 'Israeli' in recipe.cuisines %}
+                        <option selected>Israeli</option>
+                        {% else %}
+                        <option>Israeli</option>
+                        {% endif %}
+                    {% if 'Italian' in recipe.cuisines %}
+                        <option selected>Italian</option>
+                        {% else %}
+                        <option>Italian</option>
+                        {% endif %}
+                    {% if 'Japanese' in recipe.cuisines %}
+                        <option selected>Japanese</option>
+                        {% else %}
+                        <option>Japanese</option>
+                        {% endif %}
+                    {% if 'Korean' in recipe.cuisines %}
+                        <option selected>Korean</option>
+                        {% else %}
+                        <option>Korean</option>
+                        {% endif %}
+                    {% if 'Lebanese' in recipe.cuisines %}
+                        <option selected>Lebanese</option>
+                        {% else %}
+                        <option>Lebanese</option>
+                        {% endif %}
+                    {% if 'Mediterranean' in recipe.cuisines %}
+                        <option selected>Mediterranean</option>
+                        {% else %}
+                        <option>Mediterranean</option>
+                        {% endif %}
+                    {% if 'Mexican' in recipe.cuisines %}
+                        <option selected>Mexican</option>
+                        {% else %}
+                        <option>Mexican</option>
+                        {% endif %}
+                    {% if 'Middle Eastern' in recipe.cuisines %}
+                        <option selected>Middle Eastern</option>
+                        {% else %}
+                        <option>Middle Eastern</option>
+                        {% endif %}
+                    {% if 'Oceanic' in recipe.cuisines %}
+                        <option selected>Oceanic</option>
+                        {% else %}
+                        <option>Oceanic</option>
+                        {% endif %}
+                    {% if 'Pacific' in recipe.cuisines %}
+                        <option selected>Pacific</option>
+                        {% else %}
+                        <option>Pacific</option>
+                        {% endif %}
+                    {% if 'Persian' in recipe.cuisines %}
+                        <option selected>Persian</option>
+                        {% else %}
+                        <option>Persian</option>
+                        {% endif %}
+                    {% if 'Polynesian' in recipe.cuisines %}
+                        <option selected>Polynesian</option>
+                        {% else %}
+                        <option>Polynesian</option>
+                        {% endif %}
+                    {% if 'Scandinavian' in recipe.cuisines %}
+                        <option selected>Scandinavian</option>
+                        {% else %}
+                        <option>Scandinavian</option>
+                        {% endif %}
+                    {% if 'South American' in recipe.cuisines %}
+                        <option selected>South American</option>
+                        {% else %}
+                        <option>South American</option>
+                        {% endif %}
+                    {% if 'Southern' in recipe.cuisines %}
+                        <option selected>Southern</option>
+                        {% else %}
+                        <option>Southern</option>
+                        {% endif %}
+                    {% if 'Spanish' in recipe.cuisines %}
+                        <option selected>Spanish</option>
+                        {% else %}
+                        <option>Spanish</option>
+                        {% endif %}
+                    {% if 'Thai' in recipe.cuisines %}
+                        <option selected>Thai</option>
+                        {% else %}
+                        <option>Thai</option>
+                        {% endif %}
+                    {% if 'Turkish' in recipe.cuisines %}
+                        <option selected>Turkish</option>
+                        {% else %}
+                        <option>Turkish</option>
+                        {% endif %}
+                    {% if 'Vietnamese' in recipe.cuisines %}
+                        <option selected>Vietnamese</option>
+                        {% else %}
+                        <option>Vietnamese</option>
+                        {% endif %}
+                </select></label>
+            </li>
+            <li>
+                <label>Groups:
+                <select name="groups" multiple>
+                    <optgroup label="Breakfast">
+                        {% if 'Eggs' in recipe.groups %}
+                            <option selected>Eggs</option>
+                            {% else %}
+                            <option>Eggs</option>
+                            {% endif %}
+                        {% if 'Toast' in recipe.groups %}
+                            <option selected>Toast</option>
+                            {% else %}
+                            <option>Toast</option>
+                            {% endif %}
+                        {% if 'Oatmeal' in recipe.groups %}
+                            <option selected>Oatmeal</option>
+                            {% else %}
+                            <option>Oatmeal</option>
+                            {% endif %}
+                        {% if 'Meat' in recipe.groups %}
+                            <option selected>Meat</option>
+                            {% else %}
+                            <option>Meat</option>
+                            {% endif %}
+                        {% if 'Vegetable' in recipe.groups %}
+                            <option selected>Vegetable</option>
+                            {% else %}
+                            <option>Vegetable</option>
+                            {% endif %}
+                        {% if 'Fruit' in recipe.groups %}
+                            <option selected>Fruit</option>
+                            {% else %}
+                            <option>Fruit</option>
+                            {% endif %}
+                        {% if 'Smoothie' in recipe.groups %}
+                            <option selected>Smoothie</option>
+                            {% else %}
+                            <option>Smoothie</option>
+                            {% endif %}
+                        {% if 'Biscuits' in recipe.groups %}
+                            <option selected>Biscuits</option>
+                            {% else %}
+                            <option>Biscuits</option>
+                            {% endif %}
+                        {% if 'Muffins' in recipe.groups %}
+                            <option selected>Muffins</option>
+                            {% else %}
+                            <option>Muffins</option>
+                            {% endif %}
+                        {% if 'Pancakes' in recipe.groups %}
+                            <option selected>Pancakes</option>
+                            {% else %}
+                            <option>Pancakes</option>
+                            {% endif %}
+                    </optgroup>
+                    <optgroup label="Lunch & Dinner">
+                        {% if 'Salad' in recipe.groups %}
+                            <option selected>Salad</option>
+                            {% else %}
+                            <option>Salad</option>
+                            {% endif %}
+                        {% if 'Soup' in recipe.groups %}
+                            <option selected>Soup</option>
+                            {% else %}
+                            <option>Soup</option>
+                            {% endif %}
+                        {% if 'Bread' in recipe.groups %}
+                            <option selected>Bread</option>
+                            {% else %}
+                            <option>Bread</option>
+                            {% endif %}
+                        {% if 'Tortilla' in recipe.groups %}
+                            <option selected>Tortilla</option>
+                            {% else %}
+                            <option>Tortilla</option>
+                            {% endif %}
+                        {% if 'Rice' in recipe.groups %}
+                            <option selected>Rice</option>
+                            {% else %}
+                            <option>Rice</option>
+                            {% endif %}
+                        {% if 'Pasta' in recipe.groups %}
+                            <option selected>Pasta</option>
+                            {% else %}
+                            <option>Pasta</option>
+                            {% endif %}
+                        {% if 'Vegetable' in recipe.groups %}
+                            <option selected>Vegetable</option>
+                            {% else %}
+                            <option>Vegetable</option>
+                            {% endif %}
+                        {% if 'Sea' in recipe.groups %}
+                            <option selected>Sea</option>
+                            {% else %}
+                            <option>Sea</option>
+                            {% endif %}
+                        {% if 'Air' in recipe.groups %}
+                            <option selected>Air</option>
+                            {% else %}
+                            <option>Air</option>
+                            {% endif %}
+                        {% if 'Land' in recipe.groups %}
+                            <option selected>Land</option>
+                            {% else %}
+                            <option>Land</option>
+                            {% endif %}
+                    </optgroup>
+                    <optgroup label="Dessert">
+                        {% if 'Fruit & Cheese' in recipe.groups %}
+                            <option selected>Fruit & Cheese</option>
+                            {% else %}
+                            <option>Fruit & Cheese</option>
+                            {% endif %}
+                        {% if 'Pudding' in recipe.groups %}
+                            <option selected>Pudding</option>
+                            {% else %}
+                            <option>Pudding</option>
+                            {% endif %}
+                        {% if 'Ice Cream' in recipe.groups %}
+                            <option selected>Ice Cream</option>
+                            {% else %}
+                            <option>Ice Cream</option>
+                            {% endif %}
+                        {% if 'Milkshake' in recipe.groups %}
+                            <option selected>Milkshake</option>
+                            {% else %}
+                            <option>Milkshake</option>
+                            {% endif %}
+                        {% if 'Cheesecake' in recipe.groups %}
+                            <option selected>Cheesecake</option>
+                            {% else %}
+                            <option>Cheesecake</option>
+                            {% endif %}
+                        {% if 'Pastry' in recipe.groups %}
+                            <option selected>Pastry</option>
+                            {% else %}
+                            <option>Pastry</option>
+                            {% endif %}
+                        {% if 'Cookie' in recipe.groups %}
+                            <option selected>Cookie</option>
+                            {% else %}
+                            <option>Cookie</option>
+                            {% endif %}
+                        {% if 'Candy' in recipe.groups %}
+                            <option selected>Candy</option>
+                            {% else %}
+                            <option>Candy</option>
+                            {% endif %}
+                        {% if 'Donut' in recipe.groups %}
+                            <option selected>Donut</option>
+                            {% else %}
+                            <option>Donut</option>
+                            {% endif %}
+                        {% if 'Cake' in recipe.groups %}
+                            <option selected>Cake</option>
+                            {% else %}
+                            <option>Cake</option>
+                            {% endif %}
+                    </optgroup>
+                </select></label>
+            </li>
+            <li>
+                <button id="add-occasions" type="button">+</button>
+                <label>Occasions:</label>
+                <div id="occasion-fields">
+                    {% for occasion in recipe.occasions %}
+                        <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><button class="delete" type="button">Delete</button></div>
+                        {% endfor %}
+                </div>
+            </li>
+            <li>
+                <button id="add-ingredients" type="button">+</button>
+                <label>Ingredients:</label>
+                <div id="ingredient-fields">
+                    {% for ingredient in recipe.ingredients %}
+                        <div><input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><button class="delete" type="button">Delete</button></div>
+                        {% endfor %}
+                </div>
+            </li>
+            <button id="add-instructions" type="button">+</button>
+            <label>Instructions:</label>
+            <li>
+                <div id="instruction-fields">
+                    {% for instruction in recipe.instructions %}
+                        <div>
+                          <label>Text: <input type="text" name="instructions-text" maxlength="9999" value="{{instruction['text']}}"></label>
+                          <label>Photo: <input type="text" name="instructions-photo" maxlength="9999" value="{{instruction['photo']}}"></label>
+                          <label>Video: <input type="text" name="instructions-video" maxlength="9999" value="{{instruction['video']}}"></label>
+                          <label>Gif: <input type="text" name="instructions-gif" maxlength="9999" value="{{instruction['gif']}}"></label>
+                          <label>Note: <input type="text" name="instructions-note" maxlength="9999" value="{{instruction['note']}}"></label>
+                        </div>
+                        {% endfor %}
+                </div>
+            </li>
+            <li><input type="submit" value="Edit Recipe">
+            <button type="button" onclick="history.go(0)">Reset</button>
+            <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button></li>
+        </ul>
+    </form>
+{% endblock %}

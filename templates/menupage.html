@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Full Menu</h1>
-    <a href="{{url_for('newRecipe')}}">New Recipe</a>
+    <a href="{{url_for('newRecipe')}}">Add Recipe</a>
     <table>
         <thead>
             <tr>
@@ -45,7 +45,7 @@
                     <td>{% for occasion in recipe.occasions%}<p>{{occasion}}</p>{% endfor %}</td>
                     <td>{% for ingredient in recipe.ingredients%}<p>{{ingredient}}</p>{% endfor %}</td>
                     <td>{% for instruction in recipe.instructions%}<p>{{instruction}}</p>{% endfor %}</td>
-                    <td><a href="#">Edit</a><br><a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a></td>
+                    <td><a href="{{url_for('editRecipe', recipe_id=recipe.id)}}">Edit</a><br><a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a></td>
                 </tr>
                 {% endfor %}
         </tbody>

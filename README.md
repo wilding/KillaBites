@@ -55,6 +55,8 @@ Should I?
     - recommended restaurants
     - kitchen optimization
 
+    - max interval input?
+
     - multi recipe view
 
     - menu view options

@@ -152,14 +152,32 @@ def newRecipe():
 def editRecipe(recipe_id):
     """docstring for editRecipe"""
     recipe = session.query(Recipe).filter_by(id=recipe_id).one()
-    # if request.method == 'POST':
-        # parse form
-        # session.add(recipe)
-        # session.commit()
-        # flash(recipe.name + ' edited!')
-        # return redirect(url_for('viewRecipe', recipe_id=recipe.id))
-    # else:
-    return render_template('editrecipe.html', recipe=recipe)
+    if request.method == 'POST':
+        if request.form['name']:
+            recipe.name = request.form['name']
+        if request.form['gif']:
+            recipe.gif = request.form['gif']
+        if request.form['total_yield']:
+            recipe.total_yield = request.form['total_yield']
+        if request.form['calories']:
+            recipe.calories = request.form['calories']
+        recipe.pictures = request.form.getlist('pictures')
+        recipe.sources = request.form.getlist('sources')
+        recipe.time = parse_time(request.form)
+        recipe.vegetarian = True if request.form.get('vegetarian') else False
+        recipe.months = parse_months(request.form)
+        recipe.cuisines = request.form.getlist('cuisines')
+        recipe.groups = request.form.getlist('groups')
+        recipe.courses = parse_courses(request.form)
+        recipe.occasions = request.form.getlist('occasions')
+        recipe.ingredients = request.form.getlist('ingredients')
+        recipe.instructions = parse_instructions(request.form)
+        session.add(recipe)
+        session.commit()
+        flash(recipe.name + ' edited!')
+        return redirect(url_for('menupage'))
+    else:
+        return render_template('editrecipe.html', recipe=recipe)
 
 
 # Delete Recipe
