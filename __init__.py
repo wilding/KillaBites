@@ -142,7 +142,7 @@ def newRecipe():
         session.add(newrecipe)
         session.commit()
         flash(newrecipe.name + ' added!')
-        return redirect(url_for('homepage'))
+        return redirect(url_for('menupage'))
     else:
         return render_template('newrecipe.html')
 
@@ -171,7 +171,7 @@ def deleteRecipe(recipe_id):
         session.delete(recipe)
         session.commit()
         flash(recipe.name + ' deleted!')
-        return redirect(url_for('homepage'))
+        return redirect(url_for('menupage'))
     else:
         return render_template('deleterecipe.html', recipe=recipe)
 
