@@ -31,21 +31,21 @@
                 <tr>
                     <td>{{recipe.id}}</td>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
-                    <td>{{recipe.pictures}}</td>
+                    <td>{% for picture in recipe.pictures%}<p>{{picture}}</p>{% endfor %}</td>
                     <td>{{recipe.gif}}</td>
-                    <td>{{recipe.sources}}</td>
+                    <td>{% for source in recipe.sources%}<p>{{source}}</p>{% endfor %}</td>
                     <td>{{recipe.time}}</td>
                     <td>{{recipe.total_yield}}</td>
                     <td>{{recipe.calories}}</td>
                     <td>{{recipe.vegetarian}}</td>
-                    <td>{{recipe.months}}</td>
-                    <td>{{recipe.cuisines}}</td>
-                    <td>{{recipe.groups}}</td>
-                    <td>{{recipe.courses}}</td>
-                    <td>{{recipe.occasions}}</td>
+                    <td>{% for month in recipe.months%}<p>{{month}}</p>{% endfor %}</td>
+                    <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>
+                    <td>{% for group in recipe.groups%}<p>{{group}}</p>{% endfor %}</td>
+                    <td>{% for course in recipe.courses%}<p>{{course}}</p>{% endfor %}</td>
+                    <td>{% for occasion in recipe.occasions%}<p>{{occasion}}</p>{% endfor %}</td>
                     <td>{% for ingredient in recipe.ingredients%}<p>{{ingredient}}</p>{% endfor %}</td>
-                    <td>{{recipe.instructions}}</td>
-                    <td><a href="#">Edit</a><br><a href="#">Delete</a></td>
+                    <td>{% for instruction in recipe.instructions%}<p>{{instruction}}</p>{% endfor %}</td>
+                    <td><a href="#">Edit</a><br><a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a></td>
                 </tr>
                 {% endfor %}
         </tbody>
