@@ -3,7 +3,7 @@
 {% block title %}{{ super() }} | Edit {{ingredient.name}}{% endblock %}
 
 {% block content %}
-    <h1>Edit Ingredient</h1>
+    <h1>Edit {{ingredient.name}}</h1>
     <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post">
         <ul>
             <label>Name</label>
