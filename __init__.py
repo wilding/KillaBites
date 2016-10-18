@@ -65,7 +65,7 @@ def newIngredient():
         session.add(newingredient)
         session.commit()
         flash(newingredient.name + ' added!')
-        return redirect(url_for('homepage'))
+        return redirect(url_for('chartpage'))
     else:
         return render_template('newingredient.html')
 
@@ -84,11 +84,12 @@ def editIngredient(ingredient_id):
             ingredient.group = request.form['group']
         if request.form['storage']:
             ingredient.storage = request.form['storage']
+        ingredient.alts = request.form.getlist('alt')
         ingredient.months = parse_months(request.form)
         session.add(ingredient)
         session.commit()
         flash(ingredient.name + ' edited!')
-        return redirect(url_for('homepage'))
+        return redirect(url_for('chartpage'))
     else:
         return render_template('editingredient.html', ingredient=ingredient)
 
@@ -102,7 +103,7 @@ def deleteIngredient(ingredient_id):
         session.delete(ingredient)
         session.commit()
         flash(ingredient.name + ' deleted!')
-        return redirect(url_for('homepage'))
+        return redirect(url_for('chartpage'))
     else:
         return render_template('deleteingredient.html', ingredient=ingredient)
 

@@ -2,81 +2,70 @@
 
 {% block title %}{{ super() }} | Edit {{ingredient.name}}{% endblock %}
 
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dynamicfields.js')}}"></script>
+{% endblock %}
+
 {% block content %}
     <h1>Edit {{ingredient.name}}</h1>
-    <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post">
-        <ul>
-            <label>Name</label>
-            <li>
-                <input type="text" name="name" placeholder="{{ingredient.name}}">
-            </li>
-            <label>Picture</label>
-            <li>
-                <input type="text" name="picture" placeholder="{{ingredient.picture}}">
-            </li>
-            <label>Group</label>
-            <li>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Fruit</th>
-                            <th>Vegetables</th>
-                            <th>Nuts</th>
-                            <th>Fish/Seafood</th>
-                            <th>Birds</th>
-                            <th>Red Meat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                {% if ingredient.group == 'fruit': %}
-                                    <input type="radio" name="group" value="fruit" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="fruit">
-                                    {% endif %}
-                            </td>
-                            <td>
-                                {% if ingredient.group == 'vegetables': %}
-                                    <input type="radio" name="group" value="vegetables" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="vegetables">
-                                    {% endif %}
-                            </td>
-                            <td>
-                                {% if ingredient.group == 'nuts': %}
-                                    <input type="radio" name="group" value="nuts" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="nuts">
-                                    {% endif %}
-                            </td>
-                            <td>
-                                {% if ingredient.group == 'fish/seafood': %}
-                                    <input type="radio" name="group" value="fish/seafood" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="fish/seafood">
-                                    {% endif %}
-                            </td>
-                            <td>
-                                {% if ingredient.group == 'birds': %}
-                                    <input type="radio" name="group" value="birds" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="birds">
-                                    {% endif %}
-                            </td>
-                            <td>
-                                {% if ingredient.group == 'red meat': %}
-                                    <input type="radio" name="group" value="red meat" checked>
-                                    {% else %}
-                                    <input type="radio" name="group" value="red meat">
-                                    {% endif %}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
-            <label>Months</label>
-            <li class="month-menu">
+    <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post" class="ingredient-form">
+            <fieldset>
+                <legend>Name</legend>
+                <button id="add-alts" type="button">Add Alt</button>
+                <div id="items">
+                    <div><input type="text" name="name" maxlength="500" placeholder="{{ingredient.name}}"></div>
+                    {% for alt in ingredient.alts %}
+                        <div><input name="alt" type="text" maxlength="500" value="{{alt}}"><button class="delete" type="button">Delete</button></div>
+                        {% endfor %}
+                </div>
+            </fieldset>
+            <label>Picture <input type="text" name="picture" maxlength="9999" placeholder="{{ingredient.picture}}"></label><br>
+            <div class="group-menu">
+                <div class="group-container"><label>Fruit
+                    {% if ingredient.group == 'fruit': %}
+                        <input type="radio" name="group" value="fruit" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="fruit" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Vegetables
+                    {% if ingredient.group == 'vegetables': %}
+                        <input type="radio" name="group" value="vegetables" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="vegetables" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Nuts
+                    {% if ingredient.group == 'nuts': %}
+                        <input type="radio" name="group" value="nuts" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="nuts" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Sea
+                    {% if ingredient.group == 'sea': %}
+                        <input type="radio" name="group" value="sea" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="sea" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Air
+                    {% if ingredient.group == 'air': %}
+                        <input type="radio" name="group" value="air" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="air" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Land
+                    {% if ingredient.group == 'land': %}
+                        <input type="radio" name="group" value="land" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="land" required>
+                        {% endif %}
+                </label></div>
+            </div>
+            <div class="month-menu">
                 <div class="month-container"><label>Jan
                     {% if 1 in ingredient.months %}
                         <input type="checkbox" name="Jan" checked>
@@ -161,15 +150,10 @@
                         <input type="checkbox" name="Dec">
                         {% endif %}
                 </label></div>
-            </li>
-            <label>Storage Instructions</label>
-            <li>
-                <input type="text" name="storage" maxlength="9999" placeholder="{{ingredient.storage}}">
-            </li>
-            <li>
-                <input type="submit" value="Edit Ingredient">
-                <a href="{{url_for('homepage')}}">Cancel</a>
-            </li>
-        </ul>
+            </div>
+            <label>Storage Instructions <textarea name="storage" maxlength="9999">{{ingredient.storage}}</textarea></label><br>
+            <input type="submit" value="Edit Ingredient">
+            <button type="button" onclick="history.go(0)">Reset</button>
+            <button type="button" onclick="window.location.assign('{{url_for('chartpage')}}');">Cancel</button>
     </form>
 {% endblock %}
