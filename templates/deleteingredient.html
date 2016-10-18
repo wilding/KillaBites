@@ -9,7 +9,7 @@
             <label>Are you sure you want to delete {{ingredient.name}}?</label>
             <li>
                 <input type="submit" value="Delete Ingredient">
-                <a href="{{url_for('homepage')}}">Cancel</a>
+                <button type="button" onclick="window.location.assign('{{url_for('chartpage')}}');">Cancel</button>
             </li>
         </ul>
     </form>

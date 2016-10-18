@@ -9,7 +9,7 @@
             <label>Are you sure you want to delete {{recipe.name}}?</label>
             <li>
                 <input type="submit" value="Delete Recipe">
-                <a href="{{url_for('menupage')}}">Cancel</a>
+                <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button>
             </li>
         </ul>
     </form>
