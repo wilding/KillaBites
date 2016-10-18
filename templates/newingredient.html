@@ -12,7 +12,7 @@
     <form action="{{url_for('newIngredient')}}" method="post" class="ingredient-form">
         <fieldset>
             <legend>Name</legend>
-            <button id="add" type="button">Add Alt</button>
+            <button id="add-alts" type="button">Add Alt</button>
             <div id="items">
                 <div><input type="text" name="name" maxlength="500" required autofocus></div>
             </div>
@@ -43,6 +43,6 @@
         <label>Storage Instructions <textarea name="storage" maxlength="9999"></textarea></label><br>
         <input type="submit" value="Create New Ingredient">
         <input type="reset">
-        <button type="button" onclick="window.location.assign('{{url_for('homepage')}}');">Cancel</button>
+        <button type="button" onclick="window.location.assign('{{url_for('chartpage')}}');">Cancel</button>
     </form>
 {% endblock %}
