@@ -4,7 +4,6 @@
 
 {% block content %}
     <h1>{{month}}</h1>
-    <a href="{{url_for('newIngredient')}}">Add Ingredient</a>
     <div class="ingredients_container">
         {% for ingredient in ingredients: %}
             <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
