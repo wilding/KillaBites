@@ -10,20 +10,12 @@
             <tr>
                 <th>id</th>
                 <th>name</th>
-                <th>pictures</th>
-                <th>gif</th>
-                <th>sources</th>
                 <th>time</th>
-                <th>yield</th>
-                <th>calories</th>
-                <th>vegetarian</th>
                 <th>months</th>
                 <th>cuisines</th>
                 <th>groups</th>
                 <th>courses</th>
                 <th>occassions</th>
-                <th>ingredients</th>
-                <th>instructions</th>
             </tr>
         </thead>
         <tbody>
@@ -31,20 +23,12 @@
                 <tr>
                     <td>{{recipe.id}}</td>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
-                    <td>{% for picture in recipe.pictures%}<p>{{picture}}</p>{% endfor %}</td>
-                    <td>{{recipe.gif}}</td>
-                    <td>{% for source in recipe.sources%}<p>{{source}}</p>{% endfor %}</td>
                     <td>{{recipe.time}}</td>
-                    <td>{{recipe.total_yield}}</td>
-                    <td>{{recipe.calories}}</td>
-                    <td>{{recipe.vegetarian}}</td>
-                    <td>{% for month in recipe.months%}<p>{{month}}</p>{% endfor %}</td>
+                    <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
                     <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>
                     <td>{% for group in recipe.groups%}<p>{{group}}</p>{% endfor %}</td>
                     <td>{% for course in recipe.courses%}<p>{{course}}</p>{% endfor %}</td>
                     <td>{% for occasion in recipe.occasions%}<p>{{occasion}}</p>{% endfor %}</td>
-                    <td>{% for ingredient in recipe.ingredients%}<p>{{ingredient}}</p>{% endfor %}</td>
-                    <td>{% for instruction in recipe.instructions%}<p>{{instruction}}</p>{% endfor %}</td>
                     <td><a href="{{url_for('editRecipe', recipe_id=recipe.id)}}">Edit</a><br><a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a></td>
                 </tr>
                 {% endfor %}

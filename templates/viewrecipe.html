@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} | {{recipe.name}}{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="recipe-pictures" style="background-image: url({{recipe.pictures[0]}});"></div>
+        <div class="recipe-info">
+            <h2>{{recipe.name}}</h2>
+            <div class="recipe-info-row">
+                <div class="recipe-info-item">
+                    <p>time:</p>
+                    <p>{{recipe.time}}</p>
+                </div>
+                <div class="recipe-info-item">
+                    <p>yield:</p>
+                    <p>{{recipe.total_yield}}</p>
+                </div>
+                <div class="recipe-info-item">
+                    <p>calories:</p>
+                    <p>{{recipe.calories}}</p>
+                </div>
+                <div class="recipe-info-item">
+                    <p>vegetarian:</p>
+                    <p>{{recipe.vegetarian}}</p>
+                </div>
+            </div>
+            <div class="recipe-info-row">
+                <div class="recipe-info-item">
+                    <p>cuisine:</p>
+                    {% for cuisine in recipe.cuisines %}
+                        <p>{{cuisine}}</p>
+                        {% endfor %}
+                </div>
+                <div class="recipe-info-item">
+                    <p>course:</p>
+                    {% for course in recipe.courses %}
+                        <p>{{course}}</p>
+                        {% endfor %}
+                </div>
+                <div class="recipe-info-item">
+                    <p>group:</p>
+                    {% for group in recipe.groups %}
+                        <p>{{group}}</p>
+                        {% endfor %}
+                </div>
+                <div class="recipe-info-item">
+                    <p>month:</p>
+                    {% for month in recipe.months %}
+                        <p>{{month_dict[month]}}</p>
+                        {% endfor %}
+                </div>
+            </div>
+            <a href="{{url_for('editRecipe', recipe_id=recipe.id)}}">Edit</a>
+            <a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a>
+        </div>
+    </header>
+    <main>
+        <section class="ingredients">
+            {% for ingredient in recipe.ingredients %}
+                <p>{{ingredient}}</p>
+                {% endfor %}
+        </section>
+        <section class="instructions">
+            {% for instruction in recipe.instructions %}
+                <p>{{instruction['text']}}</p>
+                <p>{{instruction['note']}}</p>
+                <p>{{instruction['video']}}</p>
+                <p>{{instruction['gif']}}</p>
+                <img src="{{instruction['photo']}}">
+                <br>
+                <br>
+                <br>
+                {% endfor %}
+        </section>
+    </main>
+{% endblock %}

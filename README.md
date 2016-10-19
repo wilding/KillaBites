@@ -1,7 +1,7 @@
 To Do:
 
-    - CRUD recipe
     - view recipe
+    - match recipe view to CRUD
 
      - filter recipe by ingredient click
     - hover for ingredient info

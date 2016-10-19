@@ -36,7 +36,7 @@ def menupage():
     """docstring for menupage"""
     # session.rollback()
     recipes = session.query(Recipe).all()
-    return render_template('menupage.html', recipes=recipes)
+    return render_template('menupage.html', recipes=recipes, month_dict=month_dict)
 
 
 # Full Chart
@@ -116,7 +116,7 @@ def deleteIngredient(ingredient_id):
 def viewRecipe(recipe_id):
     """docstring for viewRecipe"""
     recipe = session.query(Recipe).filter_by(id=recipe_id).one()
-    return render_template('viewrecipe.html', recipe=recipe)
+    return render_template('viewrecipe.html', recipe=recipe, month_dict=month_dict)
 
 
 # New Recipe
