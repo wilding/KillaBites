@@ -1,17 +1,26 @@
 {% extends "layout.html" %}
 
-{% block title %} {{ super() }} | Full Chart{% endblock %}
+{% block title %} {{ super() }} | Chart{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='dynamicfields.js')}}"></script>
+{% endblock %}
 
 {% block content %}
-    <h1>Full Chart</h1>
-    <a href="{{url_for('newIngredient')}}">Add Ingredient</a>
+    <div class="chart-tabs">
+        <a href="" class="chart-group-link">Fruit</a>
+        <a href="" class="chart-group-link">Vegetables</a>
+        <a href="" class="chart-group-link">Nuts</a>
+        <a href="" class="chart-group-link">Sea</a>
+        <a href="" class="chart-group-link">Air</a>
+        <a href="" class="chart-group-link">Land</a>
+    </div>
     <table>
+        <caption align="bottom">*results will vary outside California</caption>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Alts</th>
-                <th>Group</th>
-                <th>Storage</th>
+                <th><a href="{{url_for('newIngredient')}}">Add Ingredient</a></th>
                 <th>Jan</th>
                 <th>Feb</th>
                 <th>Mar</th>
@@ -28,25 +37,34 @@
         </thead>
         <tbody>
             {% for ingredient in ingredients: %}
-                <tr>
-                    <td>{{ingredient.name}}</td>
-                    <td>{{ingredient.alts}}</td>
-                    <td>{{ingredient.group}}</td>
-                    <td>{{ingredient.storage}}</td>
-                    <td>{% if 1 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 2 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 3 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 4 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 5 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 6 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 7 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 8 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 9 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 10 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 11 in ingredient.months %}X{% endif %}</td>
-                    <td>{% if 12 in ingredient.months %}X{% endif %}</td>
-                    <td><a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}">Edit</a></td>
-                    <td><a href="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}">Delete</a></td>
+                <tr class="chart-row">
+                    <td><div class="chart-cell-name">
+                        {{ingredient.name}}
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    </div></td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}}">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
+                </tr>
+                <tr class="delete-ingredient-row">
+                    <td><div class="chart-cell-name">{{ingredient.name}}</div></td>
+                    <td colspan="12" class="delete-ingredient-cell">
+                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
+                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
+                            <input type="submit" value="Delete Ingredient">
+                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
         </tbody>

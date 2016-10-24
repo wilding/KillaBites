@@ -26,7 +26,7 @@ def homepage():
     """docstring for homepage"""
     # session.rollback()
     current_month = datetime.now().month
-    ingredients = session.query(Ingredient).filter(Ingredient.months.any(current_month)).order_by(Ingredient.group).all()
+    ingredients = session.query(Ingredient).filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
     return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
 
 
@@ -43,7 +43,7 @@ def menupage():
 @app.route('/chart/')
 def chartpage():
     """docstring for chartpage"""
-    ingredients = session.query(Ingredient).order_by(Ingredient.group).all()
+    ingredients = session.query(Ingredient).order_by(Ingredient.group, Ingredient.name).all()
     return render_template('chartpage.html', ingredients=ingredients)
 
 

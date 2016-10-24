@@ -1,30 +1,81 @@
 To Do:
 
-    - view recipe
-    - match recipe view to CRUD
+    Homepage
+        - recipes
+        - filter recipe by ingredient click
+        - hover for ingredient info
+        - split into groups?
+        - ingredient pics
+        - month font
+        - nutrition info
+        - order
 
-     - filter recipe by ingredient click
-    - hover for ingredient info
+        - background
+        - font
+        - make responsive
 
-    - homepage css
-    - chart css
-    - full menu css
-    - view recipe css
-    - form css
 
-    - json backups
-    - search google pics for additional images
-    - common measurements/terms buttons
-        - pages for terms
-    - split source into display/link tuple
+    Chart
+        - split into groups
+        - dynamic querying
+        - search
 
-    - download recipe as pdf
+        - header row stays when scrolling
+        - strikethru if no months
+        - ingredient icons or something?
+        - highlight current month
+
+        - font
+        - background
+        - make responsive
+
+
+
+    Menu
+        - dynamic querying
+        - menu view options
+        - order
+
+        - background
+        - font
+        - make responsive
+
+
+    Recipe
+        - search google pics for additional images
+        - download recipe as pdf
+        - ingredient/instruction sections
+        - time sections
+        - occassion dates
+        - recipe ingredients json input
+        - recipe versions
+        - multi recipe view
+        - drawing on instructions
+        - nutrition info
+        - split source into display/link tuple
+        - scale ingredient list
+        - pairing
+
+        - background
+        - font
+        - make responsive
+
+
+    Form
+        - match recipe view to CRUD
+        - max interval input?
+
+        - background
+        - font
+        - make responsive
+
+
+
+    - logo
+    - tab logo
+    - nav links
     - JSON API
-
-    - ingredient/instruction sections
-    - time sections
-    - occassion dates
-
+    - json backups
     - Killa!
 
 
@@ -39,31 +90,30 @@ Should I?
         - forking recipes
         - favorites
 
-    - recipe ingredients json input
+
 
     - weekly meal plan
         - occassions automatic
-    - nutrition info
 
-    - recipe versions
+    - accessibility
+
 
     - pantry
     - prices
+
     - grocery list
         - show ingredients in red/green based on availability
 
     - recommended restaurants
     - kitchen optimization
 
-    - max interval input?
-
-    - multi recipe view
-
-    - menu view options
-
     - customize list order
 
-    - drawing on instructions
+    - common measurements/terms buttons
+        - pages for terms
+
+    - trailer
+
 
     - iOS app
         - siri integration
@@ -71,11 +121,3 @@ Should I?
     - android app
     - windows app
 
-
-backgrounds?
-    menu paper?
-    chalkboard?
-
-
-    Resources:
-        http://www.voidtricks.com/jquery-add-remove-input-fields/
