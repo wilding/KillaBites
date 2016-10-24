@@ -95,7 +95,7 @@ def editIngredient(ingredient_id):
 
 
 # Delete Ingredient
-@app.route('/ingredient/delete/<int:ingredient_id>/', methods=['GET', 'POST'])
+@app.route('/ingredient/delete/<int:ingredient_id>/', methods=['POST'])
 def deleteIngredient(ingredient_id):
     """docstring for deleteIngredient"""
     ingredient = session.query(Ingredient).filter_by(id=ingredient_id).one()
@@ -104,8 +104,6 @@ def deleteIngredient(ingredient_id):
         session.commit()
         flash(ingredient.name + ' deleted!')
         return redirect(url_for('chartpage'))
-    else:
-        return render_template('deleteingredient.html', ingredient=ingredient)
 
 
 # Recipe CRUD
