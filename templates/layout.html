@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}KillaBites{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     {% block scripts %}{% endblock %}
 </head>
 <body>
     <nav>
-        <a href="{{url_for('chartpage')}}" class="nav-link">Chart</a>
-        <a href="{{url_for('homepage')}}" class="nav-link">Home</a>
-        <a href="{{url_for('menupage')}}" class="nav-link">Menu</a>
+        <a href="{{url_for('chartpage')}}" class="nav-link"><i class="fa fa-table fa-lg" aria-hidden="true"></i></a>
+        <a href="{{url_for('homepage')}}" class="nav-link"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+        <a href="{{url_for('menupage')}}" class="nav-link"><i class="fa fa-spoon fa-lg" aria-hidden="true"></i></a>
     </nav>
     {% block content %}{% endblock %}
 </body>
