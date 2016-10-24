@@ -29,26 +29,26 @@
             <label>Seconds: <input type="number" name="seconds"></label></li>
             <li><label>Yield: <input type="text" name="total_yield" maxlength="500"></label></li>
             <li><label>Calories: <input type="number" name="calories"></label></li>
-            <li><label>Vegetarian<input type="checkbox" name="vegetarian"></label></li>
+            <li><label>Vegetarian<br><input type="checkbox" name="vegetarian"></label></li>
             <li><div class="month-menu">
-                <div class="month-container"><label>Jan<input type="checkbox" name="Jan"></label></div>
-                <div class="month-container"><label>Feb<input type="checkbox" name="Feb"></label></div>
-                <div class="month-container"><label>Mar<input type="checkbox" name="Mar"></label></div>
-                <div class="month-container"><label>Apr<input type="checkbox" name="Apr"></label></div>
-                <div class="month-container"><label>May<input type="checkbox" name="May"></label></div>
-                <div class="month-container"><label>Jun<input type="checkbox" name="Jun"></label></div>
-                <div class="month-container"><label>Jul<input type="checkbox" name="Jul"></label></div>
-                <div class="month-container"><label>Aug<input type="checkbox" name="Aug"></label></div>
-                <div class="month-container"><label>Sep<input type="checkbox" name="Sep"></label></div>
-                <div class="month-container"><label>Oct<input type="checkbox" name="Oct"></label></div>
-                <div class="month-container"><label>Nov<input type="checkbox" name="Nov"></label></div>
-                <div class="month-container"><label>Dec<input type="checkbox" name="Dec"></label></div>
+                <div class="month-container"><label>Jan<br><input type="checkbox" name="Jan"></label></div>
+                <div class="month-container"><label>Feb<br><input type="checkbox" name="Feb"></label></div>
+                <div class="month-container"><label>Mar<br><input type="checkbox" name="Mar"></label></div>
+                <div class="month-container"><label>Apr<br><input type="checkbox" name="Apr"></label></div>
+                <div class="month-container"><label>May<br><input type="checkbox" name="May"></label></div>
+                <div class="month-container"><label>Jun<br><input type="checkbox" name="Jun"></label></div>
+                <div class="month-container"><label>Jul<br><input type="checkbox" name="Jul"></label></div>
+                <div class="month-container"><label>Aug<br><input type="checkbox" name="Aug"></label></div>
+                <div class="month-container"><label>Sep<br><input type="checkbox" name="Sep"></label></div>
+                <div class="month-container"><label>Oct<br><input type="checkbox" name="Oct"></label></div>
+                <div class="month-container"><label>Nov<br><input type="checkbox" name="Nov"></label></div>
+                <div class="month-container"><label>Dec<br><input type="checkbox" name="Dec"></label></div>
             </div></li>
             <li>
-                <div class="course-container"><label>Breakfast<input type="checkbox" name="breakfast"></label></div>
-                <div class="course-container"><label>Lunch & Dinner<input type="checkbox" name="dinner"></label></div>
-                <div class="course-container"><label>Dessert<input type="checkbox" name="dessert"></label></div>
-                <div class="course-container"><label>Basics<input type="checkbox" name="basics"></label></div>
+                <div class="course-container"><label>Breakfast<br><input type="checkbox" name="breakfast"></label></div>
+                <div class="course-container"><label>Lunch & Dinner<br><input type="checkbox" name="dinner"></label></div>
+                <div class="course-container"><label>Dessert<br><input type="checkbox" name="dessert"></label></div>
+                <div class="course-container"><label>Basics<br><input type="checkbox" name="basics"></label></div>
             </li>
             <li>
                 <label>Cuisines:
@@ -157,9 +157,11 @@
                     </div>
                 </div>
             </li>
-            <li><input type="submit" value="Create New Recipe">
-            <input type="reset">
-            <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button></li>
+            <li>
+                <input type="submit" value="Create New Recipe">
+                <input type="reset">
+                <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button>
+            </li>
         </ul>
     </form>
 {% endblock %}

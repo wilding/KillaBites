@@ -17,7 +17,7 @@
                 <label>Pictures:</label>
                 <div id="pic-fields">
                 {% for picture in recipe.pictures %}
-                    <div><input type="text" name="pictures" maxlength="9999" value="{{picture}}"><button class="delete" type="button">Delete</button></div>
+                    <div><input type="text" name="pictures" maxlength="9999" value="{{picture}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
                     {% endfor %}
                 </div>
             </li>
@@ -27,7 +27,7 @@
                 <label>Sources:</label>
                 <div id="source-fields">
                     {% for source in recipe.sources %}
-                        <div><input type="text" name="sources" maxlength="9999" value="{{source}}"><button class="delete" type="button">Delete</button></div>
+                        <div><input type="text" name="sources" maxlength="9999" value="{{source}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
                         {% endfor %}
                 </div>
             </li>
@@ -45,84 +45,84 @@
                     {% endif %}
             </label></li>
             <li><div class="month-menu">
-                <div class="month-container"><label>Jan
+                <div class="month-container"><label>Jan<br>
                     {% if 1 in recipe.months %}
                         <input type="checkbox" name="Jan" checked>
                         {% else %}
                         <input type="checkbox" name="Jan">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Feb
+                <div class="month-container"><label>Feb<br>
                     {% if 2 in recipe.months %}
                         <input type="checkbox" name="Feb" checked>
                         {% else %}
                         <input type="checkbox" name="Feb">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Mar
+                <div class="month-container"><label>Mar<br>
                     {% if 3 in recipe.months %}
                         <input type="checkbox" name="Mar" checked>
                         {% else %}
                         <input type="checkbox" name="Mar">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Apr
+                <div class="month-container"><label>Apr<br>
                     {% if 4 in recipe.months %}
                         <input type="checkbox" name="Apr" checked>
                         {% else %}
                         <input type="checkbox" name="Apr">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>May
+                <div class="month-container"><label>May<br>
                     {% if 5 in recipe.months %}
                         <input type="checkbox" name="May" checked>
                         {% else %}
                         <input type="checkbox" name="May">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Jun
+                <div class="month-container"><label>Jun<br>
                     {% if 6 in recipe.months %}
                         <input type="checkbox" name="Jun" checked>
                         {% else %}
                         <input type="checkbox" name="Jun">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Jul
+                <div class="month-container"><label>Jul<br>
                     {% if 7 in recipe.months %}
                         <input type="checkbox" name="Jul" checked>
                         {% else %}
                         <input type="checkbox" name="Jul">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Aug
+                <div class="month-container"><label>Aug<br>
                     {% if 8 in recipe.months %}
                         <input type="checkbox" name="Aug" checked>
                         {% else %}
                         <input type="checkbox" name="Aug">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Sep
+                <div class="month-container"><label>Sep<br>
                     {% if 9 in recipe.months %}
                         <input type="checkbox" name="Sep" checked>
                         {% else %}
                         <input type="checkbox" name="Sep">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Oct
+                <div class="month-container"><label>Oct<br>
                     {% if 10 in recipe.months %}
                         <input type="checkbox" name="Oct" checked>
                         {% else %}
                         <input type="checkbox" name="Oct">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Nov
+                <div class="month-container"><label>Nov<br>
                     {% if 11 in recipe.months %}
                         <input type="checkbox" name="Nov" checked>
                         {% else %}
                         <input type="checkbox" name="Nov">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Dec
+                <div class="month-container"><label>Dec<br>
                     {% if 12 in recipe.months %}
                         <input type="checkbox" name="Dec" checked>
                         {% else %}
@@ -131,28 +131,28 @@
                 </label></div>
             </div></li>
             <li>
-                <div class="course-container"><label>Breakfast
+                <div class="course-container"><label>Breakfast<br>
                     {% if 'Breakfast' in recipe.courses %}
                         <input type="checkbox" name="breakfast" checked>
                         {% else %}
                         <input type="checkbox" name="breakfast">
                         {% endif %}
                 </label></div>
-                <div class="course-container"><label>Lunch & Dinner
+                <div class="course-container"><label>Lunch & Dinner<br>
                     {% if 'Lunch & Dinner' in recipe.courses %}
                         <input type="checkbox" name="dinner" checked>
                         {% else %}
                         <input type="checkbox" name="dinner">
                         {% endif %}
                 </label></div>
-                <div class="course-container"><label>Dessert
+                <div class="course-container"><label>Dessert<br>
                     {% if 'Dessert' in recipe.courses %}
                         <input type="checkbox" name="dessert" checked>
                         {% else %}
                         <input type="checkbox" name="dessert">
                         {% endif %}
                 </label></div>
-                <div class="course-container"><label>Basics
+                <div class="course-container"><label>Basics<br>
                     {% if 'Basics' in recipe.courses %}
                         <input type="checkbox" name="basics" checked>
                         {% else %}
@@ -521,7 +521,7 @@
                 <label>Occasions:</label>
                 <div id="occasion-fields">
                     {% for occasion in recipe.occasions %}
-                        <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><button class="delete" type="button">Delete</button></div>
+                        <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
                         {% endfor %}
                 </div>
             </li>
@@ -530,7 +530,7 @@
                 <label>Ingredients:</label>
                 <div id="ingredient-fields">
                     {% for ingredient in recipe.ingredients %}
-                        <div><input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><button class="delete" type="button">Delete</button></div>
+                        <div><input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
                         {% endfor %}
                 </div>
             </li>

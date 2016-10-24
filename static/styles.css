@@ -13,7 +13,7 @@ body {
     margin-left: auto;
     justify-content: center;
     /*background-color: #2E56A4;*/
-    background-image: url(background.jpg);
+    background: url(background.jpg) no-repeat top center fixed;
     background-size: cover;
 }
 
@@ -22,104 +22,30 @@ h1 {
     text-align: center;
 }
 
-/* Nav */
+a {
+    text-decoration: none;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Nav
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 nav {
     width: 100%;
     display: flex;
+    margin-bottom: 40px;
 }
 
 .nav-link {
     width: 33%;
     text-align: center;
+    color: black;
 }
 
-/* Table */
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td {
-    text-align: center;
-    border: 1px solid black;
-    /*empty-cells: hide;*/
-}
-
-th {
-    text-align: center;
-    border: 1px solid black;
-}
-
-/* Forms */
-
-ul {
-    width: 100%;
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    width: 100%;
-    display: flex;
-    padding: 10px 0px 10px 0px;
-}
-
-.ingredient-form {
-    width: 50%;
-}
-
-.group-menu {
-    width: 100%;
-    display: flex;
-    padding: 10px 0px 10px 0px;
-}
-
-.month-menu {
-    width: 100%;
-    display: flex;
-    padding: 10px 0px 10px 0px;
-}
-
-.month-container {
-    width: 8.333333%;
-    text-align: center;
-}
-
-.group-container {
-    width: 16.666666%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-input[type=checkbox] {
-    width: 100%;
-    margin: 0;
-}
-
-input[type=radio] {
-    width: 100%;
-}
-
-fieldset {
-    margin: 10px 0px 10px 0px;
-}
-
-textarea {
-    width: 100%;
-}
-
-#add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
-    height: 19px;
-}
-
-.course-container {
-    width: 25%;
-}
-
-/* Homepage */
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Homepage
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 .ingredients_container {
@@ -140,7 +66,134 @@ textarea {
     margin: 10px;
 }
 
-/* Recipe View */
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Chart Page
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Tabs */
+
+.chart-tabs {
+    width: 944px;
+    display: flex;
+}
+
+
+.chart-group-link {
+    width: 16.66666%;
+    text-align: center;
+    border: 1px solid black;
+    color: black;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 0 5px 0;
+}
+
+/* Table */
+
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    padding: 10px 0 10px 0;
+}
+
+td {
+    text-align: center;
+    border: 1px solid black;
+    empty-cells: hide;
+}
+
+th {
+    text-align: center;
+    border: 1px solid black;
+    padding: 4px 0 4px 0;
+    font-weight: normal;
+    /*-webkit-text-fill-color: transparent;*/
+    /*-webkit-background-clip: text;*/
+    background: black;
+    color: #eee1c1;
+}
+
+th a {
+    color: #eee1c1;
+}
+
+.chart-row {
+    transition: transform 0.35s;
+}
+
+.chart-cell-name {
+    text-align: left;
+    padding: 2px 0 2px 5px;
+}
+
+.chart-cell-link {
+    float: right;
+    padding: 0 2px 0 2px;
+    opacity: 0;
+}
+
+.chart-cell-name:hover .chart-cell-link {
+    opacity: 1;
+}
+
+.chart-cell-fruit {
+    background: #ab1c20;
+    width: 65px;
+}
+.chart-cell-vegetables {
+    background: green;
+    width: 65px;
+}
+.chart-cell-nuts {
+    background: brown;
+    width: 65px;
+}
+.chart-cell-sea {
+    background: blue;
+    width: 65px;
+}
+.chart-cell-air {
+    background: orange;
+    width: 65px;
+}
+.chart-cell-land {
+    background: pink;
+    width: 65px;
+}
+
+.chart-cell-fruit:empty, .chart-cell-vegetables:empty, .chart-cell-nuts:empty, .chart-cell-sea:empty, .chart-cell-air:empty, .chart-cell-land:empty {
+    background-color: transparent;
+}
+
+/* Delete Ingredient Section */
+
+.delete-ingredient-row {
+    display: none;
+    height: 25px;
+}
+
+.delete-ingredient-cell {
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Menu Page
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Recipe View
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 header {
     width: 100%;
@@ -185,4 +238,95 @@ p {
 
 .instructions {
     width: 70%;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Forms
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+.ingredient-form {
+    width: 50%;
+}
+
+.group-menu, .month-menu {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}
+
+.month-container {
+    width: 8.333333%;
+    display: flex;
+    text-align: center;
+}
+
+.group-container {
+    width: 16.666666%;
+    display: flex;
+    text-align: center;
+}
+
+.course-container {
+    width: 25%;
+    display: flex;
+    text-align: center;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
+
+#name-fields {
+    margin: 0 0 10px 0;
+}
+
+#add-alts {
+    color: green;
+    cursor: pointer;
+}
+
+.form-buttons {
+    margin-top: 10px;
+}
+
+label {
+    width: 100%;
+}
+
+input[name=picture] {
+    width: 100%;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    background: transparent;
+}
+
+#add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
+    height: 19px;
 }

@@ -10,54 +10,52 @@
 {% block content %}
     <h1>Edit {{ingredient.name}}</h1>
     <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post" class="ingredient-form">
-            <fieldset>
-                <legend>Name</legend>
-                <button id="add-alts" type="button">Add Alt</button>
-                <div id="items">
-                    <div><input type="text" name="name" maxlength="500" placeholder="{{ingredient.name}}"></div>
-                    {% for alt in ingredient.alts %}
-                        <div><input name="alt" type="text" maxlength="500" value="{{alt}}"><button class="delete" type="button">Delete</button></div>
-                        {% endfor %}
-                </div>
-            </fieldset>
-            <label>Picture <input type="text" name="picture" maxlength="9999" placeholder="{{ingredient.picture}}"></label><br>
+            <i class="fa fa-plus-circle" id="add-alts" aria-hidden="true"></i>
+            <label>Name</label>
+            <div id="name-fields">
+                <input type="text" name="name" maxlength="500" value="{{ingredient.name}}">
+                {% for alt in ingredient.alts %}
+                    <i>, </i><input name="alt" type="text" maxlength="500" value="{{alt}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i>
+                    {% endfor %}
+            </div>
+            <label>Picture <input type="text" name="picture" maxlength="9999" value="{{ingredient.picture}}"></label><br>
             <div class="group-menu">
-                <div class="group-container"><label>Fruit
+                <div class="group-container"><label>Fruit<br>
                     {% if ingredient.group == 'fruit': %}
                         <input type="radio" name="group" value="fruit" checked required>
                         {% else %}
                         <input type="radio" name="group" value="fruit" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Vegetables
+                <div class="group-container"><label>Vegetables<br>
                     {% if ingredient.group == 'vegetables': %}
                         <input type="radio" name="group" value="vegetables" checked required>
                         {% else %}
                         <input type="radio" name="group" value="vegetables" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Nuts
+                <div class="group-container"><label>Nuts<br>
                     {% if ingredient.group == 'nuts': %}
                         <input type="radio" name="group" value="nuts" checked required>
                         {% else %}
                         <input type="radio" name="group" value="nuts" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Sea
+                <div class="group-container"><label>Sea<br>
                     {% if ingredient.group == 'sea': %}
                         <input type="radio" name="group" value="sea" checked required>
                         {% else %}
                         <input type="radio" name="group" value="sea" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Air
+                <div class="group-container"><label>Air<br>
                     {% if ingredient.group == 'air': %}
                         <input type="radio" name="group" value="air" checked required>
                         {% else %}
                         <input type="radio" name="group" value="air" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Land
+                <div class="group-container"><label>Land<br>
                     {% if ingredient.group == 'land': %}
                         <input type="radio" name="group" value="land" checked required>
                         {% else %}
@@ -66,84 +64,84 @@
                 </label></div>
             </div>
             <div class="month-menu">
-                <div class="month-container"><label>Jan
+                <div class="month-container"><label>Jan<br>
                     {% if 1 in ingredient.months %}
                         <input type="checkbox" name="Jan" checked>
                         {% else %}
                         <input type="checkbox" name="Jan">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Feb
+                <div class="month-container"><label>Feb<br>
                     {% if 2 in ingredient.months %}
                         <input type="checkbox" name="Feb" checked>
                         {% else %}
                         <input type="checkbox" name="Feb">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Mar
+                <div class="month-container"><label>Mar<br>
                     {% if 3 in ingredient.months %}
                         <input type="checkbox" name="Mar" checked>
                         {% else %}
                         <input type="checkbox" name="Mar">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Apr
+                <div class="month-container"><label>Apr<br>
                     {% if 4 in ingredient.months %}
                         <input type="checkbox" name="Apr" checked>
                         {% else %}
                         <input type="checkbox" name="Apr">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>May
+                <div class="month-container"><label>May<br>
                     {% if 5 in ingredient.months %}
                         <input type="checkbox" name="May" checked>
                         {% else %}
                         <input type="checkbox" name="May">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Jun
+                <div class="month-container"><label>Jun<br>
                     {% if 6 in ingredient.months %}
                         <input type="checkbox" name="Jun" checked>
                         {% else %}
                         <input type="checkbox" name="Jun">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Jul
+                <div class="month-container"><label>Jul<br>
                     {% if 7 in ingredient.months %}
                         <input type="checkbox" name="Jul" checked>
                         {% else %}
                         <input type="checkbox" name="Jul">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Aug
+                <div class="month-container"><label>Aug<br>
                     {% if 8 in ingredient.months %}
                         <input type="checkbox" name="Aug" checked>
                         {% else %}
                         <input type="checkbox" name="Aug">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Sep
+                <div class="month-container"><label>Sep<br>
                     {% if 9 in ingredient.months %}
                         <input type="checkbox" name="Sep" checked>
                         {% else %}
                         <input type="checkbox" name="Sep">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Oct
+                <div class="month-container"><label>Oct<br>
                     {% if 10 in ingredient.months %}
                         <input type="checkbox" name="Oct" checked>
                         {% else %}
                         <input type="checkbox" name="Oct">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Nov
+                <div class="month-container"><label>Nov<br>
                     {% if 11 in ingredient.months %}
                         <input type="checkbox" name="Nov" checked>
                         {% else %}
                         <input type="checkbox" name="Nov">
                         {% endif %}
                 </label></div>
-                <div class="month-container"><label>Dec
+                <div class="month-container"><label>Dec<br>
                     {% if 12 in ingredient.months %}
                         <input type="checkbox" name="Dec" checked>
                         {% else %}
@@ -152,8 +150,10 @@
                 </label></div>
             </div>
             <label>Storage Instructions <textarea name="storage" maxlength="9999">{{ingredient.storage}}</textarea></label><br>
-            <input type="submit" value="Edit Ingredient">
-            <button type="button" onclick="history.go(0)">Reset</button>
-            <button type="button" onclick="window.location.assign('{{url_for('chartpage')}}');">Cancel</button>
+            <div class="form-buttons">
+                <input type="submit" value="Edit Ingredient">
+                <button type="button" onclick="history.go(0)">Reset</button>
+                <button type="button" onclick="window.location.assign('{{url_for('chartpage')}}');">Cancel</button>
+            </div>
     </form>
 {% endblock %}
