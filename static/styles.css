@@ -167,6 +167,10 @@ th {
     background-color: transparent;
 }
 
+#empty {
+    text-decoration: line-through;
+}
+
 
 /* Links */
 

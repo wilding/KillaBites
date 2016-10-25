@@ -38,7 +38,7 @@
         <tbody>
             {% for ingredient in ingredients: %}
                 <tr class="chart-row">
-                    <td><div class="chart-cell-name">
+                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
                         <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>

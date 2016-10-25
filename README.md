@@ -21,6 +21,7 @@ To Do:
         - search
 
         - header row stays when scrolling
+
         - strikethru if no months
         - ingredient icons or something?
         - highlight current month
