@@ -27,6 +27,9 @@ $(function() {
     $("body").on("click", ".delete", function (e) {
         $(this).parent("div").remove();
     });
+
+    $(window).scroll(headerScroll);
+
 });
 
 var showDeleteIngredient = function (index) {
@@ -39,4 +42,16 @@ var showChartRow = function (index) {
     var row = $("tbody").children(".chart-row")[index];
     $(row).find('.delete-ingredient-cell').css('display', "none");
     $(row).children('.month-cell').css('display', 'table-cell');
+}
+
+var headerScroll = function () {
+    var header = $('.relative-header');
+    var offset = header.offset();
+    var scrolltop = $(window).scrollTop();
+    var fixed_header = $('.fixed-header');
+    if (scrolltop > offset.top) {
+        fixed_header.css("display", "table");
+    } else {
+        fixed_header.css("display", "none");
+    };
 }

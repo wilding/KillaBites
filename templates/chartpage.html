@@ -19,7 +19,7 @@
     <table>
         <caption align="bottom">*results will vary outside California</caption>
         <thead>
-            <tr>
+            <tr class="relative-header">
                 <th><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
                 <th id="{% if current_month == 1 %}current-month{% endif %}">Jan</th>
                 <th id="{% if current_month == 2 %}current-month{% endif %}">Feb</th>
@@ -33,6 +33,21 @@
                 <th id="{% if current_month == 10 %}current-month{% endif %}">Oct</th>
                 <th id="{% if current_month == 11 %}current-month{% endif %}">Nov</th>
                 <th id="{% if current_month == 12 %}current-month{% endif %}">Dec</th>
+            </tr>
+            <tr class="fixed-header">
+                <th width="163"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
+                <th id="{% if current_month == 1 %}current-month{% endif %}" width="65">Jan</th>
+                <th id="{% if current_month == 2 %}current-month{% endif %}" width="65">Feb</th>
+                <th id="{% if current_month == 3 %}current-month{% endif %}" width="65">Mar</th>
+                <th id="{% if current_month == 4 %}current-month{% endif %}" width="65">Apr</th>
+                <th id="{% if current_month == 5 %}current-month{% endif %}" width="65">May</th>
+                <th id="{% if current_month == 6 %}current-month{% endif %}" width="65">Jun</th>
+                <th id="{% if current_month == 7 %}current-month{% endif %}" width="65">Jul</th>
+                <th id="{% if current_month == 8 %}current-month{% endif %}" width="65">Aug</th>
+                <th id="{% if current_month == 9 %}current-month{% endif %}" width="65">Sep</th>
+                <th id="{% if current_month == 10 %}current-month{% endif %}" width="65">Oct</th>
+                <th id="{% if current_month == 11 %}current-month{% endif %}" width="65">Nov</th>
+                <th id="{% if current_month == 12 %}current-month{% endif %}" width="65">Dec</th>
             </tr>
         </thead>
         <tbody>
