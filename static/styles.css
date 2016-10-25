@@ -159,6 +159,11 @@ th {
     text-align: left;
 }
 
+#current-month {
+    color: #ab1c20;
+    font-weight: bold;
+}
+
 
 /* Empty Cells */
 

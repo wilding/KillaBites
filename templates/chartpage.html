@@ -21,18 +21,18 @@
         <thead>
             <tr>
                 <th><a href="{{url_for('newIngredient')}}">Add Ingredient</a></th>
-                <th>Jan</th>
-                <th>Feb</th>
-                <th>Mar</th>
-                <th>Apr</th>
-                <th>May</th>
-                <th>Jun</th>
-                <th>Jul</th>
-                <th>Aug</th>
-                <th>Sep</th>
-                <th>Oct</th>
-                <th>Nov</th>
-                <th>Dec</th>
+                <th id="{% if current_month == 1 %}current-month{% endif %}">Jan</th>
+                <th id="{% if current_month == 2 %}current-month{% endif %}">Feb</th>
+                <th id="{% if current_month == 3 %}current-month{% endif %}">Mar</th>
+                <th id="{% if current_month == 4 %}current-month{% endif %}">Apr</th>
+                <th id="{% if current_month == 5 %}current-month{% endif %}">May</th>
+                <th id="{% if current_month == 6 %}current-month{% endif %}">Jun</th>
+                <th id="{% if current_month == 7 %}current-month{% endif %}">Jul</th>
+                <th id="{% if current_month == 8 %}current-month{% endif %}">Aug</th>
+                <th id="{% if current_month == 9 %}current-month{% endif %}">Sep</th>
+                <th id="{% if current_month == 10 %}current-month{% endif %}">Oct</th>
+                <th id="{% if current_month == 11 %}current-month{% endif %}">Nov</th>
+                <th id="{% if current_month == 12 %}current-month{% endif %}">Dec</th>
             </tr>
         </thead>
         <tbody>

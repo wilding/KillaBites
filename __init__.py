@@ -44,7 +44,8 @@ def menupage():
 def chartpage():
     """docstring for chartpage"""
     ingredients = session.query(Ingredient).order_by(Ingredient.group, Ingredient.name).all()
-    return render_template('chartpage.html', ingredients=ingredients)
+    current_month = datetime.now().month
+    return render_template('chartpage.html', ingredients=ingredients, current_month=current_month)
 
 
 # Ingredient CRUD
