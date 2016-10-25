@@ -43,9 +43,14 @@ def menupage():
 @app.route('/chart/')
 def chartpage():
     """docstring for chartpage"""
-    ingredients = session.query(Ingredient).order_by(Ingredient.group, Ingredient.name).all()
+    fruit = session.query(Ingredient).filter_by(group='fruit').order_by(Ingredient.name).all()
+    vegetables = session.query(Ingredient).filter_by(group='vegetables').order_by(Ingredient.name).all()
+    nuts = session.query(Ingredient).filter_by(group='nuts').order_by(Ingredient.name).all()
+    sea = session.query(Ingredient).filter_by(group='sea').order_by(Ingredient.name).all()
+    air = session.query(Ingredient).filter_by(group='air').order_by(Ingredient.name).all()
+    land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.name).all()
     current_month = datetime.now().month
-    return render_template('chartpage.html', ingredients=ingredients, current_month=current_month)
+    return render_template('chartpage.html', fruit=fruit, vegetables=vegetables, nuts=nuts, sea=sea, air=air, land=land, current_month=current_month)
 
 
 # Ingredient CRUD

@@ -79,7 +79,7 @@ nav {
 
 .chart-tabs {
     display: flex;
-    width: 944px;
+    width: 958px;
 }
 
 .chart-group-link {
@@ -109,7 +109,7 @@ caption {
 .fixed-header {
     position: fixed;
     top: 0;
-    width: 944px;
+    width: 958px;
     display: none;
 }
 
@@ -169,6 +169,10 @@ th {
 #current-month {
     color: #ab1c20;
     font-weight: bold;
+}
+
+.group-title-cell {
+    height: 50px;
 }
 
 
