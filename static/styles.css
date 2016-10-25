@@ -169,6 +169,7 @@ th {
 
 #empty {
     text-decoration: line-through;
+    color: red;
 }
 
 
