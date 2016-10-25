@@ -26,14 +26,16 @@ a {
     text-decoration: none;
 }
 
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Nav
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
 nav {
-    width: 100%;
     display: flex;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .nav-link {
@@ -71,115 +73,117 @@ nav {
     Chart Page
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
 /* Tabs */
 
-.chart-tabs {
-    width: 944px;
-    display: flex;
-}
 
+.chart-tabs {
+    display: flex;
+    width: 944px;
+}
 
 .chart-group-link {
-    width: 16.66666%;
-    text-align: center;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
     border: 1px solid black;
     color: black;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
     padding: 5px 0 5px 0;
+    text-align: center;
+    width: 16.66666%;
 }
+
 
 /* Table */
 
+
 table {
-    max-width: 100%;
     border-collapse: collapse;
+    max-width: 100%;
 }
 
 caption {
     padding: 10px 0 10px 0;
 }
 
+
+/* Table Cells */
+
+
 td {
-    text-align: center;
     border: 1px solid black;
     empty-cells: hide;
+    text-align: center;
 }
 
 th {
-    text-align: center;
-    border: 1px solid black;
-    padding: 4px 0 4px 0;
-    font-weight: normal;
-    /*-webkit-text-fill-color: transparent;*/
-    /*-webkit-background-clip: text;*/
     background: black;
+    border: 1px solid black;
     color: #eee1c1;
-}
-
-th a {
-    color: #eee1c1;
-}
-
-.chart-row {
-    transition: transform 0.35s;
+    font-weight: normal;
+    padding: 4px 0 4px 0;
+    text-align: center;
 }
 
 .chart-cell-name {
-    text-align: left;
     padding: 2px 0 2px 5px;
+    text-align: left;
 }
 
-.chart-cell-link {
-    float: right;
-    padding: 0 2px 0 2px;
-    opacity: 0;
-}
-
-.chart-cell-name:hover .chart-cell-link {
-    opacity: 1;
+.month-cell {
+    width: 65px;
 }
 
 .chart-cell-fruit {
     background: #ab1c20;
-    width: 65px;
 }
 .chart-cell-vegetables {
     background: green;
-    width: 65px;
 }
 .chart-cell-nuts {
     background: brown;
-    width: 65px;
 }
 .chart-cell-sea {
     background: blue;
-    width: 65px;
 }
 .chart-cell-air {
     background: orange;
-    width: 65px;
 }
 .chart-cell-land {
     background: pink;
-    width: 65px;
 }
+
+.delete-ingredient-cell {
+    display: none;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+/* Empty Cells */
+
 
 .chart-cell-fruit:empty, .chart-cell-vegetables:empty, .chart-cell-nuts:empty, .chart-cell-sea:empty, .chart-cell-air:empty, .chart-cell-land:empty {
     background-color: transparent;
 }
 
-/* Delete Ingredient Section */
 
-.delete-ingredient-row {
-    display: none;
-    height: 25px;
+/* Links */
+
+
+th a {
+    color: #eee1c1;
 }
 
-.delete-ingredient-cell {
-    text-align: left;
-    padding-left: 10px;
+.chart-cell-link {
+    float: right;
+    opacity: 0;
+    padding: 0 2px 0 2px;
+    color: blue;
+}
+
+.chart-cell-name:hover .chart-cell-link {
+    opacity: 1;
 }
 
 

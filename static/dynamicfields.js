@@ -30,15 +30,13 @@ $(function() {
 });
 
 var showDeleteIngredient = function (index) {
-    var delete_row = $("tbody").children(".delete-ingredient-row")[index];
-    var chart_row = $("tbody").children(".chart-row")[index];
-    $(delete_row).css('display', "table-row");
-    $(chart_row).css('display', 'none');
+    var row = $("tbody").children(".chart-row")[index];
+    $(row).find('.delete-ingredient-cell').css('display', "table-cell");
+    $(row).children('.month-cell').css('display', 'none');
 }
 
 var showChartRow = function (index) {
-    var delete_row = $("tbody").children(".delete-ingredient-row")[index];
-    var chart_row = $("tbody").children(".chart-row")[index];
-    $(delete_row).css('display', "none");
-    $(chart_row).css('display', 'table-row');
+    var row = $("tbody").children(".chart-row")[index];
+    $(row).find('.delete-ingredient-cell').css('display', "none");
+    $(row).children('.month-cell').css('display', 'table-cell');
 }
