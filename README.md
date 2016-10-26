@@ -16,11 +16,10 @@ To Do:
 
 
     Chart
-        - split into groups
         - dynamic querying
         - search
 
-        - ingredient icons or something?
+        - ingredient icons or something? hover for picture?
         - delete ingredient transition?
 
         - font

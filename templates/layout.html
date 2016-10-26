@@ -10,9 +10,9 @@
 </head>
 <body>
     <nav>
-        <a href="{{url_for('chartpage')}}" class="nav-link"><i class="fa fa-table fa-lg" aria-hidden="true"></i></a>
-        <a href="{{url_for('homepage')}}" class="nav-link"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
-        <a href="{{url_for('menupage')}}" class="nav-link"><i class="fa fa-spoon fa-lg" aria-hidden="true"></i></a>
+        <a href="{{url_for('chartpage')}}" class="nav-link" id="{% if request.path == '/chart/' %}current-page{% endif %}">C<br>H<br>A<br>R<br>T<br><i class="fa fa-table fa-lg" aria-hidden="true"></i></a>
+        <a href="{{url_for('homepage')}}" class="nav-link" id="{% if request.path == '/' %}current-page{% endif %}">H<br>O<br>M<br>E<br><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+        <a href="{{url_for('menupage')}}" class="nav-link last-link" id="{% if request.path == '/menu/' %}current-page{% endif %}">M<br>E<br>N<br>U<br><i class="fa fa-spoon fa-lg" aria-hidden="true"></i></a>
     </nav>
     {% block content %}{% endblock %}
 </body>
