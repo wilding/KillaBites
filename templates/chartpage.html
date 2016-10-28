@@ -58,7 +58,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.fruit-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -77,7 +77,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.fruit-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>
@@ -91,7 +91,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.vegetables-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -110,7 +110,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.vegetables-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>
@@ -124,7 +124,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.nuts-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -143,7 +143,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.nuts-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>
@@ -157,7 +157,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.sea-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -176,7 +176,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, 'sea-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>
@@ -190,7 +190,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.air-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -209,7 +209,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.air-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>
@@ -223,7 +223,7 @@
                 <tr class="chart-row">
                     <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
                         {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}})"></i>
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.land-table')"></i>
                         <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                     </div></td>
                     <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
@@ -242,7 +242,7 @@
                         <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}})">Cancel</button>
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.land-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>

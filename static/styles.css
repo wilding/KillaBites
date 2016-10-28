@@ -172,6 +172,10 @@ th {
     text-align: center;
 }
 
+.group-title-cell {
+    height: 50px;
+}
+
 .chart-cell-name {
     padding: 2px 0 2px 5px;
     text-align: left;
@@ -213,10 +217,6 @@ th {
 #current-month {
     color: #ab1c20;
     font-weight: bold;
-}
-
-.group-title-cell {
-    height: 50px;
 }
 
 

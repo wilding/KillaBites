@@ -46,14 +46,14 @@ $(function() {
 
 });
 
-var showDeleteIngredient = function (index) {
-    var row = $("tbody").children(".chart-row")[index];
-    $(row).find('.delete-ingredient-cell').css('display', "table-cell");
+var showDeleteIngredient = function (index, table) {
+    var row = $(table).children(".chart-row")[index];
     $(row).children('.month-cell').css('display', 'none');
+    $(row).find('.delete-ingredient-cell').css('display', "table-cell");
 }
 
-var showChartRow = function (index) {
-    var row = $("tbody").children(".chart-row")[index];
+var showChartRow = function (index, table) {
+    var row = $(table).children(".chart-row")[index];
     $(row).find('.delete-ingredient-cell').css('display', "none");
     $(row).children('.month-cell').css('display', 'table-cell');
 }
