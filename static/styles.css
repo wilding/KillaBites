@@ -200,6 +200,10 @@ th {
     background: #E53935;
 }
 
+.chart-cell-link {
+    cursor: pointer;
+}
+
 .delete-ingredient-cell {
     display: none;
     padding-left: 10px;

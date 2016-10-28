@@ -16,13 +16,13 @@ To Do:
 
 
     Chart
-        - dynamic querying
         - search
 
         - ingredient icons or something? hover for picture?
         - delete ingredient transition?
 
         - font
+        - colors
         - background
         - make responsive
 
