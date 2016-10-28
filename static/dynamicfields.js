@@ -30,6 +30,20 @@ $(function() {
 
     $(window).scroll(headerScroll);
 
+    $('.chart-group-tab').click(function () {
+        var number_active = $('.active').length;
+        if (number_active === 0) {
+            $('tbody').toggleClass('show-group');
+        }
+        $(this).toggleClass('chart-cell-' + $(this).text().toLowerCase());
+        $(this).toggleClass('active');
+        var tablestring = '.' + $(this).text().toLowerCase() + '-table';
+        $(tablestring).toggleClass('show-group');
+        if ((number_active === 1) && (!($(this).hasClass('active')))) {
+            $('tbody').addClass('show-group');
+        }
+    });
+
 });
 
 var showDeleteIngredient = function (index) {

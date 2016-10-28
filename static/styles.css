@@ -113,15 +113,15 @@ nav {
     margin-top: 50px;
 }
 
-.chart-group-link {
+.chart-group-tab {
     border: 1px solid black;
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
-    color: black;
     padding: 5px 0 5px 0;
     text-align: center;
     width: 16.66666%;
+    cursor: pointer;
 }
 
 
@@ -130,6 +130,7 @@ nav {
 
 table {
     border-collapse: collapse;
+    width: 958px;
     max-width: 100%;
 }
 
@@ -142,6 +143,14 @@ caption {
     position: fixed;
     top: 0;
     width: 958px;
+}
+
+tbody {
+    display: none;
+}
+
+.show-group {
+    display: table-row-group;
 }
 
 
@@ -173,22 +182,22 @@ th {
 }
 
 .chart-cell-fruit {
-    background: #ab1c20;
+    background: #7B1FA2;
 }
 .chart-cell-vegetables {
-    background: green;
+    background: #43A047;
 }
 .chart-cell-nuts {
-    background: brown;
+    background: #6D4C41;
 }
 .chart-cell-sea {
-    background: blue;
+    background: #1E88E5;
 }
 .chart-cell-air {
-    background: orange;
+    background: #FDD835;
 }
 .chart-cell-land {
-    background: pink;
+    background: #E53935;
 }
 
 .delete-ingredient-cell {

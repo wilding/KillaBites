@@ -9,30 +9,30 @@
 
 {% block content %}
     <div class="chart-tabs">
-        <a href="" class="chart-group-link">Fruit</a>
-        <a href="" class="chart-group-link">Vegetables</a>
-        <a href="" class="chart-group-link">Nuts</a>
-        <a href="" class="chart-group-link">Sea</a>
-        <a href="" class="chart-group-link">Air</a>
-        <a href="" class="chart-group-link">Land</a>
+        <p class="chart-group-tab fruit-tab">Fruit</p>
+        <p class="chart-group-tab vegetables-tab">Vegetables</p>
+        <p class="chart-group-tab nuts-tab">Nuts</p>
+        <p class="chart-group-tab sea-tab">Sea</p>
+        <p class="chart-group-tab air-tab">Air</p>
+        <p class="chart-group-tab land-tab">Land</p>
     </div>
     <table>
         <caption align="bottom">*results will vary outside California</caption>
         <thead>
             <tr class="relative-header">
-                <th><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
-                <th id="{% if current_month == 1 %}current-month{% endif %}">Jan</th>
-                <th id="{% if current_month == 2 %}current-month{% endif %}">Feb</th>
-                <th id="{% if current_month == 3 %}current-month{% endif %}">Mar</th>
-                <th id="{% if current_month == 4 %}current-month{% endif %}">Apr</th>
-                <th id="{% if current_month == 5 %}current-month{% endif %}">May</th>
-                <th id="{% if current_month == 6 %}current-month{% endif %}">Jun</th>
-                <th id="{% if current_month == 7 %}current-month{% endif %}">Jul</th>
-                <th id="{% if current_month == 8 %}current-month{% endif %}">Aug</th>
-                <th id="{% if current_month == 9 %}current-month{% endif %}">Sep</th>
-                <th id="{% if current_month == 10 %}current-month{% endif %}">Oct</th>
-                <th id="{% if current_month == 11 %}current-month{% endif %}">Nov</th>
-                <th id="{% if current_month == 12 %}current-month{% endif %}">Dec</th>
+                <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
+                <th id="{% if current_month == 1 %}current-month{% endif %}" width="65">Jan</th>
+                <th id="{% if current_month == 2 %}current-month{% endif %}" width="65">Feb</th>
+                <th id="{% if current_month == 3 %}current-month{% endif %}" width="65">Mar</th>
+                <th id="{% if current_month == 4 %}current-month{% endif %}" width="65">Apr</th>
+                <th id="{% if current_month == 5 %}current-month{% endif %}" width="65">May</th>
+                <th id="{% if current_month == 6 %}current-month{% endif %}" width="65">Jun</th>
+                <th id="{% if current_month == 7 %}current-month{% endif %}" width="65">Jul</th>
+                <th id="{% if current_month == 8 %}current-month{% endif %}" width="65">Aug</th>
+                <th id="{% if current_month == 9 %}current-month{% endif %}" width="65">Sep</th>
+                <th id="{% if current_month == 10 %}current-month{% endif %}" width="65">Oct</th>
+                <th id="{% if current_month == 11 %}current-month{% endif %}" width="65">Nov</th>
+                <th id="{% if current_month == 12 %}current-month{% endif %}" width="65">Dec</th>
             </tr>
             <tr class="fixed-header">
                 <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
@@ -50,7 +50,7 @@
                 <th id="{% if current_month == 12 %}current-month{% endif %}" width="65">Dec</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="fruit-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Fruit</td>
             </tr>
@@ -82,6 +82,8 @@
                     </td>
                 </tr>
                 {% endfor %}
+        </tbody>
+        <tbody class="vegetables-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Vegetables</td>
             </tr>
@@ -113,6 +115,8 @@
                     </td>
                 </tr>
                 {% endfor %}
+        </tbody>
+        <tbody class="nuts-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Nuts</td>
             </tr>
@@ -144,6 +148,8 @@
                     </td>
                 </tr>
                 {% endfor %}
+        </tbody>
+        <tbody class="sea-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sea</td>
             </tr>
@@ -175,6 +181,8 @@
                     </td>
                 </tr>
                 {% endfor %}
+        </tbody>
+        <tbody class="air-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Air</td>
             </tr>
@@ -206,6 +214,8 @@
                     </td>
                 </tr>
                 {% endfor %}
+        </tbody>
+        <tbody class="land-table show-group">
             <tr>
                 <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Land</td>
             </tr>
