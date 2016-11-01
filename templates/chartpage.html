@@ -11,6 +11,7 @@
     <div class="chart-tabs">
         <p class="chart-group-tab fruit-tab">Fruit</p>
         <p class="chart-group-tab vegetables-tab">Vegetables</p>
+        <p class="chart-group-tab herbs-tab">Herbs</p>
         <p class="chart-group-tab nuts-tab">Nuts</p>
         <p class="chart-group-tab sea-tab">Sea</p>
         <p class="chart-group-tab air-tab">Air</p>
@@ -111,6 +112,39 @@
                             <label>Are you sure you want to delete {{ingredient.name}}?</label>
                             <input type="submit" value="Delete Ingredient">
                             <button type="button" onclick="showChartRow({{loop.index0}}, '.vegetables-table')">Cancel</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+        </tbody>
+        <tbody class="herbs-table show-group">
+            <tr>
+                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Herbs</td>
+            </tr>
+            {% for ingredient in herbs: %}
+                <tr class="chart-row">
+                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
+                        {{ingredient.name}}
+                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.herbs-table')"></i>
+                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    </div></td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
+                    <td colspan="12" class="delete-ingredient-cell">
+                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
+                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
+                            <input type="submit" value="Delete Ingredient">
+                            <button type="button" onclick="showChartRow({{loop.index0}}, '.herbs-table')">Cancel</button>
                         </form>
                     </td>
                 </tr>

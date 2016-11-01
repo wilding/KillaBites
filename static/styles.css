@@ -19,8 +19,18 @@ h1 {
     width: 100%;
 }
 
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
+}
+
+@font-face {
+    font-family: halloween;
+    src: url(./Halloween.ttf);
 }
 
 
@@ -79,10 +89,15 @@ nav {
     Homepage
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+.homepage-title {
+    font-family: halloween;
+    font-size: 3em;
+}
 
 .ingredients_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
 }
 
@@ -118,10 +133,10 @@ nav {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
+    cursor: pointer;
     padding: 5px 0 5px 0;
     text-align: center;
-    width: 16.66666%;
-    cursor: pointer;
+    width: 100%;
 }
 
 
@@ -191,6 +206,9 @@ th {
 .chart-cell-vegetables {
     background: #43A047;
 }
+.chart-cell-herbs {
+    background: #7CB342;
+}
 .chart-cell-nuts {
     background: #6D4C41;
 }
@@ -223,7 +241,7 @@ th {
 /* Empty Cells */
 
 
-.chart-cell-fruit:empty, .chart-cell-vegetables:empty, .chart-cell-nuts:empty, .chart-cell-sea:empty, .chart-cell-air:empty, .chart-cell-land:empty {
+.chart-cell-fruit:empty, .chart-cell-vegetables:empty, .chart-cell-herbs:empty, .chart-cell-nuts:empty, .chart-cell-sea:empty, .chart-cell-air:empty, .chart-cell-land:empty {
     background-color: transparent;
 }
 
@@ -346,7 +364,7 @@ li {
 .group-container {
     display: flex;
     text-align: center;
-    width: 16.666666%;
+    width: 100%;
 }
 
 .course-container {

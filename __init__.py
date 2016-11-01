@@ -26,8 +26,14 @@ def homepage():
     """docstring for homepage"""
     # session.rollback()
     current_month = datetime.now().month
-    ingredients = session.query(Ingredient).filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
+    fruit = session.query(Ingredient).filter_by(group="fruit").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    vegetables = session.query(Ingredient).filter_by(group="vegetables").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    herbs = session.query(Ingredient).filter_by(group="herbs").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    nuts = session.query(Ingredient).filter_by(group="nuts").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    sea = session.query(Ingredient).filter_by(group="sea").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    air = session.query(Ingredient).filter_by(group="air").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    return render_template('homepage.html', fruit=fruit, vegetables=vegetables, herbs=herbs, nuts=nuts, sea=sea, air=air, land=land, month=month_dict[current_month])
 
 
 # Full Menu
@@ -45,18 +51,19 @@ def chartpage():
     """docstring for chartpage"""
     fruit = session.query(Ingredient).filter_by(group='fruit').order_by(Ingredient.name).all()
     vegetables = session.query(Ingredient).filter_by(group='vegetables').order_by(Ingredient.name).all()
+    herbs = session.query(Ingredient).filter_by(group='herbs').order_by(Ingredient.name).all()
     nuts = session.query(Ingredient).filter_by(group='nuts').order_by(Ingredient.name).all()
     sea = session.query(Ingredient).filter_by(group='sea').order_by(Ingredient.name).all()
     air = session.query(Ingredient).filter_by(group='air').order_by(Ingredient.name).all()
     land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.name).all()
     current_month = datetime.now().month
-    return render_template('chartpage.html', fruit=fruit, vegetables=vegetables, nuts=nuts, sea=sea, air=air, land=land, current_month=current_month)
+    return render_template('chartpage.html', fruit=fruit, vegetables=vegetables, herbs=herbs, nuts=nuts, sea=sea, air=air, land=land, current_month=current_month)
 
 
 # Ingredient CRUD
 
 
-# Add Ingredient
+# New Ingredient
 @app.route('/ingredient/add/', methods=['GET', 'POST'])
 def newIngredient():
     """docstring for newIngredient"""

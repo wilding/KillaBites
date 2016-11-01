@@ -27,11 +27,18 @@
                         <input type="radio" name="group" value="fruit" required>
                         {% endif %}
                 </label></div>
-                <div class="group-container"><label>Vegetables<br>
+                <div class="group-container"><label>Vegetable<br>
                     {% if ingredient.group == 'vegetables': %}
                         <input type="radio" name="group" value="vegetables" checked required>
                         {% else %}
                         <input type="radio" name="group" value="vegetables" required>
+                        {% endif %}
+                </label></div>
+                <div class="group-container"><label>Herb<br>
+                    {% if ingredient.group == 'herbs': %}
+                        <input type="radio" name="group" value="herbs" checked required>
+                        {% else %}
+                        <input type="radio" name="group" value="herbs" required>
                         {% endif %}
                 </label></div>
                 <div class="group-container"><label>Nuts<br>
