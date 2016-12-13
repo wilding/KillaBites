@@ -4,12 +4,10 @@
 
 {% block content %}
     <h1>Full Menu</h1>
-    <a href="{{url_for('newRecipe')}}">Add Recipe</a>
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>name</th>
+                <th><a href="{{url_for('newRecipe')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
                 <th>time</th>
                 <th>months</th>
                 <th>cuisines</th>
@@ -18,10 +16,9 @@
                 <th>occassions</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="show-group">
             {% for recipe in recipes %}
                 <tr>
-                    <td>{{recipe.id}}</td>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
                     <td>{{recipe.time}}</td>
                     <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
