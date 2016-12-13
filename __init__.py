@@ -34,7 +34,7 @@ def homepage():
     air = session.query(Ingredient).filter_by(group="air").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
     land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
     ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
-    return render_template('homepage.html', ingredients=ingredients, month=month_dict[current_month])
+    return render_template('viewhomepage.html', ingredients=ingredients, month=month_dict[current_month])
 
 
 # Full Menu
@@ -43,7 +43,7 @@ def menupage():
     """docstring for menupage"""
     # session.rollback()
     recipes = session.query(Recipe).all()
-    return render_template('menupage.html', recipes=recipes, month_dict=month_dict)
+    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict)
 
 
 # Full Chart
@@ -59,7 +59,7 @@ def chartpage():
     land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.name).all()
     ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
     current_month = datetime.now().month
-    return render_template('chartpage.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict)
+    return render_template('viewchart.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict)
 
 
 # Ingredient CRUD
