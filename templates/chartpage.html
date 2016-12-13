@@ -9,278 +9,47 @@
 
 {% block content %}
     <div class="chart-tabs">
-        <p class="chart-group-tab fruit-tab">Fruit</p>
-        <p class="chart-group-tab vegetables-tab">Vegetables</p>
-        <p class="chart-group-tab herbs-tab">Herbs</p>
-        <p class="chart-group-tab nuts-tab">Nuts</p>
-        <p class="chart-group-tab sea-tab">Sea</p>
-        <p class="chart-group-tab air-tab">Air</p>
-        <p class="chart-group-tab land-tab">Land</p>
+        {% for group in ingredients %}
+            <p class="chart-group-tab {{group[0].group}}-tab">{{group[0].group.capitalize()}}</p>
+            {% endfor %}
     </div>
     <table>
         <caption align="bottom">*results will vary outside California</caption>
         <thead>
-            <tr class="relative-header">
-                <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
-                <th id="{% if current_month == 1 %}current-month{% endif %}" width="65">Jan</th>
-                <th id="{% if current_month == 2 %}current-month{% endif %}" width="65">Feb</th>
-                <th id="{% if current_month == 3 %}current-month{% endif %}" width="65">Mar</th>
-                <th id="{% if current_month == 4 %}current-month{% endif %}" width="65">Apr</th>
-                <th id="{% if current_month == 5 %}current-month{% endif %}" width="65">May</th>
-                <th id="{% if current_month == 6 %}current-month{% endif %}" width="65">Jun</th>
-                <th id="{% if current_month == 7 %}current-month{% endif %}" width="65">Jul</th>
-                <th id="{% if current_month == 8 %}current-month{% endif %}" width="65">Aug</th>
-                <th id="{% if current_month == 9 %}current-month{% endif %}" width="65">Sep</th>
-                <th id="{% if current_month == 10 %}current-month{% endif %}" width="65">Oct</th>
-                <th id="{% if current_month == 11 %}current-month{% endif %}" width="65">Nov</th>
-                <th id="{% if current_month == 12 %}current-month{% endif %}" width="65">Dec</th>
-            </tr>
-            <tr class="fixed-header">
-                <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
-                <th id="{% if current_month == 1 %}current-month{% endif %}" width="65">Jan</th>
-                <th id="{% if current_month == 2 %}current-month{% endif %}" width="65">Feb</th>
-                <th id="{% if current_month == 3 %}current-month{% endif %}" width="65">Mar</th>
-                <th id="{% if current_month == 4 %}current-month{% endif %}" width="65">Apr</th>
-                <th id="{% if current_month == 5 %}current-month{% endif %}" width="65">May</th>
-                <th id="{% if current_month == 6 %}current-month{% endif %}" width="65">Jun</th>
-                <th id="{% if current_month == 7 %}current-month{% endif %}" width="65">Jul</th>
-                <th id="{% if current_month == 8 %}current-month{% endif %}" width="65">Aug</th>
-                <th id="{% if current_month == 9 %}current-month{% endif %}" width="65">Sep</th>
-                <th id="{% if current_month == 10 %}current-month{% endif %}" width="65">Oct</th>
-                <th id="{% if current_month == 11 %}current-month{% endif %}" width="65">Nov</th>
-                <th id="{% if current_month == 12 %}current-month{% endif %}" width="65">Dec</th>
-            </tr>
+            {% for position in ['relative', 'fixed'] %}
+                <tr class="{{position}}-header">
+                    <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
+                    {% for i in range(1, 13) %}
+                        <th id="{% if current_month == i %}current-month{% endif %}" width="65">{{month_dict[i][:3]}}</th>
+                        {% endfor %}
+                </tr>
+                {% endfor %}
         </thead>
-        <tbody class="fruit-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Fruit</td>
-            </tr>
-            {% for ingredient in fruit: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.fruit-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.fruit-table')">Cancel</button>
-                        </form>
-                    </td>
+        {% for group in ingredients %}
+            <tbody class="{{group[0].group}}-table show-group">
+                <tr>
+                    <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> {{group[0].group.capitalize()}}</td>
                 </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="vegetables-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Vegetables</td>
-            </tr>
-            {% for ingredient in vegetables: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.vegetables-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.vegetables-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="herbs-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Herbs</td>
-            </tr>
-            {% for ingredient in herbs: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.herbs-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.herbs-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="nuts-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Nuts</td>
-            </tr>
-            {% for ingredient in nuts: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.nuts-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.nuts-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="sea-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Sea</td>
-            </tr>
-            {% for ingredient in sea: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.sea-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, 'sea-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="air-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Air</td>
-            </tr>
-            {% for ingredient in air: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.air-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.air-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
-        <tbody class="land-table show-group">
-            <tr>
-                <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> Land</td>
-            </tr>
-            {% for ingredient in land: %}
-                <tr class="chart-row">
-                    <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                        {{ingredient.name}}
-                        <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.land-table')"></i>
-                        <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    </div></td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 1 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 2 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 3 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 4 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 5 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 6 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 7 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 8 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 9 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 10 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 11 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td class="chart-cell-{{ingredient.group}} month-cell">{% if 12 in ingredient.months %}&nbsp;{% endif %}</td>
-                    <td colspan="12" class="delete-ingredient-cell">
-                        <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                            <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                            <input type="submit" value="Delete Ingredient">
-                            <button type="button" onclick="showChartRow({{loop.index0}}, '.land-table')">Cancel</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-        </tbody>
+                {% for ingredient in group %}
+                    <tr class="chart-row">
+                        <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
+                            {{ingredient.name}}
+                            <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.{{ingredient.group}}-table')"></i>
+                            <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        </div></td>
+                        {% for i in range(1, 13) %}
+                            <td class="chart-cell-{{ingredient.group}} month-cell">{% if i in ingredient.months %}&nbsp;{% endif %}</td>
+                            {% endfor %}
+                        <td colspan="12" class="delete-ingredient-cell">
+                            <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
+                                <label>Are you sure you want to delete {{ingredient.name}}?</label>
+                                <input type="submit" value="Delete Ingredient">
+                                <button type="button" onclick="showChartRow({{loop.index0}}, '.{{ingredient.group}}-table')">Cancel</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+            </tbody>
+            {% endfor %}
     </table>
 {% endblock %}

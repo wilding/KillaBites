@@ -3,35 +3,13 @@
 {% block title %} {{ super() }} | {{month}}{% endblock %}
 
 {% block content %}
-    <h1 class="homepage-title">{{month.upper()}}</h1>
+    <h1 class="homepage-title">{{month}}</h1>
     <div class="ingredients_container">
-        <h2>Fruit</h2>
-        {% for ingredient in fruit: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Vegatables</h2>
-        {% for ingredient in vegetables: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Herbs</h2>
-        {% for ingredient in herbs: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Nuts</h2>
-        {% for ingredient in nuts: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Sea</h2>
-        {% for ingredient in sea: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Land</h2>
-        {% for ingredient in air: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-            {% endfor %}
-        <h2>Air</h2>
-        {% for ingredient in land: %}
-            <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
+        {% for category in ingredients %}
+            <h2>{{category[0].group.capitalize()}}</h2>
+            {% for ingredient in category %}
+                <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
+                {% endfor %}
             {% endfor %}
     </div>
 {% endblock %}
