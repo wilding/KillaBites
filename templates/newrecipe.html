@@ -8,28 +8,37 @@
 {% endblock %}
 
 {% block content %}
-    <h1>New Recipe</h1>
     <form action="{{url_for('newRecipe')}}" method="post">
        <ul>
-            <li><label>Name: <input type="text" name="name" maxlength="500" required autofocus></label></li>
             <li>
-                <button id="add-pics" type="button">+</button>
-                <label>Pictures: </label>
-                <div id="pic-fields"><input type="text" name="pictures" maxlength="9999"></div>
+                <label>Name: <input type="text" name="name" maxlength="500" required autofocus></label>
             </li>
-            <li><label>Gif: <input type="text" name="gif" maxlength="9999"></label></li>
+            <li>
+                <i class="fa fa-plus-circle" id="add-pics" aria-hidden="true"></i>
+                <label>Pictures: </label>
+                <div id="pic-fields">
+                    <input type="text" name="pictures" maxlength="9999">
+                </div>
+            </li>
+            <li>
+                <label>Gif: <input type="text" name="gif" maxlength="9999"></label>
+            </li>
             <li>
                 <button id="add-sources" type="button">+</button>
                 <label>Sources: </label>
                 <div id="source-fields"><input type="text" name="sources" maxlength="9999"></div>
             </li>
-            <li><label>Days: <input type="number" name="days"></label>
-            <label>Hours: <input type="number" name="hours"></label>
-            <label>Minutes: <input type="number" name="minutes"></label>
-            <label>Seconds: <input type="number" name="seconds"></label></li>
-            <li><label>Yield: <input type="text" name="total_yield" maxlength="500"></label></li>
-            <li><label>Calories: <input type="number" name="calories"></label></li>
-            <li><label>Vegetarian<br><input type="checkbox" name="vegetarian"></label></li>
+            <li>
+                <label>Days: <input type="number" name="days"></label>
+                <label>Hours: <input type="number" name="hours"></label>
+                <label>Minutes: <input type="number" name="minutes"></label>
+                <label>Seconds: <input type="number" name="seconds"></label>
+            </li>
+            <li>
+                <label>Yield: <input type="text" name="total_yield" maxlength="500"></label>
+                <label>Calories: <input type="number" name="calories"></label>
+                <label>Vegetarian<br><input type="checkbox" name="vegetarian"></label>
+            </li>
             <li><div class="month-menu">
                 <div class="month-container"><label>Jan<br><input type="checkbox" name="Jan"></label></div>
                 <div class="month-container"><label>Feb<br><input type="checkbox" name="Feb"></label></div>
@@ -92,8 +101,6 @@
                     <option>Turkish</option>
                     <option>Vietnamese</option>
                 </select></label>
-            </li>
-            <li>
                 <label>Groups:
                 <select name="groups" multiple>
                     <optgroup label="Breakfast">
@@ -133,8 +140,6 @@
                         <option>Cake</option>
                     </optgroup>
                 </select></label>
-            </li>
-            <li>
                 <button id="add-occasions" type="button">+</button>
                 <label>Occasions: </label>
                 <div id="occasion-fields"><input type="text" name="occasions" maxlength="500"></div>
@@ -158,7 +163,7 @@
                 </div>
             </li>
             <li>
-                <input type="submit" value="Create New Recipe">
+                <input type="submit" value="Create Recipe">
                 <input type="reset">
                 <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button>
             </li>
