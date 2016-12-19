@@ -4,12 +4,24 @@
 
 {% block content %}
     <h1 class="homepage-title">{{month}}</h1>
-    <div class="ingredients_container">
         {% for category in ingredients %}
-            <h2>{{category[0].group.capitalize()}}</h2>
-            {% for ingredient in category %}
-                <div class="ingredient_pic" style="background-image: url({{ingredient.picture}});"></div>
-                {% endfor %}
+            <div class="homepage-container">
+                <h2>{{category[0].group.capitalize()}}</h2>
+                {% for ingredient in category %}
+                    <div class="homepage-pic" style="background-image: url({{ingredient.picture}});">
+                        <span class="homepage-popup">
+                            <p class="popup-name">
+                                <b>{{ingredient.name}}</b>{% for alt in ingredient.alts %}, {{alt}}{% endfor %}
+                            </p>
+                            <div class="popup-months">
+                                {% for i in range(1,13) %}
+                                    <div class="popup-cell {% if i in ingredient.months %}filled{% endif %}">{{month_dict[i][:3]}}</div>
+                                    {% endfor %}
+                            </div>
+                            <p class="popup-storage">{{ingredient.storage}}</p>
+                        </span>
+                    </div>
+                    {% endfor %}
+            </div>
             {% endfor %}
-    </div>
 {% endblock %}

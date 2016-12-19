@@ -20,8 +20,8 @@ h1 {
 }
 
 h2 {
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 
 a {
@@ -33,6 +33,16 @@ a {
     src: url(./Halloween.ttf);
 }
 
+@font-face {
+    font-family: thanksgiving;
+    src: url(./Thanksgiving.ttf);
+}
+
+@font-face {
+    font-family: appleberry;
+    src: url(./appleberry.ttf);
+}
+
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Nav
@@ -41,11 +51,11 @@ a {
 
 nav {
     display: flex;
+    height: 0;
     justify-content: flex-end;
-    width: 100%;
     margin-right: 50px;
     position: fixed;
-    height: 0;
+    width: 100%;
 }
 
 .nav-link {
@@ -57,19 +67,19 @@ nav {
     color: #eee1c1;
     display: flex;
     flex-wrap: wrap;
-    height: 108px;
+    height: 110px;
     justify-content: center;
     margin: 0 5px 0 5px;
     padding-bottom: 12px;
     text-align: center;
-    transform: translate3d(0,-70px,0);
+    transform: translate3d(0,-72px,0);
     transition: transform 0.35s;
     width: 3%;
 }
 
 .nav-link i {
-    width: 100%;
     font-size: auto;
+    width: 100%;
 }
 
 #current-page {
@@ -89,28 +99,92 @@ nav {
     Homepage
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.homepage-title {
-    font-family: halloween;
-    font-size: 3em;
-}
+/*.homepage-title {
+    font-family: appleberry;
+    font-size: 4em;
+}*/
 
-.ingredients_container {
+.homepage-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
 }
 
-.ingredient_pic {
+.homepage-pic {
     background-position: center;
     background-size: cover;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
+    cursor: pointer;
     height: 8em;
     margin: 10px;
-    overflow: hidden;
+    position: relative;
     width: 8em;
+}
+
+
+/* Popup */
+
+
+.homepage-popup {
+    background: black;
+    border-radius: 5px;
+    color: #eee1c1;
+    margin-left: -128px;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    transition: 0s visibility;
+    visibility: hidden;
+    width: 300%;
+    z-index: 1;
+}
+
+.homepage-pic:hover .homepage-popup {
+    transition-delay: 0.5s;
+    visibility: visible;
+}
+
+.homepage-popup::after {
+    border-color: transparent transparent black transparent;
+    border-style: solid;
+    border-width: 8px;
+    bottom: 100%;
+    content: " ";
+    left: 50%;
+    position: absolute;
+}
+
+.popup-name {
+    margin: 2px 0 2px 0;
+    width: 100%;
+}
+
+.popup-name b {
+    font-size: 20px;
+}
+
+.popup-months {
+    display: flex;
+    width: 100%;
+}
+
+.popup-cell {
+    background: #eee1c1;
+    border: 1px solid black;
+    color: black;
+    font-size: 13px;
+    width: 8.3333%;
+}
+
+.popup-storage {
+    padding: 5px 0 5px 0;
+}
+
+.filled {
+    background: #ab1c20;
 }
 
 

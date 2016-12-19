@@ -34,7 +34,7 @@ def homepage():
     air = session.query(Ingredient).filter_by(group="air").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
     land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
     ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
-    return render_template('viewhomepage.html', ingredients=ingredients, month=month_dict[current_month])
+    return render_template('viewhomepage.html', ingredients=ingredients, month_dict=month_dict, month=month_dict[current_month])
 
 
 # Full Menu
