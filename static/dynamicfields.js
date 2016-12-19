@@ -45,12 +45,19 @@ $(function() {
     // });
 
     $('.chart-group-tab').click(function () {
-        $('tbody').removeClass('show-group');
-        $('.chart-group-tab').removeClass('chart-cell-fruit chart-cell-vegetables chart-cell-herbs chart-cell-nuts chart-cell-sea chart-cell-air chart-cell-land');
-        $(this).toggleClass('chart-cell-' + $(this).text().toLowerCase());
-        $(this).toggleClass('active');
-        var tablestring = '.' + $(this).text().toLowerCase() + '-table';
-        $(tablestring).toggleClass('show-group');
+        if ($(this).hasClass('active') === true) {
+            console.log("Test!");
+            $(this).toggleClass('chart-cell-' + $(this).text().toLowerCase());
+            $(this).toggleClass('active');
+            $('tbody').addClass('show-group');
+        } else {
+            $('tbody').removeClass('show-group');
+            $('.chart-group-tab').removeClass('chart-cell-fruit chart-cell-vegetables chart-cell-herbs chart-cell-nuts chart-cell-sea chart-cell-air chart-cell-land active');
+            $(this).toggleClass('chart-cell-' + $(this).text().toLowerCase());
+            $(this).toggleClass('active');
+            var tablestring = '.' + $(this).text().toLowerCase() + '-table';
+            $(tablestring).toggleClass('show-group');
+        }
     });
 
 
