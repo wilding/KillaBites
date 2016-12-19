@@ -154,6 +154,7 @@ nav {
     bottom: 100%;
     content: " ";
     left: 50%;
+    margin-left: -5px;
     position: absolute;
 }
 
