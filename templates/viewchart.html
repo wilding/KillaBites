@@ -18,7 +18,7 @@
         <thead>
             {% for position in ['relative', 'fixed'] %}
                 <tr class="{{position}}-header">
-                    <th width="177"><a href="{{url_for('newIngredient')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
+                    <th width="177"><a href="{{url_for('newIngredient')}}" class="add-ingredient-link"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
                     {% for i in range(1, 13) %}
                         <th id="{% if current_month == i %}current-month{% endif %}" width="65">{{month_dict[i][:3]}}</th>
                         {% endfor %}
@@ -28,7 +28,13 @@
         {% for group in ingredients %}
             <tbody class="{{group[0].group}}-table show-group">
                 <tr>
-                    <td colspan="13" class="group-title-cell"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i> {{group[0].group.capitalize()}}</td>
+                    <td colspan="13" class="group-title-cell">
+                        <div>
+                            <i class="fa fa-sort-alpha-asc" id="active-sort" aria-hidden="true"></i>&nbsp;&nbsp;
+                            <p class="group-title">{{group[0].group.capitalize()}}</p>&nbsp;&nbsp;
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                    </td>
                 </tr>
                 {% for ingredient in group %}
                     <tr class="chart-row">

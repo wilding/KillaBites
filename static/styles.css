@@ -198,8 +198,8 @@ nav {
 
 .chart-tabs {
     display: flex;
-    width: 958px;
     margin-top: 50px;
+    width: 958px;
 }
 
 .chart-group-tab {
@@ -219,8 +219,8 @@ nav {
 
 table {
     border-collapse: collapse;
-    width: 958px;
     max-width: 100%;
+    width: 958px;
 }
 
 caption {
@@ -263,6 +263,41 @@ th {
 
 .group-title-cell {
     height: 50px;
+}
+
+.group-title-cell div {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.group-title {
+    display: inline-block;
+    font-size: 18pt;
+}
+
+#active-sort {
+    color: #ab1c20;
+}
+
+.group-title-cell i {
+    color: grey;
+    cursor: pointer;
+    opacity: 0;
+    padding: 8px;
+    transition: opacity 0.35s, visibility 0.35s;
+    visibility: hidden;
+}
+
+.group-title-cell:hover .fa-calendar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.group-title-cell:hover .fa-sort-alpha-asc {
+    opacity: 1;
+    visibility: visible;
 }
 
 .chart-cell-name {
@@ -328,8 +363,12 @@ th {
 /* Links */
 
 
-th a {
+.add-ingredient-link {
     color: #eee1c1;
+}
+
+.add-ingredient-link:hover {
+    color: #ab1c20;
 }
 
 .chart-cell-link {
@@ -337,6 +376,7 @@ th a {
     float: right;
     opacity: 0;
     padding: 0 2px 0 2px;
+    transition: opacity 0.35s;
 }
 
 .chart-cell-name:hover .chart-cell-link {
@@ -347,7 +387,6 @@ th a {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Menu Page
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 
 
 
@@ -463,10 +502,6 @@ li {
 
 .form-buttons {
     margin-top: 10px;
-}
-
-label {
-    width: 100%;
 }
 
 input[name=picture] {
