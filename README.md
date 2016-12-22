@@ -1,12 +1,12 @@
 To Do:
 
     Homepage
-        - recipes
-        - filter recipe by ingredient click
-        - hover for ingredient info
-        - split into groups?
-        - ingredient pics
+        * recipes
+        * filter recipe by ingredient click
+
+        * ingredient pics
         - month font
+
         - nutrition info
         - order
 
@@ -18,13 +18,17 @@ To Do:
     Chart
         - search
 
-        - ingredient icons or something? hover for picture?
+        * hover for picture?
+        * hover over tabs
+
+        * edit ingredient form in chart
         - delete ingredient transition?
 
         - font
         - colors
-        - background
         - make responsive
+
+        - customize ingredient list
 
 
 
@@ -52,6 +56,8 @@ To Do:
         - split source into display/link tuple
         - scale ingredient list
         - pairing
+        - public or no, publish
+        - cuisine flags
 
         - background
         - font
@@ -61,6 +67,8 @@ To Do:
     Form
         - match recipe view to CRUD
         - max interval input?
+
+        - remove ingredient name field bug
 
         - background
         - font
@@ -74,6 +82,8 @@ To Do:
     - JSON API
     - json backups
     - Killa!
+
+    Features Page
 
 
 

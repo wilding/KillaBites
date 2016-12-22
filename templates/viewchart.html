@@ -10,7 +10,7 @@
 {% block content %}
     <div class="chart-tabs">
         {% for group in ingredients %}
-            <p class="chart-group-tab {{group[0].group}}-tab">{{group[0].group.capitalize()}}</p>
+            <p class="chart-group-tab {{group[0][0].group}}-tab">{{group[0][0].group.capitalize()}}</p>
             {% endfor %}
     </div>
     <table>
@@ -26,36 +26,38 @@
                 {% endfor %}
         </thead>
         {% for group in ingredients %}
-            <tbody class="{{group[0].group}}-table show-group">
-                <tr>
-                    <td colspan="13" class="group-title-cell">
-                        <div>
-                            <i class="fa fa-sort-alpha-asc" id="active-sort" aria-hidden="true"></i>&nbsp;&nbsp;
-                            <p class="group-title">{{group[0].group.capitalize()}}</p>&nbsp;&nbsp;
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                        </div>
-                    </td>
-                </tr>
-                {% for ingredient in group %}
-                    <tr class="chart-row">
-                        <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                            {{ingredient.name}}
-                            <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.{{ingredient.group}}-table')"></i>
-                            <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                        </div></td>
-                        {% for i in range(1, 13) %}
-                            <td class="chart-cell-{{ingredient.group}} month-cell">{% if i in ingredient.months %}&nbsp;{% endif %}</td>
-                            {% endfor %}
-                        <td colspan="12" class="delete-ingredient-cell">
-                            <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                                <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                                <input type="submit" value="Delete Ingredient">
-                                <button type="button" onclick="showChartRow({{loop.index0}}, '.{{ingredient.group}}-table')">Cancel</button>
-                            </form>
+            {% for i in range(2) %}
+                <tbody class="{{group[i][0].group}}-table sorting-{{i}} show-group {% if i == 1 %}hide-sort{% endif %}">
+                    <tr>
+                        <td colspan="13" class="group-title-cell">
+                            <div>
+                                <i class="fa fa-sort-alpha-asc" id="active-sort" aria-hidden="true"></i>&nbsp;&nbsp;
+                                <p class="group-title">{{group[i][0].group.capitalize()}}</p>&nbsp;&nbsp;
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </div>
                         </td>
                     </tr>
-                    {% endfor %}
-            </tbody>
+                    {% for ingredient in group[i] %}
+                        <tr class="chart-row">
+                            <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
+                                {{ingredient.name}}
+                                <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.{{ingredient.group}}-table')"></i>
+                                <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            </div></td>
+                            {% for i in range(1, 13) %}
+                                <td class="chart-cell-{{ingredient.group}} month-cell">{% if i in ingredient.months %}&nbsp;{% endif %}</td>
+                                {% endfor %}
+                            <td colspan="12" class="delete-ingredient-cell">
+                                <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
+                                    <label>Are you sure you want to delete {{ingredient.name}}?</label>
+                                    <input type="submit" value="Delete Ingredient">
+                                    <button type="button" onclick="showChartRow({{loop.index0}}, '.{{ingredient.group}}-table')">Cancel</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                </tbody>
+                {% endfor %}
             {% endfor %}
     </table>
 {% endblock %}

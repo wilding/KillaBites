@@ -50,14 +50,28 @@ def menupage():
 @app.route('/chart/')
 def chartpage():
     """docstring for chartpage"""
-    fruit = session.query(Ingredient).filter_by(group='fruit').order_by(Ingredient.name).all()
-    vegetables = session.query(Ingredient).filter_by(group='vegetables').order_by(Ingredient.name).all()
-    herbs = session.query(Ingredient).filter_by(group='herbs').order_by(Ingredient.name).all()
-    nuts = session.query(Ingredient).filter_by(group='nuts').order_by(Ingredient.name).all()
-    sea = session.query(Ingredient).filter_by(group='sea').order_by(Ingredient.name).all()
-    air = session.query(Ingredient).filter_by(group='air').order_by(Ingredient.name).all()
-    land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.name).all()
-    ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
+    alpha_fruit = session.query(Ingredient).filter_by(group='fruit').order_by(Ingredient.name).all()
+    alpha_vegetables = session.query(Ingredient).filter_by(group='vegetables').order_by(Ingredient.name).all()
+    alpha_herbs = session.query(Ingredient).filter_by(group='herbs').order_by(Ingredient.name).all()
+    alpha_nuts = session.query(Ingredient).filter_by(group='nuts').order_by(Ingredient.name).all()
+    alpha_sea = session.query(Ingredient).filter_by(group='sea').order_by(Ingredient.name).all()
+    alpha_air = session.query(Ingredient).filter_by(group='air').order_by(Ingredient.name).all()
+    alpha_land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.name).all()
+    month_fruit = session.query(Ingredient).filter_by(group='fruit').order_by(Ingredient.months).all()
+    month_vegetables = session.query(Ingredient).filter_by(group='vegetables').order_by(Ingredient.months).all()
+    month_herbs = session.query(Ingredient).filter_by(group='herbs').order_by(Ingredient.months).all()
+    month_nuts = session.query(Ingredient).filter_by(group='nuts').order_by(Ingredient.months).all()
+    month_sea = session.query(Ingredient).filter_by(group='sea').order_by(Ingredient.months).all()
+    month_air = session.query(Ingredient).filter_by(group='air').order_by(Ingredient.months).all()
+    month_land = session.query(Ingredient).filter_by(group='land').order_by(Ingredient.months).all()
+    ingredients = [
+        (alpha_fruit, month_fruit),
+        (alpha_vegetables, month_vegetables),
+        (alpha_herbs, month_herbs),
+        (alpha_nuts, month_nuts),
+        (alpha_sea, month_sea),
+        (alpha_air, month_air),
+        (alpha_land, month_land)]
     current_month = datetime.now().month
     return render_template('viewchart.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict)
 

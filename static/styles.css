@@ -243,6 +243,10 @@ tbody {
     display: table-row-group;
 }
 
+.hide-sort {
+    display: none;
+}
+
 
 /* Table Cells */
 

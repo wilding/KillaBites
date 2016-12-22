@@ -46,7 +46,6 @@ $(function() {
 
     $('.chart-group-tab').click(function () {
         if ($(this).hasClass('active') === true) {
-            console.log("Test!");
             $(this).toggleClass('chart-cell-' + $(this).text().toLowerCase());
             $(this).toggleClass('active');
             $('tbody').addClass('show-group');
@@ -61,9 +60,28 @@ $(function() {
     });
 
 
-    $('.group-title-cell').find('i').click(function () {
-        $(this).siblings('i').removeAttr('id');
-        $(this).attr('id', 'active-sort');
+    $('.fa-sort-alpha-asc').click(function () {
+        var this_table = '.' + $(this).parents('tbody').attr('class').split(" ")[0];
+        $(this_table).find('.fa-calendar').each(function() {
+            $(this).removeAttr('id');
+        });
+        $(this_table).find('.fa-sort-alpha-asc').each(function() {
+            $(this).attr('id', 'active-sort');
+        });
+        $(this_table).slice(1).addClass('hide-sort');
+        $(this_table).slice(0, 1).removeClass('hide-sort');
+    });
+
+    $('.fa-calendar').click(function () {
+        var this_table = '.' + $(this).parents('tbody').attr('class').split(" ")[0];
+        $(this_table).find('.fa-sort-alpha-asc').each(function() {
+            $(this).removeAttr('id');
+        });
+        $(this_table).find('.fa-calendar').each(function() {
+            $(this).attr('id', 'active-sort');
+        });
+        $(this_table).slice(0, 1).addClass('hide-sort');
+        $(this_table).slice(1).removeClass('hide-sort');
     });
 
 });
