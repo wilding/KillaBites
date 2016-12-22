@@ -77,6 +77,14 @@ nav {
     width: 3%;
 }
 
+.nav-text-small {
+    font-size: 11px;
+}
+
+.nav-text {
+    font-size: 13px;
+}
+
 .nav-link i {
     font-size: auto;
     width: 100%;
@@ -268,6 +276,10 @@ tbody {
 .hide-sort {
     display: none;
 }
+
+/*.chart-row:hover {
+    background: rgba(253,216,53, 0.4);
+}*/
 
 
 /* Table Cells */

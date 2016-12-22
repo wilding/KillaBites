@@ -18,13 +18,8 @@ To Do:
     Chart
         - search
 
-        * hover for picture?
-        * hover over tabs
-
         * edit ingredient form in chart
-        - delete ingredient transition?
 
-        - font
         - colors
         - make responsive
 
@@ -78,7 +73,6 @@ To Do:
 
     - logo
     - tab logo
-    - nav links
     - JSON API
     - json backups
     - Killa!
@@ -86,7 +80,12 @@ To Do:
     Features Page
 
 
+Questions:
 
+    chart tab click behavior, click or doubleclick?
+    chart sorted alphabetically or monthly by default?
+    hover to highlight chart row? hover for picture?
+    different colors or just red in chart? what about homepage popup?
 
 Should I?
 
