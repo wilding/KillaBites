@@ -211,9 +211,31 @@ nav {
     cursor: pointer;
     padding: 5px 0 5px 0;
     text-align: center;
+    transition: background 0.35s;
     width: 100%;
 }
 
+.fruit-tab:hover {
+    background: rgb(123, 31, 162);
+}
+.vegetables-tab:hover {
+    background: rgb(67, 160, 71);
+}
+.herbs-tab:hover {
+    background: rgb(124, 179, 66);
+}
+.nuts-tab:hover {
+    background: rgb(109, 76, 65);
+}
+.sea-tab:hover {
+    background: rgb(30, 136, 229);
+}
+.air-tab:hover {
+    background: rgb(253, 216, 53);
+}
+.land-tab:hover {
+    background: rgb(229, 57, 53);
+}
 
 /* Table */
 
@@ -370,6 +392,8 @@ th {
 
 .add-ingredient-link {
     color: #eee1c1;
+    cursor: pointer;
+    transition: color 0.35s;
 }
 
 .add-ingredient-link:hover {
