@@ -413,7 +413,7 @@ th {
 }
 
 .chart-cell-link {
-    color: blue;
+    color: grey;
     float: right;
     opacity: 0;
     padding: 0 2px 0 2px;
