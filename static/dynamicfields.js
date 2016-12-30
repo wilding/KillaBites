@@ -84,6 +84,10 @@ $(function() {
         $(this_table).slice(1).removeClass('hide-sort');
     });
 
+    $('.homepage-pic').click(function () {
+        $(this).parent().toggleClass('active-ingredient');
+    });
+
 });
 
 var showDeleteIngredient = function (index, table) {

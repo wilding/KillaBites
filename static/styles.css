@@ -30,17 +30,12 @@ a {
 
 @font-face {
     font-family: halloween;
-    src: url(./Halloween.ttf);
+    src: url(./fonts/Halloween.ttf);
 }
 
 @font-face {
-    font-family: thanksgiving;
-    src: url(./Thanksgiving.ttf);
-}
-
-@font-face {
-    font-family: appleberry;
-    src: url(./appleberry.ttf);
+    font-family: toxtypewriter;
+    src: url(./fonts/ToxTypewriter.ttf);
 }
 
 
@@ -56,6 +51,7 @@ nav {
     margin-right: 50px;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 .nav-link {
@@ -112,6 +108,34 @@ nav {
     font-size: 4em;
 }*/
 
+.homepage-recipes {
+    width: 25%;
+    border-right: 3px solid black;
+    text-align: center;
+    background: black;
+}
+
+.logo {
+    font-size: 50px;
+    color: #eee1c1;
+    font-family: toxtypewriter;
+    margin: 0;
+}
+
+h4 {
+    color: #ab1c20;
+}
+
+.homepage-recipe-link {
+    color: #eee1c1;
+}
+
+.homepage-ingredients {
+    width: 75%;
+    height: 100vh;
+    overflow: scroll;
+}
+
 .homepage-container {
     display: flex;
     flex-wrap: wrap;
@@ -129,7 +153,48 @@ nav {
     height: 8em;
     margin: 10px;
     position: relative;
+    visibility: visible;
     width: 8em;
+}
+
+.fruit-container {
+    background: rgb(123, 31, 162);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.vegetables-container {
+    background: rgb(67, 160, 71);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.herbs-container {
+    background: rgb(124, 179, 66);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.nuts-container {
+    background: rgb(109, 76, 65);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.sea-container {
+    background: rgb(30, 136, 229);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.air-container {
+    background: rgb(253, 216, 53);
+    border-radius: 100%;
+    visibility: hidden;
+}
+.land-container {
+    background: rgb(229, 57, 53);
+    border-radius: 100%;
+    visibility: hidden;
+}
+
+.active-ingredient {
+    visibility: visible;
 }
 
 
