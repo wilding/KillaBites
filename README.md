@@ -1,19 +1,16 @@
 To Do:
 
+    - ingredient pics
+    - recipes
+
     Homepage
-        * recipes
         * filter recipe by ingredient click
-
-        * ingredient pics
-        - month font
-
-        - nutrition info
-        - order
 
         - background
         - font
         - make responsive
-
+        - nutrition info
+        - order
 
     Chart
         - search
@@ -22,10 +19,7 @@ To Do:
 
         - colors
         - make responsive
-
         - customize ingredient list
-
-
 
     Menu
         - dynamic querying
@@ -73,8 +67,7 @@ To Do:
 
     - logo
     - tab logo
-    - JSON API
-    - json backups
+    * json backups
     - Killa!
 
     Features Page
@@ -82,10 +75,13 @@ To Do:
 
 Questions:
 
-    chart tab click behavior, click or doubleclick?
-    chart sorted alphabetically or monthly by default?
-    hover to highlight chart row? hover for picture?
-    different colors or just red in chart? what about homepage popup?
+    chart
+        chart tab click behavior, click or doubleclick?
+        chart sorted alphabetically or monthly by default?
+        hover to highlight chart row? hover for picture?
+        different colors or just red in chart? what about homepage popup?
+    homepage
+        filter or highlight recipes when ingredient clicked?
 
 Should I?
 

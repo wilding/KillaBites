@@ -51,6 +51,9 @@
                         {% endfor %}
                 </div>
             </div>
+            {% for source in recipe.sources %}
+                <a href="{{source}}">{{source}}</a><br>
+                {% endfor %}
             <a href="{{url_for('editRecipe', recipe_id=recipe.id)}}">Edit</a>
             <a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a>
         </div>
