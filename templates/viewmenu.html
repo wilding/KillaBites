@@ -8,19 +8,18 @@
         <thead>
             <tr>
                 <th><a href="{{url_for('newRecipe')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
-                <th>time</th>
                 <th>months</th>
                 <th>cuisines</th>
                 <th>groups</th>
                 <th>courses</th>
                 <th>occassions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="show-group">
             {% for recipe in recipes %}
                 <tr>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
-                    <td>{{recipe.time}}</td>
                     <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
                     <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>
                     <td>{% for group in recipe.groups%}<p>{{group}}</p>{% endfor %}</td>
