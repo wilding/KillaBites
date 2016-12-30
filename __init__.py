@@ -20,30 +20,27 @@ session = DBSession()
 month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'}
 
 
+###############################################################################################################################################################################
+    # View Pages
+###############################################################################################################################################################################
+
+
 # Homepage
 @app.route('/')
 def homepage():
     """docstring for homepage"""
     # session.rollback()
     current_month = datetime.now().month
-    fruit = session.query(Ingredient).filter_by(group="fruit").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    vegetables = session.query(Ingredient).filter_by(group="vegetables").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    herbs = session.query(Ingredient).filter_by(group="herbs").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    nuts = session.query(Ingredient).filter_by(group="nuts").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    sea = session.query(Ingredient).filter_by(group="sea").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    air = session.query(Ingredient).filter_by(group="air").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
-    land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.group, Ingredient.name).all()
+    fruit = session.query(Ingredient).filter_by(group="fruit").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    vegetables = session.query(Ingredient).filter_by(group="vegetables").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    herbs = session.query(Ingredient).filter_by(group="herbs").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    nuts = session.query(Ingredient).filter_by(group="nuts").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    sea = session.query(Ingredient).filter_by(group="sea").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    air = session.query(Ingredient).filter_by(group="air").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
+    land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
     ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
-    return render_template('viewhomepage.html', ingredients=ingredients, month_dict=month_dict, month=month_dict[current_month])
-
-
-# Full Menu
-@app.route('/menu/')
-def menupage():
-    """docstring for menupage"""
-    # session.rollback()
-    recipes = session.query(Recipe).all()
-    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict)
+    recipes = session.query(Recipe).filter(Recipe.months.any(current_month)).order_by(Recipe.groups)
+    return render_template('viewhomepage.html', ingredients=ingredients, month_dict=month_dict, month=month_dict[current_month], recipes=recipes, Recipe=Recipe)
 
 
 # Full Chart
@@ -76,7 +73,26 @@ def chartpage():
     return render_template('viewchart.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict)
 
 
-# Ingredient CRUD
+# Full Menu
+@app.route('/menu/')
+def menupage():
+    """docstring for menupage"""
+    # session.rollback()
+    recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
+    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict)
+
+
+# View Recipe
+@app.route('/recipe/<int:recipe_id>/')
+def viewRecipe(recipe_id):
+    """docstring for viewRecipe"""
+    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
+    return render_template('viewrecipe.html', recipe=recipe, month_dict=month_dict)
+
+
+###############################################################################################################################################################################
+    # Ingredient CRUD
+###############################################################################################################################################################################
 
 
 # New Ingredient
@@ -135,15 +151,9 @@ def deleteIngredient(ingredient_id):
         return redirect(url_for('chartpage'))
 
 
-# Recipe CRUD
-
-
-# View Recipe
-@app.route('/recipe/<int:recipe_id>/')
-def viewRecipe(recipe_id):
-    """docstring for viewRecipe"""
-    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
-    return render_template('viewrecipe.html', recipe=recipe, month_dict=month_dict)
+###############################################################################################################################################################################
+    # Recipe CRUD
+###############################################################################################################################################################################
 
 
 # New Recipe
@@ -222,7 +232,35 @@ def deleteRecipe(recipe_id):
         return render_template('deleterecipe.html', recipe=recipe)
 
 
-# Helper Functions
+###############################################################################################################################################################################
+    # JSON
+###############################################################################################################################################################################
+
+
+# Ingredients JSON
+@app.route('/ingredient/json/')
+def ingredientsJSON():
+    ingredients = session.query(Ingredient).order_by(Ingredient.group, Ingredient.name).all()
+    return jsonify(Ingredients=[ingredient.serialize for ingredient in ingredients])
+
+
+# Recipes JSON
+@app.route('/recipe/json/')
+def recipesJSON():
+    recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
+    return jsonify(Recipes=[recipe.serialize for recipe in recipes])
+
+
+# Individual Recipe JSON
+@app.route('/recipe/<int:recipe_id>/json/')
+def recipeJSON(recipe_id):
+    recipe = session.query(Recipe).filter_by(id=recipe_id).one()
+    return jsonify(recipe.serialize)
+
+
+###############################################################################################################################################################################
+    # Helper Functions
+###############################################################################################################################################################################
 
 
 # month parser helper function

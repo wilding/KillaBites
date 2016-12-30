@@ -68,7 +68,7 @@ class Recipe(Base):
             'pictures': self.pictures,
             'gif': self.gif,
             'sources': self.sources,
-            'time': self.time,
+            'time': str(self.time),
             'total_yield': self.total_yield,
             'calories': self.calories,
             'vegetarian': self.vegetarian,
