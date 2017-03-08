@@ -1,10 +1,7 @@
 To Do:
 
-    - ingredient pics
-    - recipes
-
     Homepage
-        * filter recipe by ingredient click
+        - filter recipe by ingredient click
 
         - background
         - font
@@ -12,41 +9,45 @@ To Do:
         - nutrition info
         - order
 
-    Chart
-        - search
 
+    Chart
         * edit ingredient form in chart
+
+        - search
+        - customize ingredient list
 
         - colors
         - make responsive
-        - customize ingredient list
+
 
     Menu
-        - dynamic querying
         - menu view options
-        - order
+
+        - search
 
         - background
         - font
         - make responsive
+        - order
 
 
     Recipe
+        * ingredient/instruction sections
+        - time sections
+        - multi recipe view
+        - cuisine flags
         - search google pics for additional images
         - download recipe as pdf
-        - ingredient/instruction sections
-        - time sections
-        - occassion dates
-        - recipe ingredients json input
-        - recipe versions
-        - multi recipe view
-        - drawing on instructions
-        - nutrition info
+
         - split source into display/link tuple
-        - scale ingredient list
         - pairing
+        - recipe ingredients json input
+            - scale ingredient list
+        - occassion dates
+        - recipe versions
+        - nutrition info
+        - drawing on instructions
         - public or no, publish
-        - cuisine flags
 
         - background
         - font
@@ -64,13 +65,44 @@ To Do:
         - make responsive
 
 
+    Users
+        - custom user menus
+
+        - recipe.user_id
+        - comments
+        - optional comments
+
+        - forking recipes
+            - auto source
+            - track # of forks
+
+        - favorites
+
+        - create/edit/delete Ingredients
+        - user options
+            - menu view default
+
+
+
+    - ingredients
+    - recipes
+
 
     - logo
     - tab logo
     * json backups
     - Killa!
+    - trailer
 
-    Features Page
+
+    - Features Page
+
+
+    - iOS app
+        - siri integration
+    - OSX app
+    - android app
+    - windows app
 
 
 Questions:
@@ -80,25 +112,18 @@ Questions:
         chart sorted alphabetically or monthly by default?
         hover to highlight chart row? hover for picture?
         different colors or just red in chart? what about homepage popup?
+        side borders for title cells?
     homepage
         filter or highlight recipes when ingredient clicked?
+        scroll ingredients and menu separately or together?
+
 
 Should I?
-
-    - users
-        - custom user menus
-        - comments
-        - optional comments
-        - forking recipes
-        - favorites
-
-
 
     - weekly meal plan
         - occassions automatic
 
     - accessibility
-
 
     - pantry
     - prices
@@ -113,13 +138,3 @@ Should I?
 
     - common measurements/terms buttons
         - pages for terms
-
-    - trailer
-
-
-    - iOS app
-        - siri integration
-    - OSX app
-    - android app
-    - windows app
-

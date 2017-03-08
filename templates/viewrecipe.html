@@ -6,46 +6,52 @@
     <header>
         <div class="recipe-pictures" style="background-image: url({{recipe.pictures[0]}});"></div>
         <div class="recipe-info">
-            <h2>{{recipe.name}}</h2>
+            <h2 class="recipe-info-title">{{recipe.name}}</h2>
             <div class="recipe-info-row">
                 <div class="recipe-info-item">
-                    <p>time:</p>
+                    <p class="recipe-info-label">time:</p>
                     <p>{{recipe.time}}</p>
                 </div>
                 <div class="recipe-info-item">
-                    <p>yield:</p>
+                    <p class="recipe-info-label">yield:</p>
                     <p>{{recipe.total_yield}}</p>
                 </div>
                 <div class="recipe-info-item">
-                    <p>calories:</p>
+                    <p class="recipe-info-label">calories:</p>
                     <p>{{recipe.calories}}</p>
                 </div>
                 <div class="recipe-info-item">
-                    <p>vegetarian:</p>
+                    <p class="recipe-info-label">vegetarian:</p>
                     <p>{{recipe.vegetarian}}</p>
                 </div>
             </div>
             <div class="recipe-info-row">
                 <div class="recipe-info-item">
-                    <p>cuisine:</p>
+                    <p class="recipe-info-label">cuisine:</p>
                     {% for cuisine in recipe.cuisines %}
                         <p>{{cuisine}}</p>
                         {% endfor %}
                 </div>
                 <div class="recipe-info-item">
-                    <p>course:</p>
+                    <p class="recipe-info-label">course:</p>
                     {% for course in recipe.courses %}
                         <p>{{course}}</p>
                         {% endfor %}
                 </div>
                 <div class="recipe-info-item">
-                    <p>group:</p>
+                    <p class="recipe-info-label">group:</p>
                     {% for group in recipe.groups %}
                         <p>{{group}}</p>
                         {% endfor %}
                 </div>
                 <div class="recipe-info-item">
-                    <p>month:</p>
+                    <p class="recipe-info-label">occassions:</p>
+                    {% for occassion in recipe.occassions %}
+                        <p>{{occassion}}</p>
+                        {% endfor %}
+                </div>
+                <div class="recipe-info-item">
+                    <p class="recipe-info-label">month:</p>
                     {% for month in recipe.months %}
                         <p>{{month_dict[month]}}</p>
                         {% endfor %}
@@ -66,7 +72,7 @@
         </section>
         <section class="instructions">
             {% for instruction in recipe.instructions %}
-                <p>{{instruction['text']}}</p>
+                <p>• {{instruction['text']}}</p>
                 <p>{{instruction['note']}}</p>
                 <p>{{instruction['video']}}</p>
                 <p>{{instruction['gif']}}</p>

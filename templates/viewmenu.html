@@ -2,11 +2,47 @@
 
 {% block title %} {{ super() }} | Menu{% endblock %}
 
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='menu.js')}}"></script>
+{% endblock %}
+
 {% block content %}
-    <h1>Full Menu</h1>
+    <div class="dropdown-menus">
+        <select class="dropdown-cuisine">
+            <option>Cuisine</option>
+            {% for cuisine in cuisines %}
+                <option>{{cuisine}}</option>
+                {% endfor %}
+        </select>
+        <select class="dropdown-course">
+            <option>Course</option>
+            <option>Breakfast</option>
+            <option>Lunch & Dinner</option>
+            <option>Dessert</option>
+            <option>Basics</option>
+        </select>
+        <select class="dropdown-group">
+            <option>Group</option>
+            {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
+                <optgroup label="{{course}}">
+                    {% for group in groups[course] %}
+                        <option>{{group}}</option>
+                        {% endfor %}
+                </optgroup>
+                {% endfor %}
+        </select>
+        <select class="dropdown-month">
+            <option>Month</option>
+            {% for i in month_dict %}
+                <option>{{month_dict[i]}}</option>
+                {% endfor %}
+        </select>
+    </div>
     <table>
         <thead>
             <tr>
+                <th></th>
                 <th><a href="{{url_for('newRecipe')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
                 <th>months</th>
                 <th>cuisines</th>
@@ -18,7 +54,8 @@
         </thead>
         <tbody class="show-group">
             {% for recipe in recipes %}
-                <tr>
+                <tr class="cuisine-Cuisine course-Course group-Group month-Month {% for cuisine in recipe.cuisines %}cuisine-{{cuisine}} {% endfor %}{% for course in recipe.courses %}course-{{course}} {% endfor %}{% for group in recipe.groups %}group-{{group}} {% endfor %}{% for month in recipe.months %}month-{{month_dict[month]}} {% endfor %}">
+                    <td class="recipe-pic" style="background-image: url({{recipe.pictures[0]}});"></td>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
                     <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
                     <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>

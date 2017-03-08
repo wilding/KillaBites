@@ -310,6 +310,7 @@ h4 {
     background: rgb(229, 57, 53);
 }
 
+
 /* Table */
 
 
@@ -345,6 +346,10 @@ tbody {
 /*.chart-row:hover {
     background: rgba(253,216,53, 0.4);
 }*/
+
+.edit-chart-row {
+    height: 100px;
+}
 
 
 /* Table Cells */
@@ -495,6 +500,34 @@ th {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+.dropdown-menus {
+    display: flex;
+    justify-content: center;
+    width: 958px;
+    height: 38px;
+    background: black;
+}
+
+.dropdown-cuisine, .dropdown-course, .dropdown-group, .dropdown-month {
+    width: 25%;
+    height: 38px;
+    background: black;
+    color: #eee1c1;
+    border: 0;
+    text-align-last: center;
+    font-size: 14pt;
+    font-family: times;
+    text-decoration: none;
+}
+
+.hide-recipe {
+    display: none;
+}
+
+.recipe-pic {
+    width: 120px;
+    background-size: cover;
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Recipe View
@@ -523,8 +556,12 @@ p {
     width: 30%;
 }
 
+/* Recipe Info */
+
 .recipe-info {
     width: 70%;
+    background: black;
+    color: #eee1c1;
 }
 
 .recipe-info-row {
@@ -533,17 +570,31 @@ p {
     width: 100%;
 }
 
+.recipe-info-title {
+    font-size: 20pt;
+}
+
 .recipe-info-item {
     text-align: center;
     width: 25%;
 }
 
+.recipe-info-label {
+    color: #ab1c20;
+}
+
+/* Ingredients & Instructions */
+
 .ingredients {
     width: 30%;
+    font-size: 18px;
+    margin-top: 40px;
+    padding-left: 10%;
 }
 
 .instructions {
     width: 70%;
+    margin: 40px 0 0 20px;
 }
 
 
