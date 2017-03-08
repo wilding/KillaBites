@@ -17,27 +17,22 @@
         </div>
         <label>Picture <input type="text" name="picture" maxlength="9999"></label><br>
         <div class="group-menu">
-            <div class="group-container"><label>Fruit<br><input type="radio" name="group" value="fruit" required></label></div>
-            <div class="group-container"><label>Vegetable<br><input type="radio" name="group" value="vegetables" required></label></div>
-            <div class="group-container"><label>Herb<br><input type="radio" name="group" value="herbs" required></label></div>
-            <div class="group-container"><label>Nut<br><input type="radio" name="group" value="nuts" required></label></div>
-            <div class="group-container"><label>Sea<br><input type="radio" name="group" value="sea" required></label></div>
-            <div class="group-container"><label>Air<br><input type="radio" name="group" value="air" required></label></div>
-            <div class="group-container"><label>Land<br><input type="radio" name="group" value="land" required></label></div>
+            {% for group in ingredient_groups %}
+                <div class="group-container">
+                    <label>{{group.capitalize()}}<br>
+                        <input type="radio" name="group" value="{{group}}" required>
+                    </label>
+                </div>
+                {% endfor %}
         </div>
         <div class="month-menu">
-            <div class="month-container"><label>Jan<br><input type="checkbox" name="Jan"></label></div>
-            <div class="month-container"><label>Feb<br><input type="checkbox" name="Feb"></label></div>
-            <div class="month-container"><label>Mar<br><input type="checkbox" name="Mar"></label></div>
-            <div class="month-container"><label>Apr<br><input type="checkbox" name="Apr"></label></div>
-            <div class="month-container"><label>May<br><input type="checkbox" name="May"></label></div>
-            <div class="month-container"><label>Jun<br><input type="checkbox" name="Jun"></label></div>
-            <div class="month-container"><label>Jul<br><input type="checkbox" name="Jul"></label></div>
-            <div class="month-container"><label>Aug<br><input type="checkbox" name="Aug"></label></div>
-            <div class="month-container"><label>Sep<br><input type="checkbox" name="Sep"></label></div>
-            <div class="month-container"><label>Oct<br><input type="checkbox" name="Oct"></label></div>
-            <div class="month-container"><label>Nov<br><input type="checkbox" name="Nov"></label></div>
-            <div class="month-container"><label>Dec<br><input type="checkbox" name="Dec"></label></div>
+            {% for i in range(1, 13) %}
+                <div class="month-container">
+                    <label>{{month_dict[i][:3]}}<br>
+                        <input type="checkbox" name="{{month_dict[i][:3]}}">
+                    </label>
+                </div>
+                {% endfor %}
         </div>
         <label>Storage Instructions <textarea name="storage" maxlength="9999"></textarea></label><br>
         <div class="form-buttons">

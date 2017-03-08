@@ -40,18 +40,9 @@
                 <label>Vegetarian<br><input type="checkbox" name="vegetarian"></label>
             </li>
             <li><div class="month-menu">
-                <div class="month-container"><label>Jan<br><input type="checkbox" name="Jan"></label></div>
-                <div class="month-container"><label>Feb<br><input type="checkbox" name="Feb"></label></div>
-                <div class="month-container"><label>Mar<br><input type="checkbox" name="Mar"></label></div>
-                <div class="month-container"><label>Apr<br><input type="checkbox" name="Apr"></label></div>
-                <div class="month-container"><label>May<br><input type="checkbox" name="May"></label></div>
-                <div class="month-container"><label>Jun<br><input type="checkbox" name="Jun"></label></div>
-                <div class="month-container"><label>Jul<br><input type="checkbox" name="Jul"></label></div>
-                <div class="month-container"><label>Aug<br><input type="checkbox" name="Aug"></label></div>
-                <div class="month-container"><label>Sep<br><input type="checkbox" name="Sep"></label></div>
-                <div class="month-container"><label>Oct<br><input type="checkbox" name="Oct"></label></div>
-                <div class="month-container"><label>Nov<br><input type="checkbox" name="Nov"></label></div>
-                <div class="month-container"><label>Dec<br><input type="checkbox" name="Dec"></label></div>
+                {% for i in range(1,13) %}
+                    <div class="month-container"><label>{{month_dict[i][:3]}}<br><input type="checkbox" name="{{month_dict[i][:3]}}"></label></div>
+                    {% endfor %}
             </div></li>
             <li>
                 <div class="course-container"><label>Breakfast<br><input type="checkbox" name="breakfast"></label></div>
@@ -62,83 +53,19 @@
             <li>
                 <label>Cuisines:
                 <select name="cuisines" multiple>
-                    <option>African</option>
-                    <option>American</option>
-                    <option>Arab</option>
-                    <option>Brazilian</option>
-                    <option>Burmese</option>
-                    <option>Cajun</option>
-                    <option>Canadian</option>
-                    <option>Caribbean</option>
-                    <option>Central American</option>
-                    <option>Chinese</option>
-                    <option>Eastern European</option>
-                    <option>English</option>
-                    <option>Ethiopian</option>
-                    <option>Filipino</option>
-                    <option>French</option>
-                    <option>German</option>
-                    <option>Hawaiian</option>
-                    <option>Indian</option>
-                    <option>Indonesian</option>
-                    <option>Israeli</option>
-                    <option>Italian</option>
-                    <option>Japanese</option>
-                    <option>Korean</option>
-                    <option>Lebanese</option>
-                    <option>Mediterranean</option>
-                    <option>Mexican</option>
-                    <option>Middle Eastern</option>
-                    <option>Oceanic</option>
-                    <option>Pacific</option>
-                    <option>Persian</option>
-                    <option>Polynesian</option>
-                    <option>Scandinavian</option>
-                    <option>South American</option>
-                    <option>Southern</option>
-                    <option>Spanish</option>
-                    <option>Thai</option>
-                    <option>Turkish</option>
-                    <option>Vietnamese</option>
+                    {% for cuisine in cuisines %}
+                        <option>{{cuisine}}</option>
+                        {% endfor %}
                 </select></label>
                 <label>Groups:
                 <select name="groups" multiple>
-                    <optgroup label="Breakfast">
-                        <option>Eggs</option>
-                        <option>Toast</option>
-                        <option>Oatmeal</option>
-                        <option>Meat</option>
-                        <option>Vegetable</option>
-                        <option>Fruit</option>
-                        <option>Smoothie</option>
-                        <option>Biscuits</option>
-                        <option>Muffins</option>
-                        <option>Pancakes</option>
-                    </optgroup>
-                    <optgroup label="Lunch & Dinner">
-                        <option>Salad</option>
-                        <option>Soup</option>
-                        <option>Bread</option>
-                        <option>Tortilla</option>
-                        <option>Rice</option>
-                        <option>Pasta</option>
-                        <option>Vegetable</option>
-                        <option>Sea</option>
-                        <option>Air</option>
-                        <option>Land</option>
-                    </optgroup>
-                    <optgroup label="Dessert">
-                        <option>Fruit & Cheese</option>
-                        <option>Pudding</option>
-                        <option>Ice Cream</option>
-                        <option>Milkshake</option>
-                        <option>Cheesecake</option>
-                        <option>Pastry</option>
-                        <option>Cookie</option>
-                        <option>Candy</option>
-                        <option>Donut</option>
-                        <option>Cake</option>
-                    </optgroup>
+                    {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
+                        <optgroup label="{{course}}">
+                            {% for group in groups[course] %}
+                                <option>{{group}}</option>
+                                {% endfor %}
+                        </optgroup>
+                        {% endfor %}
                 </select></label>
                 <button id="add-occasions" type="button">+</button>
                 <label>Occasions: </label>

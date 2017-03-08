@@ -18,7 +18,9 @@ session = DBSession()
 
 # global month dictionary for quick lookup
 month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'}
-
+cuisines = ['African', 'American', 'Arab', 'Brazilian', 'Burmese', 'Cajun', 'Canadian', 'Caribbean', 'Central American', 'Chinese', 'Eastern European', 'English', 'Ethiopian', 'Filipino', 'French', 'German', 'Hawaiian', 'Indian', 'Indonesian', 'Irish', 'Israeli', 'Italian', 'Japanese', 'Korean', 'Lebanese', 'Mediterranean', 'Mexican', 'Middle Eastern', 'Oceanic', 'Pacific', 'Persian', 'Polynesian', 'Scandinavian', 'South American', 'Southern', 'Spanish', 'Thai', 'Turkish', 'Vietnamese']
+groups = {'Breakfast': ['Eggs', 'Toast', 'Oatmeal', 'Meat', 'Vegetable', 'Fruit', 'Smoothie', 'Biscuits', 'Muffins', 'Pancakes'], 'Lunch & Dinner': ['Salad', 'Soup', 'Bread', 'Tortilla', 'Rice', 'Pasta', 'Noodles', 'Vegetable', 'Sea', 'Air', 'Land'], 'Dessert': ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Milkshake', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake']}
+ingredient_groups = ['fruit', 'vegetables', 'herbs', 'nuts', 'sea', 'air', 'land']
 
 ###############################################################################################################################################################################
     # View Pages
@@ -79,7 +81,7 @@ def menupage():
     """docstring for menupage"""
     # session.rollback()
     recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
-    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict)
+    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict, cuisines=cuisines, groups=groups)
 
 
 # View Recipe
@@ -112,7 +114,7 @@ def newIngredient():
         flash(newingredient.name + ' added!')
         return redirect(url_for('chartpage'))
     else:
-        return render_template('newingredient.html')
+        return render_template('newingredient.html', month_dict=month_dict, ingredient_groups=ingredient_groups)
 
 
 # Edit Ingredient
@@ -136,7 +138,7 @@ def editIngredient(ingredient_id):
         flash(ingredient.name + ' edited!')
         return redirect(url_for('chartpage'))
     else:
-        return render_template('editingredient.html', ingredient=ingredient)
+        return render_template('editingredient.html', ingredient=ingredient, month_dict=month_dict, ingredient_groups=ingredient_groups)
 
 
 # Delete Ingredient
@@ -182,7 +184,7 @@ def newRecipe():
         flash(newrecipe.name + ' added!')
         return redirect(url_for('menupage'))
     else:
-        return render_template('newrecipe.html')
+        return render_template('newrecipe.html', month_dict=month_dict, cuisines=cuisines, groups=groups)
 
 
 # Edit Recipe
@@ -215,7 +217,7 @@ def editRecipe(recipe_id):
         flash(recipe.name + ' edited!')
         return redirect(url_for('menupage'))
     else:
-        return render_template('editrecipe.html', recipe=recipe)
+        return render_template('editrecipe.html', recipe=recipe, month_dict=month_dict, cuisines=cuisines, groups=groups)
 
 
 # Delete Recipe
