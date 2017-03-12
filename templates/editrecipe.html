@@ -88,12 +88,16 @@
             <li>
                 <label>Cuisines:
                 <select name="cuisines" multiple>
-                    {% for cuisine in cuisines %}
-                        {% if cuisine in recipe.cuisines %}
-                            <option selected>{{cuisine}}</option>
-                            {% else %}
-                            <option>{{cuisine}}</option>
-                            {% endif %}
+                    {% for region in regions %}
+                        <optgroup label="{{region}}">
+                            {% for cuisine in cuisines[region] %}
+                                {% if cuisine in recipe.cuisines %}
+                                    <option selected>{{cuisine}}</option>
+                                    {% else %}
+                                    <option>{{cuisine}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                        </optgroup>
                         {% endfor %}
                 </select></label>
             </li>

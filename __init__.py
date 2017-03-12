@@ -18,7 +18,23 @@ session = DBSession()
 
 # global month dictionary for quick lookup
 month_dict = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'}
-cuisines = ['African', 'American', 'Arab', 'Brazilian', 'Burmese', 'Cajun', 'Canadian', 'Caribbean', 'Central American', 'Chinese', 'Eastern European', 'English', 'Ethiopian', 'Filipino', 'French', 'German', 'Hawaiian', 'Indian', 'Indonesian', 'Irish', 'Israeli', 'Italian', 'Japanese', 'Korean', 'Lebanese', 'Mediterranean', 'Mexican', 'Middle Eastern', 'Oceanic', 'Pacific', 'Persian', 'Polynesian', 'Scandinavian', 'South American', 'Southern', 'Spanish', 'Thai', 'Turkish', 'Vietnamese']
+cuisines = {
+    'Asian':
+        ['Burmese', 'Chinese', 'Filipino', 'Japanese', 'Korean', 'Thai', 'Vietnamese'],
+    'Middle Eastern':
+        ['Arab', 'Indian', 'Israeli', 'Lebanese', 'Middle Eastern', 'Persian', 'Turkish'],
+    'European':
+        ['Eastern European', 'English', 'French', 'German', 'Irish',  'Italian', 'Mediterranean', 'Nordic', 'Spanish'],
+    'Latin American':
+        ['Brazilian', 'Caribbean', 'Central American', 'Mexican', 'South American'],
+    'American':
+        ['American', 'Cajun', 'Canadian', 'Hawaiian', 'Pacific', 'Southern'],
+    'African':
+        ['African', 'Ethiopian'],
+    'Oceanic':
+        ['Indonesian', 'Oceanic', 'Polynesian']
+}
+regions = ['American', 'European', 'Latin American', 'Asian', 'Middle Eastern', 'Oceanic', 'African']
 groups = {'Breakfast': ['Eggs', 'Toast', 'Oatmeal', 'Meat', 'Vegetable', 'Fruit', 'Smoothie', 'Biscuits', 'Muffins', 'Pancakes'], 'Lunch & Dinner': ['Salad', 'Soup', 'Bread', 'Tortilla', 'Rice', 'Pasta', 'Noodles', 'Vegetable', 'Sea', 'Air', 'Land'], 'Dessert': ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Milkshake', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake']}
 ingredient_groups = ['fruit', 'vegetables', 'herbs', 'nuts', 'sea', 'air', 'land']
 
@@ -81,7 +97,7 @@ def menupage():
     """docstring for menupage"""
     # session.rollback()
     recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
-    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict, cuisines=cuisines, groups=groups)
+    return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
 
 # View Recipe
@@ -184,7 +200,7 @@ def newRecipe():
         flash(newrecipe.name + ' added!')
         return redirect(url_for('menupage'))
     else:
-        return render_template('newrecipe.html', month_dict=month_dict, cuisines=cuisines, groups=groups)
+        return render_template('newrecipe.html', month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
 
 # Edit Recipe
@@ -217,7 +233,7 @@ def editRecipe(recipe_id):
         flash(recipe.name + ' edited!')
         return redirect(url_for('menupage'))
     else:
-        return render_template('editrecipe.html', recipe=recipe, month_dict=month_dict, cuisines=cuisines, groups=groups)
+        return render_template('editrecipe.html', recipe=recipe, month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
 
 # Delete Recipe

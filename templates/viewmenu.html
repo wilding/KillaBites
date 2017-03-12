@@ -11,8 +11,12 @@
     <div class="dropdown-menus">
         <select class="dropdown-cuisine">
             <option>Cuisine</option>
-            {% for cuisine in cuisines %}
-                <option>{{cuisine}}</option>
+            {% for region in regions %}
+                <optgroup label="{{region}}">
+                    {% for cuisine in cuisines[region] %}
+                        <option>{{cuisine}}</option>
+                        {% endfor %}
+                </optgroup>
                 {% endfor %}
         </select>
         <select class="dropdown-course">
