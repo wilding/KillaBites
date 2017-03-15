@@ -81,7 +81,7 @@ $(function() {
     });
 
 
-    // remove name fields when the - button is clicked
+    // remove name fields when the - button is clicked and save original deleted names
     $("body").on("click", ".delete", function (e) {
         if ($(this).parent().hasClass('og-name')) {
             var name = $(this).siblings('input[name=alt]').val();
@@ -146,7 +146,7 @@ $(function() {
     });
 
 
-    // correctly reset month input background when the reset button is clicked
+    // correctly reset month input background and name input when the reset button is clicked
     $('.reset-ingredient-button').click(function() {
         var group = $(this).parents('.edit-chart-row').siblings().prev('.title-row').find('.group-title').text().toLowerCase();
         var month_menu = $(this).parents('.edit-ingredient-triple').siblings('.ingredient-month-menu');
