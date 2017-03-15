@@ -349,6 +349,7 @@ tbody {
 
 .edit-chart-row {
     height: 100px;
+    display: none;
 }
 
 
@@ -411,7 +412,9 @@ th {
 
 .chart-cell-name {
     padding: 2px 0 2px 5px;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .month-cell {
@@ -438,16 +441,6 @@ th {
 }
 .chart-cell-land {
     background: #E53935;
-}
-
-.chart-cell-link {
-    cursor: pointer;
-}
-
-.delete-ingredient-cell {
-    display: none;
-    padding-left: 10px;
-    text-align: left;
 }
 
 #current-month {
@@ -484,10 +477,11 @@ th {
 
 .chart-cell-link {
     color: grey;
-    float: right;
     opacity: 0;
     padding: 0 2px 0 2px;
     transition: opacity 0.35s;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .chart-cell-name:hover .chart-cell-link {
@@ -615,10 +609,6 @@ li {
     width: 100%;
 }
 
-.ingredient-form {
-    width: 50%;
-}
-
 .group-menu, .month-menu {
     display: flex;
     padding: 10px 0px 10px 0px;
@@ -633,6 +623,7 @@ li {
 
 .group-container {
     display: flex;
+    justify-content: center;
     text-align: center;
     width: 100%;
 }
@@ -643,43 +634,203 @@ li {
     width: 25%;
 }
 
-.delete {
-    color: red;
-    cursor: pointer;
-}
-
-#name-fields {
-    margin: 0 0 10px 0;
-}
-
-#add-alts {
-    color: green;
-    cursor: pointer;
-}
-
-.form-buttons {
-    margin-top: 10px;
-}
-
-input[name=picture] {
-    width: 100%;
-}
 
 input[type=text] {
     background: transparent;
     border: none;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid grey;
 }
 
 input[type=text]:focus {
     outline: none;
 }
 
-textarea {
-    background: transparent;
-    width: 100%;
-}
-
 #add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
     height: 19px;
 }
+
+
+/* Edit Ingredient Row */
+
+
+/* Ingredient Name Input */
+
+
+.edit-ingredient-name-cell {
+    text-align: left;
+    vertical-align: top;
+}
+
+.name-fields {
+    margin: 1px 4px 5px 4px;
+}
+
+input[name=name], input[name=alt] {
+    font-family: times;
+    font-size: 12pt;
+    width: calc(100% - 14px);
+    padding-bottom: 3px;
+}
+
+.delete {
+    color: #E53935;
+    cursor: pointer;
+    padding-bottom: 4px;
+    border-bottom: 1px solid grey;
+}
+
+.plus-button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+}
+
+.add-alts {
+    color: #43A047;
+    cursor: pointer;
+}
+
+
+/* Ingredient Input */
+
+
+.edit-ingredient-cell {
+    padding: 0;
+}
+
+
+/* Ingredient Month Input */
+
+
+.ingredient-month-menu {
+    display: flex;
+    height: 25px;
+    border-bottom: 1px solid black;
+}
+
+.ingredient-month-container {
+    width: 8.333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredient-month-container-1, .ingredient-month-container-2, .ingredient-month-container-3, .ingredient-month-container-4, .ingredient-month-container-5 {
+    border-right: 1px solid black;
+}
+
+.ingredient-month-container-7, .ingredient-month-container-8, .ingredient-month-container-9, .ingredient-month-container-10, .ingredient-month-container-11, .ingredient-month-container-12 {
+    border-left: 1px solid black;
+}
+
+.month-label {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+
+/* Ingredient Group Input */
+
+
+.group-label {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* Ingredient Picture/Storage Input */
+
+
+.edit-ingredient-triple {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid black;
+
+}
+
+.triple-container {
+    width: 33.3333333%;
+}
+
+.triple-container-1 {
+    border-right: 1px solid black;
+}
+
+textarea {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    resize: none;
+    border: 1px solid transparent;
+}
+
+textarea:focus {
+    border: 1px solid black;
+}
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+
+/* Ingredient Buttons */
+
+
+.triple-container-3 {
+    border-left: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-ingredient-button {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: grey;
+}
+
+.edit-ingredient-button:hover {
+    color: black;
+}
+
+.submit-ingredient-button:hover {
+    color: #43A047;
+}
+
+.delete-ingredient-button:hover {
+    color: #E53935;
+}
+
+.delete-warning {
+    font-size: 10pt;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    color: #E53935;
+    vertical-align: middle;
+}
+
+.delete-ingredient-form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hide-buttons {
+    display: none;
+}
+

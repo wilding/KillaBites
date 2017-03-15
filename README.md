@@ -1,6 +1,9 @@
 To Do:
 
     Homepage
+        - tabs for browsing courses
+        - occassions
+
         - filter recipe by ingredient click
 
         - background
@@ -22,6 +25,7 @@ To Do:
 
     Menu
         - menu view options
+        - merge regions and cuisines
 
         - search
 
@@ -84,17 +88,18 @@ To Do:
 
 
 
-    - ingredients
-    - recipes
+    * ingredients
+    * recipes
 
 
     - logo
     - tab logo
+
     * json backups
+
     - Killa!
+
     - trailer
-
-
     - Features Page
 
 

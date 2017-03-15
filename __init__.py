@@ -37,6 +37,7 @@ cuisines = {
 regions = ['American', 'European', 'Latin American', 'Asian', 'Middle Eastern', 'Oceanic', 'African']
 groups = {'Breakfast': ['Eggs', 'Toast', 'Oatmeal', 'Meat', 'Vegetable', 'Fruit', 'Smoothie', 'Biscuits', 'Muffins', 'Pancakes'], 'Lunch & Dinner': ['Salad', 'Soup', 'Bread', 'Tortilla', 'Rice', 'Pasta', 'Noodles', 'Vegetable', 'Sea', 'Air', 'Land'], 'Dessert': ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Milkshake', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake']}
 ingredient_groups = ['fruit', 'vegetables', 'herbs', 'nuts', 'sea', 'air', 'land']
+ingredient_group_colors = {'fruit': ['#7B1FA2', 'rgba(123, 31, 162, 0.3)'], 'vegetables': ['#43A047', 'rgba(67, 160, 71, 0.3)'], 'herbs': ['#7CB342', 'rgba(124, 179, 66, 0.3)'], 'nuts': ['#6D4C41', 'rgba(109, 76, 65, 0.3)'], 'sea': ['#1E88E5', 'rgba(30, 136, 229, 0.3)'], 'air': ['#FDD835', 'rgba(253, 216, 53, 0.3)'], 'land': ['#E53935', 'rgba(229, 57, 53, 0.3)']}
 
 ###############################################################################################################################################################################
     # View Pages
@@ -88,7 +89,7 @@ def chartpage():
         (alpha_air, month_air),
         (alpha_land, month_land)]
     current_month = datetime.now().month
-    return render_template('viewchart.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict)
+    return render_template('viewchart.html', ingredients=ingredients, current_month=current_month, month_dict=month_dict, ingredient_groups=ingredient_groups, ingredient_group_colors=ingredient_group_colors)
 
 
 # Full Menu
@@ -141,12 +142,10 @@ def editIngredient(ingredient_id):
     if request.method == 'POST':
         if request.form['name']:
             ingredient.name = request.form['name']
-        if request.form['picture']:
-            ingredient.picture = request.form['picture']
         if request.form['group']:
             ingredient.group = request.form['group']
-        if request.form['storage']:
-            ingredient.storage = request.form['storage']
+        ingredient.picture = request.form['picture']
+        ingredient.storage = request.form['storage']
         ingredient.alts = request.form.getlist('alt')
         ingredient.months = parse_months(request.form)
         session.add(ingredient)

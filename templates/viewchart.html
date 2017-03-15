@@ -28,7 +28,7 @@
         {% for group in ingredients %}
             {% for i in range(2) %}
                 <tbody class="{{group[i][0].group}}-table sorting-{{i}} show-group {% if i == 1 %}hide-sort{% endif %}">
-                    <tr>
+                    <tr class="title-row">
                         <td colspan="13" class="group-title-cell">
                             <div>
                                 <i class="fa fa-sort-alpha-asc" id="active-sort" aria-hidden="true"></i>&nbsp;&nbsp;
@@ -39,21 +39,93 @@
                     </tr>
                     {% for ingredient in group[i] %}
                         <tr class="chart-row">
-                            <td><div class="chart-cell-name" id="{% if not ingredient.months %}empty{% endif %}">
-                                {{ingredient.name}}
-                                <i class="fa fa-trash-o chart-cell-link" aria-hidden="true" onclick="showDeleteIngredient({{loop.index0}}, '.{{ingredient.group}}-table')"></i>
-                                <a href="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" class="chart-cell-link"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                            </div></td>
+                            <td>
+                                <div class="chart-cell-name">
+                                    <p id="{% if not ingredient.months %}empty{% endif %}">{{ingredient.name}}</p>
+                                    <i class="fa fa-pencil-square-o chart-cell-link" aria-hidden="true"></i>
+                                </div>
+                            </td>
                             {% for i in range(1, 13) %}
                                 <td class="chart-cell-{{ingredient.group}} month-cell">{% if i in ingredient.months %}&nbsp;{% endif %}</td>
                                 {% endfor %}
-                            <td colspan="12" class="delete-ingredient-cell">
-                                <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post">
-                                    <label>Are you sure you want to delete {{ingredient.name}}?</label>
-                                    <input type="submit" value="Delete Ingredient">
-                                    <button type="button" onclick="showChartRow({{loop.index0}}, '.{{ingredient.group}}-table')">Cancel</button>
-                                </form>
-                            </td>
+                        </tr>
+
+
+
+                        <tr class="edit-chart-row">
+                            <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post" id="ingredient_form_{{ingredient.id}}">
+
+                                <td colspan="1" class="edit-ingredient-name-cell">
+                                    <div class="name-fields" data-id="{{ingredient.id}}">
+                                        <div><input type="text" name="name" maxlength="500" value="{{ingredient.name}}"></div>
+                                        {% for alt in ingredient.alts %}
+                                            <div class="og-name"><input name="alt" type="text" maxlength="500" value="{{alt}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
+                                            {% endfor %}
+                                    </div>
+                                    <div class="plus-button-div">
+                                        <i class="fa fa-plus-circle add-alts" id='add-alts' aria-hidden="true"></i>
+                                    </div>
+                                </td>
+
+                                <td colspan="12" class="edit-ingredient-cell">
+
+
+                                    <div class="ingredient-month-menu" style="background: {{ingredient_group_colors[ingredient.group][1]}};">
+                                        {% for i in range(1,13) %}
+                                            <div class="ingredient-month-container ingredient-month-container-{{i}}" style="background: {% if i in ingredient.months %}{{ingredient_group_colors[ingredient.group][0]}}{% endif %};">
+                                                <label class="month-label">
+                                                    {% if i in ingredient.months %}
+                                                        <input type="checkbox" class="checkbox og-checkbox" name="{{month_dict[i][:3]}}" checked>
+                                                        {% else %}
+                                                        <input type="checkbox" class="checkbox" name="{{month_dict[i][:3]}}">
+                                                        {% endif %}
+                                                </label>
+                                            </div>
+                                            {% endfor %}
+                                    </div>
+
+
+
+                                    <div class="group-menu">
+                                        {% for group in ingredient_groups %}
+                                            <div class="group-container">
+                                                <label class="group-label">{{group.capitalize()}}<br>
+                                                    {% if ingredient.group == group %}
+                                                        <input type="radio" name="group" value="{{group}}" checked required>
+                                                        {% else %}
+                                                        <input type="radio" name="group" value="{{group}}" required>
+                                                        {% endif %}
+                                                </label>
+                                            </div>
+                                            {% endfor %}
+                                    </div>
+
+                                    <div class="edit-ingredient-triple">
+                                        <div class="triple-container triple-container-1">
+                                            <textarea name="picture" maxlength="9999" placeholder="Picture">{{ingredient.picture}}</textarea>
+                                        </div>
+                                        <div class="triple-container">
+                                            <textarea name="storage" maxlength="9999" placeholder="Storage Instructions">{{ingredient.storage}}</textarea>
+                                        </div>
+                                        <div class="triple-container triple-container-3">
+                                            <button type="reset" class="edit-ingredient-button reset-ingredient-button" data-id="{{ingredient.id}}"><i class="fa fa-repeat" aria-hidden="true">&nbsp;</i>Reset</button>
+                                            <button type="submit" class="edit-ingredient-button submit-ingredient-button"><i class="fa fa-check" aria-hidden="true">&nbsp;</i>Submit</button>
+                                            <button type="button" class="edit-ingredient-button cancel-ingredient-button"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+                                            <button type="button" class="edit-ingredient-button delete-ingredient-button soft-delete"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+                                        </div>
+                            </form>
+                                        <div class="triple-container triple-container-3 hide-buttons">
+                                            <form action="{{url_for('deleteIngredient', ingredient_id=ingredient.id)}}" method="post" class='delete-ingredient-form'>
+                                                <p class="delete-warning">Are you sure you want to delete {{ingredient.name}}?</p>
+                                                <button type="button" class="edit-ingredient-button soft-delete"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+                                                <button type="submit" class="edit-ingredient-button delete-ingredient-button hard-delete"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+
+                                </td>
                         </tr>
                         {% endfor %}
                 </tbody>
