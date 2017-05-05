@@ -8,136 +8,148 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Edit {{recipe.name}}</h1>
-    <form action="{{url_for('editRecipe', recipe_id=recipe.id)}}" method="post">
-       <ul>
-            <li><label>Name: <input type="text" name="name" maxlength="500" placeholder="{{recipe.name}}"></label></li>
-            <li>
-                <button id="add-pics" type="button">+</button>
+    <form action="{{url_for('editRecipe', recipe_id=recipe.id)}}" class="edit-recipe-form" method="post">
+
+
+
+
+
+        <header>
+            <div class="recipe-pictures" style="background-image: url({{recipe.pictures[0]}});">
                 <label>Pictures:</label>
                 <div id="pic-fields">
                 {% for picture in recipe.pictures %}
-                    <div><input type="text" name="pictures" maxlength="9999" value="{{picture}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
+                    <div>
+                        <input type="text" name="pictures" maxlength="9999" value="{{picture}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-pictures" aria-hidden="true"></i>
+                    </div>
                     {% endfor %}
                 </div>
-            </li>
-            <li><label>Gif: <input type="text" name="gif" maxlength="9999" placeholder="{{recipe.gif}}"></label></li>
-            <li>
-                <button id="add-sources" type="button">+</button>
+                <div><label>Gif: <input type="text" name="gif" maxlength="9999" placeholder="{{recipe.gif}}"></label></div>
                 <label>Sources:</label>
                 <div id="source-fields">
                     {% for source in recipe.sources %}
-                        <div><input type="text" name="sources" maxlength="9999" value="{{source}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
+                        <div>
+                            <input type="text" name="sources" maxlength="9999" value="{{source}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-sources" aria-hidden="true"></i>
+                        </div>
                         {% endfor %}
                 </div>
-            </li>
-            <li><label>Days: <input type="number" name="days" value="{{recipe.time.days}}"></label>
-            <label>Hours: <input type="number" name="hours" value="{{recipe.time.seconds // 3600}}"></label>
-            <label>Minutes: <input type="number" name="minutes" value="{{(recipe.time.seconds % 3600) // 60}}"></label>
-            <label>Seconds: <input type="number" name="seconds" value="{{(recipe.time.seconds % 3600) % 60}}"></label></li>
-            <li><label>Yield: <input type="text" name="total_yield" maxlength="500" placeholder="{{recipe.total_yield}}"></label></li>
-            <li><label>Calories: <input type="number" name="calories" placeholder="{{recipe.calories}}"></label></li>
-            <li><label>Vegetarian
-                {% if recipe.vegetarian %}
-                    <input type="checkbox" name="vegetarian" checked>
-                    {% else %}
-                    <input type="checkbox" name="vegetarian">
-                    {% endif %}
-            </label></li>
-            <li><div class="month-menu">
-                {% for i in range(1,13) %}
-                    <div class="month-container"><label>{{month_dict[i][:3]}}<br>
-                        {% if i in recipe.months %}
-                            <input type="checkbox" name="{{month_dict[i][:3]}}" checked>
+            </div>
+            <div class="recipe-info">
+                <i class="fa fa-pencil-square-o fa-lg edit-recipe" aria-hidden="true" onclick=""></i>
+                <h2 class="recipe-info-title">
+                    <input type="text" name="title" maxlength="500" value="{{recipe.name}}">
+                </h2>
+                <div class="popup-months">
+                    {% for i in range(1,13) %}
+                        <div class="popup-cell {% if i in recipe.months %}filled{% endif %}">{{month_dict[i][:3]}}</div>
+                        {% endfor %}
+                </div>
+                <div class="ingredient-month-menu" style="background: rgba(229, 57, 53, 0.3);">
+                    {% for i in range(1,13) %}
+                        <div class="ingredient-month-container ingredient-month-container-{{i}}" style="background: {% if i in recipe.months %}#E53935{% endif %};">
+                            <label class="month-label">
+                                {% if i in recipe.months %}
+                                    <input type="checkbox" class="checkbox og-checkbox" name="{{month_dict[i][:3]}}" checked>
+                                    {% else %}
+                                    <input type="checkbox" class="checkbox" name="{{month_dict[i][:3]}}">
+                                    {% endif %}
+                            </label>
+                        </div>
+                        {% endfor %}
+                </div>
+                <div class="recipe-info-row">
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">time:</p>
+                        <label>D:<input type="number" name="days" value="{{recipe.time.days}}"></label>
+                        <label>H:<input type="number" name="hours" value="{{recipe.time.seconds // 3600}}"></label>
+                        <label>M:<input type="number" name="minutes" value="{{(recipe.time.seconds % 3600) // 60}}"></label>
+                        <label>S:<input type="number" name="seconds" value="{{(recipe.time.seconds % 3600) % 60}}"></label>
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">yield:</p>
+                        <input type="text" name="total_yield" maxlength="500" value="{{recipe.total_yield}}">
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">calories:</p>
+                        <input type="number" name="calories" value="{{recipe.calories}}">
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">vegetarian:</p>
+                        {% if recipe.vegetarian %}
+                            <input type="checkbox" name="vegetarian" checked>
                             {% else %}
-                            <input type="checkbox" name="{{month_dict[i][:3]}}">
+                            <input type="checkbox" name="vegetarian">
                             {% endif %}
-                    </label></div>
-                    {% endfor %}
-            </div></li>
-            <li>
-                <div class="course-container"><label>Breakfast<br>
-                    {% if 'Breakfast' in recipe.courses %}
-                        <input type="checkbox" name="breakfast" checked>
-                        {% else %}
-                        <input type="checkbox" name="breakfast">
-                        {% endif %}
-                </label></div>
-                <div class="course-container"><label>Lunch & Dinner<br>
-                    {% if 'Lunch & Dinner' in recipe.courses %}
-                        <input type="checkbox" name="dinner" checked>
-                        {% else %}
-                        <input type="checkbox" name="dinner">
-                        {% endif %}
-                </label></div>
-                <div class="course-container"><label>Dessert<br>
-                    {% if 'Dessert' in recipe.courses %}
-                        <input type="checkbox" name="dessert" checked>
-                        {% else %}
-                        <input type="checkbox" name="dessert">
-                        {% endif %}
-                </label></div>
-                <div class="course-container"><label>Basics<br>
-                    {% if 'Basics' in recipe.courses %}
-                        <input type="checkbox" name="basics" checked>
-                        {% else %}
-                        <input type="checkbox" name="basics">
-                        {% endif %}
-                </label></div>
-            </li>
-            <li>
-                <label>Cuisines:
-                <select name="cuisines" multiple>
-                    {% for region in regions %}
-                        <optgroup label="{{region}}">
-                            {% for cuisine in cuisines[region] %}
-                                {% if cuisine in recipe.cuisines %}
-                                    <option selected>{{cuisine}}</option>
-                                    {% else %}
-                                    <option>{{cuisine}}</option>
-                                    {% endif %}
-                                {% endfor %}
-                        </optgroup>
-                        {% endfor %}
-                </select></label>
-            </li>
-            <li>
-                <label>Groups:
-                <select name="groups" multiple>
-                    {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
-                        <optgroup label="{{course}}">
-                            {% for group in groups[course] %}
-                                {% if group in recipe.groups %}
-                                    <option selected>{{group}}</option>
-                                    {% else %}
-                                    <option>{{group}}</option>
-                                    {% endif %}
-                                {% endfor %}
-                        </optgroup>
-                        {% endfor %}
-                </select></label>
-            </li>
-            <li>
-                <button id="add-occasions" type="button">+</button>
-                <label>Occasions:</label>
-                <div id="occasion-fields">
-                    {% for occasion in recipe.occasions %}
-                        <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
-                        {% endfor %}
+                    </div>
                 </div>
-            </li>
-            <li>
-                <button id="add-ingredients" type="button">+</button>
-                <label>Ingredients:</label>
+                <div class="recipe-info-row">
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">cuisine:</p>
+                        <select name="cuisines" class="recipe-info-select" multiple>
+                            {% for region in regions %}
+                                <optgroup label="{{region}}">
+                                    {% for cuisine in cuisines[region] %}
+                                        {% if cuisine in recipe.cuisines %}
+                                            <option selected>{{cuisine}}</option>
+                                            {% else %}
+                                            <option>{{cuisine}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                </optgroup>
+                                {% endfor %}
+                        </select>
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">course:</p>
+                        <select name="courses" class="recipe-info-select" multiple>
+                            {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert', 'Basics', 'Drinks'] %}
+                                {% if course in recipe.courses %}
+                                    <option selected>{{course}}</option>
+                                    {% else %}
+                                    <option>{{course}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                        </select>
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">group:</p>
+                        <select name="groups" class="recipe-info-select" multiple>
+                            {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
+                                <optgroup label="{{course}}">
+                                    {% for group in groups[course] %}
+                                        {% if group in recipe.groups %}
+                                            <option selected>{{group}}</option>
+                                            {% else %}
+                                            <option>{{group}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                </optgroup>
+                                {% endfor %}
+                        </select>
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">occassions:</p>
+                        <div id="occasion-fields">
+                            {% for occasion in recipe.occasions %}
+                                <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-occasions" aria-hidden="true"></i></div>
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="ingredients">
                 <div id="ingredient-fields">
                     {% for ingredient in recipe.ingredients %}
-                        <div><input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>
+                        <div>
+                            <input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-ingredients" aria-hidden="true"></i>
+                        </div>
                         {% endfor %}
                 </div>
-            </li>
-            <button id="add-instructions" type="button">+</button>
-            <label>Instructions:</label>
-            <li>
+            </section>
+            <section class="instructions">
+                <button id="add-instructions" type="button">+</button>
                 <div id="instruction-fields">
                     {% for instruction in recipe.instructions %}
                         <div>
@@ -149,10 +161,37 @@
                         </div>
                         {% endfor %}
                 </div>
-            </li>
-            <li><input type="submit" value="Edit Recipe">
+            </section>
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <input type="submit" value="Edit Recipe">
             <button type="button" onclick="history.go(0)">Reset</button>
-            <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button></li>
-        </ul>
+            <button type="button" onclick="window.location.assign('{{url_for('viewRecipe', recipe_id=recipe.id)}}');">Cancel</button>
+            <button type="button" class="delete-recipe-button">Delete</button>
+    </form>
+    <form action="{{url_for('deleteRecipe', recipe_id=recipe.id)}}" class="delete-recipe" method="post">
+        <label>Are you sure you want to delete {{recipe.name}}?</label><br>
+        <input type="submit" value="Delete">
+        <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button>
     </form>
 {% endblock %}

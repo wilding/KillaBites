@@ -110,9 +110,10 @@ nav {
 
 .homepage-recipes {
     width: 25%;
-    border-right: 3px solid black;
+    height: 100vh;
     text-align: center;
     background: black;
+    overflow: scroll;
 }
 
 .logo {
@@ -120,6 +121,35 @@ nav {
     color: #eee1c1;
     font-family: toxtypewriter;
     margin: 0;
+}
+
+.course-switcher {
+    display: flex;
+    color: #ab1c20;
+    border: 2px solid #ab1c20;
+    width: 90%;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.course-switcher-option {
+    border: 1px solid #ab1c20;
+    width: 33.33333%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-switcher-selected {
+    background: #ab1c20;
+    color: black;
+    font-weight: bold;
 }
 
 h4 {
@@ -141,6 +171,10 @@ h4 {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+}
+
+.homepage-courses-Breakfast, .homepage-courses-Dessert {
+    display: none;
 }
 
 .homepage-pic {
@@ -251,6 +285,7 @@ h4 {
     color: black;
     font-size: 13px;
     width: 8.3333%;
+    text-align: center;
 }
 
 .popup-storage {
@@ -500,6 +535,10 @@ th {
     width: 958px;
     height: 38px;
     background: black;
+    margin-top: 50px;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .dropdown-cuisine, .dropdown-course, .dropdown-group, .dropdown-month {
@@ -518,9 +557,8 @@ th {
     display: none;
 }
 
-.recipe-pic {
-    width: 120px;
-    background-size: cover;
+.menu-table {
+    margin-bottom: 40px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -548,6 +586,25 @@ p {
     background-position: center;
     background-size: cover;
     width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recipe-pic-arrows {
+    align-items: center;
+    display: flex;
+    font-size: 18pt;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0 3px 0 3px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.35s;
+}
+
+.recipe-pictures:hover .recipe-pic-arrows {
+    opacity: 1;
 }
 
 /* Recipe Info */
@@ -566,11 +623,13 @@ p {
 
 .recipe-info-title {
     font-size: 20pt;
+    margin: 0 0 10px 0;
 }
 
 .recipe-info-item {
     text-align: center;
     width: 25%;
+    overflow: scroll;
 }
 
 .recipe-info-label {
@@ -581,14 +640,34 @@ p {
 
 .ingredients {
     width: 30%;
-    font-size: 18px;
+    font-size: 16pt;
     margin-top: 40px;
-    padding-left: 10%;
+    padding-left: 6%;
 }
 
 .instructions {
     width: 70%;
+    font-size: 16pt;
     margin: 40px 0 0 20px;
+}
+
+.instruction-note {
+    margin-left: 13px;
+    color: grey;
+    font-size: 12pt;
+}
+
+.fa-leaf {
+    color: #43A047;
+}
+
+.recipe-info-title i {
+    font-size: 10pt;
+}
+
+.edit-recipe {
+    margin: 10px 0 0 10px;
+    cursor: pointer;
 }
 
 
@@ -634,20 +713,74 @@ li {
     width: 25%;
 }
 
-
-input[type=text] {
+input[type=text], input[type=number] {
     background: transparent;
     border: none;
-    border-bottom: 1px solid grey;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=number]:focus {
     outline: none;
 }
 
 #add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
     height: 19px;
 }
+
+.delete-recipe {
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.edit-recipe-form {
+    width: 100%;
+}
+
+input[name=title] {
+    color: #eee1c1;
+    font-size: 20pt;
+    text-align: center;
+    border-bottom: none;
+    font-family: times;
+    font-weight: bold;
+}
+
+input[name=sources], input[name=pictures], input[name=occasions], input[name=ingredients], input[name=gif] {
+    padding-bottom: 3px;
+    font-family: times;
+    font-size: 12pt;
+    border-bottom: 1px solid grey;
+}
+
+input[name=total_yield], input[name=calories] {
+    color: #eee1c1;
+    text-align: center;
+    font-family: times;
+    font-size: 12pt;
+}
+
+input[name=days], input[name=hours], input[name=minutes], input[name=seconds] {
+   color: #eee1c1;
+   text-align: center;
+   font-family: times;
+   font-size: 12pt;
+   width: 40px;
+}
+
+
+.recipe-info-select {
+    background: transparent;
+    color: #eee1c1;
+    border: none;
+    width: 100%;
+    font-family: times;
+    font-size: 12pt;
+}
+
+
+
+
 
 
 /* Edit Ingredient Row */
@@ -670,6 +803,7 @@ input[name=name], input[name=alt] {
     font-size: 12pt;
     width: calc(100% - 14px);
     padding-bottom: 3px;
+    border-bottom: 1px solid grey;
 }
 
 .delete {
@@ -677,6 +811,14 @@ input[name=name], input[name=alt] {
     cursor: pointer;
     padding-bottom: 4px;
     border-bottom: 1px solid grey;
+}
+
+.add {
+    color: #43A047;
+    cursor: pointer;
+    padding-bottom: 4px;
+    border-bottom: 1px solid grey;
+    padding-left: 3px;
 }
 
 .plus-button-div {
@@ -731,9 +873,9 @@ input[name=name], input[name=alt] {
     cursor: pointer;
 }
 
-input[type=checkbox] {
+/*input[type=checkbox] {
     visibility: hidden;
-}
+}*/
 
 
 /* Ingredient Group Input */
@@ -833,4 +975,9 @@ textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .hide-buttons {
     display: none;
 }
+
+
+
+
+
 

@@ -24,7 +24,7 @@ cuisines = {
     'Middle Eastern':
         ['Arab', 'Indian', 'Israeli', 'Lebanese', 'Middle Eastern', 'Persian', 'Turkish'],
     'European':
-        ['Eastern European', 'English', 'French', 'German', 'Irish',  'Italian', 'Mediterranean', 'Nordic', 'Spanish'],
+        ['Eastern European', 'English', 'French', 'German', 'Irish',  'Italian', 'Mediterranean', 'Nordic', 'Portuguese', 'Spanish'],
     'Latin American':
         ['Brazilian', 'Caribbean', 'Central American', 'Mexican', 'South American'],
     'American':
@@ -59,7 +59,7 @@ def homepage():
     land = session.query(Ingredient).filter_by(group="land").filter(Ingredient.months.any(current_month)).order_by(Ingredient.name).all()
     ingredients = [fruit, vegetables, herbs, nuts, sea, air, land]
     recipes = session.query(Recipe).filter(Recipe.months.any(current_month)).order_by(Recipe.groups)
-    return render_template('viewhomepage.html', ingredients=ingredients, month_dict=month_dict, month=month_dict[current_month], recipes=recipes, Recipe=Recipe)
+    return render_template('viewhomepage.html', ingredients=ingredients, month_dict=month_dict, month=month_dict[current_month], recipes=recipes, Recipe=Recipe, groups=groups)
 
 
 # Full Chart
@@ -97,7 +97,7 @@ def chartpage():
 def menupage():
     """docstring for menupage"""
     # session.rollback()
-    recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
+    recipes = session.query(Recipe).order_by(Recipe.name).all()
     return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
 
@@ -179,7 +179,7 @@ def newRecipe():
     """docsting for newRecipe"""
     if request.method == 'POST':
         newrecipe = Recipe(
-            name=request.form['name'],
+            name=request.form['title'],
             pictures=request.form.getlist('pictures'),
             gif=request.form['gif'],
             sources=request.form.getlist('sources'),
@@ -197,7 +197,7 @@ def newRecipe():
         session.add(newrecipe)
         session.commit()
         flash(newrecipe.name + ' added!')
-        return redirect(url_for('menupage'))
+        return redirect(url_for('viewRecipe', recipe_id=newrecipe.id))
     else:
         return render_template('newrecipe.html', month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
@@ -208,8 +208,8 @@ def editRecipe(recipe_id):
     """docstring for editRecipe"""
     recipe = session.query(Recipe).filter_by(id=recipe_id).one()
     if request.method == 'POST':
-        if request.form['name']:
-            recipe.name = request.form['name']
+        if request.form['title']:
+            recipe.name = request.form['title']
         if request.form['gif']:
             recipe.gif = request.form['gif']
         if request.form['total_yield']:
@@ -223,14 +223,14 @@ def editRecipe(recipe_id):
         recipe.months = parse_months(request.form)
         recipe.cuisines = request.form.getlist('cuisines')
         recipe.groups = request.form.getlist('groups')
-        recipe.courses = parse_courses(request.form)
+        recipe.courses = request.form.getlist('courses')
         recipe.occasions = request.form.getlist('occasions')
         recipe.ingredients = request.form.getlist('ingredients')
         recipe.instructions = parse_instructions(request.form)
         session.add(recipe)
         session.commit()
         flash(recipe.name + ' edited!')
-        return redirect(url_for('menupage'))
+        return redirect(url_for('viewRecipe', recipe_id=recipe.id))
     else:
         return render_template('editrecipe.html', recipe=recipe, month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 

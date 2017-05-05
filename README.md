@@ -1,7 +1,6 @@
 To Do:
 
     Homepage
-        - tabs for browsing courses
         - occassions
 
         - filter recipe by ingredient click
@@ -14,7 +13,7 @@ To Do:
 
 
     Chart
-        * edit ingredient form in chart
+        * new ingredient form in chart
 
         - search
         - customize ingredient list
@@ -26,6 +25,7 @@ To Do:
     Menu
         - menu view options
         - merge regions and cuisines
+        - cancel filters
 
         - search
 
@@ -36,22 +36,39 @@ To Do:
 
 
     Recipe
-        * ingredient/instruction sections
-        - time sections
-        - multi recipe view
-        - cuisine flags
-        - search google pics for additional images
-        - download recipe as pdf
 
-        - split source into display/link tuple
-        - pairing
-        - recipe ingredients json input
-            - scale ingredient list
-        - occassion dates
+        picture
+            - double click picture for large picture window
+            - upload pictures
+            - crop pictures
+            - search google pics for additional images?
+        info
+            - cuisine flags
+            - time sections
+            - split source into display/link tuple
+            - occassion dates
+        ingredients/instructions
+            - enter and delete key for ingredients/instructions
+            - click & drag to rearrange ingredients/instructions
+            - instructions embed pictures/gifs/videos
+            - ingredients json input
+                - scale ingredient list
+            - drawing on instructions
+
+
+
+        - multi recipe view
         - recipe versions
+
+
+        - download recipe as pdf
+        - send recipe as email
+
+
+        - pairing
         - nutrition info
-        - drawing on instructions
         - public or no, publish
+
 
         - background
         - font
@@ -76,9 +93,12 @@ To Do:
         - comments
         - optional comments
 
+        - personal course/groups and region/cuisine dictionaries
+
         - forking recipes
             - auto source
             - track # of forks
+            - fork single recipe/category/whole user/cuisine/etc
 
         - favorites
 
