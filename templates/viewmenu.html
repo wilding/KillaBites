@@ -43,11 +43,10 @@
                 {% endfor %}
         </select>
     </div>
-    <table>
+    <table class="menu-table">
         <thead>
             <tr>
-                <th></th>
-                <th><a href="{{url_for('newRecipe')}}"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></th>
+                <th class="add-ingredient-link" onclick="window.location.assign('{{url_for('newRecipe')}}');"><i class="fa fa-plus-circle" aria-hidden="true"></i></th>
                 <th>months</th>
                 <th>cuisines</th>
                 <th>groups</th>
@@ -59,7 +58,6 @@
         <tbody class="show-group">
             {% for recipe in recipes %}
                 <tr class="cuisine-Cuisine course-Course group-Group month-Month {% for cuisine in recipe.cuisines %}cuisine-{{cuisine}} {% endfor %}{% for course in recipe.courses %}course-{{course}} {% endfor %}{% for group in recipe.groups %}group-{{group}} {% endfor %}{% for month in recipe.months %}month-{{month_dict[month]}} {% endfor %}">
-                    <td class="recipe-pic" style="background-image: url({{recipe.pictures[0]}});"></td>
                     <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
                     <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
                     <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>
