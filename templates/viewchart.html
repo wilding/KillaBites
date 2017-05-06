@@ -25,6 +25,62 @@
                 </tr>
                 {% endfor %}
         </thead>
+
+
+
+            <tbody class="show-group">
+                <tr class="new-chart-row">
+                    <form>
+                        <td colspan="1" class="edit-ingredient-name-cell">
+                            <div class="name-fields">
+                                <div><input type="text" name="name" maxlength="500"></div>
+                            </div>
+                            <div class="plus-button-div">
+                                <i class="fa fa-plus-circle add-alts" id='add-alts' aria-hidden="true"></i>
+                            </div>
+                        </td>
+                        <td colspan="12" class="edit-ingredient-cell">
+                            <div class="ingredient-month-menu">
+                                {% for i in range(1,13) %}
+                                    <div class="ingredient-month-container ingredient-month-container-{{i}}">
+                                        <label class="month-label">
+                                            <input type="checkbox" class="checkbox" name="{{month_dict[i][:3]}}">
+                                        </label>
+                                    </div>
+                                    {% endfor %}
+                            </div>
+                            <div class="group-menu">
+                                {% for group in ingredient_groups %}
+                                    <div class="group-container">
+                                        <label class="group-label">{{group.capitalize()}}<br>
+                                            <input type="radio" name="group" value="{{group}}" checked required>
+                                        </label>
+                                    </div>
+                                    {% endfor %}
+                            </div>
+                            <div class="edit-ingredient-triple">
+                                <div class="triple-container triple-container-1">
+                                    <textarea name="picture" maxlength="9999" placeholder="Picture"></textarea>
+                                </div>
+                                <div class="triple-container">
+                                    <textarea name="storage" maxlength="9999" placeholder="Storage Instructions"></textarea>
+                                </div>
+                                <div class="triple-container triple-container-3">
+                                    <button type="reset" class="edit-ingredient-button reset-ingredient-button"><i class="fa fa-repeat" aria-hidden="true">&nbsp;</i>Reset</button>
+                                    <button type="submit" class="edit-ingredient-button submit-ingredient-button"><i class="fa fa-check" aria-hidden="true">&nbsp;</i>Submit</button>
+                                    <button type="button" class="edit-ingredient-button cancel-ingredient-button"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+                                    <button type="button" class="edit-ingredient-button delete-ingredient-button soft-delete"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+                                </div>
+                    </form>
+                            </div>
+                        </td>
+                </tr>
+            </tbody>
+
+
+
+
+
         {% for group in ingredients %}
             {% for i in range(2) %}
                 <tbody class="{{group[i][0].group}}-table sorting-{{i}} show-group {% if i == 1 %}hide-sort{% endif %}">
@@ -54,7 +110,6 @@
 
                         <tr class="edit-chart-row">
                             <form action="{{url_for('editIngredient', ingredient_id=ingredient.id)}}" method="post" id="ingredient_form_{{ingredient.id}}">
-
                                 <td colspan="1" class="edit-ingredient-name-cell">
                                     <div class="name-fields" data-id="{{ingredient.id}}">
                                         <div><input type="text" name="name" maxlength="500" value="{{ingredient.name}}"></div>
@@ -66,10 +121,7 @@
                                         <i class="fa fa-plus-circle add-alts" id='add-alts' aria-hidden="true"></i>
                                     </div>
                                 </td>
-
                                 <td colspan="12" class="edit-ingredient-cell">
-
-
                                     <div class="ingredient-month-menu" style="background: {{ingredient_group_colors[ingredient.group][1]}};">
                                         {% for i in range(1,13) %}
                                             <div class="ingredient-month-container ingredient-month-container-{{i}}" style="background: {% if i in ingredient.months %}{{ingredient_group_colors[ingredient.group][0]}}{% endif %};">
@@ -83,9 +135,6 @@
                                             </div>
                                             {% endfor %}
                                     </div>
-
-
-
                                     <div class="group-menu">
                                         {% for group in ingredient_groups %}
                                             <div class="group-container">
@@ -99,7 +148,6 @@
                                             </div>
                                             {% endfor %}
                                     </div>
-
                                     <div class="edit-ingredient-triple">
                                         <div class="triple-container triple-container-1">
                                             <textarea name="picture" maxlength="9999" placeholder="Picture">{{ingredient.picture}}</textarea>
@@ -122,11 +170,12 @@
                                             </form>
                                         </div>
                                     </div>
-
-
-
                                 </td>
                         </tr>
+
+
+
+
                         {% endfor %}
                 </tbody>
                 {% endfor %}
