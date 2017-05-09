@@ -603,6 +603,11 @@ p {
     transition: opacity 0.35s;
 }
 
+.recipe-pic-button {
+    width: calc(100% - 46.32px);
+    cursor: pointer;
+}
+
 .recipe-pictures:hover .recipe-pic-arrows {
     opacity: 1;
 }
@@ -670,6 +675,43 @@ p {
     cursor: pointer;
 }
 
+.picture-popup-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-popup {
+    height: 90%;
+    width: 80%;
+    background: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.picture-popup img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.picture-popup-arrows {
+    align-items: center;
+    display: flex;
+    font-size: 18pt;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0 3px 0 3px;
+    cursor: pointer;
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Forms
@@ -768,6 +810,24 @@ input[name=days], input[name=hours], input[name=minutes], input[name=seconds] {
    width: 40px;
 }
 
+input[name=instructions-text] {
+    width: 95%;
+}
+
+input[name=instructions-text], input[name=instructions-photo], input[name=instructions-gif], input[name=instructions-video], input[name=instructions-note] {
+    padding-bottom: 3px;
+    border-bottom: 1px solid grey;
+    font-family: times;
+    font-size: 11pt;
+}
+
+#instruction-fields {
+    font-size: 12pt;
+}
+
+.instruction-cell {
+    margin: 20px 0 20px 0;
+}
 
 .recipe-info-select {
     background: transparent;
@@ -776,6 +836,18 @@ input[name=days], input[name=hours], input[name=minutes], input[name=seconds] {
     width: 100%;
     font-family: times;
     font-size: 12pt;
+}
+
+.recipe-month-menu {
+    display: flex;
+    height: 17px;
+}
+
+.recipe-month-container {
+    width: 8.333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -977,7 +1049,9 @@ textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 
 
-
+.hidden {
+    display: none;
+}
 
 
 

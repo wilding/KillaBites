@@ -12,6 +12,7 @@
         <div class="recipe-pictures" style="background-image: {% for picture in recipe.pictures %}url({{picture}}){% if loop.index < recipe.pictures|length %},{% endif %}{% endfor %};">
             {% if recipe.pictures|length > 1 %}
                 <div class="recipe-pic-arrows"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                <div class="recipe-pic-button"></div>
                 <div class="recipe-pic-arrows"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                 {% endif %}
         </div>
@@ -101,4 +102,13 @@
                 {% endfor %}
         </section>
     </main>
+    <div class="picture-popup-background hidden">
+        <div class="picture-popup">
+            <div class="picture-popup-arrows"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            {% for picture in recipe.pictures %}
+                <img class="hidden" src="{{picture}}">
+                {% endfor %}
+            <div class="picture-popup-arrows"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+        </div>
+    </div>
 {% endblock %}
