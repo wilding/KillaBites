@@ -18,7 +18,7 @@
         <thead>
             {% for position in ['relative', 'fixed'] %}
                 <tr class="{{position}}-header">
-                    <th width="177" class="add-ingredient-link" onclick="window.location.assign('{{url_for('newIngredient')}}');"><i class="fa fa-plus-circle" aria-hidden="true"></i></th>
+                    <th width="177" class="add-ingredient-link"><i class="fa fa-plus-circle" aria-hidden="true"></i></th>
                     {% for i in range(1, 13) %}
                         <th id="{% if current_month == i %}current-month{% endif %}" width="65">{{month_dict[i][:3]}}</th>
                         {% endfor %}
@@ -28,9 +28,9 @@
 
 
 
-            <tbody class="show-group">
+            <tbody class="new-ingredient">
                 <tr class="new-chart-row">
-                    <form>
+                    <form action="{{url_for('newIngredient')}}" method="post">
                         <td colspan="1" class="edit-ingredient-name-cell">
                             <div class="name-fields">
                                 <div><input type="text" name="name" maxlength="500"></div>
@@ -40,7 +40,7 @@
                             </div>
                         </td>
                         <td colspan="12" class="edit-ingredient-cell">
-                            <div class="ingredient-month-menu">
+                            <div class="ingredient-month-menu" style="background: rgba(123, 31, 162, 0.3);">
                                 {% for i in range(1,13) %}
                                     <div class="ingredient-month-container ingredient-month-container-{{i}}">
                                         <label class="month-label">
@@ -53,7 +53,7 @@
                                 {% for group in ingredient_groups %}
                                     <div class="group-container">
                                         <label class="group-label">{{group.capitalize()}}<br>
-                                            <input type="radio" name="group" value="{{group}}" checked required>
+                                            <input type="radio" name="group" value="{{group}}" {% if group == 'fruit' %}checked{% endif %} required>
                                         </label>
                                     </div>
                                     {% endfor %}
@@ -66,14 +66,14 @@
                                     <textarea name="storage" maxlength="9999" placeholder="Storage Instructions"></textarea>
                                 </div>
                                 <div class="triple-container triple-container-3">
-                                    <button type="reset" class="edit-ingredient-button reset-ingredient-button"><i class="fa fa-repeat" aria-hidden="true">&nbsp;</i>Reset</button>
+                                    <button type="reset" class="edit-ingredient-button reset-new-ingredient-button"><i class="fa fa-repeat" aria-hidden="true">&nbsp;</i>Reset</button>
                                     <button type="submit" class="edit-ingredient-button submit-ingredient-button"><i class="fa fa-check" aria-hidden="true">&nbsp;</i>Submit</button>
-                                    <button type="button" class="edit-ingredient-button cancel-ingredient-button"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
-                                    <button type="button" class="edit-ingredient-button delete-ingredient-button soft-delete"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+                                    <button type="button" class="edit-ingredient-button cancel-new-ingredient-button"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+                                    <button type="button" class="edit-ingredient-button cancel-new-ingredient-button"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
                                 </div>
-                    </form>
                             </div>
                         </td>
+                    </form>
                 </tr>
             </tbody>
 

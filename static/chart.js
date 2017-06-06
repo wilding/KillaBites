@@ -75,14 +75,14 @@ $(function() {
 
 
     // add name fields when the + button is clicked
-    $(".add-alts").click(function (e) {
+    $(".add-alts").click(function () {
         var id = $(this).parent().siblings('.name-fields').attr('data-id');
-        $(this).parent().siblings(".name-fields").append('<div class="added-name"><input name="alt" type="text" maxlength="500" form="ingredient_form_' + id + '"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>');
+        $(this).parent().siblings('.name-fields').append('<div class="added-name"><input name="alt" type="text" maxlength="500" form="ingredient_form_' + id + '"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>');
     });
 
 
     // remove name fields when the - button is clicked and save original deleted names
-    $("body").on("click", ".delete", function (e) {
+    $('body').on('click', '.delete', function () {
         if ($(this).parent().hasClass('og-name')) {
             var name = $(this).siblings('input[name=alt]').val();
             var id = $(this).parents('.name-fields').attr('data-id')
@@ -157,13 +157,33 @@ $(function() {
             $(this).parents('.ingredient-month-container').css('background', ingredient_group_colors[group][0]);
         });
         $(this).parents('.edit-ingredient-cell').siblings('.edit-ingredient-name-cell').find('.added-name').remove();
-        id = $(this).attr('data-id');
-        name_fields = $(this).parents('.edit-chart-row').find('.name-fields');
-        names_to_add = deleted_names[id]
+        var id = $(this).attr('data-id');
+        var name_fields = $(this).parents('.edit-chart-row').find('.name-fields');
+        var names_to_add = deleted_names[id];
         for (i in names_to_add) {
             name_fields.append('<div class="og-name"><input name="alt" type="text" maxlength="500" form="ingredient_form" value="' + names_to_add[i] + '"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>');
         };
         deleted_names[id] = [];
+    });
+
+
+    // correctly reset month input background and name input when the reset button is clicked
+    $('.reset-new-ingredient-button').click(function() {
+        var month_menu = $(this).parents('.edit-ingredient-triple').siblings('.ingredient-month-menu');
+        month_menu.css('background', 'rgba(123, 31, 162, 0.3)');
+        month_menu.find('.ingredient-month-container').css('background', 'none');
+        $(this).parents('.edit-ingredient-cell').siblings('.edit-ingredient-name-cell').find('.added-name').remove();
+    });
+
+
+    // show new ingredient row when the + button is clicked
+    $('.add-ingredient-link').click( function () {
+        $('.new-ingredient').addClass('show-group');
+        $('.new-ingredient').find('input[name=name]').focus();
+    });
+    // hide new ingredient row when cancel button is clicked
+    $('.cancel-new-ingredient-button').click(function() {
+        $('.new-ingredient').removeClass('show-group');
     });
 
 
@@ -179,7 +199,7 @@ var ingredient_group_colors = {
     'sea': ['#1E88E5', 'rgba(30, 136, 229, 0.3)'],
     'air': ['#FDD835', 'rgba(253, 216, 53, 0.3)'],
     'land': ['#E53935', 'rgba(229, 57, 53, 0.3)']
-}
+};
 
 
 var deleted_names = {};
@@ -192,8 +212,8 @@ var headerScroll = function () {
     var scrolltop = $(window).scrollTop();
     var fixed_header = $('.fixed-header');
     if (scrolltop > offset.top) {
-        fixed_header.css("display", "table");
+        fixed_header.css('display', 'table');
     } else {
-        fixed_header.css("display", "none");
-    };
-}
+        fixed_header.css('display', 'none');
+    }
+};
