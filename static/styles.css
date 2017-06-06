@@ -541,8 +541,18 @@ th {
     border-radius: 10px 10px 0 0;
 }
 
-.dropdown-cuisine, .dropdown-course, .dropdown-group, .dropdown-month {
+.dropdown-container {
     width: 25%;
+}
+
+.dropdown-container i {
+    color: #E53935;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.dropdown-cuisine, .dropdown-course, .dropdown-group, .dropdown-month {
+    width: 90%;
     height: 38px;
     background: black;
     color: #eee1c1;
@@ -589,6 +599,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: #eee1c1;
 }
 
 .recipe-pic-arrows {
@@ -644,16 +655,20 @@ p {
 /* Ingredients & Instructions */
 
 .ingredients {
-    width: 30%;
+    width: 24%;
     font-size: 16pt;
     margin-top: 40px;
-    padding-left: 6%;
+    margin-left: 6%;
+    overflow: scroll;
+    cursor: text;
 }
 
 .instructions {
     width: 70%;
     font-size: 16pt;
     margin: 40px 0 0 20px;
+    overflow: scroll;
+    cursor: text;
 }
 
 .instruction-note {
@@ -671,8 +686,47 @@ p {
 }
 
 .edit-recipe {
-    margin: 10px 0 0 10px;
+    padding: 10px;
     cursor: pointer;
+}
+
+.edit-recipe-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #eee1c1;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-recipe-button:hover {
+    color: #ab1c20;
+}
+
+.edit-recipe-button button {
+    background: black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 4px;
+    border: 0;
+    color: #eee1c1;
+    width: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-recipe-button button:hover {
+    color: #ab1c20;
 }
 
 .picture-popup-background {
@@ -760,24 +814,75 @@ input[type=text], input[type=number] {
     border: none;
 }
 
-input[type=text]:focus, input[type=number]:focus {
+input[type=text]:focus, input[type=number]:focus, button:focus, select:focus {
     outline: none;
 }
 
-#add-pics, #add-sources, #add-occasions, #add-ingredients, #add-instructions {
-    height: 19px;
-}
 
-.delete-recipe {
-    width: 100%;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+/* Edit Recipe */
 
 .edit-recipe-form {
     width: 100%;
 }
+
+/* Edit Recipe Picture */
+
+.edit-recipe-pictures {
+    background: black;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    color: #eee1c1;
+    align-content: flex-start;
+    padding: 5px;
+}
+
+input[name=sources], input[name=occasions] {
+    padding-bottom: 3px;
+    font-family: times;
+    font-size: 12pt;
+    border-bottom: 1px solid grey;
+    color: #eee1c1;
+}
+
+input[name=pictures] {
+    display: none;
+}
+
+.edit-picture-mini {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    height: 30%;
+    width: 30%;
+    margin: 5px;
+    cursor: -webkit-grab;
+}
+
+.edit-picture-mini:active {
+    cursor: -webkit-grabbing;
+}
+
+.edit-picture-mini .delete {
+    border: 0;
+    padding: 0;
+}
+
+.add-picture-mini {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px dashed #eee1c1;
+}
+
+.add-picture-mini:hover {
+    color: #ab1c20;
+    border: 1px dashed #ab1c20;
+}
+
+/* Edit Recipe Info */
 
 input[name=title] {
     color: #eee1c1;
@@ -786,13 +891,8 @@ input[name=title] {
     border-bottom: none;
     font-family: times;
     font-weight: bold;
-}
-
-input[name=sources], input[name=pictures], input[name=occasions], input[name=ingredients], input[name=gif] {
-    padding-bottom: 3px;
-    font-family: times;
-    font-size: 12pt;
-    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 input[name=total_yield], input[name=calories] {
@@ -807,26 +907,7 @@ input[name=days], input[name=hours], input[name=minutes], input[name=seconds] {
    text-align: center;
    font-family: times;
    font-size: 12pt;
-   width: 40px;
-}
-
-input[name=instructions-text] {
-    width: 95%;
-}
-
-input[name=instructions-text], input[name=instructions-photo], input[name=instructions-gif], input[name=instructions-video], input[name=instructions-note] {
-    padding-bottom: 3px;
-    border-bottom: 1px solid grey;
-    font-family: times;
-    font-size: 11pt;
-}
-
-#instruction-fields {
-    font-size: 12pt;
-}
-
-.instruction-cell {
-    margin: 20px 0 20px 0;
+   width: 35px;
 }
 
 .recipe-info-select {
@@ -841,6 +922,13 @@ input[name=instructions-text], input[name=instructions-photo], input[name=instru
 .recipe-month-menu {
     display: flex;
     height: 17px;
+    background: #eee1c1;
+}
+
+.recipe-month-menu label {
+    color: black;
+    font-size: 13px;
+    text-align: center;
 }
 
 .recipe-month-container {
@@ -848,6 +936,125 @@ input[name=instructions-text], input[name=instructions-photo], input[name=instru
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
+}
+
+/* Edit Recipe Ingredients & Instructions */
+
+input[name=ingredients] {
+    font-family: times;
+    font-size: 16pt;
+    width: calc(95% - 19px);
+    padding: 0;
+}
+
+input[name=instructions-text] {
+    width: 75%;
+    font-family: times;
+    font-size: 16pt;
+    padding: 0;
+}
+
+input[name=instructions-note] {
+    width: 75%;
+    font-family: times;
+    color: grey;
+    font-size: 12pt;
+    margin-left: 13px;
+    padding: 0;
+}
+
+input[name=instructions-photo], input[name=instructions-gif], input[name=instructions-video] {
+    padding-bottom: 3px;
+    border-bottom: 1px solid grey;
+    font-family: times;
+    font-size: 11pt;
+    display: none;
+}
+
+input[name=Jan], input[name=Feb], input[name=Mar], input[name=Apr], input[name=May], input[name=Jun], input[name=Jul], input[name=Aug], input[name=Sep], input[name=Oct], input[name=Nov], input[name=Dec] {
+    display: none;
+}
+
+.instruction-cell {
+    font-size: 16pt;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: default;
+}
+
+.instruction-buttons {
+    cursor: pointer;
+    color: #ab1c20;
+    opacity: 0;
+}
+
+.instruction-cell:hover .instruction-buttons {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.ingredients .fa-bars {
+    opacity: 0;
+    cursor: -webkit-grab;
+    color: rgba(0,0,0,0.6);
+}
+
+.fa-bars:active {
+    cursor: -webkit-grabbing;
+}
+
+.ingredients div:hover .fa-bars {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+
+
+
+
+.delete-recipe-buttons {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: #eee1c1;
+    cursor: pointer;
+    width: 215.92px;
+    height: 42px;
+}
+
+.delete-recipe-buttons button {
+    background: black;
+    border: 0;
+    color: #eee1c1;
+    width: 50%;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.delete-recipe-buttons label {
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.delete-recipe-buttons button:hover {
+    color: #ab1c20;
+}
+
+.delete-recipe {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -1048,9 +1255,14 @@ textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     display: none;
 }
 
+/*////////////////////////////////////////////////////////////////////////*/
 
 .hidden {
     display: none;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 

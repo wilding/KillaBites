@@ -210,8 +210,6 @@ def editRecipe(recipe_id):
     if request.method == 'POST':
         if request.form['title']:
             recipe.name = request.form['title']
-        if request.form['gif']:
-            recipe.gif = request.form['gif']
         if request.form['total_yield']:
             recipe.total_yield = request.form['total_yield']
         if request.form['calories']:

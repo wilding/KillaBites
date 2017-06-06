@@ -14,10 +14,11 @@
                 <div class="recipe-pic-arrows"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
                 <div class="recipe-pic-button"></div>
                 <div class="recipe-pic-arrows"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                {% else %}
+                <div class="recipe-pic-button" style="width: 100%;"></div>
                 {% endif %}
         </div>
         <div class="recipe-info">
-            <i class="fa fa-pencil-square-o fa-lg edit-recipe" aria-hidden="true" onclick="window.location.assign('{{url_for('editRecipe', recipe_id=recipe.id)}}');"></i>
             <h2 class="recipe-info-title">
                 {{recipe.name}}
                 {% if recipe.vegetarian %}
@@ -102,6 +103,9 @@
                 {% endfor %}
         </section>
     </main>
+    <div class="edit-recipe-button" onclick="window.location.assign('{{url_for('editRecipe', recipe_id=recipe.id)}}');">
+        edit<i class="fa fa-pencil-square-o fa-lg edit-recipe" aria-hidden="true"></i>
+    </div>
     <div class="picture-popup-background hidden">
         <div class="picture-popup">
             <div class="picture-popup-arrows"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>

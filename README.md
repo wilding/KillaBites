@@ -1,7 +1,10 @@
 To Do:
 
-    Homepage
-        - occassions
+    ////////////////////////// Homepage ///////////////////////////////////////////////////////////////////////////////////////
+
+
+        * occassions
+        * fix popup overlap bug
 
         - filter recipe by ingredient click
 
@@ -11,23 +14,39 @@ To Do:
         - nutrition info
         - order
 
+        ? filter or highlight recipes when ingredient clicked?
+        ? scroll ingredients and menu separately or together?
 
-    Chart
-        * new ingredient form in chart
 
-        - search
+    ////////////////////////// Chart ///////////////////////////////////////////////////////////////////////////////////////
+
+
+        * upload pictures
+        * remove ingredient name field bug
+            readded names rearrange after reset
+            submit does not recognize name inputs that were readded after reset
+            new ingredient doesnt add alts
+        * search
+
         - customize ingredient list
 
         - colors
         - make responsive
+        - optimize
+
+        ? chart tab click behavior, click or doubleclick?
+        ? hover to highlight chart row? hover for picture?
+        ? different colors or just red in chart? what about homepage popup?
+        ? side borders for title cells?
 
 
-    Menu
-        - menu view options
+    ////////////////////////// Menu ///////////////////////////////////////////////////////////////////////////////////////
+
+
+        * menu view options
+        * search
+
         - merge regions and cuisines
-        - cancel filters
-
-        - search
 
         - background
         - font
@@ -35,25 +54,42 @@ To Do:
         - order
 
 
-    Recipe
+    ////////////////////////// Recipe ///////////////////////////////////////////////////////////////////////////////////////
 
-        picture
-            - double click picture for large picture window
-            - upload pictures
-            - crop pictures
-            - search google pics for additional images?
+
+        - new recipe form
+
+
         info
-            - cuisine flags
+            * cuisine flags
             - time sections
             - split source into display/link tuple
             - occassion dates
+            - max interval input?
+
+        picture
+            * upload pictures
+            * overflow for 9+ pictures
+
+            - crop pictures
+            - include gifs
+            - search google pics for additional images?
+
         ingredients/instructions
-            - enter and delete key for ingredients/instructions
-            - click & drag to rearrange ingredients/instructions
-            - instructions embed pictures/gifs/videos
+            * delete key at beginning of non-empty input
+            * enter key midway through/at beginning of non-empty input
+
+            * click & drag to rearrange ingredients/instructions
+            * instructions embed pictures/gifs/videos
+
+            - sections w/ titles
             - ingredients json input
                 - scale ingredient list
             - drawing on instructions
+            - customize dashes/dots/numbering/etc.
+
+            ? common measurements/terms buttons
+                ? pages for terms
 
 
 
@@ -75,18 +111,9 @@ To Do:
         - make responsive
 
 
-    Form
-        - match recipe view to CRUD
-        - max interval input?
-
-        - remove ingredient name field bug
-
-        - background
-        - font
-        - make responsive
+    ////////////////////////// User ///////////////////////////////////////////////////////////////////////////////////////
 
 
-    Users
         - custom user menus
 
         - recipe.user_id
@@ -107,13 +134,15 @@ To Do:
             - menu view default
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     * ingredients
     * recipes
 
 
     - logo
-    - tab logo
+    - favicon
 
     * json backups
 
@@ -130,17 +159,8 @@ To Do:
     - windows app
 
 
-Questions:
 
-    chart
-        chart tab click behavior, click or doubleclick?
-        chart sorted alphabetically or monthly by default?
-        hover to highlight chart row? hover for picture?
-        different colors or just red in chart? what about homepage popup?
-        side borders for title cells?
-    homepage
-        filter or highlight recipes when ingredient clicked?
-        scroll ingredients and menu separately or together?
+
 
 
 Should I?
@@ -156,10 +176,20 @@ Should I?
     - grocery list
         - show ingredients in red/green based on availability
 
-    - recommended restaurants
-    - kitchen optimization
-
     - customize list order
 
-    - common measurements/terms buttons
-        - pages for terms
+
+
+
+
+
+Colors:
+    white: #eee1c1
+    red1: #E53935
+    green: #43A047
+    red2: #ab1c20
+
+
+
+
+

@@ -4,55 +4,36 @@
 
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script src="{{url_for('static', filename='forms.js')}}"></script>
 {% endblock %}
 
 {% block content %}
     <form action="{{url_for('editRecipe', recipe_id=recipe.id)}}" class="edit-recipe-form" method="post">
-
-
-
-
-
         <header>
-            <div class="recipe-pictures" style="background-image: url({{recipe.pictures[0]}});">
-                <label>Pictures:</label>
-                <div id="pic-fields">
+            <div class="edit-recipe-pictures">
                 {% for picture in recipe.pictures %}
-                    <div>
-                        <input type="text" name="pictures" maxlength="9999" value="{{picture}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-pictures" aria-hidden="true"></i>
+                    <div class="edit-picture-mini sortable-mini" style="background-image: url({{picture}});">
+                        <input type="text" name="pictures" maxlength="9999" value="{{picture}}">
+                        <i class="fa fa-minus-circle delete" aria-hidden="true"></i>
                     </div>
                     {% endfor %}
-                </div>
-                <div><label>Gif: <input type="text" name="gif" maxlength="9999" placeholder="{{recipe.gif}}"></label></div>
-                <label>Sources:</label>
-                <div id="source-fields">
-                    {% for source in recipe.sources %}
-                        <div>
-                            <input type="text" name="sources" maxlength="9999" value="{{source}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-sources" aria-hidden="true"></i>
-                        </div>
-                        {% endfor %}
+                <div class="edit-picture-mini add-picture-mini">
+                    +&nbsp;<i class="fa fa-2x fa-picture-o" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="recipe-info">
-                <i class="fa fa-pencil-square-o fa-lg edit-recipe" aria-hidden="true" onclick=""></i>
-                <h2 class="recipe-info-title">
-                    <input type="text" name="title" maxlength="500" value="{{recipe.name}}">
-                </h2>
-                <div class="popup-months">
+                <input type="text" name="title" maxlength="500" value="{{recipe.name}}">
+                <div class="recipe-month-menu">
                     {% for i in range(1,13) %}
-                        <div class="popup-cell {% if i in recipe.months %}filled{% endif %}">{{month_dict[i][:3]}}</div>
-                        {% endfor %}
-                </div>
-                <div class="ingredient-month-menu" style="background: rgba(229, 57, 53, 0.3);">
-                    {% for i in range(1,13) %}
-                        <div class="ingredient-month-container ingredient-month-container-{{i}}" style="background: {% if i in recipe.months %}#E53935{% endif %};">
+                        <div class="recipe-month-container" style="background: {% if i in recipe.months %}#ab1c20{% endif %};">
                             <label class="month-label">
                                 {% if i in recipe.months %}
                                     <input type="checkbox" class="checkbox og-checkbox" name="{{month_dict[i][:3]}}" checked>
                                     {% else %}
                                     <input type="checkbox" class="checkbox" name="{{month_dict[i][:3]}}">
                                     {% endif %}
+                                {{month_dict[i][:3]}}
                             </label>
                         </div>
                         {% endfor %}
@@ -60,10 +41,10 @@
                 <div class="recipe-info-row">
                     <div class="recipe-info-item">
                         <p class="recipe-info-label">time:</p>
-                        <label>D:<input type="number" name="days" value="{{recipe.time.days}}"></label>
-                        <label>H:<input type="number" name="hours" value="{{recipe.time.seconds // 3600}}"></label>
-                        <label>M:<input type="number" name="minutes" value="{{(recipe.time.seconds % 3600) // 60}}"></label>
-                        <label>S:<input type="number" name="seconds" value="{{(recipe.time.seconds % 3600) % 60}}"></label>
+                        <label><input type="number" name="days" value="{{recipe.time.days}}">days,</label>
+                        <label><input type="number" name="hours" value="{{recipe.time.seconds // 3600}}">:</label>
+                        <label><input type="number" name="minutes" value="{{(recipe.time.seconds % 3600) // 60}}">:</label>
+                        <label><input type="number" name="seconds" value="{{(recipe.time.seconds % 3600) % 60}}"></label>
                     </div>
                     <div class="recipe-info-item">
                         <p class="recipe-info-label">yield:</p>
@@ -80,6 +61,14 @@
                             {% else %}
                             <input type="checkbox" name="vegetarian">
                             {% endif %}
+                    </div>
+                    <div class="recipe-info-item">
+                        <p class="recipe-info-label">occassions:</p>
+                        <div id="occasion-fields">
+                            {% for occasion in recipe.occasions %}
+                                <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-occasions" aria-hidden="true"></i></div>
+                                {% endfor %}
+                        </div>
                     </div>
                 </div>
                 <div class="recipe-info-row">
@@ -128,70 +117,56 @@
                         </select>
                     </div>
                     <div class="recipe-info-item">
-                        <p class="recipe-info-label">occassions:</p>
-                        <div id="occasion-fields">
-                            {% for occasion in recipe.occasions %}
-                                <div><input type="text" name="occasions" maxlength="500" value="{{occasion}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-occasions" aria-hidden="true"></i></div>
-                                {% endfor %}
-                        </div>
+                        <p class="recipe-info-label">sources:</p>
+                        {% for source in recipe.sources %}
+                            <div>
+                                <input type="text" name="sources" maxlength="9999" value="{{source}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-sources" aria-hidden="true"></i>
+                            </div>
+                            {% endfor %}
                     </div>
                 </div>
             </div>
         </header>
         <main>
             <section class="ingredients">
-                <div id="ingredient-fields">
-                    {% for ingredient in recipe.ingredients %}
-                        <div>
-                            <input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-ingredients" aria-hidden="true"></i>
-                        </div>
-                        {% endfor %}
-                </div>
+                {% for ingredient in recipe.ingredients %}
+                    <div>
+                        <input type="text" name="ingredients" maxlength="9999" value="{{ingredient}}" onfocus="this.value = this.value;">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    {% endfor %}
             </section>
             <section class="instructions">
-                <button id="add-instructions" type="button">+</button>
-                <div id="instruction-fields">
-                    {% for instruction in recipe.instructions %}
-                        <div>
-                          <label>Text: <input type="text" name="instructions-text" maxlength="9999" value="{{instruction['text']}}"></label>
-                          <label>Photo: <input type="text" name="instructions-photo" maxlength="9999" value="{{instruction['photo']}}"></label>
-                          <label>Video: <input type="text" name="instructions-video" maxlength="9999" value="{{instruction['video']}}"></label>
-                          <label>Gif: <input type="text" name="instructions-gif" maxlength="9999" value="{{instruction['gif']}}"></label>
-                          <label>Note: <input type="text" name="instructions-note" maxlength="9999" value="{{instruction['note']}}"></label>
+                {% for instruction in recipe.instructions %}
+                    <div class="instruction-cell">
+                        <i class="{% if not instruction['text'] %}invisible{% endif %}">-&nbsp;</i>
+                        <input type="text" name="instructions-text" maxlength="9999" value="{{instruction['text']}}" onfocus="this.value = this.value;">
+                        <div class="instruction-buttons">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            <i class="fa fa-picture-o" aria-hidden="true"></i>
+                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                            <i class="fa fa-sticky-note-o" onclick="$(this).siblings('input[name=instructions-note]').toggleClass('hidden');$(this).siblings('input[name=instructions-note]').focus();" aria-hidden="true"></i>
                         </div>
-                        {% endfor %}
-                </div>
+                        <input type="text" name="instructions-note" maxlength="9999" value="{{instruction['note']}}" class="{% if not instruction['note'] %}hidden{% endif %}">
+                        <input type="text" name="instructions-photo" maxlength="9999" value="{{instruction['photo']}}">
+                        <input type="text" name="instructions-video" maxlength="9999" value="{{instruction['video']}}">
+                        <input type="text" name="instructions-gif" maxlength="9999" value="{{instruction['gif']}}">
+                    </div>
+                    {% endfor %}
             </section>
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <input type="submit" value="Edit Recipe">
-            <button type="button" onclick="history.go(0)">Reset</button>
-            <button type="button" onclick="window.location.assign('{{url_for('viewRecipe', recipe_id=recipe.id)}}');">Cancel</button>
-            <button type="button" class="delete-recipe-button">Delete</button>
+        <div class="edit-recipe-button">
+            <button type="button" onclick="history.go(0)"><i class="fa fa-repeat" aria-hidden="true">&nbsp;</i>Reset</button>
+            <button type="submit"><i class="fa fa-check" aria-hidden="true">&nbsp;</i>Submit</button>
+            <button type="button" onclick="window.location.assign('{{url_for('viewRecipe', recipe_id=recipe.id)}}');"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+            <button type="button" class="delete-recipe-button"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+        </div>
     </form>
-    <form action="{{url_for('deleteRecipe', recipe_id=recipe.id)}}" class="delete-recipe" method="post">
-        <label>Are you sure you want to delete {{recipe.name}}?</label><br>
-        <input type="submit" value="Delete">
-        <button type="button" onclick="window.location.assign('{{url_for('menupage')}}');">Cancel</button>
-    </form>
+    <div class="delete-recipe-buttons hidden">
+        <form action="{{url_for('deleteRecipe', recipe_id=recipe.id)}}" class="delete-recipe" method="post">
+            <label>Delete recipe?</label>
+            <button type="submit"><i class="fa fa-trash-o" aria-hidden="true">&nbsp;</i>Delete</button>
+            <button type="button" onclick="$(this).parents('.delete-recipe-buttons').addClass('hidden');"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+        </form>
+    </div>
 {% endblock %}
