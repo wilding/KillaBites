@@ -9,39 +9,51 @@
 
 {% block content %}
     <div class="dropdown-menus">
-        <select class="dropdown-cuisine">
-            <option>Cuisine</option>
-            {% for region in regions %}
-                <optgroup label="{{region}}">
-                    {% for cuisine in cuisines[region] %}
-                        <option>{{cuisine}}</option>
-                        {% endfor %}
-                </optgroup>
-                {% endfor %}
-        </select>
-        <select class="dropdown-course">
-            <option>Course</option>
-            <option>Breakfast</option>
-            <option>Lunch & Dinner</option>
-            <option>Dessert</option>
-            <option>Basics</option>
-        </select>
-        <select class="dropdown-group">
-            <option>Group</option>
-            {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
-                <optgroup label="{{course}}">
-                    {% for group in groups[course] %}
-                        <option>{{group}}</option>
-                        {% endfor %}
-                </optgroup>
-                {% endfor %}
-        </select>
-        <select class="dropdown-month">
-            <option>Month</option>
-            {% for i in month_dict %}
-                <option>{{month_dict[i]}}</option>
-                {% endfor %}
-        </select>
+        <div class="dropdown-container">
+            <select class="dropdown-cuisine">
+                <option>Cuisine</option>
+                {% for region in regions %}
+                    <optgroup label="{{region}}">
+                        {% for cuisine in cuisines[region] %}
+                            <option>{{cuisine}}</option>
+                            {% endfor %}
+                    </optgroup>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-course">
+                <option>Course</option>
+                <option>Breakfast</option>
+                <option>Lunch & Dinner</option>
+                <option>Dessert</option>
+                <option>Basics</option>
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-group">
+                <option>Group</option>
+                {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
+                    <optgroup label="{{course}}">
+                        {% for group in groups[course] %}
+                            <option>{{group}}</option>
+                            {% endfor %}
+                    </optgroup>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-month">
+                <option>Month</option>
+                {% for i in month_dict %}
+                    <option>{{month_dict[i]}}</option>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
     </div>
     <table class="menu-table">
         <thead>
