@@ -571,6 +571,21 @@ th {
     margin-bottom: 40px;
 }
 
+.recipe-link {
+    color: black;
+}
+
+.empty-recipe {
+    color: red;
+    font-style: italic;
+}
+
+
+
+
+
+
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Recipe View
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -645,7 +660,6 @@ p {
 .recipe-info-item {
     text-align: center;
     width: 25%;
-    overflow: scroll;
 }
 
 .recipe-info-label {
@@ -704,6 +718,7 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding-left: 10px;
 }
 
 .edit-recipe-button:hover {
@@ -969,7 +984,6 @@ input[name=instructions-photo], input[name=instructions-gif], input[name=instruc
     border-bottom: 1px solid grey;
     font-family: times;
     font-size: 11pt;
-    display: none;
 }
 
 input[name=Jan], input[name=Feb], input[name=Mar], input[name=Apr], input[name=May], input[name=Jun], input[name=Jul], input[name=Aug], input[name=Sep], input[name=Oct], input[name=Nov], input[name=Dec] {
@@ -996,8 +1010,11 @@ input[name=Jan], input[name=Feb], input[name=Mar], input[name=Apr], input[name=M
 
 .ingredients .fa-bars {
     opacity: 0;
-    cursor: -webkit-grab;
     color: rgba(0,0,0,0.6);
+}
+
+.fa-bars {
+    cursor: -webkit-grab;
 }
 
 .fa-bars:active {
@@ -1007,6 +1024,10 @@ input[name=Jan], input[name=Feb], input[name=Mar], input[name=Apr], input[name=M
 .ingredients div:hover .fa-bars {
     opacity: 1;
     transition: opacity 0.3s;
+}
+
+.instruction-media-inputs label {
+    font-size: 12pt;
 }
 
 

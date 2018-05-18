@@ -43,12 +43,12 @@
                     <p class="recipe-info-label">calories:</p>
                     <p>{{recipe.calories}}</p>
                 </div>
-                <!-- <div class="recipe-info-item">
-                    <p class="recipe-info-label">sources:</p>
-                    {% for source in recipe.sources %}
-                        <p>{{source}}</p>
+                <div class="recipe-info-item">
+                    <p class="recipe-info-label">occassions:</p>
+                    {% for occassion in recipe.occassions %}
+                        <p>{{occassion}}</p>
                         {% endfor %}
-                </div> -->
+                </div>
             </div>
             <div class="recipe-info-row">
                 <div class="recipe-info-item">
@@ -70,15 +70,12 @@
                         {% endfor %}
                 </div>
                 <div class="recipe-info-item">
-                    <p class="recipe-info-label">occassions:</p>
-                    {% for occassion in recipe.occassions %}
-                        <p>{{occassion}}</p>
+                    <p class="recipe-info-label">sources:</p>
+                    {% for source in recipe.sources %}
+                        <a href="{{source}}">{{source}}</a><br>
                         {% endfor %}
                 </div>
             </div>
-            {% for source in recipe.sources %}
-                <a href="{{source}}">{{source}}</a><br>
-                {% endfor %}
         </div>
     </header>
     <main>
@@ -94,9 +91,11 @@
             {% for instruction in recipe.instructions %}
                 <p>{% if instruction['text'] %}-{% endif %} {{instruction['text']}}</p>
                 <p class="instruction-note">{{instruction['note']}}</p>
+                <!--
                 <p>{{instruction['video']}}</p>
                 <p>{{instruction['gif']}}</p>
                 <img src="{{instruction['photo']}}">
+                -->
                 {% if not instruction.text %}
                     <br>
                     {% endif %}

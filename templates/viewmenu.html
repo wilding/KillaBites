@@ -29,13 +29,14 @@
                 <option>Lunch & Dinner</option>
                 <option>Dessert</option>
                 <option>Basics</option>
+                <option>Drinks</option>
             </select>
             <i class="fa fa-times-circle" aria-hidden="true"></i>
         </div>
         <div class="dropdown-container">
             <select class="dropdown-group">
                 <option>Group</option>
-                {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert'] %}
+                {% for course in ['Breakfast', 'Lunch & Dinner', 'Dessert', 'Basics', 'Drinks'] %}
                     <optgroup label="{{course}}">
                         {% for group in groups[course] %}
                             <option>{{group}}</option>
@@ -70,7 +71,7 @@
         <tbody class="show-group">
             {% for recipe in recipes %}
                 <tr class="cuisine-Cuisine course-Course group-Group month-Month {% for cuisine in recipe.cuisines %}cuisine-{{cuisine}} {% endfor %}{% for course in recipe.courses %}course-{{course}} {% endfor %}{% for group in recipe.groups %}group-{{group}} {% endfor %}{% for month in recipe.months %}month-{{month_dict[month]}} {% endfor %}">
-                    <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}">{{recipe.name}}</a></td>
+                    <td><a href="{{url_for('viewRecipe', recipe_id=recipe.id)}}" class="{% if recipe.ingredients|length < 2 %}empty-recipe{% endif %} recipe-link">{{recipe.name}}</a></td>
                     <td>{% for month in recipe.months%}<p>{{month_dict[month]}}</p>{% endfor %}</td>
                     <td>{% for cuisine in recipe.cuisines%}<p>{{cuisine}}</p>{% endfor %}</td>
                     <td>{% for group in recipe.groups%}<p>{{group}}</p>{% endfor %}</td>

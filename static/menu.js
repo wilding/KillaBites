@@ -14,6 +14,19 @@ $(function() {
             $(this).addClass('hide-recipe');
         }
     });
+    // show/hide the clear button
+    if (selected_cuisine != 'Cuisine') {
+        $('.dropdown-cuisine').siblings().css('visibility', 'visible');
+    }
+    if (selected_course != 'Course') {
+        $('.dropdown-course').siblings().css('visibility', 'visible');
+    }
+    if (selected_group != 'Group') {
+        $('.dropdown-group').siblings().css('visibility', 'visible');
+    }
+    if (selected_month != 'Month') {
+        $('.dropdown-month').siblings().css('visibility', 'visible');
+    }
 
 
     // cuisine dropdown menu

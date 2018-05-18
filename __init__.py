@@ -35,7 +35,18 @@ cuisines = {
         ['Indonesian', 'Oceanic', 'Polynesian']
 }
 regions = ['American', 'European', 'Latin American', 'Asian', 'Middle Eastern', 'Oceanic', 'African']
-groups = {'Breakfast': ['Eggs', 'Toast', 'Oatmeal', 'Meat', 'Vegetable', 'Fruit', 'Smoothie', 'Biscuits', 'Muffins', 'Pancakes'], 'Lunch & Dinner': ['Salad', 'Soup', 'Bread', 'Tortilla', 'Rice', 'Pasta', 'Noodles', 'Vegetable', 'Sea', 'Air', 'Land'], 'Dessert': ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Milkshake', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake']}
+groups = {
+    'Breakfast':
+        ['Eggs', 'Meat', 'Vegetable', 'Fruit', 'Oatmeal', 'Toast', 'Pancakes', 'Pastry'],
+    'Lunch & Dinner':
+        ['Salad', 'Soup', 'Bread', 'Tortilla', 'Rice', 'Pasta', 'Noodles', 'Vegetable', 'Sea', 'Air', 'Land'],
+    'Dessert':
+        ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake'],
+    'Basics':
+        ['Dairy', 'Stock'],
+    'Drinks':
+        ['Smoothie', 'Milkshake', 'Beer', 'Wine', 'Tequila', 'Mezcal', 'Gin', 'Whiskey', 'Rum', 'Vodka', 'Brandy']
+}
 ingredient_groups = ['fruit', 'vegetables', 'herbs', 'nuts', 'sea', 'air', 'land']
 ingredient_group_colors = {'fruit': ['#7B1FA2', 'rgba(123, 31, 162, 0.3)'], 'vegetables': ['#43A047', 'rgba(67, 160, 71, 0.3)'], 'herbs': ['#7CB342', 'rgba(124, 179, 66, 0.3)'], 'nuts': ['#6D4C41', 'rgba(109, 76, 65, 0.3)'], 'sea': ['#1E88E5', 'rgba(30, 136, 229, 0.3)'], 'air': ['#FDD835', 'rgba(253, 216, 53, 0.3)'], 'land': ['#E53935', 'rgba(229, 57, 53, 0.3)']}
 
@@ -181,7 +192,6 @@ def newRecipe():
         newrecipe = Recipe(
             name=request.form['title'],
             pictures=request.form.getlist('pictures'),
-            gif=request.form['gif'],
             sources=request.form.getlist('sources'),
             time=parse_time(request.form),
             total_yield=request.form['total_yield'],
@@ -190,7 +200,7 @@ def newRecipe():
             months=parse_months(request.form),
             cuisines=request.form.getlist('cuisines'),
             groups=request.form.getlist('groups'),
-            courses=parse_courses(request.form),
+            courses=request.form.getlist('courses'),
             occasions=request.form.getlist('occasions'),
             ingredients=request.form.getlist('ingredients'),
             instructions=parse_instructions(request.form))
@@ -295,21 +305,6 @@ def parse_time(form):
     minutes = int(form['minutes']) if form.get('minutes') else 0
     seconds = int(form['seconds']) if form.get('seconds') else 0
     return timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
-
-
-# course parser helper function
-def parse_courses(form):
-    """docstring for parse_courses"""
-    output = []
-    if form.get('breakfast'):
-        output.append('Breakfast')
-    if form.get('dinner'):
-        output.append('Lunch & Dinner')
-    if form.get('dessert'):
-        output.append('Dessert')
-    if form.get('basics'):
-        output.append('Basics')
-    return output
 
 
 # instructions parser helper function

@@ -43,8 +43,9 @@ To Do:
     ////////////////////////// Menu ///////////////////////////////////////////////////////////////////////////////////////
 
 
-        * menu view options
+        * menu view options - list, cards, pics, grid
         * search
+        * make it so changing cuisine/group name changes all the db entries with that name as well
 
         - merge regions and cuisines
 
@@ -62,6 +63,8 @@ To Do:
 
         info
             * cuisine flags
+            * fix overflow
+            * merge view and edit pages
             - time sections
             - split source into display/link tuple
             - occassion dates
@@ -76,13 +79,12 @@ To Do:
             - search google pics for additional images?
 
         ingredients/instructions
-            * delete key at beginning of non-empty input
-            * enter key midway through/at beginning of non-empty input
+            * select multiple inputs w/ cursor
+            * arrow key behavior
 
-            * click & drag to rearrange ingredients/instructions
             * instructions embed pictures/gifs/videos
+            * sections w/ titles
 
-            - sections w/ titles
             - ingredients json input
                 - scale ingredient list
             - drawing on instructions
@@ -90,6 +92,10 @@ To Do:
 
             ? common measurements/terms buttons
                 ? pages for terms
+
+            - check off ingredients as you use them
+            - click anywhere in blank ingredient/instruction area to go to first input
+            - bug where you can delete all ingredients/instructions and are not able to add new ones
 
 
 
@@ -128,6 +134,8 @@ To Do:
             - fork single recipe/category/whole user/cuisine/etc
 
         - favorites
+
+        - month plan
 
         - create/edit/delete Ingredients
         - user options

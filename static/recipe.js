@@ -1,7 +1,7 @@
 $(function() {
 
     // Click through pictures using arrows on the recipe card
-    $('.recipe-pic-arrows').click(function (e) {
+    $('.recipe-pic-arrows').click(function () {
         var background_list = $(this).parent().css('background-image').split(', ');
         if ($(this).find('.fa').hasClass('fa-chevron-left')) {
             var new_background = background_list.pop();
@@ -25,7 +25,7 @@ $(function() {
 
 
     // Click through pictures using arrows on the large picture popup
-    $('.picture-popup-arrows').click(function(e) {
+    $('.picture-popup-arrows').click(function() {
         var current = $(this).siblings('img:not(.hidden)');
         if ($(this).find('.fa').hasClass('fa-chevron-left')) {
             if ($('.picture-popup').find('img').first().hasClass('hidden')) {
@@ -51,7 +51,7 @@ $(function() {
 
 
     // Show large picture popup when double clicking the picture
-    $('.recipe-pic-button').dblclick(function (e) {
+    $('.recipe-pic-button').dblclick(function () {
         var background = $(this).parent().css('background-image').split(', ')[0].slice(4, -1);
         background = background.replace('http://localhost:8080', '');
         $('.picture-popup-background').removeClass('hidden');
@@ -74,7 +74,6 @@ $(function() {
 $(document).keyup(function(e) {
     if (e.which == 27) {
         $('.picture-popup-background').click();
-        console.log('esc!');
     }
     else if (e.which == 37) {
         $('.picture-popup-arrows').find('.fa-chevron-left').click();
