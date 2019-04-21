@@ -6,8 +6,9 @@ $(function() {
     });
 
     // add picture fields when the + button is clicked
-    $('body').on('click', '.add-pictures', function () {
-        $('<div><input type="text" name="pictures" maxlength="9999"><i class="fa fa-minus-circle delete" aria-hidden="true"></i><i class="fa fa-plus-circle add add-pictures" aria-hidden="true"></i></div>').insertAfter($(this).parent());
+    $('body').on('click', '.add-picture-mini', function () {
+        $('<div class="new-picture-mini"><input type="text" name="pictures" maxlength="9999"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>').insertBefore($(this));
+        $(this).prev().find('input').focus();
     });
 
     // add source fields when the + button is clicked

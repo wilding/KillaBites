@@ -65,7 +65,6 @@
                 <th>groups</th>
                 <th>courses</th>
                 <th>occassions</th>
-                <th></th>
             </tr>
         </thead>
         <tbody class="show-group">
@@ -77,7 +76,6 @@
                     <td>{% for group in recipe.groups%}<p>{{group}}</p>{% endfor %}</td>
                     <td>{% for course in recipe.courses%}<p>{{course}}</p>{% endfor %}</td>
                     <td>{% for occasion in recipe.occasions%}<p>{{occasion}}</p>{% endfor %}</td>
-                    <td><a href="{{url_for('editRecipe', recipe_id=recipe.id)}}">Edit</a><br><a href="{{url_for('deleteRecipe', recipe_id=recipe.id)}}">Delete</a></td>
                 </tr>
                 {% endfor %}
         </tbody>

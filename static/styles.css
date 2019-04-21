@@ -571,6 +571,10 @@ th {
     margin-bottom: 40px;
 }
 
+.menu-table tbody td {
+    min-height: 35px;
+}
+
 .recipe-link {
     color: black;
 }
@@ -861,7 +865,11 @@ input[name=sources], input[name=occasions] {
 }
 
 input[name=pictures] {
-    display: none;
+    color: white;
+    width: 100%;
+    height: calc(100% - 17px);
+    text-align: center;
+    margin: 0 5px 0 5px;
 }
 
 .edit-picture-mini {
@@ -895,6 +903,24 @@ input[name=pictures] {
 .add-picture-mini:hover {
     color: #ab1c20;
     border: 1px dashed #ab1c20;
+}
+
+.new-picture-mini {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    height: 30%;
+    width: 30%;
+    margin: 5px;
+    border: 1px dashed #eee1c1;
+}
+
+.new-picture-mini i {
+    border: none;
+    align-self: flex-end;
+    right: 0px;
+    margin-right: 2px;
 }
 
 /* Edit Recipe Info */

@@ -110,7 +110,7 @@ $(function() {
     // change month input colors by clicking on different groups
     $('input[name=group]').click(function() {
         var group = $(this).val();
-        var month_menu = $(this).parents('.group-menu').siblings('.ingredient-month-menu')
+        var month_menu = $(this).parents('.group-menu').siblings('.ingredient-month-menu');
         var months = month_menu.find('input[type=checkbox]:checked');
         month_menu.css('background', ingredient_group_colors[group][1]);
         months.each(function() {

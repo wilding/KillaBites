@@ -155,7 +155,7 @@
         11
       ],
       "name": "Apple",
-      "picture": "http://www.ffvbasket.com/wp-content/uploads/2015/12/fuji.jpg",
+      "picture": "static/ingredient-pics/apple.jpg",
       "storage": "keep in the crisper refrigerator drawer"
     },
     {
@@ -210,7 +210,9 @@
       "alts": [],
       "group": "fruit",
       "id": 261,
-      "months": [],
+      "months": [
+        7
+      ],
       "name": "Blackcurrant",
       "picture": "",
       "storage": ""
@@ -328,9 +330,15 @@
       "alts": [],
       "group": "fruit",
       "id": 256,
-      "months": [],
+      "months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "name": "Date",
-      "picture": "",
+      "picture": "static/ingredient-pics/date.jpg",
       "storage": ""
     },
     {
@@ -385,7 +393,7 @@
         10
       ],
       "name": "Fig",
-      "picture": "http://www.healthiswealthofheart.com/wp-content/uploads/2015/08/figs.jpg",
+      "picture": "static/ingredient-pics/fig.jpg",
       "storage": ""
     },
     {
@@ -465,7 +473,7 @@
         10
       ],
       "name": "Huckleberry",
-      "picture": "",
+      "picture": "static/ingredient-pics/huckleberry.jpg",
       "storage": ""
     },
     {
@@ -508,10 +516,19 @@
       "alts": [],
       "group": "fruit",
       "id": 159,
-      "months": [],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12
+      ],
       "name": "Kiwi",
       "picture": "",
-      "storage": ""
+      "storage": "store at room temp until ripened, then refrigerate"
     },
     {
       "alts": [],
@@ -549,10 +566,49 @@
       "alts": [],
       "group": "fruit",
       "id": 175,
-      "months": [],
-      "name": "Lime",
+      "months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Lime (mexican)",
+      "picture": "static/ingredient-pics/lime.jpg",
+      "storage": "store at room temp"
+    },
+    {
+      "alts": [],
+      "group": "fruit",
+      "id": 332,
+      "months": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Lime (persian)",
+      "picture": "static/ingredient-pics/persian-lime.jpg",
+      "storage": "store at room temp"
+    },
+    {
+      "alts": [],
+      "group": "fruit",
+      "id": 333,
+      "months": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "name": "Lime (yuzu)",
       "picture": "",
-      "storage": ""
+      "storage": "store at room temp"
     },
     {
       "alts": [],
@@ -597,6 +653,7 @@
       "group": "fruit",
       "id": 158,
       "months": [
+        3,
         4,
         5,
         6,
@@ -629,7 +686,7 @@
         9
       ],
       "name": "Melon",
-      "picture": "",
+      "picture": "static/ingredient-pics/melon.jpg",
       "storage": ""
     },
     {
@@ -791,7 +848,7 @@
         9
       ],
       "name": "Passion Fruit",
-      "picture": "",
+      "picture": "static/ingredient-pics/passion-fruit.jpg",
       "storage": ""
     },
     {
@@ -805,7 +862,7 @@
         9
       ],
       "name": "Peach",
-      "picture": "",
+      "picture": "static/ingredient-pics/peach.jpg",
       "storage": ""
     },
     {
@@ -818,7 +875,7 @@
         10
       ],
       "name": "Pear",
-      "picture": "static/ingredient-pics/pear.png",
+      "picture": "static/ingredient-pics/pear.jpg",
       "storage": ""
     },
     {
@@ -861,9 +918,28 @@
       "alts": [],
       "group": "fruit",
       "id": 188,
-      "months": [],
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
       "name": "Plum",
-      "picture": "",
+      "picture": "static/ingredient-pics/plum.jpg",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "fruit",
+      "id": 331,
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "name": "Pluot",
+      "picture": "static/ingredient-pics/pluot.jpg",
       "storage": ""
     },
     {
@@ -876,7 +952,7 @@
         11
       ],
       "name": "Pomegranate",
-      "picture": "http://www.sahultrading.com/wp-content/uploads/2014/12/Pomegranate-3.jpg",
+      "picture": "static/ingredient-pics/pomegranate.jpg",
       "storage": ""
     },
     {
@@ -892,7 +968,11 @@
       "alts": [],
       "group": "fruit",
       "id": 173,
-      "months": [],
+      "months": [
+        10,
+        11,
+        12
+      ],
       "name": "Quince",
       "picture": "",
       "storage": ""
@@ -917,7 +997,7 @@
         10
       ],
       "name": "Raspberry",
-      "picture": "",
+      "picture": "static/ingredient-pics/raspberry.jpg",
       "storage": ""
     },
     {
@@ -1098,15 +1178,6 @@
       "id": 301,
       "months": [],
       "name": "Chervil",
-      "picture": "",
-      "storage": ""
-    },
-    {
-      "alts": [],
-      "group": "herbs",
-      "id": 69,
-      "months": [],
-      "name": "Chives",
       "picture": "",
       "storage": ""
     },
@@ -1781,6 +1852,28 @@
       "storage": ""
     },
     {
+      "alts": [
+        "Sablefish",
+        "Butterfish"
+      ],
+      "group": "sea",
+      "id": 150,
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "name": "Black Cod",
+      "picture": "static/ingredient-pics/sablefish.jpg",
+      "storage": ""
+    },
+    {
       "alts": [],
       "group": "sea",
       "id": 144,
@@ -2195,25 +2288,6 @@
     {
       "alts": [],
       "group": "sea",
-      "id": 150,
-      "months": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ],
-      "name": "Sablefish",
-      "picture": "static/ingredient-pics/sablefish.jpg",
-      "storage": ""
-    },
-    {
-      "alts": [],
-      "group": "sea",
       "id": 155,
       "months": [
         5,
@@ -2227,7 +2301,9 @@
       "storage": ""
     },
     {
-      "alts": [],
+      "alts": [
+        "Boquerones"
+      ],
       "group": "sea",
       "id": 139,
       "months": [
@@ -2692,7 +2768,7 @@
         9
       ],
       "name": "Bell Pepper",
-      "picture": "",
+      "picture": "static/ingredient-pics/bell-pepper.jpg",
       "storage": ""
     },
     {
@@ -2721,7 +2797,7 @@
         9
       ],
       "name": "Blackeye Peas",
-      "picture": "",
+      "picture": "static/ingredient-pics/blackeye-pea.jpg",
       "storage": ""
     },
     {
@@ -2786,7 +2862,7 @@
         12
       ],
       "name": "Butternut Squash",
-      "picture": "",
+      "picture": "static/ingredient-pics/butternut-squash.jpg",
       "storage": ""
     },
     {
@@ -2803,8 +2879,35 @@
         11,
         12
       ],
-      "name": "Cabbage",
+      "name": "Cabbage (green)",
       "picture": "static/ingredient-pics/cabbage.jpg",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 330,
+      "months": [],
+      "name": "Cabbage (napa)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 328,
+      "months": [],
+      "name": "Cabbage (red)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 329,
+      "months": [],
+      "name": "cabbage (savoy)",
+      "picture": "",
       "storage": ""
     },
     {
@@ -2941,7 +3044,7 @@
         10
       ],
       "name": "Corn",
-      "picture": "",
+      "picture": "static/ingredient-pics/corn.jpg",
       "storage": ""
     },
     {
@@ -2955,7 +3058,7 @@
         9
       ],
       "name": "Cucumber",
-      "picture": "",
+      "picture": "static/ingredient-pics/cucumber.jpg",
       "storage": ""
     },
     {
@@ -3009,7 +3112,7 @@
         12
       ],
       "name": "Endive",
-      "picture": "",
+      "picture": "static/ingredient-pics/endive.jpg",
       "storage": ""
     },
     {
@@ -3073,7 +3176,7 @@
         12
       ],
       "name": "Garlic",
-      "picture": "",
+      "picture": "static/ingredient-pics/garlic.jpg",
       "storage": ""
     },
     {
@@ -3097,7 +3200,7 @@
         9
       ],
       "name": "Green Beans",
-      "picture": "",
+      "picture": "static/ingredient-pics/green-beans.jpg",
       "storage": ""
     },
     {
@@ -3321,7 +3424,7 @@
         9
       ],
       "name": "Peas",
-      "picture": "",
+      "picture": "static/ingredient-pics/peas.jpg",
       "storage": ""
     },
     {
@@ -3535,6 +3638,19 @@
       "storage": ""
     },
     {
+      "alts": [],
+      "group": "vegetables",
+      "id": 335,
+      "months": [
+        3,
+        4,
+        5
+      ],
+      "name": "Rhubarb",
+      "picture": "",
+      "storage": ""
+    },
+    {
       "alts": [
         "Green Onion"
       ],
@@ -3542,6 +3658,15 @@
       "id": 68,
       "months": [],
       "name": "Scallion",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 334,
+      "months": [],
+      "name": "Sea Beans",
       "picture": "",
       "storage": ""
     },
@@ -3620,7 +3745,7 @@
         9
       ],
       "name": "Squash (summer)",
-      "picture": "",
+      "picture": "static/ingredient-pics/summer-squash.jpg",
       "storage": ""
     },
     {
@@ -3635,20 +3760,6 @@
       ],
       "name": "Squash (winter)",
       "picture": "static/ingredient-pics/wintersquash.jpg",
-      "storage": ""
-    },
-    {
-      "alts": [],
-      "group": "vegetables",
-      "id": 51,
-      "months": [
-        6,
-        7,
-        8,
-        9
-      ],
-      "name": "String Beans",
-      "picture": "",
       "storage": ""
     },
     {
@@ -3690,7 +3801,7 @@
         10
       ],
       "name": "Tomatillo",
-      "picture": "http://images.wisegeek.com/tomatillo.jpg",
+      "picture": "static/ingredient-pics/tomatillo.jpg",
       "storage": ""
     },
     {
@@ -3704,7 +3815,7 @@
         10
       ],
       "name": "Tomato",
-      "picture": "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2012/06/red-tomato-meteorite.jpg",
+      "picture": "static/ingredient-pics/tomato.jpg",
       "storage": ""
     },
     {
@@ -3726,7 +3837,7 @@
         9
       ],
       "name": "Zuchinni",
-      "picture": "",
+      "picture": "static/ingredient-pics/zucchini.jpg",
       "storage": ""
     }
   ]
