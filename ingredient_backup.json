@@ -2765,7 +2765,9 @@
       "months": [
         7,
         8,
-        9
+        9,
+        10,
+        11
       ],
       "name": "Bell Pepper",
       "picture": "static/ingredient-pics/bell-pepper.jpg",
@@ -3430,9 +3432,27 @@
     {
       "alts": [],
       "group": "vegetables",
+      "id": 336,
+      "months": [],
+      "name": "Pepper (anaheim)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
       "id": 91,
       "months": [],
       "name": "Pepper (banana)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 339,
+      "months": [],
+      "name": "Pepper (bola)",
       "picture": "",
       "storage": ""
     },
@@ -3448,18 +3468,9 @@
     {
       "alts": [],
       "group": "vegetables",
-      "id": 93,
+      "id": 337,
       "months": [],
-      "name": "Pepper (chili)",
-      "picture": "",
-      "storage": ""
-    },
-    {
-      "alts": [],
-      "group": "vegetables",
-      "id": 100,
-      "months": [],
-      "name": "Pepper (chipotle)",
+      "name": "Pepper (chilaca)",
       "picture": "",
       "storage": ""
     },
@@ -3469,6 +3480,15 @@
       "id": 199,
       "months": [],
       "name": "Pepper (datil)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 340,
+      "months": [],
+      "name": "Pepper (de arbol)",
       "picture": "",
       "storage": ""
     },
@@ -3491,11 +3511,23 @@
       "storage": ""
     },
     {
-      "alts": [],
+      "alts": [
+        "Chipotle",
+        "Morita"
+      ],
       "group": "vegetables",
       "id": 92,
       "months": [],
       "name": "Pepper (jalape\u00f1o)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 338,
+      "months": [],
+      "name": "Pepper (mirasol)",
       "picture": "",
       "storage": ""
     },
@@ -3510,32 +3542,24 @@
     },
     {
       "alts": [
-        "Ancho Chile"
+        "Ancho Chile",
+        "Mulato"
       ],
       "group": "vegetables",
       "id": 98,
-      "months": [],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "name": "Pepper (poblano)",
       "picture": "",
       "storage": ""
     },
     {
-      "alts": [],
-      "group": "vegetables",
-      "id": 12,
-      "months": [
-        7,
-        8,
-        9,
-        10,
-        11
+      "alts": [
+        "Chile Seco"
       ],
-      "name": "Peppers",
-      "picture": "http://naturallynourishing.com/wp-content/uploads/2013/06/Bell-Peppers.jpg",
-      "storage": ""
-    },
-    {
-      "alts": [],
       "group": "vegetables",
       "id": 99,
       "months": [],
