@@ -41,7 +41,9 @@
     {
       "calories": 0,
       "courses": [],
-      "cuisines": [],
+      "cuisines": [
+        "Indian"
+      ],
       "gif": "",
       "groups": [
         "Donut"
@@ -60,7 +62,9 @@
         }
       ],
       "months": [
-        5
+        9,
+        10,
+        11
       ],
       "name": "Jalebi",
       "occasions": [
@@ -69,6 +73,42 @@
       "pictures": [
         ""
       ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1135,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Aoili",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
       "sources": [
         ""
       ],
@@ -1292,6 +1332,42 @@
         "Basics"
       ],
       "cuisines": [
+        "Middle Eastern"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1130,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Harissa",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
         "French"
       ],
       "gif": null,
@@ -2333,7 +2409,8 @@
         "sugar?",
         "lime?",
         "chipotle?",
-        "garlic?"
+        "garlic?",
+        "apple cider vinegar?"
       ],
       "instructions": [
         {
@@ -2395,6 +2472,46 @@
       "sources": [
         "https://www.seriouseats.com/recipes/2016/01/charred-salsa-verde-tomatillo-salsa.html",
         "https://www.seriouseats.com/recipes/2013/05/orange-tomatillo-salsa-recipe.html"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "African"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1150,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Shito",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "Ghana"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -2618,6 +2735,132 @@
         "Basics"
       ],
       "cuisines": [
+        "Lebanese",
+        "Middle Eastern"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1128,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Tuom",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Mediterranean",
+        "Middle Eastern"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1127,
+      "ingredients": [
+        "Cucumber",
+        "Salt",
+        "White Wine Vinegar",
+        "",
+        "Garlic",
+        "Olive Oil",
+        "",
+        "Yogurt",
+        "White Wine Vinegar/Lemon",
+        "S + P",
+        "Dill",
+        "Mint?",
+        "Lemon Zest?",
+        "Aleppo Pepper?"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "peel & grate cucumber",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "quick pickle the grated cucumber",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "blend garlic & oil",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "combine cucumber, garlic oil, yogurt, & seasonings",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Tzatziki",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
         "French"
       ],
       "gif": null,
@@ -2671,6 +2914,78 @@
       ],
       "months": [],
       "name": "Vinagrette",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Japanese"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1154,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Wasabi",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Middle Eastern"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1129,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Whipped Feta",
       "occasions": [
         ""
       ],
@@ -3157,6 +3472,44 @@
       "courses": [
         "Basics"
       ],
+      "cuisines": [
+        "French"
+      ],
+      "gif": null,
+      "groups": [
+        "Dairy"
+      ],
+      "id": 1123,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "ramp, ramp oil",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Beurre Blanc",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.instagram.com/p/BVJTK7TDSOV/"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
       "cuisines": [],
       "gif": null,
       "groups": [
@@ -3527,7 +3880,8 @@
         "Basics"
       ],
       "cuisines": [
-        "Lebanese"
+        "Lebanese",
+        "Middle Eastern"
       ],
       "gif": null,
       "groups": [
@@ -4583,6 +4937,48 @@
     {
       "calories": 0,
       "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Vegetable"
+      ],
+      "id": 1134,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Sofrito",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
         "Breakfast"
       ],
       "cuisines": [],
@@ -4614,7 +5010,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/31mpgv/bacon_blue_deviled_eggs_with_roasted_garlic_and/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -4655,7 +5051,8 @@
         ""
       ],
       "sources": [
-        "McDonald's"
+        "McDonald's",
+        "https://www.seriouseats.com/2016/01/building-a-better-egg-mcmuffin-food-lab.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -4777,6 +5174,42 @@
       ],
       "sources": [
         "Kenji"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Eggs"
+      ],
+      "id": 1121,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Fried Eggs",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.plated.com/morsel/8-perfect-ways-fry-egg/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -4916,46 +5349,6 @@
       "courses": [
         "Breakfast"
       ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Eggs"
-      ],
-      "id": 600,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9
-      ],
-      "name": "Home Fry",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
       "cuisines": [
         "Mexican"
       ],
@@ -4987,7 +5380,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/3epcp2/huevos_rancheros_oc1080x1080/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -5200,7 +5593,7 @@
       ],
       "pictures": [],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2014/04/foolproof-poached-eggs-food-lab-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -5503,7 +5896,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/food/comments/19ncpm/my_favorite_breakfast_eggs_w_spinach_oven_roasted/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -5563,7 +5956,8 @@
       ],
       "cuisines": [
         "Pacific",
-        "Middle Eastern"
+        "Middle Eastern",
+        "African"
       ],
       "gif": "",
       "groups": [
@@ -5572,13 +5966,15 @@
       "id": 662,
       "ingredients": [
         "Oil",
-        "Onion",
-        "Mushroom?",
+        "Peppers",
         "Garlic",
         "Salt",
-        "Peppers",
-        "",
         "Cumin",
+        "Onion?",
+        "Mushroom?",
+        "harissa?",
+        "tomato paste?",
+        "",
         "Paprika",
         "Tumeric?",
         "Coriander?",
@@ -5597,7 +5993,8 @@
         "Olive Oil",
         "",
         "Pita/Toast",
-        "Hummus"
+        "Hummus",
+        "yogurt"
       ],
       "instructions": [
         {
@@ -5608,7 +6005,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Shakshuka",
       "occasions": [
         ""
@@ -5619,7 +6020,8 @@
         "/static/recipe-pics/shakshuka-3.jpg"
       ],
       "sources": [
-        "Kenji"
+        "Kenji",
+        "Jerusalem"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -5762,6 +6164,48 @@
         "Breakfast"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Eggs"
+      ],
+      "id": 1144,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Tortilla Espa\u00f1ola",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=1gYA0UVEAFA"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
         "Filipino"
       ],
       "gif": null,
@@ -5831,25 +6275,26 @@
         "Red Pepper",
         "Mushrooms?",
         "Cotija?",
-        "Hot Sauce",
         "",
         "Chorizo",
         "Potatoes?",
         "Bacon?",
+        "beans?",
         "",
         "Tortilla",
         "",
+        "onions & peppers?",
+        "",
         "Avocado",
-        "Lime",
         "Cilantro & Onion?",
-        "Hot Sauce",
-        "",
-        "",
         "queso fresco?",
-        "beans?",
+        "",
+        "Lime",
+        "Hot Sauce",
         "crema?",
         "salsa?",
-        "onions & peppers?"
+        "",
+        ""
       ],
       "instructions": [
         {
@@ -5977,6 +6422,47 @@
       ],
       "sources": [
         "Le Pain Bakery"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Eggs",
+        "Vegetable"
+      ],
+      "id": 600,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9
+      ],
+      "name": "Home Fry",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.seriouseats.com/2016/06/food-lab-how-to-make-great-home-fries.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -6467,7 +6953,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/129zsq/homemade_breakfast_chilaquiles_with_chorizo_oc/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -6798,7 +7284,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/1in4fj/spiced_meatballs_with_egg_red_pepper_and_tomato/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -6915,7 +7401,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.thekitchn.com/recipe-frozen-singleserve-oatmeal-recipes-from-the-kitchn-193961"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -6957,47 +7443,7 @@
         ""
       ],
       "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Oatmeal"
-      ],
-      "id": 626,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Baked Pumpkin Oatmeal",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
+        "https://www.thekitchn.com/recipe-slow-cooker-oatmeal-wit-47778"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -7153,6 +7599,42 @@
         ""
       ],
       "sources": [
+        "https://www.thekitchn.com/morning-recipe-steel-cut-oats-with-maple-roasted-apples-and-cheddar-182720"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Oatmeal"
+      ],
+      "id": 1122,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Muesli",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
         ""
       ],
       "time": "0:00:00",
@@ -7234,6 +7716,77 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Oatmeal"
+      ],
+      "id": 626,
+      "ingredients": [
+        "Oatmeal",
+        "Oatly",
+        "Pumpkin Puree",
+        "Maple Syrup",
+        "vanilla?",
+        "",
+        "Cinnamon",
+        "Allspice",
+        "Cardamom",
+        "cloves?",
+        "ginger?",
+        "curry?",
+        "cayenne?",
+        "nutmeg?",
+        "",
+        "Maple Syrup",
+        "Marshmallow?",
+        "chocolate/white chocolate?",
+        "nutella?",
+        "molasses?",
+        "",
+        "brown butter?",
+        "Pumpkin Seeds?",
+        "walnut?",
+        "Hazlenut?",
+        "rosemary/sage/thyme?",
+        "pine nuts?",
+        "crumble?",
+        "coconut?",
+        "chia?",
+        "",
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        10
+      ],
+      "name": "Pumpkin Oatmeal",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.thekitchn.com/baked-pumpkin-spice-oatmeal-recipe-159872"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -7382,7 +7935,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        12
+      ],
       "name": "Banh Xeo",
       "occasions": [
         ""
@@ -7719,7 +8276,8 @@
         "Breakfast"
       ],
       "cuisines": [
-        "Israeli"
+        "Israeli",
+        "Middle Eastern"
       ],
       "gif": "",
       "groups": [
@@ -8234,46 +8792,6 @@
       "groups": [
         "Pastry"
       ],
-      "id": 607,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9
-      ],
-      "name": "Apple Cider Bread",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
       "id": 554,
       "ingredients": [
         ""
@@ -8550,44 +9068,6 @@
       "courses": [
         "Breakfast"
       ],
-      "cuisines": [
-        "American"
-      ],
-      "gif": null,
-      "groups": [
-        "Pastry"
-      ],
-      "id": 1119,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Cinnamon Buns",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        "https://www.youtube.com/watch?v=bqy4XFraBlk"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -8654,46 +9134,6 @@
       "pictures": [],
       "sources": [
         "https://www.youtube.com/watch?v=mQYdS3YCEss"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 604,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9
-      ],
-      "name": "Cranberry Apple Granola Muffin",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9031,86 +9471,6 @@
       "groups": [
         "Pastry"
       ],
-      "id": 630,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Pumpkin Biscuits",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 629,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Pumpkin Bread",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
       "id": 69,
       "ingredients": [
         "Pumpkin Bread"
@@ -9146,45 +9506,6 @@
       "courses": [
         "Breakfast"
       ],
-      "cuisines": [
-        "Pacific",
-        "Mexican"
-      ],
-      "gif": null,
-      "groups": [
-        "Pastry"
-      ],
-      "id": 1044,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Pumpkin Scone",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        "Gracias Madre"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -9207,6 +9528,134 @@
         11
       ],
       "name": "Rosemary Garlic Parmesan Biscuit",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 607,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Apple Cider Bread",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
+        "American"
+      ],
+      "gif": null,
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 1119,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        11,
+        12
+      ],
+      "name": "Cinnamon Buns",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=bqy4XFraBlk"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 604,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Cranberry Apple Granola Muffin",
       "occasions": [
         ""
       ],
@@ -9533,6 +9982,137 @@
         "Pastry",
         "Pastry"
       ],
+      "id": 630,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Pumpkin Biscuits",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 629,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        10,
+        11
+      ],
+      "name": "Pumpkin Bread",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
+        "Pacific",
+        "Mexican"
+      ],
+      "gif": null,
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 1044,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Pumpkin Scone",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "Gracias Madre"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
       "id": 261,
       "ingredients": [
         ""
@@ -9825,7 +10405,8 @@
         "Breakfast"
       ],
       "cuisines": [
-        "Spanish"
+        "Spanish",
+        "Mexican"
       ],
       "gif": "",
       "groups": [
@@ -9844,7 +10425,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Croque Se\u00f1ora",
       "occasions": [
         ""
@@ -10450,89 +11035,6 @@
       "courses": [
         "Breakfast"
       ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 514,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        5
-      ],
-      "name": "Cherry Tomato Cobbler",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [
-        "Pacific"
-      ],
-      "gif": "",
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 526,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        6,
-        7
-      ],
-      "name": "Cherry Tomatoes",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
       "cuisines": [
         "Middle Eastern"
       ],
@@ -10563,6 +11065,42 @@
       ],
       "sources": [
         "Plenty"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Vegetable"
+      ],
+      "id": 1126,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Hash",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -10684,6 +11222,91 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 514,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        5
+      ],
+      "name": "Cherry Tomato Cobbler",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.thekitchn.com/recipe-tomato-cobbler-with-cornmeal-cheddar-biscuits-206816"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
+        "Pacific"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 526,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        6,
+        7
+      ],
+      "name": "Cherry Tomatoes",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "http://blog.jumpingrocks.com/tomatoes-at-their-peak-a-great-recipe-from-swiss-woods-bed-and-breakfast/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -11161,6 +11784,51 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Pastry",
+        "Land",
+        "Pastry"
+      ],
+      "id": 1140,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Croquetas",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast",
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Portuguese",
         "Spanish",
         "Mexican",
@@ -11169,7 +11837,8 @@
       "gif": "",
       "groups": [
         "Pastry",
-        "Land"
+        "Land",
+        "Pastry"
       ],
       "id": 804,
       "ingredients": [
@@ -11184,7 +11853,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Empanadas",
       "occasions": [
         ""
@@ -11193,7 +11866,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.youtube.com/watch?v=FPHe-xWEdjE"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -11386,9 +12059,9 @@
         }
       ],
       "months": [
-        9,
-        10,
-        11
+        6,
+        7,
+        8
       ],
       "name": "Baked Beans",
       "occasions": [
@@ -11441,6 +12114,94 @@
       "pictures": [
         ""
       ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast",
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 1142,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Padrones",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast",
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 1141,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Patatas Bravas",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
       "sources": [
         ""
       ],
@@ -11849,7 +12610,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11
+      ],
       "name": "Chocolate Cake",
       "occasions": [
         ""
@@ -12162,7 +12925,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11
+      ],
       "name": "Devil's Food Cake",
       "occasions": [
         ""
@@ -12550,7 +13315,10 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11,
+        12
+      ],
       "name": "Monkey Bread",
       "occasions": [
         "Christmas"
@@ -12702,7 +13470,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11
+      ],
       "name": "Salted Caramel Fudge Cake",
       "occasions": [
         ""
@@ -12864,7 +13634,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11
+      ],
       "name": "Spiced Pumpkin Cake w/ Pistachio Brittle",
       "occasions": [
         ""
@@ -13021,7 +13793,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        11
+      ],
       "name": "Vanilla Orange Cupcakes",
       "occasions": [
         ""
@@ -13604,6 +14378,48 @@
         "Dessert"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Cheesecake"
+      ],
+      "id": 1146,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Basque Cheesecake",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=uVwPO7GY8MY"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [
         "American"
       ],
       "gif": "",
@@ -13708,7 +14524,8 @@
       ],
       "months": [
         9,
-        10
+        10,
+        11
       ],
       "name": "Eggplant Cheesecake",
       "occasions": [
@@ -14302,6 +15119,7 @@
       ],
       "cuisines": [
         "Pacific",
+        "Spanish",
         "Mexican",
         "South American"
       ],
@@ -14322,7 +15140,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Alfajores",
       "occasions": [
         ""
@@ -15461,7 +16283,9 @@
         }
       ],
       "months": [
-        2
+        9,
+        10,
+        11
       ],
       "name": "Oatmeal Cookies",
       "occasions": [
@@ -16128,7 +16952,10 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        10,
+        11
+      ],
       "name": "Apple Cider Donuts",
       "occasions": [
         ""
@@ -16165,7 +16992,8 @@
         }
       ],
       "months": [
-        10
+        10,
+        11
       ],
       "name": "Apple Fritter",
       "occasions": [
@@ -16249,7 +17077,9 @@
         }
       ],
       "months": [
-        9
+        9,
+        10,
+        11
       ],
       "name": "Bu\u00f1uelos",
       "occasions": [
@@ -16332,7 +17162,10 @@
         }
       ],
       "months": [
-        6
+        6,
+        9,
+        10,
+        11
       ],
       "name": "Churro",
       "occasions": [
@@ -16823,7 +17656,7 @@
         }
       ],
       "months": [
-        11
+        7
       ],
       "name": "Funnel Cake",
       "occasions": [
@@ -16997,7 +17830,6 @@
         }
       ],
       "months": [
-        11,
         12
       ],
       "name": "Broiled Pineapple",
@@ -17038,7 +17870,8 @@
         }
       ],
       "months": [
-        8
+        8,
+        9
       ],
       "name": "Broiled Plums w/ Mascarpone",
       "occasions": [
@@ -17079,7 +17912,8 @@
       ],
       "months": [
         9,
-        10
+        10,
+        11
       ],
       "name": "Caramelized Brandy Pears",
       "occasions": [
@@ -18427,6 +19261,7 @@
         "Dessert"
       ],
       "cuisines": [
+        "Middle Eastern",
         "Persian"
       ],
       "gif": "",
@@ -18763,7 +19598,8 @@
         "Dessert"
       ],
       "cuisines": [
-        "Arab"
+        "Arab",
+        "Middle Eastern"
       ],
       "gif": "",
       "groups": [
@@ -19709,6 +20545,7 @@
         "Dessert"
       ],
       "cuisines": [
+        "Middle Eastern",
         "Turkish"
       ],
       "gif": "",
@@ -19948,46 +20785,6 @@
         2
       ],
       "name": "Gooey Butter Cake Ice Cream",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        "Jeni's Splendid Ice Creams"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Ice Cream"
-      ],
-      "id": 349,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        11
-      ],
-      "name": "Gorgonzola Dulce Ice Cream w/ Candied Walnuts",
       "occasions": [
         ""
       ],
@@ -21122,7 +21919,9 @@
         }
       ],
       "months": [
-        9
+        9,
+        10,
+        11
       ],
       "name": "Olive Oil w/ Sea Salted Pepitas Ice Cream",
       "occasions": [
@@ -22161,6 +22960,7 @@
         }
       ],
       "months": [
+        11,
         12
       ],
       "name": "Ube Ice Cream",
@@ -22426,48 +23226,6 @@
       "courses": [
         "Dessert"
       ],
-      "cuisines": [
-        "German"
-      ],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 632,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Apple Strudel",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -22696,46 +23454,6 @@
         7
       ],
       "name": "Blackberry Pie",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 258,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9
-      ],
-      "name": "Butternut Squash Pie",
       "occasions": [
         ""
       ],
@@ -23105,44 +23823,6 @@
       ],
       "sources": [
         ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 275,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Fig and Goat Cheese Tart",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        "Ottolenge"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -23596,84 +24276,6 @@
       "groups": [
         "Pastry"
       ],
-      "id": 259,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Sweet Potato Pie",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [
-        "Filipino"
-      ],
-      "gif": null,
-      "groups": [
-        "Pastry"
-      ],
-      "id": 822,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        11
-      ],
-      "name": "Ube Pie",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        "Irenia"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
       "id": 267,
       "ingredients": [
         ""
@@ -23774,7 +24376,9 @@
         }
       ],
       "months": [
-        8
+        9,
+        10,
+        11
       ],
       "name": "Apple/Pear/Quince Gallete",
       "occasions": [
@@ -23959,13 +24563,18 @@
         "Pie Dough",
         "",
         "3 Apples",
-        "3 c Water",
-        "2.5 Tbsp Sugar",
+        "3 c Water/Apple Cider",
+        "2.5 Tbsp Sugar/Brown Sugar",
         "Lemon",
         "1/8 tsp Cinnamon",
         "1/8 tsp Nutmeg",
         "1/8 tsp Salt",
         "1 Tbsp Tapioca Starch",
+        "vanilla?",
+        "allspice?",
+        "cardamom?",
+        "star anise/cinnamon sticks?",
+        "butter?",
         "",
         "Egg Wash",
         "Cinnamon",
@@ -24000,7 +24609,53 @@
       ],
       "sources": [
         "Hilda",
-        "J. Kenji Lopez Alt"
+        "J. Kenji Lopez Alt",
+        "https://www.youtube.com/watch?v=6HDc8B1RxzU"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [
+        "German"
+      ],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 632,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Apple Strudel",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -24036,7 +24691,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Baklava",
       "occasions": [
@@ -24047,6 +24704,49 @@
       ],
       "sources": [
         "Sunnin"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 258,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Butternut Squash Pie",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -24090,6 +24790,47 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 275,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9
+      ],
+      "name": "Fig and Goat Cheese Tart",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "Ottolenge"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -24822,6 +25563,91 @@
       "courses": [
         "Dessert"
       ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 259,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Sweet Potato Pie",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [
+        "Filipino"
+      ],
+      "gif": null,
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 822,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        11,
+        12
+      ],
+      "name": "Ube Pie",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "Irenia"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
       "cuisines": [
         "Mexican"
       ],
@@ -24842,7 +25668,9 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        12
+      ],
       "name": "Atole",
       "occasions": [
         ""
@@ -25474,7 +26302,8 @@
         "/static/recipe-pics/chocolate-mousse.jpg"
       ],
       "sources": [
-        "David Lebowitz"
+        "David Lebowitz",
+        "https://www.youtube.com/watch?v=_W5SZhatK0Q"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -25606,7 +26435,8 @@
         "Dessert"
       ],
       "cuisines": [
-        "French"
+        "French",
+        "Spanish"
       ],
       "gif": "",
       "groups": [
@@ -25626,7 +26456,10 @@
         }
       ],
       "months": [
-        4
+        4,
+        9,
+        10,
+        11
       ],
       "name": "Cr\u00e8me Br\u00fbl\u00e9e",
       "occasions": [
@@ -25805,7 +26638,10 @@
         }
       ],
       "months": [
-        6
+        6,
+        9,
+        10,
+        11
       ],
       "name": "Flan",
       "occasions": [
@@ -26224,7 +27060,8 @@
         }
       ],
       "months": [
-        10
+        10,
+        11
       ],
       "name": "Pumpkin Butter Pudding",
       "occasions": [
@@ -26247,7 +27084,8 @@
       ],
       "cuisines": [
         "Indian",
-        "Lebanese"
+        "Lebanese",
+        "Middle Eastern"
       ],
       "gif": "",
       "groups": [
@@ -26267,6 +27105,7 @@
         }
       ],
       "months": [
+        10,
         11
       ],
       "name": "Rice Pudding",
@@ -26352,6 +27191,7 @@
         }
       ],
       "months": [
+        11,
         12
       ],
       "name": "Ube Pudding",
@@ -26628,6 +27468,42 @@
       "pictures": [
         ""
       ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Drinks"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 1138,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Cafe Con Leche",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
       "sources": [
         ""
       ],
@@ -29348,8 +30224,8 @@
         }
       ],
       "months": [
-        10,
-        11,
+        1,
+        2,
         12
       ],
       "name": "Burmese Grilled Chicken",
@@ -29581,8 +30457,8 @@
         }
       ],
       "months": [
-        10,
-        11,
+        1,
+        2,
         12
       ],
       "name": "Chicken Pot Pie",
@@ -29722,6 +30598,13 @@
           "note": "don't cover for crispier skin?",
           "photo": "",
           "text": "rest 15 min",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
           "video": ""
         },
         {
@@ -29975,6 +30858,27 @@
           "note": "",
           "photo": "",
           "text": "finish with cilantro",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "tomato paste?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "chhonk?",
           "video": ""
         }
       ],
@@ -30394,7 +31298,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        12
+      ],
       "name": "Ike's Wings",
       "occasions": [
         ""
@@ -30814,6 +31722,65 @@
       "courses": [
         "Lunch & Dinner"
       ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Air"
+      ],
+      "id": 1145,
+      "ingredients": [
+        "Oil",
+        "Garlic",
+        "",
+        "Chicken Thigh",
+        "S + P",
+        "lemon?",
+        "garlic?",
+        "herbs?",
+        "",
+        "White Wine",
+        "Bay Leaf",
+        "Parsley",
+        "thyme?",
+        "",
+        "vinegar?",
+        "red pepper?",
+        "paprika?",
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Pollo al Ajillo",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -30874,7 +31841,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        3
+      ],
       "name": "Poule au Pot",
       "occasions": [
         ""
@@ -31074,14 +32045,13 @@
         "Turkey",
         "Stuffing",
         "Gravy",
-        "",
         "Cranberry",
         "Sweet Potato/Sage",
         "Spinach/Greens",
+        "Roll",
+        "",
         "Squash?",
         "Corn?",
-        "",
-        "Roll",
         "Acorn Bread?",
         "cornbread/sage?",
         "",
@@ -31322,8 +32292,6 @@
         }
       ],
       "months": [
-        10,
-        11,
         12
       ],
       "name": "Adobo",
@@ -31370,7 +32338,7 @@
         }
       ],
       "months": [
-        10,
+        1,
         11,
         12
       ],
@@ -31383,48 +32351,6 @@
       ],
       "sources": [
         "Grand Central Market"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
-        "Persian"
-      ],
-      "gif": "",
-      "groups": [
-        "Bread"
-      ],
-      "id": 610,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Balani",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -31472,6 +32398,8 @@
         }
       ],
       "months": [
+        1,
+        2,
         12
       ],
       "name": "Banh Mi",
@@ -31591,7 +32519,9 @@
         }
       ],
       "months": [
-        8
+        7,
+        8,
+        9
       ],
       "name": "BLT",
       "occasions": [
@@ -31602,6 +32532,51 @@
       ],
       "sources": [
         "Thomas Keller Youtube"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Middle Eastern",
+        "Persian"
+      ],
+      "gif": "",
+      "groups": [
+        "Bread"
+      ],
+      "id": 610,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Bolani",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -32152,7 +33127,9 @@
         }
       ],
       "months": [
-        3
+        6,
+        7,
+        8
       ],
       "name": "Cubano",
       "occasions": [
@@ -32214,7 +33191,7 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Spanish"
+        "Italian"
       ],
       "gif": "",
       "groups": [
@@ -32504,7 +33481,8 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Mediterranean"
+        "Mediterranean",
+        "Middle Eastern"
       ],
       "gif": "",
       "groups": [
@@ -32533,6 +33511,49 @@
       "pictures": [
         ""
       ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Pacific",
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Bread"
+      ],
+      "id": 1151,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Ham & Cheese Sandwich",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
       "sources": [
         ""
       ],
@@ -32576,7 +33597,11 @@
         }
       ],
       "months": [
-        8
+        7,
+        8,
+        9,
+        10,
+        11
       ],
       "name": "Neapolitan Pizza",
       "occasions": [
@@ -32718,7 +33743,10 @@
         }
       ],
       "months": [
-        8
+        8,
+        9,
+        10,
+        11
       ],
       "name": "Pan con Tomate",
       "occasions": [
@@ -33109,7 +34137,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Sicilian Pizza",
       "occasions": [
         ""
@@ -33408,6 +34440,54 @@
       ],
       "id": 1080,
       "ingredients": [
+        "Bread",
+        "chicharron",
+        "Sweet Potato",
+        "Red Onion",
+        "Aji"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "name": "Chicharron Sanguch",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Pacific",
+        "Portuguese"
+      ],
+      "gif": null,
+      "groups": [
+        "Bread",
+        "Land"
+      ],
+      "id": 1152,
+      "ingredients": [
         ""
       ],
       "instructions": [
@@ -33419,14 +34499,18 @@
           "video": ""
         }
       ],
-      "months": [],
-      "name": "Chicharron Sanguch",
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Linguica Sandwich",
       "occasions": [
         ""
       ],
       "pictures": [],
       "sources": [
-        ""
+        "Bass Derby"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -33500,7 +34584,8 @@
         }
       ],
       "months": [
-        7
+        9,
+        10
       ],
       "name": "Philly Cheesesteak",
       "occasions": [
@@ -33821,6 +34906,48 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Land"
+      ],
+      "id": 1143,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Albondigas",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Pacific"
       ],
       "gif": "",
@@ -33850,9 +34977,9 @@
         }
       ],
       "months": [
-        1,
-        2,
-        12
+        9,
+        10,
+        11
       ],
       "name": "Anderson Lamb",
       "occasions": [
@@ -33895,6 +35022,46 @@
       ],
       "months": [],
       "name": "Anticuchos",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Land"
+      ],
+      "id": 1147,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Bacon Wrapped Dates",
       "occasions": [
         ""
       ],
@@ -34030,6 +35197,44 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Mexican"
+      ],
+      "gif": null,
+      "groups": [
+        "Land"
+      ],
+      "id": 1124,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Birria",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Filipino"
       ],
       "gif": "",
@@ -34121,23 +35326,21 @@
         "Burger",
         "Cheese",
         "",
-        "Mushroom",
         "Onion",
-        "Peppers?",
-        "",
         "Tomato",
         "Lettuce",
-        "Pineapple",
-        "",
         "Pickles",
-        "Kimchi",
-        "Slaw",
         "",
-        "Bacon",
-        "Avocado",
-        "Egg",
-        "Spam",
-        "Chili",
+        "Mushroom?",
+        "Peppers?",
+        "Pineapple?",
+        "Kimchi?",
+        "Slaw?",
+        "Bacon?",
+        "Avocado?",
+        "Egg?",
+        "Spam?",
+        "Chili?",
         "",
         "thousand island",
         "spicy mayo",
@@ -34162,28 +35365,119 @@
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "onion: raw, grilled, caramelized",
+          "text": "cut meat into cubes",
           "video": ""
         },
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "onion under cheese",
+          "text": "freeze 20 min",
           "video": ""
         },
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "martin's buns",
+          "text": "grind meat",
           "video": ""
         },
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "mustard fried?",
+          "text": "form into 2 oz balls",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toast bun",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "prepare sides",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "season patties",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add burger to skillet & smash",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "sear ~1 min",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "season/mustard fry",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "scrape & flip",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add cheese",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "remove & rest",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "assemble burger",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
           "video": ""
         },
         {
@@ -34204,7 +35498,49 @@
           "gif": "",
           "note": "",
           "photo": "",
+          "text": "20-25% fat ratio",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "martin's buns/potato buns",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "onion: raw, grilled, caramelized",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
           "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "onion under cheese",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toppings on bottom or top?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "mustard fried?",
           "video": ""
         }
       ],
@@ -34221,7 +35557,8 @@
         ""
       ],
       "sources": [
-        "Modernist Cuisine?"
+        "Modernist Cuisine?",
+        "In n Out"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -34659,7 +35996,7 @@
         "",
         "Slaw",
         "",
-        "chili",
+        "chili cheese",
         "",
         "saurkraut",
         "",
@@ -34685,6 +36022,13 @@
           "gif": "",
           "note": "",
           "photo": "",
+          "text": "poach 10 min/broil 3 min method",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
           "text": "toast buns w/o opening",
           "video": ""
         }
@@ -34692,9 +36036,53 @@
       "months": [
         6,
         7,
-        8
+        8,
+        9,
+        10
       ],
       "name": "Hot Dog",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Land"
+      ],
+      "id": 1136,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Jamon Iberico",
       "occasions": [
         ""
       ],
@@ -34809,48 +36197,6 @@
       ],
       "months": [],
       "name": "Kare Kare",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
-        "Middle Eastern"
-      ],
-      "gif": "",
-      "groups": [
-        "Land"
-      ],
-      "id": 613,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Kebab",
       "occasions": [
         ""
       ],
@@ -35106,7 +36452,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Meatballs",
       "occasions": [
@@ -35534,6 +36882,96 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Mediterranean",
+        "Israeli",
+        "Lebanese",
+        "Middle Eastern",
+        "Turkish"
+      ],
+      "gif": "",
+      "groups": [
+        "Land"
+      ],
+      "id": 613,
+      "ingredients": [
+        "Meat",
+        "Veggies?",
+        "",
+        "Lemon",
+        "Garlic",
+        "S + P",
+        "Olive Oil",
+        "White Wine Vinegar?",
+        "rosemary",
+        "thyme",
+        "coriander?",
+        "tomato paste?",
+        "tuom?",
+        "",
+        "Pita",
+        "Sauce",
+        "Tomato",
+        "Pickles",
+        "Red Onion",
+        "Herb",
+        "Feta",
+        "Aleppo Pepper"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "souvlaki, kebab, gyro",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "soak skewers",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "pork tenderloin, chicken thigh, lamb, beef, shrimp, falafel",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Souvlaki",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.youtube.com/watch?v=aQaf3gzXxig&t=83s"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -36115,7 +37553,9 @@
         "/static/recipe-pics/pad-thai.jpg"
       ],
       "sources": [
-        ""
+        "https://www.youtube.com/watch?v=kBBnBF3sOws",
+        "Krua Thai",
+        "Luv 2 Eat"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -36187,6 +37627,8 @@
         }
       ],
       "months": [
+        1,
+        2,
         12
       ],
       "name": "Pho",
@@ -37034,7 +38476,9 @@
         }
       ],
       "months": [
-        7
+        6,
+        7,
+        8
       ],
       "name": "Cajun Pasta",
       "occasions": [
@@ -37339,6 +38783,7 @@
         }
       ],
       "months": [
+        6,
         7
       ],
       "name": "Mac n Cheese",
@@ -38393,7 +39838,9 @@
         }
       ],
       "months": [
-        6
+        9,
+        10,
+        11
       ],
       "name": "Mussel Pasta",
       "occasions": [
@@ -38500,6 +39947,64 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Mediterranean",
+        "Middle Eastern"
+      ],
+      "gif": null,
+      "groups": [
+        "Rice"
+      ],
+      "id": 1149,
+      "ingredients": [
+        "1 C Cous Cous",
+        "1 C Water",
+        "1/2 tsp Salt",
+        "2 Tbsp Butter",
+        "",
+        "Red Pepper",
+        "Zuchinni",
+        "Eggplant",
+        "Onion?",
+        "Walnut?",
+        "",
+        "Lemon",
+        "Olive Oil",
+        "S + P",
+        "Aleppo Pepper",
+        "herb?"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Cous Cous",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Thai"
       ],
       "gif": null,
@@ -38537,6 +40042,44 @@
       "pictures": [],
       "sources": [
         "Hot Thai Kitchen"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Japanese"
+      ],
+      "gif": null,
+      "groups": [
+        "Rice"
+      ],
+      "id": 1155,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Inari",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -38690,6 +40233,46 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Hawaiian",
+        "Pacific"
+      ],
+      "gif": null,
+      "groups": [
+        "Rice"
+      ],
+      "id": 1153,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Musubi",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Middle Eastern",
         "Persian"
       ],
       "gif": "",
@@ -38937,7 +40520,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        6,
+        7,
+        8
+      ],
       "name": "Dakbokkeumtang",
       "occasions": [
         ""
@@ -38965,25 +40552,55 @@
       ],
       "id": 1035,
       "ingredients": [
-        ""
+        "chicken thigh",
+        "lemon juice",
+        "olive oil",
+        "garlic",
+        "oregano",
+        "coriander seed",
+        "s + p",
+        "",
+        "butter",
+        "turmeric/cumin",
+        "basmati rice",
+        "broth",
+        "s + p",
+        "",
+        "mayo",
+        "yogurt",
+        "sugar",
+        "white vinegar",
+        "lemon juice",
+        "parsley",
+        "s + p",
+        "",
+        "iceberg lettuce",
+        "tomato",
+        "harissa",
+        "pita"
       ],
       "instructions": [
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "split sauce, one cooling (cucumber/mint/dill) one spicy (harissa/herbs)?",
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Halal Cart Style Chicken",
       "occasions": [
         ""
       ],
       "pictures": [],
       "sources": [
-        "https://old.reddit.com/r/seriouseats/comments/7b1wba/after_seeing_so_many_posts_i_had_to_try_it_myself/"
+        "https://old.reddit.com/r/seriouseats/comments/7b1wba/after_seeing_so_many_posts_i_had_to_try_it_myself/",
+        "https://www.seriouseats.com/recipes/2011/12/serious-eats-halal-cart-style-chicken-and-rice-white-sauce-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -39328,7 +40945,9 @@
         }
       ],
       "months": [
-        9
+        9,
+        10,
+        11
       ],
       "name": "Paella",
       "occasions": [
@@ -39454,7 +41073,18 @@
       ],
       "id": 638,
       "ingredients": [
-        ""
+        "Apples",
+        "Lemon",
+        "",
+        "Arugula",
+        "Pomegranate",
+        "Slivered Almonds",
+        "Goat Cheese",
+        "",
+        "Apple Cider Vinegar",
+        "Honey",
+        "Olive Oil",
+        "S + P"
       ],
       "instructions": [
         {
@@ -39471,7 +41101,7 @@
         11,
         12
       ],
-      "name": "Arugula, Apple, and Pomegranate Salad with Cider-Honey Vinaigrette",
+      "name": "Arugula, Apple, and Pomegranate Salad",
       "occasions": [
         ""
       ],
@@ -40222,7 +41852,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Fried Eggplant w/ Tahini & Pomegranate Seeds",
       "occasions": [
@@ -40286,6 +41918,9 @@
         }
       ],
       "months": [
+        9,
+        10,
+        11,
         12
       ],
       "name": "Kale Salad",
@@ -40834,50 +42469,6 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "American"
-      ],
-      "gif": "",
-      "groups": [
-        "Salad"
-      ],
-      "id": 789,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9,
-        10,
-        11
-      ],
-      "name": "Waldorf Salad",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
         "Italian"
       ],
       "gif": "",
@@ -41036,7 +42627,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "name": "Black Cod",
       "occasions": [
         ""
@@ -41045,7 +42640,50 @@
         ""
       ],
       "sources": [
-        "Va de Vi"
+        "Va de Vi",
+        "Otium"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Sea"
+      ],
+      "id": 1139,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Boquerones",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -41076,7 +42714,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        12
+      ],
       "name": "Ca Kho To",
       "occasions": [
         ""
@@ -41545,7 +43187,9 @@
         }
       ],
       "months": [
-        9
+        9,
+        10,
+        11
       ],
       "name": "Gambas al Ajillo",
       "occasions": [
@@ -41722,13 +43366,44 @@
       "courses": [
         "Lunch & Dinner"
       ],
-      "cuisines": [],
-      "gif": "",
+      "cuisines": [
+        "Mediterranean",
+        "Middle Eastern"
+      ],
+      "gif": null,
       "groups": [
         "Sea"
       ],
-      "id": 519,
+      "id": 1131,
       "ingredients": [
+        "Fish/Scallops",
+        "S + P",
+        "Spices?",
+        "Flour",
+        "",
+        "Butter + Olive Oil",
+        "Lemon/Zest",
+        "Wine?",
+        "Garlic",
+        "Capers",
+        "Tomato",
+        "Parsley",
+        "Olives?",
+        "Bread Crumbs?",
+        "Saffron?",
+        "",
+        "Cous Cous",
+        "",
+        "Tzatziki",
+        "Harissa?",
+        "Mint?",
+        "Za'atar",
+        "",
+        "Pickled Onion?",
+        "Artichoke?",
+        "Salad?",
+        "Tomatoes?",
+        "",
         ""
       ],
       "instructions": [
@@ -41736,22 +43411,106 @@
           "gif": "",
           "note": "",
           "photo": "",
+          "text": "saute vegetables",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "steam cous cous",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add vegetables to cous cous",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "season",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
           "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "brown butter",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "season fish",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "coat fish in flour",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "sear fish",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "flip fish, deglaze, & add vegetables",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "baste fish w/ sauce",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "plate w/ cous cous, sauces, & sides",
           "video": ""
         }
       ],
       "months": [
-        4
+        9,
+        10,
+        11
       ],
-      "name": "Mussels",
+      "name": "Mediterranean Fish",
       "occasions": [
         ""
       ],
-      "pictures": [
-        ""
-      ],
+      "pictures": [],
       "sources": [
-        "The Kitchen Door"
+        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -41781,7 +43540,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Mussels with Fennel and Saffron",
       "occasions": [
@@ -41878,7 +43639,12 @@
       "courses": [
         "Lunch & Dinner"
       ],
-      "cuisines": [],
+      "cuisines": [
+        "Pacific",
+        "French",
+        "Portuguese",
+        "Spanish"
+      ],
       "gif": "",
       "groups": [
         "Sea"
@@ -42121,6 +43887,48 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Sea"
+      ],
+      "id": 1137,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Pulpo",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "French"
       ],
       "gif": "",
@@ -42141,7 +43949,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Sailor Style Mussels",
       "occasions": [
@@ -42290,25 +44100,89 @@
       ],
       "id": 707,
       "ingredients": [
-        ""
+        "Scallops",
+        "S + P",
+        "Oil",
+        "Butter",
+        "spices",
+        "Zest",
+        "Lemon/Lime",
+        "Herbs",
+        "",
+        "Olive Oil",
+        "Bacon/Chorizo",
+        "Green Onion",
+        "Garlic",
+        "Peppers",
+        "Corn",
+        "Buttermilk",
+        "Cilantro",
+        "coconut milk?",
+        "lemongrass?",
+        "ginger?",
+        "cinnamon?",
+        "kaffir lime leaf?",
+        "",
+        "cous cous?",
+        "broth",
+        "",
+        "white/orange/green/purple sauce",
+        "chile",
+        "tomato",
+        "caper",
+        "micro greens",
+        "anchovy breadcrumbs?",
+        "onions",
+        "caviar",
+        "bacon",
+        "pickled radish?",
+        "citrus",
+        "flowers",
+        "asparagus",
+        "octopus",
+        "green onion chiffonade/chives",
+        "guac",
+        "basil/mint",
+        "cayenne",
+        "edamame",
+        "kiwi",
+        "chantrelle"
       ],
       "instructions": [
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "chorizo",
+          "text": "butter baste",
           "video": ""
         },
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "butter baste",
+          "text": "remove muscle",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "season right before searing",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "dry thoroughly",
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "name": "Seared Scallops",
       "occasions": [
         ""
@@ -42771,6 +44645,191 @@
       "courses": [
         "Lunch & Dinner"
       ],
+      "cuisines": [
+        "Spanish"
+      ],
+      "gif": null,
+      "groups": [
+        "Sea",
+        "Land"
+      ],
+      "id": 1133,
+      "ingredients": [
+        "Steak/White Fish",
+        "Garlic",
+        "Lemon",
+        "Thyme",
+        "Salt",
+        "Olive Oil",
+        "",
+        "Hazelnuts",
+        "Olive Oil",
+        "Salt",
+        "almonds/pine nuts?",
+        "",
+        "Red Bell Pepper",
+        "Tomato",
+        "Garlic",
+        "Salt",
+        "1/2 tsp Paprika",
+        "Cayenne/Ancho Powder?",
+        "2 Tbsp Sherry Vinegar",
+        "4 Tbsp Olive Oil",
+        "bread?",
+        "fennel fronds?",
+        "pomegranate molasses?",
+        "cumin?",
+        "sundried tomatoes?",
+        "",
+        "Parsley",
+        "Lemon Juice",
+        "Zest",
+        "Salt"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "marinate meat",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toast hazelnuts @ 350 for 10-15 min",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "put hazelnuts in a kitchen towel and shake to remove husks",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "crush with mortar & pestle",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "mix in oil & salt",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "remove tomato seeds",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "broil peppers & tomato",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "remove skin from peppers & tomato",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "mix ingredients into a sauce",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "plate steak/fish with sauce and hazelnuts",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "garnish w/ parsley",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "blend nuts/bread in with sauce?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "brown garlic in olive oil before adding both? Or before toasting bread if using bread?",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Romesco",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=uegmlk8OT3w",
+        "https://www.youtube.com/watch?v=3ZtN78fMk-g"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -42789,7 +44848,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        3
+      ],
       "name": "Broccoli Cheese Soup",
       "occasions": [
         ""
@@ -42923,6 +44986,7 @@
         }
       ],
       "months": [
+        10,
         11
       ],
       "name": "Butternut Squash Soup",
@@ -42967,6 +45031,8 @@
         }
       ],
       "months": [
+        7,
+        8,
         9
       ],
       "name": "Corn Chowder",
@@ -43006,7 +45072,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        3
+      ],
       "name": "Cream of Mushroom Soup",
       "occasions": [
         ""
@@ -43036,7 +45106,23 @@
       ],
       "id": 585,
       "ingredients": [
-        ""
+        "Tomatoes",
+        "Cucumber",
+        "Red Bell Pepper",
+        "Jalape\u00f1o",
+        "Green Onion",
+        "Garlic",
+        "Cumin",
+        "Oregano?",
+        "S + P",
+        "",
+        "Cherry Tomatoes",
+        "Lime",
+        "Worcestershire Sauce",
+        "Balsamic Vinegar",
+        "Olive Oil",
+        "",
+        "Basil"
       ],
       "instructions": [
         {
@@ -43048,7 +45134,10 @@
         }
       ],
       "months": [
-        9
+        8,
+        9,
+        10,
+        11
       ],
       "name": "Gazpacho",
       "occasions": [
@@ -43058,7 +45147,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.youtube.com/watch?v=vO_0joLyBOY",
+        "https://www.youtube.com/watch?v=OgYK0rjpd2c&t=1s"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -43089,8 +45179,54 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "name": "Jorim",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Mexican"
+      ],
+      "gif": null,
+      "groups": [
+        "Soup"
+      ],
+      "id": 1125,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        10,
+        11,
+        12
+      ],
+      "name": "Menudo",
       "occasions": [
         ""
       ],
@@ -43169,7 +45305,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "name": "Onion Soup",
       "occasions": [
         ""
@@ -43208,6 +45348,7 @@
         }
       ],
       "months": [
+        10,
         11
       ],
       "name": "Pumpkin Soup",
@@ -43291,7 +45432,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "name": "Sopa de Lima",
       "occasions": [
         ""
@@ -43328,6 +45473,7 @@
         }
       ],
       "months": [
+        10,
         11
       ],
       "name": "Sweet Potato Soup",
@@ -43369,7 +45515,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "name": "Thai red lentil soup w/ aromatic chile oil",
       "occasions": [
         ""
@@ -43410,7 +45560,9 @@
         }
       ],
       "months": [
-        9
+        8,
+        9,
+        10
       ],
       "name": "Tomato Bisque",
       "occasions": [
@@ -43818,7 +45970,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        8,
+        9,
+        10
+      ],
       "name": "Tortilla Soup",
       "occasions": [
         ""
@@ -43875,45 +46031,6 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Chinese"
-      ],
-      "gif": null,
-      "groups": [
-        "Soup",
-        "Air"
-      ],
-      "id": 1052,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Duck Noodle Soup",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
         "Japanese"
       ],
       "gif": "",
@@ -43934,7 +46051,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        3
+      ],
       "name": "Umami Soup",
       "occasions": [
         ""
@@ -44020,8 +46141,9 @@
         }
       ],
       "months": [
-        10,
-        11,
+        1,
+        2,
+        3,
         12
       ],
       "name": "Chicken Noodle Soup",
@@ -44031,6 +46153,48 @@
       "pictures": [
         ""
       ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Chinese"
+      ],
+      "gif": null,
+      "groups": [
+        "Soup",
+        "Noodles",
+        "Air"
+      ],
+      "id": 1052,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        12
+      ],
+      "name": "Duck Noodle Soup",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
       "sources": [
         ""
       ],
@@ -44065,7 +46229,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "name": "Boat Noodles",
       "occasions": [
         ""
@@ -44106,6 +46274,7 @@
         }
       ],
       "months": [
+        11,
         12
       ],
       "name": "Cioppino",
@@ -44208,7 +46377,11 @@
           "video": ""
         }
       ],
-      "months": [],
+      "months": [
+        1,
+        2,
+        3
+      ],
       "name": "Squid Soup",
       "occasions": [
         ""
@@ -44679,9 +46852,10 @@
         }
       ],
       "months": [
-        7,
         8,
-        9
+        9,
+        10,
+        11
       ],
       "name": "Chicken Tinga",
       "occasions": [
@@ -44744,7 +46918,8 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Mexican"
+        "Mexican",
+        "Middle Eastern"
       ],
       "gif": "",
       "groups": [
@@ -44765,6 +46940,8 @@
         }
       ],
       "months": [
+        9,
+        10,
         11
       ],
       "name": "Al Pastor",
@@ -44775,7 +46952,8 @@
         "/static/recipe-pics/pastor.jpg"
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2013/05/tacos-al-pastor-recipe.html",
+        "https://www.reddit.com/r/GifRecipes/comments/57jsvv/homemade_al_pastor/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -44916,7 +47094,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2015/08/whole-grilled-fish-tacos.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -44971,13 +47149,15 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Persian"
+        "Pacific",
+        "Mexican"
       ],
-      "gif": "",
+      "gif": null,
       "groups": [
+        "Tortilla",
         "Vegetable"
       ],
-      "id": 615,
+      "id": 1132,
       "ingredients": [
         ""
       ],
@@ -44991,17 +47171,18 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
-      "name": "Baba Ghanoush",
+      "name": "Sweet Potato Taco",
       "occasions": [
         ""
       ],
-      "pictures": [
-        ""
-      ],
+      "pictures": [],
       "sources": [
-        ""
+        "Guerilla Tacos",
+        "https://parade.com/608615/alison-ashton/guerrilla-tacos-sweet-potato-taco/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -45215,48 +47396,6 @@
       "sources": [
         "Scarpetta",
         "http://www.seriouseats.com/recipes/2014/10/warm-brussels-sprout-salad-bacon-hazelnut-sherry-vinaigretter-recipe.html"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
-        "Indian"
-      ],
-      "gif": "",
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 717,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        11
-      ],
-      "name": "Chickpea Curry",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -45591,48 +47730,6 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Persian"
-      ],
-      "gif": "",
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 596,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10
-      ],
-      "name": "Kashke Bademjan",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
         "Korean"
       ],
       "gif": null,
@@ -45829,42 +47926,6 @@
       "pictures": [],
       "sources": [
         ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [],
-      "gif": null,
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 1101,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Smashed Potatoes",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        "https://www.youtube.com/watch?v=tPdi0cUPg0Q"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -46272,6 +48333,97 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Middle Eastern",
+        "Persian"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 615,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Baba Ghanoush",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Indian"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 717,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Chickpea Curry",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Mexican"
       ],
       "gif": "",
@@ -46492,6 +48644,175 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Indian"
+      ],
+      "gif": null,
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 1148,
+      "ingredients": [
+        "1 C Lentils",
+        "4 C Water",
+        "Bay Leaf",
+        "1 tsp Turmeric",
+        "1 tsp Salt",
+        "1 Lime",
+        "canned tomato?",
+        "",
+        "Chhonk:",
+        "2 Tbsp Ghee",
+        "2 tsp Cumin Seeds",
+        "2 Red Chilies (dry)",
+        "Red Chili Powder",
+        "Asafetida",
+        "fresh chili?",
+        "fenugreek leaves?",
+        "",
+        "salt?",
+        "sugar/raw sugar/jaggery?",
+        "tamarind paste/lime juice?",
+        "chile powder?",
+        "garam masala?",
+        "Cilantro?",
+        "Yogurt?",
+        "crispy onions?",
+        "",
+        "Basmati Rice",
+        "Naan/Bread"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "soak dal?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "wash dal",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "bring to boil",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "skim?",
+          "photo": "",
+          "text": "simmer 20-30 min",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "remove from heat",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "save half the lime for seasoning at the end",
+          "photo": "",
+          "text": "add lime",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toast chhonk",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "add dal to hot chhonk or add chhonk to dal?",
+          "photo": "",
+          "text": "mix chhonk with dal",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "pumpkin dal?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add masala? or cook lentils in with masala?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "whole chili or chopped finely?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "mustard seeds/cumin seeds/cloves/cassia/dried chilies/curry leaves",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Dal",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "Indian-ish"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Pacific",
         "Mexican"
       ],
@@ -46568,7 +48889,9 @@
         }
       ],
       "months": [
-        10
+        9,
+        10,
+        11
       ],
       "name": "Falafel",
       "occasions": [
@@ -46774,6 +49097,8 @@
         }
       ],
       "months": [
+        9,
+        10,
         11
       ],
       "name": "Palak Paneer",
@@ -46871,6 +49196,47 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 1101,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        1,
+        2,
+        12
+      ],
+      "name": "Smashed Potatoes",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=tPdi0cUPg0Q"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -47070,6 +49436,53 @@
         ""
       ],
       "pictures": [],
+      "sources": [
+        ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner",
+        "Basics"
+      ],
+      "cuisines": [
+        "Middle Eastern",
+        "Persian"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 596,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Kashke Bademjan",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
       "sources": [
         ""
       ],

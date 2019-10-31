@@ -2986,20 +2986,6 @@
     {
       "alts": [],
       "group": "vegetables",
-      "id": 81,
-      "months": [
-        4,
-        5,
-        6,
-        7
-      ],
-      "name": "Cherry Tomato",
-      "picture": "",
-      "storage": ""
-    },
-    {
-      "alts": [],
-      "group": "vegetables",
       "id": 56,
       "months": [
         3,
@@ -3840,6 +3826,87 @@
       ],
       "name": "Tomato",
       "picture": "static/ingredient-pics/tomato.jpg",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 343,
+      "months": [],
+      "name": "Tomato (beefsteak)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 346,
+      "months": [],
+      "name": "Tomato (cherokee purple)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 81,
+      "months": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "name": "Tomato (cherry)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 345,
+      "months": [],
+      "name": "Tomato (grape)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 347,
+      "months": [],
+      "name": "Tomato (green zebra)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 341,
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "name": "Tomato (Roma)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 342,
+      "months": [],
+      "name": "Tomato (san marzano)",
+      "picture": "",
+      "storage": ""
+    },
+    {
+      "alts": [],
+      "group": "vegetables",
+      "id": 344,
+      "months": [],
+      "name": "Tomato (sungold)",
+      "picture": "",
       "storage": ""
     },
     {
