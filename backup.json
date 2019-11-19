@@ -473,7 +473,9 @@
         "Basics"
       ],
       "cuisines": [
-        "Burmese"
+        "Burmese",
+        "Thai",
+        "Vietnamese"
       ],
       "gif": null,
       "groups": [],
@@ -497,7 +499,8 @@
       ],
       "pictures": [],
       "sources": [
-        "Rivers of Flavor"
+        "Rivers of Flavor",
+        "https://www.reddit.com/r/FoodPorn/comments/41pbgd/anyone_care_for_some_homemade_spicy_sweet_chilli/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -1192,7 +1195,9 @@
       ],
       "pictures": [],
       "sources": [
-        "https://www.foodnetwork.com/recipes/alton-brown/granola-recipe-1939521"
+        "https://www.foodnetwork.com/recipes/alton-brown/granola-recipe-1939521",
+        "https://www.seriouseats.com/2017/06/how-to-make-crispy-homemade-granola.html",
+        "https://www.bonappetit.com/recipe/fennel-honey-granola"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -1320,7 +1325,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/recipes/comments/17s7f8/i_missed_the_guacamole_thread_here_is_the_recipe/",
+        "https://www.reddit.com/r/Cooking/comments/17tvdj/the_best_guacamole_a_recipe_in_pictures/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -1440,42 +1446,6 @@
       "courses": [
         "Basics"
       ],
-      "cuisines": [
-        "Japanese"
-      ],
-      "gif": null,
-      "groups": [],
-      "id": 981,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Japanese Mayonnaise",
-      "occasions": [
-        ""
-      ],
-      "pictures": [],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Basics"
-      ],
       "cuisines": [],
       "gif": null,
       "groups": [],
@@ -1500,6 +1470,42 @@
       "pictures": [],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Basics"
+      ],
+      "cuisines": [
+        "Japanese"
+      ],
+      "gif": null,
+      "groups": [],
+      "id": 981,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Kewpie Mayonnaise",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.seriouseats.com/2013/10/sauced-japanese-style-kewpie-mayonnaise-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -1742,7 +1748,7 @@
       ],
       "pictures": [],
       "sources": [
-        ""
+        "https://www.thekitchn.com/how-to-make-homemade-mozzarella-cooking-lessons-from-the-kitchn-174355"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -2182,7 +2188,7 @@
       ],
       "pictures": [],
       "sources": [
-        ""
+        "https://importfood.com/index.php?option=com_zoo&task=item&item_id=3507&Itemid=285"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -2259,7 +2265,7 @@
       ],
       "pictures": [],
       "sources": [
-        ""
+        "https://www.seriouseats.com/2018/06/to-make-ricotta-cheese-at-home-you-have-to-know-when-to-hold-em.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -2471,7 +2477,8 @@
       "pictures": [],
       "sources": [
         "https://www.seriouseats.com/recipes/2016/01/charred-salsa-verde-tomatillo-salsa.html",
-        "https://www.seriouseats.com/recipes/2013/05/orange-tomatillo-salsa-recipe.html"
+        "https://www.seriouseats.com/recipes/2013/05/orange-tomatillo-salsa-recipe.html",
+        "https://www.reddit.com/r/FoodPorn/comments/1jwy8u/blended_up_some_homemade_hot_tomatilloserrano/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -2511,7 +2518,8 @@
       ],
       "pictures": [],
       "sources": [
-        "Ghana"
+        "Ghana",
+        "https://myburntorange.wordpress.com/2011/12/30/eat-shito-ghanas-black-pepper-sauce/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -4388,7 +4396,105 @@
           "gif": "",
           "note": "",
           "photo": "",
+          "text": "mix dry ingredients",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "incorporate butter",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add liquid & create dough",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "put dough on floured surface & roll",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "cut and stack to create layers",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "shape",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "refrigerate 2 hrs",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "fill",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "refrigerate 30 min",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "bake",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "cool",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
           "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "kenji food processor/stella old fashioned/vodka/mom",
           "video": ""
         }
       ],
@@ -6206,6 +6312,49 @@
         "Breakfast"
       ],
       "cuisines": [
+        "Middle Eastern",
+        "Turkish"
+      ],
+      "gif": null,
+      "groups": [
+        "Eggs"
+      ],
+      "id": 1156,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Turkish Eggs",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.youtube.com/watch?v=wpuLqnK8ywg"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
         "Filipino"
       ],
       "gif": null,
@@ -7904,7 +8053,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/Cooking/comments/zvi91/peanut_butter_and_banana_waffle_sandwich/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -8078,6 +8227,44 @@
         "Breakfast"
       ],
       "cuisines": [
+        "French"
+      ],
+      "gif": null,
+      "groups": [
+        "Pancakes"
+      ],
+      "id": 1158,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Crepes",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.seriouseats.com/2017/03/how-to-make-crepes-savory-pancakes-food-lab.html"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
         "Indian"
       ],
       "gif": "",
@@ -8086,21 +8273,28 @@
       ],
       "id": 37,
       "ingredients": [
-        "Cone Dosa",
-        "Palak",
-        "Paneer",
-        "Red Sauce",
-        "White Sauce",
-        "Cashew",
-        "Coriander",
-        "Flower?"
+        ""
       ],
       "instructions": [
         {
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "cone dosa?:",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "green sauce/red sauce/white sauce",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "cashew/coriander/flower/paneer",
           "video": ""
         }
       ],
@@ -8463,7 +8657,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/30t103/lemon_sugar_crepes_with_whipped_cream_cheese/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -8569,7 +8763,9 @@
       ],
       "sources": [
         "http://allrecipes.com/recipe/21014/good-old-fashioned-pancakes/",
-        "http://cooking.nytimes.com/recipes/1893-everyday-pancakes"
+        "http://cooking.nytimes.com/recipes/1893-everyday-pancakes",
+        "https://www.reddit.com/r/FoodPorn/comments/4mnxdq/did_someone_say_pancakes_oc6000x4000/",
+        "https://www.seriouseats.com/recipes/topics/meal/breakfast-and-brunch/pancake"
       ],
       "time": "1 day, 1:15:24",
       "total_yield": "3 Pancakes",
@@ -8611,7 +8807,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/2olwui/pumpkin_pancakes_3264x2448/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -8731,7 +8927,8 @@
         ""
       ],
       "sources": [
-        "Plenty"
+        "Plenty",
+        "https://www.thekitchn.com/sweet-potato-pancakes-259059"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -8776,47 +8973,8 @@
       "sources": [
         "Roscoe's",
         "Shenandoah",
-        "https://old.reddit.com/r/FoodPorn/comments/67nnmd/fried_chicken_waffle_avocado_toast_w_hot_aleppo/"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 554,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        7
-      ],
-      "name": "Bacon, Cheddar, & Green Onion Biscuits",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        "Manhattan Beach Post"
+        "https://old.reddit.com/r/FoodPorn/comments/67nnmd/fried_chicken_waffle_avocado_toast_w_hot_aleppo/",
+        "https://www.reddit.com/r/FoodPorn/comments/4a0cr3/amazing_korean_chicken_and_waffles_with_egg/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9184,48 +9342,6 @@
       "courses": [
         "Breakfast"
       ],
-      "cuisines": [
-        "American"
-      ],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 505,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        4
-      ],
-      "name": "Drop Biscuits",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -9288,46 +9404,6 @@
       ],
       "months": [],
       "name": "Jalape\u00f1o Cheddar Honey Cornmeal Biscuits",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 472,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        3
-      ],
-      "name": "Lemon Poppyseed Bread",
       "occasions": [
         ""
       ],
@@ -9431,86 +9507,6 @@
       "groups": [
         "Pastry"
       ],
-      "id": 579,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        8
-      ],
-      "name": "Peach Scones",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
-      "id": 69,
-      "ingredients": [
-        "Pumpkin Bread"
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        11
-      ],
-      "name": "Pumpkin Cinnamon Bread",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry"
-      ],
       "id": 544,
       "ingredients": [
         ""
@@ -9579,6 +9575,48 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 554,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        7
+      ],
+      "name": "Bacon, Cheddar, & Green Onion Biscuits",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "Manhattan Beach Post",
+        "https://www.youtube.com/watch?v=c9eEOZ6Nx2Y"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9663,7 +9701,50 @@
         ""
       ],
       "sources": [
+        "https://www.myrecipes.com/recipe/cranberry-apple-granola-muffins"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [
+        "American"
+      ],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 505,
+      "ingredients": [
         ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        4
+      ],
+      "name": "Drop Biscuits",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.seriouseats.com/2014/06/how-to-make-quick-and-easy-drop-biscuits.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9705,6 +9786,47 @@
       ],
       "sources": [
         "https://www.youtube.com/watch?v=yxGczEE3NSw"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 472,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        3
+      ],
+      "name": "Lemon Poppyseed Bread",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.reddit.com/r/DessertPorn/comments/497vl3/zesty_and_fluffy_lemon_and_poppy_seed_buns_410_x/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9787,6 +9909,47 @@
       ],
       "sources": [
         "http://www.lemonsforlulu.com/orange-sage-beer-biscuits/"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Breakfast"
+      ],
+      "cuisines": [],
+      "gif": "",
+      "groups": [
+        "Pastry",
+        "Pastry"
+      ],
+      "id": 579,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        8
+      ],
+      "name": "Peach Scones",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.seriouseats.com/recipes/2012/07/mini-glazed-peach-scones-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -9982,50 +10145,6 @@
         "Pastry",
         "Pastry"
       ],
-      "id": 630,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "name": "Pumpkin Biscuits",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Breakfast"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Pastry",
-        "Pastry"
-      ],
       "id": 629,
       "ingredients": [
         ""
@@ -10035,7 +10154,7 @@
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "cinnamon ",
           "video": ""
         }
       ],
@@ -10051,7 +10170,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/Baking/comments/1lyw6c/pumpkin_streusel_muffins_with_cream_cheese_filling/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -10237,7 +10356,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/2016/05/how-to-make-avocado-toast-flavor-topping-ideas.html",
+        "https://www.seriouseats.com/sponsored/2014/07/california-avocado-toast-three-ways.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -10498,7 +10618,8 @@
       ],
       "sources": [
         "http://www.foodnetwork.com/recipes/robert-irvine/french-toast-recipe.html",
-        "http://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast"
+        "http://www.mccormick.com/recipes/breakfast-brunch/quick-and-easy-french-toast",
+        "https://www.reddit.com/r/FoodPorn/comments/2n676b/nutella_and_banana_stuffed_french_toast_os_1920_x/"
       ],
       "time": "2 days, 4:15:09",
       "total_yield": "3 French Toast",
@@ -12014,7 +12135,14 @@
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "shishito peppers?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "honey butter",
           "video": ""
         }
       ],
@@ -12025,7 +12153,8 @@
       ],
       "pictures": [],
       "sources": [
-        "https://www.youtube.com/watch?v=A1lsTLs-iZg"
+        "https://www.youtube.com/watch?v=A1lsTLs-iZg",
+        "Hatchet Hall"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -12137,7 +12266,9 @@
       ],
       "id": 1142,
       "ingredients": [
-        ""
+        "padrones",
+        "oil",
+        "salt"
       ],
       "instructions": [
         {
@@ -12435,46 +12566,6 @@
         "Dessert"
       ],
       "cuisines": [
-        "Irish"
-      ],
-      "gif": "",
-      "groups": [
-        "Cake"
-      ],
-      "id": 230,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [],
-      "name": "Brownie Car Bomb",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Dessert"
-      ],
-      "cuisines": [
         "American"
       ],
       "gif": "",
@@ -12503,7 +12594,44 @@
         ""
       ],
       "sources": [
+        "Stella",
+        "https://www.reddit.com/r/FoodPorn/comments/33pn3o/recently_became_absolutely_obsessed_with_creating/"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Cake"
+      ],
+      "id": 1162,
+      "ingredients": [
         ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Butterbeer Cupcakes",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.reddit.com/r/food/comments/4z0rlt/a_flight_of_cupcakes_i_made_for_a_friends_30th/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -12621,7 +12749,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/2yfp3w/3layer_greek_yogurt_chocolate_cake_683x1024/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -12662,7 +12790,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.howsweeteats.com/2013/08/whole-wheat-chocolate-fudge-zucchini-snack-cake-with-candied-pistachios/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -13209,7 +13337,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/3jo5rw/triple_lemon_cake_with_a_burst_of_berries_and/",
+        "https://cooking.nytimes.com/recipes/1017151-lemon-almond-butter-cake?smid=fb-nytimes&smtyp=cur"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -13326,6 +13455,42 @@
       "pictures": [],
       "sources": [
         "https://www.youtube.com/watch?v=i883yj99aBQ"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Cake"
+      ],
+      "id": 1160,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Olive Oil Cake",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.seriouseats.com/sponsored/2019/07/this-lemony-olive-oil-cake-is-summer-in-a-bundt.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -13521,7 +13686,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/2onds5/its_national_brownie_day_how_about_some_homemade/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -13605,7 +13770,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/3mj74m/peanut_butter_cup_stuffed_smores_brownies_600x740/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14451,7 +14616,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2012/08/bourbon-roasted-peach-cheesecake-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14493,7 +14658,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/2y4sb3/double_chocolate_brownie_irish_car_bomb/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14577,7 +14742,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2013/11/goat-cheese-cheesecake-with-fig-jam.html",
+        "https://www.jocooks.com/recipes/goat-cheese-cheesecake-with-figs/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14698,7 +14864,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/GifRecipes/comments/40ojyf/nobake_nutella_cheesecake/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14861,7 +15027,9 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/1ozf44/my_homemade_pumpkin_spice_cheesecake_with_salted/",
+        "https://www.reddit.com/r/DessertPorn/comments/50tlmh/individual_pumpkin_cheesecakes_9001050/",
+        "https://www.reddit.com/r/FoodPorn/comments/574j1a/mini_pumpkin_cheesecakes_with_bourbon_caramel/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14901,7 +15069,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/341g2q/rice_krispie_treat_marshmallow_cheesecake_580x873/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14943,7 +15111,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/2mdsh9/i_am_so_proud_of_this_cheesecake_salted_caramel/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -14985,7 +15153,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/2ujtre/samoa_cheesecake_576x864/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -15025,7 +15193,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/345e43/strawberry_cheesecake_4195x2432_oc/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -17800,7 +17968,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.marthastewart.com/336924/broiled-persimmons-with-mascarpone"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -17881,7 +18049,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.marthastewart.com/317383/broiled-plums-with-mascarpone-cream"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -17923,7 +18091,8 @@
         ""
       ],
       "sources": [
-        "Ottolenge"
+        "Ottolenge",
+        "https://www.marthastewart.com/336687/caramelized-pears"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18013,6 +18182,45 @@
       "time": "0:00:00",
       "total_yield": "",
       "vegetarian": true
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Fruit & Cheese"
+      ],
+      "id": 1157,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10
+      ],
+      "name": "Grilled Figs w/ Goat Cheese",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.seriouseats.com/recipes/2011/11/grilling-figs-stuffed-with-goat-cheese-recipe.html"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
     },
     {
       "calories": 0,
@@ -18138,7 +18346,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.marthastewart.com/314823/melon-with-honeyed-yogurt"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18184,7 +18392,8 @@
         ""
       ],
       "sources": [
-        ""
+        "Carmel Restaurant",
+        "https://www.seriouseats.com/recipes/2010/11/grilling-apples-in-caramel-sauce-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18266,7 +18475,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/Eyebleach/comments/4rduox/strawberry_rose/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18352,7 +18561,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.marthastewart.com/357858/sweet-cherries-robiola-cheese"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18396,7 +18605,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.marthastewart.com/315329/tequila-soaked-watermelon-wedges"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -18914,7 +19123,8 @@
       "sources": [
         "Ottolenge",
         "http://shesimmers.com/2009/03/mango-and-sweet-coconut-sticky-rice.html",
-        "https://mangolicious-mango.blogspot.com/2015/11/mango-sticky-rice.html"
+        "https://mangolicious-mango.blogspot.com/2015/11/mango-sticky-rice.html",
+        "https://sushiamy.wordpress.com/2012/05/04/thai-coconut-sticky-rice-and-mango-sushi/"
       ],
       "time": "0:00:00",
       "total_yield": "2 servings",
@@ -19546,7 +19756,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/FoodPorn/comments/4r74l1/blueberry_lavender_ice_cream_with_honey_and_maple/",
+        "https://www.reddit.com/r/FoodPorn/comments/4lkhrs/blueberry_lavender_coconut_ice_cream_1067x1600/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -19713,7 +19924,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2012/09/bourbon-peach-brown-sugar-ice-cream-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -20041,7 +20252,7 @@
         ""
       ],
       "sources": [
-        "http://www.seriouseats.com/2016/08/how-to-make-cajeta-ice-cream-sundae-whipped-cream.html"
+        "https://www.seriouseats.com/2016/08/how-to-make-cajeta-ice-cream-sundae-whipped-cream.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -20658,7 +20869,8 @@
         ""
       ],
       "sources": [
-        "Gilroy Garlic Festival"
+        "Gilroy Garlic Festival",
+        "https://www.thespruceeats.com/gilroy-garlic-ice-cream-recipe-101385"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -21142,6 +21354,44 @@
       "courses": [
         "Dessert"
       ],
+      "cuisines": [
+        "American"
+      ],
+      "gif": null,
+      "groups": [
+        "Ice Cream"
+      ],
+      "id": 1159,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Hot Fudge Sundae",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.reddit.com/r/DessertPorn/comments/32n6jt/hot_fudge_sundae_from_ghirardelli_square_in_san/"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
       "cuisines": [],
       "gif": "",
       "groups": [
@@ -21456,7 +21706,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/362aas/i_found_an_old_but_working_ice_cream_maker_and/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -22049,7 +22299,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.seriouseats.com/recipes/2012/07/easy-peach-sorbet-recipe.html"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -24590,7 +24840,21 @@
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "cast iron?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "bottom rack?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "on a sheet pan w/ parchment paper",
           "video": ""
         }
       ],
@@ -25765,6 +26029,42 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Dessert"
+      ],
+      "cuisines": [],
+      "gif": null,
+      "groups": [
+        "Pudding"
+      ],
+      "id": 1161,
+      "ingredients": [
+        ""
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        }
+      ],
+      "months": [],
+      "name": "Brownie Pudding",
+      "occasions": [
+        ""
+      ],
+      "pictures": [],
+      "sources": [
+        "https://www.reddit.com/r/FoodPorn/comments/201nx0/brownie_pudding_533x800/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -27469,7 +27769,8 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/food/comments/2mnzal/how_to_spice_up_your_hot_chocolate/",
+        "https://www.reddit.com/r/food/comments/44nit5/real_hot_chocolate_no_powder_or_syrup_in_sight_so/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -28390,7 +28691,7 @@
         ""
       ],
       "sources": [
-        ""
+        "https://www.reddit.com/r/DessertPorn/comments/2yoa6h/thin_mint_milkshake_683x1024/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -30742,7 +31043,7 @@
           "gif": "",
           "note": "",
           "photo": "",
-          "text": "",
+          "text": "boneless, skewers",
           "video": ""
         }
       ],
@@ -32043,26 +32344,28 @@
       "id": 1118,
       "ingredients": [
         "Turkey",
-        "Stuffing",
+        "",
         "Gravy",
         "Cranberry",
-        "Sweet Potato/Sage",
+        "",
+        "Cornbread/Stuffing",
+        "Roll/Acorn Bread",
+        "",
+        "Potato",
         "Spinach/Greens",
-        "Roll",
+        "Butternut Squash/Sage",
+        "Endive/Pecans",
+        "Brussels Sprouts",
+        "Mushrooms?",
+        "Salad",
         "",
-        "Squash?",
-        "Corn?",
-        "Acorn Bread?",
-        "cornbread/sage?",
-        "",
-        "Wine?",
-        "",
-        "Endive",
-        "Pecans?",
-        "Cheese",
+        "Wine",
+        "Water",
+        "Mulled Wine",
         "",
         "Apple Pie",
         "Pumpkin Pie",
+        "Ube Pie",
         "Ice Cream",
         "Whipped Cream"
       ],
@@ -35038,14 +35341,29 @@
       "courses": [
         "Lunch & Dinner"
       ],
-      "cuisines": [],
+      "cuisines": [
+        "Spanish"
+      ],
       "gif": null,
       "groups": [
         "Land"
       ],
       "id": 1147,
       "ingredients": [
-        ""
+        "Dates",
+        "Bacon",
+        "",
+        "Stuffing:",
+        "Goat Cheese?",
+        "herb?",
+        "almond/nut?",
+        "egg yolk?",
+        "",
+        "sherry vinegar?",
+        "sauce?",
+        "chive topping?",
+        "crispy rice cake?",
+        "black garlic puree?"
       ],
       "instructions": [
         {
@@ -44634,7 +44952,8 @@
       ],
       "pictures": [],
       "sources": [
-        ""
+        "Hot Thai Kitchen",
+        "https://www.reddit.com/r/Cooking/comments/1xctxw/red_thai_peanut_curry_with_turkey_and_bamboo/"
       ],
       "time": "0:00:00",
       "total_yield": "",
@@ -45442,47 +45761,6 @@
         ""
       ],
       "pictures": [],
-      "sources": [
-        ""
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Soup"
-      ],
-      "id": 545,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        10,
-        11
-      ],
-      "name": "Sweet Potato Soup",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
       "sources": [
         ""
       ],
@@ -47345,67 +47623,6 @@
       "courses": [
         "Lunch & Dinner"
       ],
-      "cuisines": [],
-      "gif": "",
-      "groups": [
-        "Vegetable"
-      ],
-      "id": 402,
-      "ingredients": [
-        "Brussels Sprouts",
-        "Oil",
-        "Maple Syrup?",
-        "s + p",
-        "",
-        "Pancetta",
-        "Shallots",
-        "",
-        "Balsamic?",
-        "Honey?",
-        "Hazelnut?"
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "As hot as possible",
-          "video": ""
-        },
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "Preheat pan?",
-          "video": ""
-        }
-      ],
-      "months": [
-        1,
-        2,
-        11,
-        12
-      ],
-      "name": "Caramelized Brussels Sprouts",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        "Scarpetta",
-        "http://www.seriouseats.com/recipes/2014/10/warm-brussels-sprout-salad-bacon-hazelnut-sherry-vinaigretter-recipe.html"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
       "cuisines": [
         "American"
       ],
@@ -48379,6 +48596,230 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
+        "Spanish"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 402,
+      "ingredients": [
+        "Oil",
+        "Chorizo/Pancetta/Bacon",
+        "Shallots",
+        "Garlic",
+        "Paprika",
+        "",
+        "Brussels Sprouts",
+        "Salt",
+        "",
+        "Honey/Maple Syrup",
+        "Sherry Vinegar/Balsamic",
+        "chili flakes?",
+        "olive oil?",
+        "S + P?",
+        "",
+        "Hazelnut?"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Fry Chorizo",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Add shallots and garlic",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Add paprika",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Strain oil into bowl with brussels sprouts",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Salt brussels sprouts and put in pan",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "bake until crispy",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "mix in fried chorizo/shallots",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "caramelize honey",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "deglaze w/ vinegar",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "glaze brussels sprouts",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "As hot as possible",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "Preheat pan?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "bottom shelf?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add honey both before and after?",
+          "video": ""
+        }
+      ],
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "name": "Caramelized Brussels Sprouts",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "Scarpetta",
+        "http://www.seriouseats.com/recipes/2014/10/warm-brussels-sprout-salad-bacon-hazelnut-sherry-vinaigretter-recipe.html",
+        "https://www.seriouseats.com/recipes/2016/12/roasted-brussels-sprouts-chorizo-sherry-vinegar-recipe.html"
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
         "Indian"
       ],
       "gif": "",
@@ -48663,23 +49104,24 @@
         "",
         "Chhonk:",
         "2 Tbsp Ghee",
-        "2 tsp Cumin Seeds",
-        "2 Red Chilies (dry)",
-        "Red Chili Powder",
+        "2 tsp Cumin Seeds/Black Cumin Seeds",
+        "Black Mustard Seeds?",
+        "dry chilis/chili powder/fresh chili",
         "Asafetida",
-        "fresh chili?",
         "fenugreek leaves?",
         "",
-        "salt?",
-        "sugar/raw sugar/jaggery?",
+        "salt",
+        "sugar/raw sugar/jaggery",
+        "chili powder",
+        "Cilantro",
         "tamarind paste/lime juice?",
-        "chile powder?",
         "garam masala?",
-        "Cilantro?",
+        "",
         "Yogurt?",
         "crispy onions?",
+        "cilantro?",
         "",
-        "Basmati Rice",
+        "Basmati Rice/Wild Rice",
         "Naan/Bread"
       ],
       "instructions": [
@@ -48757,7 +49199,49 @@
           "gif": "",
           "note": "",
           "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
           "text": "pumpkin dal?",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "thyme/sage/brown butter/hazelnut/cinnamon/allspice/cardamom/clove/nutmeg/",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
           "video": ""
         },
         {
@@ -49076,51 +49560,6 @@
         "Lunch & Dinner"
       ],
       "cuisines": [
-        "Indian"
-      ],
-      "gif": "",
-      "groups": [
-        "Vegetable",
-        "Vegetable"
-      ],
-      "id": 479,
-      "ingredients": [
-        ""
-      ],
-      "instructions": [
-        {
-          "gif": "",
-          "note": "",
-          "photo": "",
-          "text": "",
-          "video": ""
-        }
-      ],
-      "months": [
-        9,
-        10,
-        11
-      ],
-      "name": "Palak Paneer",
-      "occasions": [
-        ""
-      ],
-      "pictures": [
-        ""
-      ],
-      "sources": [
-        "https://www.youtube.com/watch?v=E4G5Y2ghqEQ"
-      ],
-      "time": "0:00:00",
-      "total_yield": "",
-      "vegetarian": false
-    },
-    {
-      "calories": 0,
-      "courses": [
-        "Lunch & Dinner"
-      ],
-      "cuisines": [
         "French"
       ],
       "gif": "",
@@ -49196,6 +49635,142 @@
       ],
       "sources": [
         ""
+      ],
+      "time": "0:00:00",
+      "total_yield": "",
+      "vegetarian": false
+    },
+    {
+      "calories": 0,
+      "courses": [
+        "Lunch & Dinner"
+      ],
+      "cuisines": [
+        "Indian"
+      ],
+      "gif": "",
+      "groups": [
+        "Vegetable",
+        "Vegetable"
+      ],
+      "id": 479,
+      "ingredients": [
+        "Ghee",
+        "Coriander Seed",
+        "Cardamom Pods",
+        "",
+        "Onion",
+        "Garlic",
+        "Ginger",
+        "Spinach (1 lb)",
+        "tomato?",
+        "",
+        "Serrano Pepper",
+        "Lime",
+        "Salt",
+        "",
+        "Feta/Paneer/Tofu",
+        "",
+        "Ghee",
+        "Cumin Seeds",
+        "Chili Powder",
+        "Asafetida",
+        "",
+        "Basmati/Naan"
+      ],
+      "instructions": [
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toast spices",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "let sit so one side chars",
+          "photo": "",
+          "text": "saute onion",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "sweat aromatics",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "add spinach in stages",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "remove from heat and add seasonings",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "blend",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "return to pan & heat gently",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "fold in protein",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "toast chhonk",
+          "video": ""
+        },
+        {
+          "gif": "",
+          "note": "",
+          "photo": "",
+          "text": "fold chhonk into sauce",
+          "video": ""
+        }
+      ],
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "name": "Saag",
+      "occasions": [
+        ""
+      ],
+      "pictures": [
+        ""
+      ],
+      "sources": [
+        "https://www.youtube.com/watch?v=E4G5Y2ghqEQ"
       ],
       "time": "0:00:00",
       "total_yield": "",
