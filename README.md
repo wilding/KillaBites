@@ -16,6 +16,9 @@ To Do:
 
         ? filter or highlight recipes when ingredient clicked?
         ? scroll ingredients and menu separately or together?
+        
+        
+        ingredients - featured recipes
 
 
     ////////////////////////// Chart ///////////////////////////////////////////////////////////////////////////////////////
@@ -54,11 +57,14 @@ To Do:
         - make responsive
         - order
 
+        - Create custom Menus?
 
     ////////////////////////// Recipe ///////////////////////////////////////////////////////////////////////////////////////
 
 
         - new recipe form
+        
+
 
 
         info
@@ -97,6 +103,9 @@ To Do:
             - click anywhere in blank ingredient/instruction area to go to first input
             - bug where you can delete all ingredients/instructions and are not able to add new ones
 
+            - multiple comments per recipe instruction
+            - nested ingredients/instructions
+            - titles (bold section headers)
 
 
         - multi recipe view
@@ -110,6 +119,7 @@ To Do:
         - pairing
         - nutrition info
         - public or no, publish
+            public, private, friends only
 
 
         - background
@@ -141,6 +151,7 @@ To Do:
         - user options
             - menu view default
 
+        - friends
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
