@@ -7,7 +7,14 @@ $(function() {
 
     // add picture fields when the + button is clicked
     $('body').on('click', '.add-picture-mini', function () {
-        $('<div class="new-picture-mini"><input type="text" name="pictures" maxlength="9999"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>').insertBefore($(this));
+        var name = $(this).parent().next().find('input[name=title]').val();
+        name = name.toLowerCase();
+        name = name.replaceAll(' ', '-');
+        number = $(this).siblings().length + 1;
+        if (number > 1) {
+            name = name + '-' + number;
+        }
+        $('<div class="new-picture-mini"><input type="text" name="pictures" maxlength="9999" value="/static/recipe-pics/' + name + '.jpeg"><i class="fa fa-minus-circle delete" aria-hidden="true"></i></div>').insertBefore($(this));
         $(this).prev().find('input').focus();
     });
 
