@@ -24,7 +24,7 @@ cuisines = {
     'Middle Eastern':
         ['Arab', 'Indian', 'Israeli', 'Lebanese', 'Middle Eastern', 'Persian', 'Turkish'],
     'European':
-        ['Eastern European', 'English', 'French', 'German', 'Irish',  'Italian', 'Mediterranean', 'Nordic', 'Portuguese', 'Spanish'],
+        ['Eastern European', 'English', 'French', 'German', 'Greek', 'Irish',  'Italian', 'Mediterranean', 'Nordic', 'Portuguese', 'Spanish'],
     'Latin American':
         ['Brazilian', 'Caribbean', 'Central American', 'Mexican', 'South American'],
     'American':
@@ -43,9 +43,9 @@ groups = {
     'Dessert':
         ['Fruit & Cheese', 'Pudding', 'Ice Cream', 'Cheesecake', 'Pastry', 'Cookie', 'Candy', 'Donut', 'Cake'],
     'Basics':
-        ['Dairy', 'Stock'],
+        ['Dairy', 'Stock', 'Sauce', 'Pickle'],
     'Drinks':
-        ['Smoothie', 'Milkshake', 'Beer', 'Wine', 'Tequila', 'Mezcal', 'Gin', 'Whiskey', 'Rum', 'Vodka', 'Brandy']
+        ['Coffee', 'Smoothie', 'Milkshake', 'Beer', 'Wine', 'Tequila', 'Mezcal', 'Gin', 'Whiskey', 'Rum', 'Vodka', 'Brandy']
 }
 ingredient_groups = ['fruit', 'vegetables', 'herbs', 'nuts', 'sea', 'air', 'land']
 ingredient_group_colors = {'fruit': ['#7B1FA2', 'rgba(123, 31, 162, 0.3)'], 'vegetables': ['#43A047', 'rgba(67, 160, 71, 0.3)'], 'herbs': ['#7CB342', 'rgba(124, 179, 66, 0.3)'], 'nuts': ['#6D4C41', 'rgba(109, 76, 65, 0.3)'], 'sea': ['#1E88E5', 'rgba(30, 136, 229, 0.3)'], 'air': ['#FDD835', 'rgba(253, 216, 53, 0.3)'], 'land': ['#E53935', 'rgba(229, 57, 53, 0.3)']}
