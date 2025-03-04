@@ -542,7 +542,7 @@ th {
 }
 
 .dropdown-container {
-    width: 25%;
+    width: 33.33%;
 }
 
 .dropdown-container i {
@@ -585,7 +585,34 @@ th {
 }
 
 
+.option-child {
+    padding-left: 15px;
+}
 
+.menu-month-menu {
+    display: flex;
+    height: 17px;
+    background: #eee1c1;
+    width: 958px;
+}
+
+.menu-month-menu label {
+    color: black;
+    font-size: 13px;
+    text-align: center;
+}
+
+.menu-month-container {
+    width: 8.333333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+input[name=January], input[name=February], input[name=March], input[name=April], input[name=May], input[name=June], input[name=July], input[name=August], input[name=September], input[name=October], input[name=November], input[name=December] {
+    display: none;
+}
 
 
 
