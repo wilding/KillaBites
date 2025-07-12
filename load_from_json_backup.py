@@ -9,7 +9,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-with open('backups/ingredients_2021-01-15', 'r') as json_data:
+with open('backups/ingredients_2025-07-04.json', 'r') as json_data:
     full_data = json.load(json_data)
     ingredients = full_data['Ingredients']
     for i in ingredients:
@@ -25,7 +25,7 @@ with open('backups/ingredients_2021-01-15', 'r') as json_data:
     session.commit()
 
 
-with open('backups/recipes_2023-05-25.json', 'r') as json_data:
+with open('backups/recipes_2025-07-04.json', 'r') as json_data:
     full_data = json.load(json_data)
     recipes = full_data['Recipes']
     for r in recipes:

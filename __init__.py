@@ -420,6 +420,7 @@ def deleteWine(wine_id):
 
 # Ingredients JSON
 @app.route('/ingredient/json/')
+@app.route('/chart/json/')
 def ingredientsJSON():
     ingredients = session.query(Ingredient).order_by(Ingredient.group, Ingredient.name).all()
     return jsonify(Ingredients=[ingredient.serialize for ingredient in ingredients])
@@ -427,6 +428,7 @@ def ingredientsJSON():
 
 # Recipes JSON
 @app.route('/recipe/json/')
+@app.route('/menu/json/')
 def recipesJSON():
     recipes = session.query(Recipe).order_by(Recipe.courses, Recipe.groups, Recipe.name).all()
     return jsonify(Recipes=[recipe.serialize for recipe in recipes])
