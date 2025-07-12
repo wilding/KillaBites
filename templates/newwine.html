@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} | New Wine{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='wine.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='winestyles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <form action="{{url_for('newWine')}}" class="edit-recipe-form" method="post" enctype="multipart/form-data">
+        <div class="wine-form">
+            <div class="wine-form-section">
+                <label>Name:<input type="text" name="name" maxlength="9999" required autofocus></label>
+                <label>Winery:
+                    <div class="array-input">
+                        <input type="text" name="winery" maxlength="9999">
+                        <i class="fa fa-minus-circle delete" aria-hidden="true"></i>
+                        <i class="fa fa-plus-circle add add-winery" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </div>
+            <div class="wine-form-section">
+                <label>Variety:
+                    <div class="array-input">
+                        <input type="text" name="variety" maxlength="500">
+                        <i class="fa fa-minus-circle delete" aria-hidden="true"></i>
+                        <i class="fa fa-plus-circle add add-variety" aria-hidden="true"></i>
+                    </div>
+                </label>
+                <label>Region:<input type="text" name="region" maxlength="9999"></label>
+            </div>
+            <div class="wine-form-section">
+                <label>Vintage:<input type="number" name="vintage"></label>
+                <label>Rating:<input type="number" name="rating"></label>
+            </div>
+            <div class="wine-form-section">
+                <label>Notes:
+                    <div class="array-input">
+                        <input type="text" name="notes" maxlength="9999">
+                        <i class="fa fa-minus-circle delete" aria-hidden="true"></i>
+                        <i class="fa fa-plus-circle add add-note" aria-hidden="true"></i>
+                    </div>
+                </label>
+                <label>Pairings:
+                    <div class="array-input">
+                        <input type="text" name="pairings" maxlength="9999">
+                        <i class="fa fa-minus-circle delete" aria-hidden="true"></i>
+                        <i class="fa fa-plus-circle add add-pairing" aria-hidden="true"></i>
+                    </div>
+                </label>
+            </div>
+            <div class="wine-form-section">
+                <label>Picture:<input type="file" name="picture" accept="image/*"></label>
+                <label>Label:<input type="file" name="label" accept="image/*"></label>
+            </div>
+            <div class="wine-form-section">
+                <label class="checkbox-label"><input type="checkbox" name="sparkling">Sparkling</label>
+                <label class="checkbox-label"><input type="checkbox" name="dessert">Dessert</label>
+                <label class="checkbox-label"><input type="checkbox" name="favorite">Favorite</label>
+            </div>
+            <div class="wine-form-section">
+                <button type="submit"><i class="fa fa-check" aria-hidden="true">&nbsp;</i>Submit</button>
+                <button type="button" onclick="window.location.assign('{{url_for('winepage')}}');"><i class="fa fa-times" aria-hidden="true">&nbsp;</i>Cancel</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -2,9 +2,13 @@ from flask import Flask, render_template, url_for, request, redirect, flash, jso
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, joinedload_all
-from database_setup import Base, Ingredient, Recipe
+from database_setup import Base, Ingredient, Recipe, Wine
 
 from datetime import datetime, timedelta
+
+import os
+from werkzeug.utils import secure_filename
+
 
 # initialize flask app
 app = Flask(__name__)
@@ -111,6 +115,77 @@ def menupage():
     recipes = session.query(Recipe).order_by(Recipe.name).all()
     return render_template('viewmenu.html', recipes=recipes, month_dict=month_dict, cuisines=cuisines, groups=groups, regions=regions)
 
+# Wine
+@app.route('/wine/')
+def winepage():
+    """docstring for winepage"""
+    wine = session.query(Wine).order_by(Wine.id).all()
+    regions = []
+    wineries = []
+    varieties = []
+    timestamp = datetime.now()
+    current_year = timestamp.year
+    oldest_vintage = current_year
+    for w in wine:
+        if w.vintage and w.vintage < oldest_vintage:
+            oldest_vintage = w.vintage
+        parts = w.region.split("-")
+        part_builder = ''
+        for part in parts:
+            if part_builder:
+                part_builder += '-'
+            part_builder += part
+            if part_builder not in regions:
+                regions.append(part_builder)
+        for wnry in w.winery:
+            if wnry not in wineries:
+                wineries.append(wnry)
+        for vrty in w.variety:
+            vrty = vrty.split(" [")[0]
+            if vrty not in varieties:
+                varieties.append(vrty)
+    regions.sort()
+    rgns = build_nested_structure(regions)
+    wineries.sort()
+    varieties.sort()
+    year_list = list(range(oldest_vintage, current_year))
+    return render_template('viewwine.html', wine=wine, regions=regions, rgns=rgns, wineries=wineries, varieties=varieties, years=year_list)
+
+# Wine
+@app.route('/wine/shelf/')
+def wineshelf():
+    """docstring for wineshelf"""
+    wine = session.query(Wine).order_by(Wine.id).all()
+    regions = []
+    wineries = []
+    varieties = []
+    timestamp = datetime.now()
+    current_year = timestamp.year
+    oldest_vintage = current_year
+    for w in wine:
+        if w.vintage and w.vintage < oldest_vintage:
+            oldest_vintage = w.vintage
+        parts = w.region.split("-")
+        part_builder = ''
+        for part in parts:
+            if part_builder:
+                part_builder += '-'
+            part_builder += part
+            if part_builder not in regions:
+                regions.append(part_builder)
+        for wnry in w.winery:
+            if wnry not in wineries:
+                wineries.append(wnry)
+        for vrty in w.variety:
+            vrty = vrty.split(" [")[0]
+            if vrty not in varieties:
+                varieties.append(vrty)
+    regions.sort()
+    rgns = build_nested_structure(regions)
+    wineries.sort()
+    varieties.sort()
+    year_list = list(range(oldest_vintage, current_year))
+    return render_template('viewwineshelf.html', wine=wine, regions=regions, rgns=rgns, wineries=wineries, varieties=varieties, years=year_list)
 
 # View Recipe
 @app.route('/recipe/<int:recipe_id>/')
@@ -258,6 +333,87 @@ def deleteRecipe(recipe_id):
 
 
 ###############################################################################################################################################################################
+    # Wine CRUD
+###############################################################################################################################################################################
+
+
+# New Wine
+@app.route('/wine/new/', methods=['GET', 'POST'])
+def newWine():
+    """docsting for newWine"""
+    if request.method == 'POST':
+        newwine = Wine(
+            name=request.form['name'],
+            winery=request.form.getlist('winery'),
+            vintage=request.form['vintage'] if request.form.get('vintage') else 0,
+            variety=request.form.getlist('variety'),
+            region=request.form['region'],
+            rating=request.form['rating'] if request.form.get('rating') else 0,
+            notes=request.form.getlist('notes'),
+            pairings=request.form.getlist('pairings'),
+            sparkling=True if request.form.get('sparkling') else False,
+            dessert=True if request.form.get('dessert') else False,
+            favorite=True if request.form.get('favorite') else False)
+        label_file = request.files.get('label')
+        picture_file = request.files.get('picture')
+        newwine.label = save_uploaded_file(label_file, str(newwine.id) + '-label', 'wine-pics')
+        newwine.picture = save_uploaded_file(picture_file, str(newwine.id) + '-bottle', 'wine-pics')
+        session.add(newwine)
+        session.commit()
+        flash(newwine.name + ' added!')
+        return redirect(url_for('winepage'))
+    else:
+        return render_template('newwine.html')
+
+
+# Edit Wine
+@app.route('/wine/edit/<int:wine_id>/', methods=['GET', 'POST'])
+def editWine(wine_id):
+    """docstring for editWine"""
+    wine = session.query(Wine).filter_by(id=wine_id).one()
+    if request.method == 'POST':
+        if request.form['name']:
+            wine.name = request.form['name']
+        if request.form['region']:
+            wine.region = request.form['region']
+        if request.form['vintage']:
+            wine.vintage = request.form['vintage']
+        if request.form['rating']:
+            wine.rating = request.form['rating']
+        wine.winery = request.form.getlist('winery')
+        wine.variety = request.form.getlist('variety')
+        wine.notes = request.form.getlist('notes')
+        wine.pairings = request.form.getlist('pairings')
+        wine.sparkling = True if request.form.get('sparkling') else False
+        wine.dessert = True if request.form.get('dessert') else False
+        wine.favorite = True if request.form.get('favorite') else False
+        label_file = request.files.get('label')
+        picture_file = request.files.get('picture')
+        if label_file:
+            wine.label = save_uploaded_file(label_file, str(wine.id) + '-label', 'wine-pics')
+        if picture_file:
+            wine.picture = save_uploaded_file(picture_file, str(wine.id) + '-bottle', 'wine-pics')
+        session.add(wine)
+        session.commit()
+        flash(wine.name + ' edited!')
+        return redirect(url_for('winepage'))
+    else:
+        return render_template('editwine.html', wine=wine)
+
+
+# Delete Wine
+@app.route('/wine/delete/<int:wine_id>/', methods=['GET', 'POST'])
+def deleteWine(wine_id):
+    """docstring for deleteWine"""
+    wine = session.query(Wine).filter_by(id=wine_id).one()
+    if request.method == 'POST':
+        session.delete(wine)
+        session.commit()
+        flash(wine.name + ' deleted!')
+        return redirect(url_for('winepage'))
+
+
+###############################################################################################################################################################################
     # JSON
 ###############################################################################################################################################################################
 
@@ -281,6 +437,12 @@ def recipesJSON():
 def recipeJSON(recipe_id):
     recipe = session.query(Recipe).filter_by(id=recipe_id).one()
     return jsonify(recipe.serialize)
+
+# Wine JSON
+@app.route('/wine/json/')
+def wineJSON():
+    wine = session.query(Wine).all()
+    return jsonify(Wine=[w.serialize for w in wine])
 
 
 ###############################################################################################################################################################################
@@ -326,6 +488,35 @@ def parse_instructions(form):
         output.append(instruction_dict)
     return output
 
+
+# turn list into nested dict
+def build_nested_structure(rawlist):
+    tree = {}
+    paths = []
+    for i in rawlist:
+        paths.append(i.split("-"))
+    for path in paths:
+        current = tree
+        for part in path:
+            current = current.setdefault(part, {})
+    return tree
+
+# Save file
+def save_uploaded_file(file_obj, new_filename, upload_folder):
+    if file_obj and file_obj.filename != '':
+        filename = secure_filename(file_obj.filename)
+        ext = os.path.splitext(filename)[1]
+        unique_filename = f"{new_filename}{ext}"
+        upload_path = os.path.join(app.root_path, 'static', upload_folder)
+        file_path = os.path.join(upload_path, unique_filename)
+        file_obj.save(file_path)
+        return f'/static/{upload_folder}/{unique_filename}'  # or return just unique_filename if you want
+    else:
+        return ''
+
+###############################################################################################################################################################################
+    # Initialize server 
+###############################################################################################################################################################################
 
 # set up server to listen to incoming requests
 if __name__ == '__main__':

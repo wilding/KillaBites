@@ -1,0 +1,101 @@
+
+.dropdown-region, .dropdown-variety, .dropdown-winery, .dropdown-vintage {
+    width: 90%;
+    height: 38px;
+    background: black;
+    color: #eee1c1;
+    border: 0;
+    text-align-last: center;
+    font-size: 14pt;
+    font-family: times;
+    text-decoration: none;
+}
+
+.dropdown-region {
+	-moz-border-radius: 10px 0 0 0;
+    -webkit-border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0 0;
+}
+
+.wine-shelf {
+	display: flex;
+	flex-wrap: wrap;
+	width: 958px;
+}
+
+.wine-container {
+	display: flex;
+	justify-content: center;
+	width:10%;
+	height: 200px;
+}
+
+.name-cell {
+	position: relative;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.name-cell:hover a {
+	display: inline;
+}
+
+.edit-wine {
+	opacity: 25%;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hide-wine {
+	display: none !important;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Forms
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.wine-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin-top: 100px;
+}
+
+.wine-form-section {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	margin-top: 40px;
+}
+
+label {
+	width: 400px;
+}
+
+input[type=text], input[type=number] {
+    font-family: times;
+    font-size: 12pt;
+    width: 100%;
+    padding-bottom: 3px;
+    border-bottom: 1px solid grey;
+}
+
+input[type=file] {
+	width: 100%;
+}
+
+.checkbox-label {
+	display: flex;
+	justify-content: center;
+}
+
+.array-input {
+	display: flex;
+	padding-top: 5px;
+}
+

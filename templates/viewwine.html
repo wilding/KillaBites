@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ super() }} | Wine{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='wine.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='winestyles.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="dropdown-menus">
+        <div class="dropdown-container">
+            <select class="dropdown-region">
+                <option>Region</option>
+                {% for region in regions %}
+                    <option>{{region}}</option>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-variety">
+                <option>Variety</option>
+                {% for vrty in varieties %}
+                    <option>{{vrty}}</option>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-winery">
+                <option>Winery</option>
+                {% for wnry in wineries %}
+                    <option>{{wnry}}</option>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown-container">
+            <select class="dropdown-vintage">
+                <option>Vintage</option>
+                <option></option>
+                {% for y in years %}
+                    <option>{{y}}</option>
+                    {% endfor %}
+            </select>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+        </div>
+    </div>
+
+
+    <table class="menu-table">
+        <thead>
+            <tr>
+                <th class="add-ingredient-link" onclick="window.location.assign('{{url_for('newWine')}}');"><i class="fa fa-plus-circle" aria-hidden="true"></i></th>
+                <th>Winery</th>
+                <th>Vintage</th>
+                <th>Variety</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+        <tbody class="show-group">
+            {% for w in wine %}
+                <tr class="region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %} {% set ns = namespace(prefix='') %} {% for p in parts %} {% if ns.prefix %} {% set ns.prefix = ns.prefix ~ '-' ~ p %} {% else %} {% set ns.prefix = p %} {% endif %} region-{{ ns.prefix }} {% endfor %} {% for vrty in w.variety %} variety-{{vrty}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
+                    <td class="name-cell">{{w.name}}<a href="{{url_for('editWine', wine_id=w.id)}}" class="hidden"><i class="fa fa-pencil-square-o fa-lg edit-wine" aria-hidden="true"></i></a></td>
+                    <td>{% for wnry in w.winery%}<p>{{wnry}}</p>{% endfor %}</td>
+                    <td>{% if w.vintage%}<p>{{w.vintage}}</p>{% endif %}</td>
+                    <td>{% for vrty in w.variety%}<p>{{vrty}}</p>{% endfor %}</td>
+                    <td>{{w.region}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

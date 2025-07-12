@@ -83,6 +83,73 @@ class Recipe(Base):
         return recipe_dict
 
 
+
+class Wine(Base):
+    """docstring for Wine class"""
+    __tablename__ = 'wine'
+    id = Column(Integer, primary_key=True)
+    label = Column(String(9999))
+    picture = Column(String(9999))
+    name = Column(String(9999))
+    winery = Column(ARRAY(String(9999)))
+    vintage = Column(Integer)
+    variety = Column(ARRAY(String(500)))
+    region = Column(String(9999))
+    rating = Column(Integer)
+    notes = Column(ARRAY(String(9999)))
+    pairings = Column(ARRAY(String(9999)))
+    sparkling = Column(Boolean)
+    dessert = Column(Boolean)
+    favorite = Column(Boolean)
+
+    @property
+    def serialize(self):
+        """Instance method, returns a dictionary
+        with column names as keywords for the instance's
+        associated values. Output can easily be jsonified"""
+        wine_dict = {
+            'id': self.id,
+            'name': self.name,
+            'label' : self.label,
+            'picture': self.picture,
+            'winery': self.winery,
+            'vintage': self.vintage,
+            'variety': self.variety,
+            'region': self.region,
+            'rating': self.rating,
+            'notes': self.notes,
+            'pairings': self.pairings,
+            'sparkling': self.sparkling,
+            'dessert': self.dessert,
+            'favorite':self.favorite
+        }
+        return wine_dict
+    
+# skin contact? white/red?
+# appellation 
+# organic/biodynamic/natural, etc? 
+
+# id
+# label
+# picture
+# name
+# winery
+# vintage
+# variety
+# region
+# rating
+# notes
+# pairings
+# sparkling
+# dessert
+# favorite
+
+
+
+
+
+
+
 # # Class
 # class User (Base):
 #    # Table Info
