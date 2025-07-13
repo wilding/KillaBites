@@ -62,7 +62,7 @@
         </thead>
         <tbody class="show-group">
             {% for w in wine %}
-                <tr class="region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %} {% set ns = namespace(prefix='') %} {% for p in parts %} {% if ns.prefix %} {% set ns.prefix = ns.prefix ~ '-' ~ p %} {% else %} {% set ns.prefix = p %} {% endif %} region-{{ ns.prefix }} {% endfor %} {% for vrty in w.variety %} variety-{{vrty}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
+                <tr class="region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %}{% set ns = namespace(prefix='') %}{% for p in parts %}{% if ns.prefix %}{% set ns.prefix = ns.prefix ~ '-' ~ p %}{% else %}{% set ns.prefix = p %}{% endif %} region-{{ns.prefix.replace(' ', '_')}}{% endfor %} {% for vrty in w.variety %} variety-{{vrty.split(' [')[0].replace(' ', '_')}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry.replace(' ', '_')}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
                     <td class="name-cell">{{w.name}}<a href="{{url_for('editWine', wine_id=w.id)}}" class="hidden"><i class="fa fa-pencil-square-o fa-lg edit-wine" aria-hidden="true"></i></a></td>
                     <td>{% for wnry in w.winery%}<p>{{wnry}}</p>{% endfor %}</td>
                     <td>{% if w.vintage%}<p>{{w.vintage}}</p>{% endif %}</td>

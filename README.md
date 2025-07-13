@@ -186,7 +186,6 @@ To Do:
 nested list for regions
     varieties?
 wines I haven't tried yet
-remove options from select list when filtered
 
 faster loading?
 
@@ -194,6 +193,11 @@ move dropdown menus to top?
 click for info?
 stars for rating
 
+extend selection box filtering to viewwine?
+    add selector classes to options
+    add switch wine-container class for new class that goes on both div and tr
+
+esc to clear filters
 
 
 

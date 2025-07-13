@@ -28,10 +28,10 @@ $(function() {
 
     // filter by dropdown menu
     $('select').change(function () {
-        var selected_region = $('.dropdown-region option:selected').text();
-        var selected_variety = $('.dropdown-variety option:selected').text();
-        var selected_winery = $('.dropdown-winery option:selected').text();
-        var selected_vintage = $('.dropdown-vintage option:selected').text();
+        var selected_region = $('.dropdown-region option:selected').text().replace(/ /g, "_");
+        var selected_variety = $('.dropdown-variety option:selected').text().replace(/ /g, "_");
+        var selected_winery = $('.dropdown-winery option:selected').text().replace(/ /g, "_");
+        var selected_vintage = $('.dropdown-vintage option:selected').text().replace(/ /g, "_");
         // show/hide the clear button
         if (['Region', 'Variety', 'Winery', 'Vintage'].indexOf($(this).val()) == -1) {
             $(this).siblings().css('visibility', 'visible');
@@ -39,7 +39,7 @@ $(function() {
         else {
             $(this).siblings().css('visibility', 'hidden');
         }
-        // filter the recipes
+        // filter the wines (table)
         $('tbody tr').each(function () {
             if ($(this).hasClass('region-' + selected_region) === true && $(this).hasClass('variety-' + selected_variety) === true && $(this).hasClass('winery-' + selected_winery) === true && $(this).hasClass('vintage-' + selected_vintage) === true) {
                 $(this).removeClass('hidden');
@@ -47,11 +47,76 @@ $(function() {
                 $(this).addClass('hidden');
             }
         });
+        // filter the wines (pictures)
         $('.wine-container').each(function () {
             if ($(this).hasClass('region-' + selected_region) === true && $(this).hasClass('variety-' + selected_variety) === true && $(this).hasClass('winery-' + selected_winery) === true && $(this).hasClass('vintage-' + selected_vintage) === true) {
                 $(this).removeClass('hide-wine');
             } else {
                 $(this).addClass('hide-wine');
+            }
+        });
+
+        // filter the dropdown options
+        let regionClasses = [''];
+        let varietyClasses = ['']
+        let wineryClasses = ['']
+        let vintageClasses = ['']
+        // build lists of all visible classes
+        $('.wine-container:visible').each(function() {
+            $(this).attr('class')?.split(/\s+/).forEach(function(className) {
+                if (className.startsWith('region-')) {
+                    const cleaned = className.substring('region-'.length);
+                    if (!regionClasses.includes(cleaned)) {
+                        regionClasses.push(cleaned);
+                    }
+                }
+                else if (className.startsWith('variety-')) {
+                    const cleaned = className.substring('variety-'.length);
+                    if (!varietyClasses.includes(cleaned)) {
+                        varietyClasses.push(cleaned);
+                    }
+                }
+                else if (className.startsWith('winery-')) {
+                    const cleaned = className.substring('winery-'.length);
+                    if (!wineryClasses.includes(cleaned)) {
+                        wineryClasses.push(cleaned);
+                    }
+                }
+                else if (className.startsWith('vintage-')) {
+                    const cleaned = className.substring('vintage-'.length);
+                    if (!vintageClasses.includes(cleaned)) {
+                        vintageClasses.push(cleaned);
+                    }
+                }
+            });
+        });
+        // filter out the dropdown options that aren't in the lists
+        $('.region-selector').each(function () {
+            if (!regionClasses.includes($(this).val().replace(/ /g, "_"))) {
+                $(this).addClass('hidden');
+            } else {
+                $(this).removeClass('hidden');
+            }
+        });
+        $('.variety-selector').each(function () {
+            if (!varietyClasses.includes($(this).val().replace(/ /g, "_"))) {
+                $(this).addClass('hidden');
+            } else {
+                $(this).removeClass('hidden');
+            }
+        });
+        $('.winery-selector').each(function () {
+            if (!wineryClasses.includes($(this).val().replace(/ /g, "_"))) {
+                $(this).addClass('hidden');
+            } else {
+                $(this).removeClass('hidden');
+            }
+        });
+        $('.vintage-selector').each(function () {
+            if (!vintageClasses.includes($(this).val().replace(/ /g, "_"))) {
+                $(this).addClass('hidden');
+            } else {
+                $(this).removeClass('hidden');
             }
         });
     });
