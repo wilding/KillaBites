@@ -199,11 +199,13 @@ extend selection box filtering to viewwine?
 
 esc to clear filters
 
+Database changes
+    skin contact? white/red?
+    appellation 
+    organic/biodynamic/natural, etc? 
 
 
-
-
-
+recrop some bottle images
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

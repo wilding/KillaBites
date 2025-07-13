@@ -124,30 +124,6 @@ class Wine(Base):
             'favorite':self.favorite
         }
         return wine_dict
-    
-# skin contact? white/red?
-# appellation 
-# organic/biodynamic/natural, etc? 
-
-# id
-# label
-# picture
-# name
-# winery
-# vintage
-# variety
-# region
-# rating
-# notes
-# pairings
-# sparkling
-# dessert
-# favorite
-
-
-
-
-
 
 
 # # Class

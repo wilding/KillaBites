@@ -51,7 +51,7 @@
 
     <div class="wine-shelf">
         {% for w in wine %}
-            <div class="wine-container region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %}{% set ns = namespace(prefix='') %}{% for p in parts %}{% if ns.prefix %}{% set ns.prefix = ns.prefix ~ '-' ~ p %}{% else %}{% set ns.prefix = p %}{% endif %} region-{{ns.prefix.replace(' ', '_')}}{% endfor %} {% for vrty in w.variety %} variety-{{vrty.split(' [')[0].replace(' ', '_')}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry.replace(' ', '_')}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
+            <div class="wine-container wine-hideable region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %}{% set ns = namespace(prefix='') %}{% for p in parts %}{% if ns.prefix %}{% set ns.prefix = ns.prefix ~ '-' ~ p %}{% else %}{% set ns.prefix = p %}{% endif %} region-{{ns.prefix.replace(' ', '_')}}{% endfor %} {% for vrty in w.variety %} variety-{{vrty.split(' [')[0].replace(' ', '_')}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry.replace(' ', '_')}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
                 <img src="{{w.picture}}" height="200" alt="Bottle of {{w.name}}">
             </div>
             {% endfor %}

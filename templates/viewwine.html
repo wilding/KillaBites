@@ -14,7 +14,7 @@
             <select class="dropdown-region">
                 <option>Region</option>
                 {% for region in regions %}
-                    <option>{{region}}</option>
+                    <option class="region-selector">{{region}}</option>
                     {% endfor %}
             </select>
             <i class="fa fa-times-circle" aria-hidden="true"></i>
@@ -23,7 +23,7 @@
             <select class="dropdown-variety">
                 <option>Variety</option>
                 {% for vrty in varieties %}
-                    <option>{{vrty}}</option>
+                    <option class="variety-selector">{{vrty}}</option>
                     {% endfor %}
             </select>
             <i class="fa fa-times-circle" aria-hidden="true"></i>
@@ -32,7 +32,7 @@
             <select class="dropdown-winery">
                 <option>Winery</option>
                 {% for wnry in wineries %}
-                    <option>{{wnry}}</option>
+                    <option class="winery-selector">{{wnry}}</option>
                     {% endfor %}
             </select>
             <i class="fa fa-times-circle" aria-hidden="true"></i>
@@ -42,7 +42,7 @@
                 <option>Vintage</option>
                 <option></option>
                 {% for y in years %}
-                    <option>{{y}}</option>
+                    <option class="vintage-selector">{{y}}</option>
                     {% endfor %}
             </select>
             <i class="fa fa-times-circle" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
         </thead>
         <tbody class="show-group">
             {% for w in wine %}
-                <tr class="region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %}{% set ns = namespace(prefix='') %}{% for p in parts %}{% if ns.prefix %}{% set ns.prefix = ns.prefix ~ '-' ~ p %}{% else %}{% set ns.prefix = p %}{% endif %} region-{{ns.prefix.replace(' ', '_')}}{% endfor %} {% for vrty in w.variety %} variety-{{vrty.split(' [')[0].replace(' ', '_')}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry.replace(' ', '_')}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
+                <tr class="wine-hideable region-Region variety-Variety winery-Winery vintage-Vintage {% set parts = w.region.split('-') %}{% set ns = namespace(prefix='') %}{% for p in parts %}{% if ns.prefix %}{% set ns.prefix = ns.prefix ~ '-' ~ p %}{% else %}{% set ns.prefix = p %}{% endif %} region-{{ns.prefix.replace(' ', '_')}}{% endfor %} {% for vrty in w.variety %} variety-{{vrty.split(' [')[0].replace(' ', '_')}} {% endfor %} {% for wnry in w.winery %} winery-{{wnry.replace(' ', '_')}} {% endfor %} {% if w.vintage %} vintage-{{w.vintage}} {% else %} vintage- {% endif %}">
                     <td class="name-cell">{{w.name}}<a href="{{url_for('editWine', wine_id=w.id)}}" class="hidden"><i class="fa fa-pencil-square-o fa-lg edit-wine" aria-hidden="true"></i></a></td>
                     <td>{% for wnry in w.winery%}<p>{{wnry}}</p>{% endfor %}</td>
                     <td>{% if w.vintage%}<p>{{w.vintage}}</p>{% endif %}</td>

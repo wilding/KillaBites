@@ -62,7 +62,7 @@ $(function() {
         let wineryClasses = ['']
         let vintageClasses = ['']
         // build lists of all visible classes
-        $('.wine-container:visible').each(function() {
+        $('.wine-hideable:visible').each(function() {
             $(this).attr('class')?.split(/\s+/).forEach(function(className) {
                 if (className.startsWith('region-')) {
                     const cleaned = className.substring('region-'.length);
@@ -128,6 +128,14 @@ $(function() {
         $(this).siblings().val(select).change();
     });
 
+});
+
+// Clear filters on ESC
+$(document).keyup(function(e) {
+    if (e.which == 27) {
+        console.log('ESC clicked!')
+        $('.fa-times-circle:visible').click();
+    }
 });
                 
                 
